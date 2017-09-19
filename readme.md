@@ -38,7 +38,7 @@ Html, CSS, Javascript, Markdown and GeoJson
 	
 ### Web Services
 
-[GitHub](https://github.com/), [Mapbox](https://www.mapbox.com/), [W3Schools](https://www.w3schools.com/), [geojson.io](http://geojson.io)
+[GitHub](https://github.com/), [Mapbox](https://www.mapbox.com/), [W3Schools](https://www.w3schools.com/), and [geojson.io](http://geojson.io)
 	
 ### Libraries for Web Mapping
 	
