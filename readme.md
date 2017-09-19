@@ -13,7 +13,7 @@ Welcome to GEOG 371: Web Mapping :gift_heart:! This course introduces current de
 
 | Week  | Lecture (M)                              | Lecture (W)                              | Lab (Th)                                 | Lecture (F)                              | Reading                                  |
 | ----- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| Wk 00 | *N/A*                                      | [Intro to the course](lectures/lec01)                      | [Lab 1: Project Management](labs/lab01)                | Intro to Web Mapping                     | Markdown, GitHub,  Typora, and Webstorm. |
+| Wk 00 | *N/A*                                      | [Intro to the course](lectures/lec01)                      | [Lab 1: Project Management](labs/lab01)                | [Intro to Web Mapping](lectures/lec02)                     | [Markdown, GitHub,  Typora, and Webstorm](readings/wk01.md) |
 | Wk 01 | Web Programming Basics I: HTML 5 and CSS | Web Mapping Architecture                 | Lab 2: Web Programming Basics            | Web Programming Basics II: Javascript | HTML, CSS and Javascript                 |
 | Wk 02 | Spatial Data for Web Mapping             | Map Client I: Basics and Geographic Features | Lab 3: Web Map Design                    | Map Client II: Map Events and Mashup     | Leaflet and JQuery                       |
 | Wk 03 | Map Client III: Web Map Interaction      | Map Server I: Intro to GeoServer         | Lab 3: Cont'd                            | Map Server II: Styling                   | GeoServer docs                           |
