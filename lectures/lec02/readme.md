@@ -225,7 +225,7 @@ The ArcGIS APIs are primarily designed to work with web services that you have p
 
 [1] http://maptimeboston.github.io/web-maps-101/
 
-[2] Kraak, Menno Jan (2001): *Settings and needs for web cartography*, in: Kraak and Allan Brown (eds), Web Cartography, Francis and Taylor, New York, p. 3–4. see also webpage. Accessed 2007-01-04.
+[2] Kraak, Menno Jan (2001) [*Settings and needs for web cartography*](http://icaci.org/files/documents/ICC_proceedings/ICC2005/htm/pdf/oral/TEMA11/Session%205/MICHAEL%20BLACK.pdf), in: Kraak and Allan Brown (eds), Web Cartography, Francis and Taylor, New York, p. 3–4. see also webpage. Accessed 2007-01-04.
 
 [3] https://en.wikipedia.org/wiki/Web_mapping
 
