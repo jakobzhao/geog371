@@ -1,16 +1,15 @@
 # GEOG 371: Web Mapping
 >
->Instructor: Bo Zhao, zhao2@oregonstate.edu | Office Hours: 2-3pm W or by appointment @ Strand 347
+>Instructor: Bo Zhao, zhao2@oregonstate.edu | Office Hours: 2-3pm W or by appointment @ Strand Ag 347
 >
->Lecture: MWF 12-12:50pm @WLKN 235 | Lab:  Th 10-11:50am @WLKN 210
+>Lecture: MWF 12-12:50pm @WLKN 235 | Lab: Th 10-11:50am @WLKN 210
 >
->Catalog course description: GEOVISUALIZATION: WEB MAPPING (4). 
->Current developments in Internet mapping and advanced cartographic skills applied to web-based maps. Techniques of Internet mapping and principles of web-based cartography, including multimedia, animation, 3D visualization, and user interface design. PREREQS: GEOG 201 or GEO 301. 
+>Catalog course description: GEOVISUALIZATION: WEB MAPPING (4).
+>Current developments in Internet mapping and advanced cartographic skills applied to web-based maps. Techniques of Internet mapping and principles of web-based cartography, including multimedia, animation, 3D visualization, and user interface design. PREREQS: GEOG 201 or GEO 301.
 
 Welcome to GEOG 371: Web Mapping :gift_heart:! This course introduces current developments of Internet mapping and advanced cartographic skills in web mapping.  By using virtual globe libraries (Cesium), open source mapping clients (Leaflet) and web mapping services (Mapbox, GeoServer), students can learn both the techniques of Internet mapping and the principles of web-based cartography, including multimedia, animation, 3D visualization, and user interface design. The lectures will focus on the theories and principles behind the Internet mapping, including distributed component technologies, graphic designs, and network communications. The lab exercises will focus on the practical applications and web design skills for Internet mapping services. The mid-term focuses on basic web mapping concepts and programming techniques. There is no final exam, but each student is required to design a web interactive map and deploy it to an openly accessible server. Feel free to contact Prof. Zhao for more information.
 
-
-## SYLLABUS
+## Syllabus
 
 | Week  | Lecture (M)                              | Lecture (W)                              | Lab (Th)                                 | Lecture (F)                              | Reading                                  |
 | ----- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
@@ -21,9 +20,9 @@ Welcome to GEOG 371: Web Mapping :gift_heart:! This course introduces current de
 | Wk 04 | Map Server III: Web Map Services         | Base Map and Mapbox                      | Lab 4: Web Map Service                   | Map Server IV: Map Tiles                 | Bing Map Tile, and GeoWebCache           |
 | Wk 05 | Midterm Exam                             | Map Design I: Web Template and Framework | Lab 4: Cont'd                            | Map Design II: Bootstrap                 | Bootstrap docs, Kosara and Mackinlay (2013) |
 | Wk 06 | Storytelling with Web Map I              | Storytelling with Web Map II             | Lab 5: Story Map                         | Map Design III: User Friendly Design Principles | storymap.js                              |
-| Wk 07 | Time Series                              | Heat Map                                 | Lab 5: Cont'd                            | Veterans Day                             |                                          |
+| Wk 07 | Time Series                              | Heat Map                                 | Lab 5: Cont'd                            | *Veterans Day*                             |                                          |
 | Wk 08 | Map Design IV: Map Critiques             | 3D Web Mapping I: Basics                 | Lab 6:  Thematic Map on the Virtual Globe | 3D Web Mapping II: Build a Virtual Environment |                                          |
-| Wk 09 | 3D Web Mapping III: Thematic Map on a Virtual Globe | Final Project Discussion and Preparation | Lab 6: Cont'd                            | Thanksgiving Break                       |                                          |
+| Wk 09 | 3D Web Mapping III: Thematic Map on a Virtual Globe | Final Project Discussion and Preparation | Lab 6: Cont'd                            | *Thanksgiving Break*                       |                                          |
 | Wk 10 | Emerging Topics on Web Mapping           | Final Project Discussion and Preparation | Final Project Discussion and Preparation | Final Project Presentation               | Elwood et al. (2012), Sui and Zhao (2015) |
 
 ## Technical Requirement
@@ -43,7 +42,6 @@ Html, CSS, Javascript, Markdown and GeoJson
 ### Libraries for Web Mapping
 	
 Jquery, Bootstrap, Leaflet, Storymap.js, cesium
-
 
 <img src="img/logo.png" width="30%" height="30%"></img>
 
