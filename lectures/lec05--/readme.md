@@ -1,4 +1,4 @@
-# Practical Exercise 2: Fundamentals of Web Programming: JavaScript
+# Web Programming Basics II: Javascript
 
 > Winter 2017 | Geography 371 | Geovisualization: Web Mapping
 >

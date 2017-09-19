@@ -1,4 +1,4 @@
-# Web Mapping Architecture
+# System Architecture for Web Mapping
 
 > Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >
@@ -9,7 +9,7 @@
 - Understand the system architecture for web mapping; and
 - Get to know the elements of a web map through examples.
 
-## 1. System architecture for web mapping
+## 1. System architecture
 
 It can take several different physical machines to create, serve, and use a web map. These are often depicted in diagrams as separate levels, or tiers of architecture. In this course, you'll likely use just one machine to play all these roles; however, it's important to understand how the tiers fit together.
 
@@ -68,7 +68,7 @@ Sometimes two tiled layers will work together to form a basemap. For example, yo
 
 ### 2.2 Thematic layers
 
-**Thematic layers (also known as business or operational layers) go on top of the basemap. ** They're the reason people are coming to visit your map. If placed on the basemap, they might not be of interest to everybody, but when placed on your focused web map, they are the main layer of interest. If your map is titled “Farmers markets in Philadelphia,” then farmers markets are your thematic layer. If your map is titled “Migration patterns of North American birds,” then the migration patterns are your thematic layer.
+**Thematic layers (also known as business or operational layers) go on top of the basemap.** They're the reason people are coming to visit your map. If placed on the basemap, they might not be of interest to everybody, but when placed on your focused web map, they are the main layer of interest. If your map is titled “Farmers markets in Philadelphia,” then farmers markets are your thematic layer. If your map is titled “Migration patterns of North American birds,” then the migration patterns are your thematic layer.
 
 Like basemaps, thematic layers are sometimes displayed with tiles; however, this may not always be possible due to the rapidly changing nature of some data. For example, if you need to display the real time positions of police vans, you cannot rely on predrawn tiles and must use some other way to draw the data. There are various web services such as Web Map Service (WMS , it will be covered in a lecture in Week 04) that are designed to draw maps on the fly in this way. You can use these for your thematic layers. Another option is to query the server for all the data and use the browser to draw it. This approach lends itself well to interactive elements such as popups and is described in Lesson 6.
 
@@ -78,7 +78,7 @@ Your map may include several thematic layers that you allow users to toggle on a
 
 ### 2.3 Interactive elements
 
-**Web maps are often equipped with interactive elements that can help you learn more about the layers in the map. ** These can be informational popups that appear when you click a feature, charts and graphs that are drawn in a separate part of the page, slider bars that adjust the time slice of data displayed in the map, and so forth. Some web maps allow you to edit GIS data in real time, or submit a geoprocessing job to the server and see the response drawn on the screen. Others allow you to type a series of stops and view driving directions between each.
+**Web maps are often equipped with interactive elements that can help you learn more about the layers in the map.** These can be informational popups that appear when you click a feature, charts and graphs that are drawn in a separate part of the page, slider bars that adjust the time slice of data displayed in the map, and so forth. Some web maps allow you to edit GIS data in real time, or submit a geoprocessing job to the server and see the response drawn on the screen. Others allow you to type a series of stops and view driving directions between each.
 
 These elements make the map come alive. The key to making an effective web map is to include the interactive elements that are most useful to your audience, without overwhelming them with options or making the tasks too complicated. Even a little bit of housekeeping, such as including user-friendly field aliases in your popups, can go a long way toward making your map approachable and useful.
 
