@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://cesiumjs.org/releases/1.31/Build/Cesium/Widgets/widgets.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://cesiumjs.org/releases/1.31/Build/Cesium/Cesium.js"></script>
+    <title> Noise Complaints in New York City (Jan. to Mar. 2017)</title>
+</head>
+
+<div id="cesiumContainer"></div>
+<div class="legend">
+    <h4> Noise Complaints in New York City </h4>
+    <p><b> # Noise Complaints (Jan. to Mar. 2017) </b></p><br/>
+    <i style="background: #bd0026"></i> <p> 1200+ </p>
+    <i style="background: #f03b20"></i> <p> 651 to 1200 </p>
+    <i style="background: #fd8d3c"></i> <p> 401 to 650 </p>
+    <i style="background: #fecc5c"></i> <p> 261 to 400 </p>
+    <i style="background: #ffffb2"></i> <p> 150 to 260 </p><br/>
+    <p> This 3D thematic map shows the number of noise complaints in New York City according to all the 3-1-1 Service requests from January to March, 2017. The data was directly downloaded from <a href="https://data.cityofnewyork.us/Social-Services/Noise-complaints-since-20151101-w-Unspecified-CB/vjav-8yz5">NYC OpenData</a>. In the United States, 3-1-1 is a special telephone number that provides access to non-emergency municipal services.</p><br/>
+    <p> Virtual globe Lib: cesium.js | BaseMap: Mapbox | Noise Reports: NYC OpenData </p>
+    <p> Author: <a href="http://ceoas.oregonstate.edu/profile/zhao/">Bo Zhao </a>| GEOG 371: Web Mapping | Oregon State University</p>
+</div>
+<script >
+
+    //create a cesium view, and use the mapbox dark map as the base map.
+    var viewer = new Cesium.Viewer('cesiumContainer', {
+            imageryProvider : new Cesium.MapboxImageryProvider({
+                    mapId : 'mapbox.dark',
+                    accessToken : 'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpenh0dG41ZjAyY3gzMXFsdTJqbm5oNmwifQ.ucAGT19EfvxX2EUaHUwAxA'
+        }),
+        vrButton: false,  // virtual reality support
+        infoBox: false, // pick a feature and show its attributes
+        sceneModePicker: false, // 2d, 2.5d and 3d
+        navigationHelpButton: false,
+        baseLayerPicker : false,
+        fullscreenButton: false,
+        geocoder: false,
+        homeButton: false,
+        animation: false,
+        timeline: false
+    });
+
+    viewer.dataSources.removeAll();
+
+    // Set function for color ramp
+    function setColor(density){
+        return density > 1200 ? '#bd0026' :
+               density > 650 ?  '#f03b20' :
+               density > 400 ?  '#fd8d3c' :
+               density > 260 ?  '#fecc5c' :
+                                '#ffffb2' ;
+    }
+
+    var dataSource = Cesium.GeoJsonDataSource.load('assets/nyc_noise.geojson').then(
+        function(dataSource) {
+
+            var p = dataSource.entities.values;
+
+            for (var i = 0; i < p.length; i++) {
+
+                p[i].polygon.material = Cesium.Color.fromCssColorString(setColor(p[i].properties.cnt));
+                p[i].polygon.extrudedHeight = p[i].properties.cnt * p[i].properties.cnt * 0.004 ;
+                p[i].polygon.outline = false;
+            }
+
+            viewer.dataSources.add(dataSource);
+            viewer.zoomTo(dataSource);
+        }
+    );
+
+    // hide the credit banner, however you should credit the map libraries or data somewhere else.
+    document.getElementsByClassName("cesium-widget-credits")[0].style.visibility = "hidden";
+
+
+</script>
+</body>
+</html>

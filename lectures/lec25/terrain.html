@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://cesiumjs.org/releases/1.31/Build/Cesium/Widgets/widgets.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://cesiumjs.org/releases/1.31/Build/Cesium/Cesium.js"></script>
+</head>
+
+<div id="cesiumContainer"></div>
+<script >
+
+    //create a cesium view, and use the mapbox dark map as the base map.
+    var viewer = new Cesium.Viewer('cesiumContainer', {
+        vrButton: true,  // virtual reality support
+        infoBox: false, // pick a feature and show its attributes
+        sceneModePicker: false, // 2d, 2.5d and 3d
+        navigationHelpButton: false,
+        baseLayerPicker : false,
+        fullscreenButton: false,
+        geocoder: false,
+        homeButton: false,
+        animation: false,
+        timeline: false
+    });
+    var terrainProvider = new Cesium.CesiumTerrainProvider({
+        url : '//assets.agi.com/stk-terrain/world'
+    });
+    viewer.terrainProvider = terrainProvider;
+    // hide the credit banner, however you should credit the map elements elsewhere.
+    document.getElementsByClassName("cesium-widget-credits")[0].style.visibility = "hidden";
+
+
+</script>
+</body>
+</html>

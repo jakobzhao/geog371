@@ -1,0 +1,35 @@
+# Uniform Resource Locator
+
+"URL" redirects here. For other uses, see [URL (disambiguation)](https://en.wikipedia.org/wiki/URL_(disambiguation)).
+
+A **Uniform Resource Locator** (**URL**), commonly informally termed a **web address** (a term which is not defined identically)[[1\]](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#cite_note-FOOTNOTEW3C2009-1) is a reference to a [web resource](https://en.wikipedia.org/wiki/Web_resource) that specifies its location on a [computer network](https://en.wikipedia.org/wiki/Computer_network) and a mechanism for retrieving it. A URL is a specific type of [Uniform Resource Identifier (URI)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier),[[2\]](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#cite_note-FOOTNOTERFC_39862005-2) although many people use the two terms interchangeably.[[3\]](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#cite_note-FOOTNOTEJoint_W3C.2FIETF_URI_Planning_Interest_Group2002-3) A URL implies the means to access an indicated resource, which is not true of every URI.[[4\]](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#cite_note-FOOTNOTERFC_23961998-4)[[3\]](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#cite_note-FOOTNOTEJoint_W3C.2FIETF_URI_Planning_Interest_Group2002-3) URLs occur most commonly to reference web pages ([http](https://en.wikipedia.org/wiki/Http)), but are also used for file transfer ([ftp](https://en.wikipedia.org/wiki/File_Transfer_Protocol)), email ([mailto](https://en.wikipedia.org/wiki/Mailto)), database access ([JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity)), and many other applications.
+
+Most [web browsers](https://en.wikipedia.org/wiki/Web_browser) display the URL of a web page above the page in an [address bar](https://en.wikipedia.org/wiki/Address_bar). A typical URL could have the form `http://www.example.com/index.html`, which indicates a protocol (`http`), a [hostname](https://en.wikipedia.org/wiki/Hostname) (`www.example.com`), and a file name (`index.html`).
+
+## Syntax
+
+Main article: [Uniform resource identifier § Syntax](https://en.wikipedia.org/wiki/Uniform_resource_identifier#Syntax)
+
+Every HTTP URL conforms to the syntax of a generic URI. A generic URI is of the form:
+
+```
+ scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]
+
+```
+
+It comprises:
+
+- The **scheme**, consisting of a sequence of characters beginning with a letter and followed by any combination of letters, digits, plus (`+`), period (`.`), or hyphen (`-`). Although schemes are case-insensitive, the canonical form is lowercase and documents that specify schemes must do so with lowercase letters. It is followed by a colon (`:`). Examples of popular schemes include `http`, `ftp`, `mailto`, `file`, `data`, and [irc](https://en.wikipedia.org/wiki/Internet_Relay_Chat#URI_scheme). URI schemes should be registered with the [Internet Assigned Numbers Authority (IANA)](https://en.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority), although non-registered schemes are used in practice.[[a\]](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#cite_note-11)
+- Two slashes (`//`): This is required by some schemes and not required by some others. When the authority component (explained below) is absent, the path component cannot begin with two slashes.[[11\]](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#cite_note-FOOTNOTERFC_39862005.C2.A73-12)
+- An **authority part**, comprising:An optional [authentication](https://en.wikipedia.org/wiki/Authentication) section of a [user name](https://en.wikipedia.org/wiki/User_name) and [password](https://en.wikipedia.org/wiki/Password), separated by a colon, followed by an at symbol (`@`)A "**host**", consisting of either a registered name (including but not limited to a [hostname](https://en.wikipedia.org/wiki/Hostname)), or an [IP address](https://en.wikipedia.org/wiki/IP_address). [IPv4](https://en.wikipedia.org/wiki/IPv4) addresses must be in [dot-decimal notation](https://en.wikipedia.org/wiki/Dot-decimal_notation), and [IPv6](https://en.wikipedia.org/wiki/IPv6) addresses must be enclosed in brackets (`[ ]`).[[12\]](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#cite_note-FOOTNOTERFC_39862005.C2.A73.2.2-13)[[b\]](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#cite_note-15)An optional [port number](https://en.wikipedia.org/wiki/Port_(computer_networking)), separated from the hostname by a colon
+- A **path**, which contains data, usually organized in hierarchical form, that appears as a sequence of segments separated by slashes. Such a sequence may resemble or map exactly to a [file system path](https://en.wikipedia.org/wiki/Path_(computing)), but does not always imply a relation to one.[[14\]](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#cite_note-FOOTNOTERFC_23961998.C2.A73.3-16) The path must begin with a single slash (`/`) if an authority part was present, and may also if one was not, but must not begin with a double slash.
+
+| Query delimiter                          | Example                   |
+| ---------------------------------------- | ------------------------- |
+| Ampersand (`&`)                          | `key1=value1&key2=value2` |
+| Semicolon (`;`)[[c\]](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#cite_note-18)[*incomplete short citation*] | `key1=value1;key2=value2` |
+
+- An optional **query**, separated from the preceding part by a question mark (`?`), containing a [query string](https://en.wikipedia.org/wiki/Query_string) of non-hierarchical data. Its syntax is not well defined, but by convention is most often a sequence of [attribute–value pairs](https://en.wikipedia.org/wiki/Attribute%E2%80%93value_pair) separated by a [delimiter](https://en.wikipedia.org/wiki/Delimiter).
+- An optional **fragment**, separated from the preceding part by a [hash](https://en.wikipedia.org/wiki/Number_sign) (`#`). The fragment contains a [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) providing direction to a secondary resource, such as a section heading in an article identified by the remainder of the URI. When the primary resource is an [HTML](https://en.wikipedia.org/wiki/HTML) document, the fragment is often an [`id` attribute](https://en.wikipedia.org/wiki/HTML#Attributes) of a specific element, and web browsers will scroll this element into view.
+
+A web browser will usually [dereference](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#URI_resolution) a URL by performing an [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) request to the specified host, by default on port number 80. URLs using the `https` scheme require that requests and responses will be made over a [secure connection to the website](https://en.wikipedia.org/wiki/HTTPS).

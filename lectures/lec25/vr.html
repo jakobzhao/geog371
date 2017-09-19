@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://cesiumjs.org/releases/1.31/Build/Cesium/Widgets/widgets.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://cesiumjs.org/releases/1.31/Build/Cesium/Cesium.js"></script>
+</head>
+<div id="cesiumContainer"></div>
+<script >
+
+    //create a cesium view, and use the mapbox dark map as the base map.
+    var viewer = new Cesium.Viewer('cesiumContainer', {
+        imageryProvider : new Cesium.MapboxImageryProvider({
+            mapId : 'mapbox.dark',
+            accessToken : 'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpenh0dG41ZjAyY3gzMXFsdTJqbm5oNmwifQ.ucAGT19EfvxX2EUaHUwAxA'
+        }),
+        vrButton: true,  // virtual reality support
+        infoBox: false, // pick a feature and show its attributes
+        sceneModePicker: true, // 2d, 2.5d and 3d
+        navigationHelpButton: false,
+        baseLayerPicker : false,
+        fullscreenButton: false,
+        geocoder: false,
+        homeButton: false,
+        animation: false,
+        timeline: false
+    });
+
+    var dataSource = Cesium.GeoJsonDataSource.load('assets/counties.geojson').then(
+        function(dataSource) {
+            var p = dataSource.entities.values;
+            for (var i = 0; i < p.length; i++) {
+
+                p[i].polygon.material = Cesium.Color.fromRandom({
+                    alpha : 0.7
+                });
+                p[i].polygon.outline = false;
+
+                p[i].polygon.extrudedHeight = 10000 * p[i].properties.CT_CNT;
+            }
+            viewer.dataSources.add(dataSource);
+            viewer.zoomTo(dataSource);
+        }
+    );
+
+
+    //Set the camera to a US centered tilted view and switch back to moving in world coordinates.
+    //viewer.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
+
+    // hide the credit banner, however you should credit the map elements elsewhere.
+    //document.getElementsByClassName("cesium-widget-credits")[0].style.visibility = "hidden";
+
+
+</script>
+</body>
+</html>

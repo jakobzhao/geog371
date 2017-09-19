@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Use correct character set. -->
+    <meta charset="utf-8">
+    <!-- Tell IE to use the latest, best version. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="http://cesiumjs.org/releases/1.31/Build/Cesium/Widgets/widgets.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://cesiumjs.org/releases/1.31/Build/Cesium/Cesium.js"></script>
+    <script src="js/GeoserverTerrainProvider.js"></script>
+    <style>
+        html, body, #cesiumContainer {
+            width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+        }
+    </style>
+    <title>Terrain Provider: Mt. Jefferson</title>
+</head>
+<body>
+<div id="cesiumContainer"></div>
+<script>
+
+    // create a terrain provider based on geoserver service
+    var terrainProvider = new Cesium.GeoserverTerrainProvider({
+        url : "http://mapio.us/geoserver/ceoas/wms",
+        layerName: "srtm_12_04",
+        styleName:"srtm",
+        waterMask:true
+    });
+
+    //turn off the unused tools.
+    var viewer = new Cesium.Viewer('cesiumContainer', {
+        baseLayerPicker: false,
+        fullscreenButton: false,
+        homeButton: false,
+        infoBox: false,
+        sceneModePicker: false,
+        selectionIndicator: false,
+        timeline: false,
+        navigationHelpButton: false,
+        vrButton: true,
+        geocoder: false,
+        animation: false,
+        terrainProvider : terrainProvider
+    });
+
+    //// The globe must enable lighting to make use of the terrain's vertex normals
+    viewer.scene.globe.enableLighting = true;
+
+</script>
+</body>
+</html>

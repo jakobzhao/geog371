@@ -1,0 +1,333 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>readme.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'><style type='text/css'>html, body {overflow-x: initial !important;}.CodeMirror { height: auto; }
+.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; }
+.CodeMirror-lines { padding: 4px 0px; }
+.CodeMirror pre { }
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler { background-color: white; }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background-color: rgb(247, 247, 247); white-space: nowrap; }
+.CodeMirror-linenumbers { }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.CodeMirror div.CodeMirror-cursor { border-left: 1px solid black; z-index: 3; }
+.CodeMirror div.CodeMirror-secondarycursor { border-left: 1px solid silver; }
+.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor { width: auto; border: 0px; background: rgb(119, 238, 119); z-index: 1; }
+.CodeMirror div.CodeMirror-cursor.CodeMirror-overwrite { }
+.cm-tab { display: inline-block; }
+.cm-s-typora-default .cm-header, .cm-s-typora-default .cm-property { color: rgb(217, 79, 138); }
+.cm-s-typora-default pre.cm-header1:not(.cm-atom) :not(.cm-overlay) { font-size: 2rem; line-height: 2rem; }
+.cm-s-typora-default pre.cm-header2:not(.cm-atom) :not(.cm-overlay) { font-size: 1.4rem; line-height: 1.4rem; }
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number { color: rgb(149, 132, 134); }
+.cm-s-typora-default .cm-table-row, .cm-s-typora-default .cm-block-start { font-family: monospace; }
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code { color: rgb(74, 90, 159); font-family: monospace; }
+.cm-s-typora-default .cm-tag { color: rgb(169, 68, 66); }
+.cm-s-typora-default .cm-string { color: rgb(126, 134, 169); }
+.cm-s-typora-default .cm-link { color: rgb(196, 122, 15); text-decoration: underline; }
+.cm-s-typora-default .cm-variable-2, .cm-s-typora-default .cm-variable-1 { color: inherit; }
+.cm-s-typora-default .cm-overlay { font-size: 1rem; font-family: monospace; }
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor { border-left: 3px solid rgb(228, 98, 154); }
+.cm-s-typora-default .CodeMirror-activeline-background { left: -60px; right: -30px; background: rgba(204, 204, 204, 0.2); }
+.cm-s-typora-default .CodeMirror-gutters { border-right: none; background-color: inherit; }
+.cm-s-typora-default .cm-trailing-space-new-line::after, .cm-startspace::after, .cm-starttab .cm-tab::after { content: "•"; position: absolute; left: 0px; opacity: 0; font-family: LetterGothicStd, monospace; }
+.os-windows .cm-startspace::after, .os-windows .cm-starttab .cm-tab::after { left: -0.1em; }
+.cm-starttab .cm-tab::after { content: " "; }
+.cm-startspace, .cm-tab, .cm-starttab, .cm-trailing-space-a, .cm-trailing-space-b, .cm-trailing-space-new-line { font-family: monospace; position: relative; }
+.cm-s-typora-default .cm-trailing-space-new-line::after { content: "↓"; opacity: 0.3; }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: black; }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-property { color: black; }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: blue; }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: bold; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: rgb(255, 0, 0); }
+.cm-invalidchar { color: rgb(255, 0, 0); }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { margin-bottom: -30px; margin-right: -30px; padding-bottom: 30px; padding-right: 30px; height: 100%; outline: none; position: relative; box-sizing: content-box; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow-x: hidden; overflow-y: scroll; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow-y: hidden; overflow-x: scroll; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: transparent; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-widget { }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.CodeMirror-selected { background: rgb(217, 217, 217); }
+.CodeMirror-focused .CodeMirror-selected { background: rgb(215, 212, 240); }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+.CodeMirror span { }
+@media print { 
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+.CodeMirror-lint-markers { width: 16px; }
+.CodeMirror-lint-tooltip { background-color: infobackground; border: 1px solid black; border-radius: 4px; color: infotext; font-family: monospace; overflow: hidden; padding: 2px 5px; position: fixed; white-space: pre-wrap; z-index: 10000; max-width: 600px; opacity: 0; transition: opacity 0.4s; font-size: 0.8em; }
+.CodeMirror-lint-mark-error, .CodeMirror-lint-mark-warning { background-position: left bottom; background-repeat: repeat-x; }
+.CodeMirror-lint-mark-error { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sJDw4cOCW1/KIAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAHElEQVQI12NggIL/DAz/GdA5/xkY/qPKMDAwAADLZwf5rvm+LQAAAABJRU5ErkJggg=="); }
+.CodeMirror-lint-marker-error, .CodeMirror-lint-marker-warning { background-position: center center; background-repeat: no-repeat; cursor: pointer; display: inline-block; height: 16px; width: 16px; vertical-align: middle; position: relative; }
+.CodeMirror-lint-message-error, .CodeMirror-lint-message-warning { padding-left: 18px; background-position: left top; background-repeat: no-repeat; }
+.CodeMirror-lint-marker-error, .CodeMirror-lint-message-error { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAHlBMVEW7AAC7AACxAAC7AAC7AAAAAAC4AAC5AAD///+7AAAUdclpAAAABnRSTlMXnORSiwCK0ZKSAAAATUlEQVR42mWPOQ7AQAgDuQLx/z8csYRmPRIFIwRGnosRrpamvkKi0FTIiMASR3hhKW+hAN6/tIWhu9PDWiTGNEkTtIOucA5Oyr9ckPgAWm0GPBog6v4AAAAASUVORK5CYII="); }
+.CodeMirror-lint-marker-warning, .CodeMirror-lint-message-warning { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAANlBMVEX/uwDvrwD/uwD/uwD/uwD/uwD/uwD/uwD/uwD6twD/uwAAAADurwD2tQD7uAD+ugAAAAD/uwDhmeTRAAAADHRSTlMJ8mN1EYcbmiixgACm7WbuAAAAVklEQVR42n3PUQqAIBBFUU1LLc3u/jdbOJoW1P08DA9Gba8+YWJ6gNJoNYIBzAA2chBth5kLmG9YUoG0NHAUwFXwO9LuBQL1giCQb8gC9Oro2vp5rncCIY8L8uEx5ZkAAAAASUVORK5CYII="); }
+.CodeMirror-lint-marker-multiple { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAMAAADzjKfhAAAACVBMVEUAAAAAAAC/v7914kyHAAAAAXRSTlMAQObYZgAAACNJREFUeNo1ioEJAAAIwmz/H90iFFSGJgFMe3gaLZ0od+9/AQZ0ADosbYraAAAAAElFTkSuQmCC"); background-repeat: no-repeat; background-position: right bottom; width: 100%; height: 100%; }
+
+
+html { font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { background: rgb(181, 214, 252); text-shadow: none; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: auto; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+.typora-export #write { margin: 0px auto; }
+#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
+#write li > table:first-child { margin-top: -20px; }
+img { max-width: 100%; vertical-align: middle; }
+input, button, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+::before, ::after, * { box-sizing: border-box; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
+a { cursor: pointer; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
+.footnotes + .footnotes { margin-top: -1em; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li p, li .mathjax-block { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
+@media print { 
+  html, body { height: 100%; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
+  p { orphans: 4; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0mm; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
+.task-list { list-style-type: none; }
+.task-list-item { position: relative; padding-left: 1em; }
+.task-list-item input { position: absolute; top: 0px; left: 0px; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc::after, .md-toc-content::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+.md-tag { opacity: 0.5; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: monospace; }
+code { text-align: left; }
+h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
+a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background: transparent !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border-width: 0px 0px 1px; border-style: none none solid; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; overflow: hidden; box-sizing: content-box; border-bottom-color: rgb(221, 221, 221); }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(221, 221, 221); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+#write { overflow-x: auto; }
+table tr { border-top: 1px solid rgb(204, 204, 204); background-color: white; margin: 0px; padding: 0px; }
+table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); }
+.md-fences, code, tt { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 32px; }
+.task-list-item input { top: 3px; left: 8px; }
+@media screen and (min-width: 914px) { 
+}
+@media print { 
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border: 1px solid rgb(221, 221, 221); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; color: inherit; }
+.md-tag { color: inherit; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+#md-notification::before { top: 10px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.117647); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+
+
+
+
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-node'><h1><a name='header-c1' class='md-header-anchor '></a>Practical Exercise 1: First Web Map Using Google My Maps</h1><blockquote><p>Winter 2017 | Geography 371 | Geovisualization: Web Mapping</p><p>Instructor: Bo Zhao | TA: Andy Wilson | Location: 210 Wilkinson | Time: Thursday 2-3:50pm</p><p>Assigned: 01/12/2017 | Due: <code>01/19/2017 @11:59pm</code> | Points Available = 50</p></blockquote><p>Welcome to the lab session of Geog 371! The first lab helps you get familiar with the lab (Digital lab @OSU), the software setup, and the structure of the lab session. In addition, this lab helps you build up your first web mapping application. The objectives of this practical exercise are:</p><ul><li>Get to know the Digital Lab @ OSU.</li><li>Create a web map using Google My Maps.</li><li>Create, manage and export geospatial data.</li><li>Share a web map to public.</li></ul><h2><a name='header-c20' class='md-header-anchor '></a>1. Introduction</h2><p>Specifically, your first web map application will be built upon <a href='https://www.google.com/maps/d'>Google My Maps</a>. This application allows you create a customized map, create geospatial data of various types (e.g., point, polyline, polygon, etc.), manage the map layers, export standard geospatial data for reuse, and share your map to public. Let&#39;s first explore the Lab environment and the software setup for this course.</p><h3><a name='header-c23' class='md-header-anchor '></a>1.1 Digital Earth Lab @ Oregon State University</h3><p>Digital Earth Lab is a teaching facility primarily for GIS, remote sensing, cartography, numerical analysis, and scientific visualization. The classroom is a facility of the OSU College of Earth, Ocean, and Atmospheric Science and is supported by the OSU Media Services. The lab was originally funded by a NASA infrastructure grant to Sherm Bloomer (professor &amp; Dean, College of Science) and Nick Pisias (professor &amp; former associate dean of COAS). Digital Earth is located in 210 Wilkinson Hall and is one of the most advanced teaching facilities on the Oregon State campus. We have been operational since the beginning of Spring term, 1999.</p><p>The lab generally opens 8am-5pm , a detailed schedule can be found at <a href='http://dusk.geo.orst.edu/de/de_teach.html.' target='_blank' >http://dusk.geo.orst.edu/de/de_teach.html.</a> The manager of the facility is COry Langhoff. If you need afterhours access, contact Cory Langhoff <a href='mailto:langhofc@oregonstate.edu' target='_blank' >langhofc@oregonstate.edu</a>, or dial 7-2532 to make arrangements. Please ahead of time.</p><h3><a name='header-c28' class='md-header-anchor '></a>1.2 Software Setup</h3><p>This course relies on a series of professional software and web applications to make, debug, and browse web maps, including:</p><ul><li><strong>Webstorm:</strong> A web mapping programming development environment;</li><li><strong>GeoServer:</strong> An integrated platform for web mapping services;</li><li><strong>QGIS:</strong> An open source GIS desktop;</li><li><strong>Chrome:</strong> A Web browser;</li><li><strong>Google Earth Pro:</strong> A three-dimensional virtual globe with various geopstial data;</li><li><strong>Google My Maps:</strong> A handy Web Mapping application which allows its user to create, edit, export and share web maps.</li></ul><p>Okay, now let us get started! The first web map is to visualize an arbitrary OSU student&#39;s activity in a day. To do that, a time table of the student&#39;s daily activity in Januanry 12th, 2017 is shown below.</p><table><thead><tr><th>Location</th><th>Time</th><th>Description</th></tr></thead><tbody><tr><td>Park West Apartments</td><td>0600 to 0759</td><td>Getting up, washing, and breakfast</td></tr><tr><td>On the way to campus</td><td>0800 to 0815</td><td>Riding a bike to campus</td></tr><tr><td>Valley Library</td><td>0816 to 1259</td><td>Studying in the library</td></tr><tr><td>On the way to cafeteria</td><td>1300 to 1310</td><td>Walking to Monroe Avenue</td></tr><tr><td>Local Boyz Hawaiian Café</td><td>1311 to 13:49</td><td>Lunch</td></tr><tr><td>On the way back to campus</td><td>1350 to 1359</td><td>Walking back to campus</td></tr><tr><td>Wilkison Hall</td><td>1400 to 1450</td><td>Taking a class</td></tr><tr><td>On the way back home</td><td>1451 to 1505</td><td>Riding back home</td></tr><tr><td>Park West Apartments</td><td>15:06 to 0599 of the next day</td><td>Supper, family time, and sleep.</td></tr></tbody></table><h2><a name='header-c93' class='md-header-anchor '></a>2. Create a map on Google My Maps</h2><p>Create custom maps to share and publish online with Google My Maps. You can make maps that show different kinds of information.</p><h3><a name='header-c96' class='md-header-anchor '></a>2.1 Create a new map</h3><p>1. Open Google My Maps <a href='https://mymaps.google.com/.' target='_blank' >https://mymaps.google.com/.</a></p><p>2. Sign in with your Google Account.</p><p>3. Click <code>Create a new map</code>.</p><p><img src='img/create_a_new_map.png' alt='' /></p><h3><a name='header-c105' class='md-header-anchor '></a>2.2 Title your map</h3><p>1. Click <code>Untitled map</code> at the top of the left panel.</p><p><img src='img/click_untitled_map.png' alt='' /></p><p>2. Add a map title and description. These details will appear when you open the map again or share it with others.</p><p><img src='img/title_desc.png' alt='' /></p><p>3. Press <code>Save</code>.</p><p>4. click on the layer title <code>Untitled layer</code>, and change the title to <code>Jan 12, 2017</code></p><h2><a name='header-c118' class='md-header-anchor '></a>3. Add places and search results</h2><p> Let us zoom in to the region of oregon state university on the map.</p><h3><a name='header-c121' class='md-header-anchor '></a>3.1 Draw to add a place</h3><p>1. In the toolbar, click Add marker <img src='img/marker.png' alt='' /> . Your cursor changes into a “+”.</p><p>2. Click on the map where you want to place your marker. For example, click on the valley library. An info window will pop up.</p><p><img src='img/valley_lib.png' alt='' /></p><p>3. In the info window, add a title and description.</p><p><img src='img/info_win.png' alt='' /></p><p>4. To save, click Save or press Enter.</p><p>5. In addition to simply drawing markers, you may also want to add markers by searching for the name of a specific place, like a restaurant, hotel, or museum to add to your map. For example, if you are not familiar with &quot;Park West Apartment&quot;, type it in the Searchbox.</p><p><img src='img/search_term.png' alt='' /></p><p>6. After you press the search button, A new, non-permanent layer entitled “Park West Apartments” will automatically appear in the left panel and your results will show as green pins on the map.</p><p>7. To add that pin to your layers, click the result. Then click <code>Add to map</code>.</p><p><img src='img/add_search_result.png' alt='' /></p><p>You can add up to <code>2,000</code> map features per layer.</p><p>8. Remove the default marker info by click <code>Remove</code>, and then fill customized info in the time table.</p><p><img src='img/pwa.png' alt='' /></p><p>9. Following the same procedure, add Local Boyz Hawaiian Cafe and Wilkinson Hall.</p><p><img src='img/pnts.png' alt='' /></p><h3><a name='header-c154' class='md-header-anchor '></a>3.2 Add a lines and shapes</h3><p>Using Google My Maps, we can add lines and shapes to your map to trace your roadtrip, keep track of your property line, or box off a neighborhood you want to live in. Now let us add the routes between each two locations.</p><p>1. In the toolbar, click the line or shape icon draw a line or shape <img src='img/polyline.png' alt='' />. There is a list of options, click `Add line or shape&#39;.</p><p>2. Your cursor changes to a “+”. Move the cursor to where you want to start drawing, then click once. For example, let us draw the route from Park West Apartment to the Valley Library.</p><p>3. Click at each point of your line or shape. The more you click, the more precise your line or shape will be. To move the map, click and hold the mouse.</p><p><img src='img/draw_route.png' alt='' /></p><p>4. To finish drawing your line, double click on the last point. And also fill in the popuped up info window to describe the route. If you did not see the popupped up info window, click on the polyline you have just drawn. <em>PS: To finish drawing your shape, click on the starting point.</em></p><p><img src='img/line_info_win.png' alt='' /></p><p>5. To save, Hit <code>Save</code> button.</p><p><img src='img/route_info.png' alt='' /></p><p>6. Following the same procedure, please draw other routes according to the time table. Then we can get a map as shown below.</p><p><img src='img/all_elements.png' alt='' /></p><blockquote><p><strong>Note: You can also add walking, driving or biking routs along roads:</strong></p><ol start='' ><li>In the toolbar, click the line or shape icon draw a line or shape <img src='img/polyline.png' alt='' />. There is a list of options, click `Add line or shape&#39;.</li><li>Whether you want driving, biking, or walking directions, click one of the <code>Add route</code> options. A new layer will be created.</li><li>Click once to mark your starting point.</li><li>Click at each point of your route. The more you click, the more precise your route will be. To pan the map, click and hold the mouse then move your cursor to the corner of the map.</li><li>To finish adding your directions route, double click on your final destination.</li></ol></blockquote><blockquote><p><strong>Why are my lines curved?</strong> If you&#39;ve used My Maps in the past, you may notice that straight lines or shapes you added previously now have a curved appearance. We use the Mercator projection to unwrap and flatten the earth’s curved surface into the flat representation used in My Maps. Previously, lines and polygons were directly drawn on top of the flat map. Now, they will follow the shortest path between their endpoints on the earth’s surface. This is why they may appear curved on the map, especially for lines longer than 200 miles towards the North and South poles.</p></blockquote><h3><a name='header-c200' class='md-header-anchor '></a>3.3 Add photos and more to your map</h3><p>Types of content you can add:</p><ul><li>Photos and videos;</li><li>Extra info, like a description, price, or website;</li><li>Text notes about places on the map.</li></ul><p>1. Click on the marker of valley library, In the box that appears on the map, click the <code>camera icon</code>​​.</p><p><img src='img/add_img.png' alt='' /></p><p>2. Choose how you want to add a photo or video. To add more photos or videos, click the + button. To remove a photo or video, click <code>delete</code>. Let us drag the image named valley_library.png from the assets folder or select the file from your computer.</p><p><img src='img/open_a_img.png' alt='' /></p><p>3. Click <code>Save</code>, then you will see.</p><p><img src='img/img_in_info_win.png' alt='' /></p><p>4. Following the same procedure, we add pictures for the other locations.</p><h2><a name='header-c227' class='md-header-anchor '></a>4. Style your placemarks, lines, and shapes</h2><p>You can style all your items in a layer together, or style them separately.</p><p>1. Click <code>Indiviudal styles</code> below the layer title.</p><p><img src='img/dropdown_list.png' alt='' /></p><p>2. Under the <code>Set labels</code> option, click on dropdown list, and select &quot;name&quot;, in this way, the name of marker or polyline is used as the label.</p><p>3. Under the <code>Group places by</code> option, you can select how you want to style your layer content:</p><p><img src='img/change_styles.png' alt='' /></p><p>There are several items in the dropdown list:</p><pre class='md-fences mock-cm' style='display:block;position:relative'>- `Uniform style` - This choice makes all the content looks the same but allows you to change the color and icon shape of the places at once.
+- `Sequence of numbers` - This choice automatically assigns a number to each placemark icon, keeping the same order as Individual styles. The numbers follow the same order as the map legend. To change the number of a placemark, change its order in the legend by dragging. In this mode, you have the option to assign any color to your icons.
+- `Individual styles` - This choice gives you the option to color all of your content one by one, and give them all different styling.
+- `Style by data column` - This choice gives you the option to use a data column to group your data for styling. Click one of the column titles to select it, then click the radio button next to the type of style:
+
+    - `Range` - This option breaks up your numeric data set into up to 8 buckets. You have the option to have this displayed in a gradient or assign each respective bucket a unique color.
+    - `Categories` - This option groups your data into matching attributes and sorts them in descending order by amount of map content present.</pre><p>try each of the options under the dropdown list, and see the difference of the styles of markers and polylines.</p><p>You can also style individual marker or polyline.</p><p>1. Let us choose <code>Individual styles</code>.</p><p>2. Hover on the piece of content in the left panel you want to style. For example, hover on The Valley Library. The color button <img src='img/color.png' alt='Color' /> will appear.</p><p>3. Click the color button <img src='img/color.png' alt='Color' /> to change the style.</p><pre class='md-fences mock-cm' style='display:block;position:relative'>- Select &#39;orange&#39; color, and;</pre><p><img src='img/select_color.png' alt='' /></p><pre class='md-fences mock-cm' style='display:block;position:relative'>- Click `More icons`, in the filter box, type &quot;library&quot;, and then select the `library` icon. press &quot;OK&quot;.</pre><p><img src='img/select_icon.png' alt='' /></p><p>4. Following the same procedure, we change all the icons into orange color, set the Part West apartment as <code>house</code> icon, the Local Boyz cafe as <code>restaurant</code> icon, and the Wilkinson hall as <code>university</code> icon. Moreover, we set the color of all polylines as &quot;Blue&quot;, and widen them.</p><p><img src='img/map_view_1.png' alt='' /></p><blockquote><p><strong>You can also add a custom icon</strong></p><p>You can add your own icons for map placemarks if you’d like to use an image that’s not already available. For example, add an icon that represents your store to mark locations on the map. Your custom icon must be a live link on the web. You can upload a .jpg, .png, .bmp, or .gif file of any size to an image hosting website, like imgur.com. My Maps will scale the icon to the right size, which is <code>32x32 pixels</code>.</p><p>If you want to use an icon with a transparent background, create your custom icon in RGB color mode. Icons with a transparent background created in Indexed color mode won&#39;t work. Custom icons are available only for the map you add them to. They aren&#39;t stored in the list of available icons for later use.</p></blockquote><p><strong>Change map base layer</strong></p><p>To enable the map readers focus on the main feature of the map (the daily activity path), we need to swtich to another base map layer.</p><p>1. Click on the <code>Base map</code> on the legend panel on the left.</p><p>2. Choose the &quot;mono city&quot; base map layer.</p><p><img src='img/base_map_layer.png' alt='' /></p><p>3. In the end, you will see a web map like this.</p><p><img src='img/map_view_2.png' alt='' /></p><h2><a name='header-c284' class='md-header-anchor '></a>5.Export and share a map</h2><p>You can export and download an entire map or just some information on it. That way, you can import and see your geographical data in other apps. For example, on a map with cross-country driving directions and restaurants along the way, download just the directions so you can visualize it in Google Earth.</p><h3><a name='header-c287' class='md-header-anchor '></a>5.1 Export your map&#39;s data</h3><p>1. In the left panel, click Menu .</p><p><img src='img/open_menu.png' alt='' /></p><p>2. Select <code>Export to KML</code> to export,  and make sure you export the <code>Entire map</code>.</p><p>3. To download without the custom icons, check <code>Export to a .KML file instead of .KMZ</code>. In this practical exercise, do not check the box, you will export a KMZ file.</p><p>4. Click <code>Download</code> button and a KMZ file will be downloaded.</p><blockquote><p><strong>Note:</strong> A KMZ map link updates about every 10 minutes. If you see a delay in updates, check back shortly.</p></blockquote><p>5. Make sure the computer you are working with right now has installed <code>Google Earth Pro</code>. If installed, open this software, and navigate from the main menu file-&gt; open.</p><p><img src='img/open_gep.png' alt='' /></p><p>6. In the open dialog, select the downloaded KMZ file and open. Then you can see the KMZ file is properly loaded.</p><p><img src='img/gep.png' alt='' /></p><h3><a name='header-c309' class='md-header-anchor '></a>5.2 Share your maps</h3><p>Show a map to others, or crowdsource information from your community or team to make your map even more powerful. Once you’ve granted access to your recipients, you can share in a few ways:</p><ul><li>Use the URL itself.</li><li>Share a link via Gmail, Google+, Facebook, or Twitter.</li><li>Add names of Google Contacts, email addresses, or Google Groups to allow others to view or edit.</li></ul><p>To share your map,</p><p>1. In the left panel, click the <code>Share</code> button <img src='img/share.png' alt='' />.</p><p>2. To share the map more widely, click <code>Change</code>.</p><p><img src='img/change_access_right.png' alt='' /></p><p>3. Then choose your visibility and access settings. Choose the <code>On - Anyone with the link</code> option, and make sure the access right is <code>Can view</code>.</p><p><img src='img/link_share.png' alt='' /></p><p>4. you can view this web map by visiting the url link <a href='https://drive.google.com/open?id=1-jUjp3rEx8h0q1OdC3MBYUbmZm0&usp=sharing'>https://drive.google.com/open?id=1-jUjp3rEx8h0q1OdC3MBYUbmZm0&amp;usp=sharing</a>.</p><blockquote><p><strong>Permissions and privacy</strong></p><p>All maps are private by default, so only you (the owner and creator) can view or edit it. However, you can allow other My Maps users to view or edit your shared maps.</p><p>To allow others to change permissions, click Change in the small font at the bottom of the share menu. Here, you can allow other editors to add people and change permissions.</p></blockquote><h2><a name='header-c343' class='md-header-anchor '></a>6. Deliverable</h2><h3><a name='header-c344' class='md-header-anchor '></a>6.1 How to save your work</h3><p>In the lab environment, it is essential that you frequently save your work. Many hours of work may be lost if you forget to save, the computer crashes, or you forget to take your work with you. Therefore please follow the simple procedures below for saving your work.</p><p>1.	Work on your local machine</p><p>Often working across a network or to a zip drive can be very time consuming. Therefore, work on your local machine and then you can cut and save your result into your flash drive if you want.</p><ul><li><p>First create a folder on the c:\ drive.
+-Name it using the following convention: XXX_GEOG371<em>PE# where XXX are your initials and # is the PE # (e.g. BZ_GEOG371</em>PE1).
+-Make sure there are NO spaces in your folder name. The example uses the underscore _ character, which works fine to add a space for clarity.</p><p>2.Save your work</p><p>-Save all of your work in your newly created folder on the c:\ XXX_GEOG371_PE# drive location.
+-Feel free to create new folders under your folder, just make sure there are NO spaces in your folder/file names.</p><p>3.Copy your work to a removable device (BACKUP!!!)</p><p>-When you are finished, or at a stopping point for the day, insert your jump drive into the computer and copy your c:\ XXX_GEOG371_PE#  folder onto your jump drive. This will ensure that everything in your folder is copied and backed-up.
+-Remove your removable media and take it with you.
+-If you don’t have a jump drive, you can also ZIP your workspace folder up and email it to you, or your Google drive.</p><p>4.Working at a new workstation</p></li></ul><p>Now that you have all of your work saved on your removable media, for whichever workstation you choose to work on, all you need to do is copy your folder (XXX_GEOG371_PE#) to the c:\ drive. This will ensure all of your files are present on the local drive AS WELL AS your path names of your folders and files are the same as when you saved them.</p><h3><a name='header-c372' class='md-header-anchor '></a>6.2 Questions for this Practical Exercise</h3><p>Please create a PE report as a word document, and answer all the following questions in the PE report.</p><p><strong>Question 1.</strong> Please follow the steps above and make the daily activity path using Google My Maps. You may need to make the web map publicly visible. In the end, copy and paste the url link of the web map in the Word Document. (5 points)</p><p><strong>Question 2.</strong> Choose a topic of your interest, and make a web map based on what you have learned from this lab. We would like to see how well the web map you made may deliver the topic, have you used multiple types of geographic features (points, lines, polygons), have you attached descriptions and pictures to the geographic features. Again, make this map publicly visible, and share the url link of the web map in the Word Document. (25 points)</p><p><strong>Question 3.</strong> please export the kml/kmz data of the web map you made in Question 2, and open the data in Google Earth Pro. Zoom into to the region of the extent of your data, and take a screenshot and insert the screenshot in a Word Document.  (5 points)</p><p><strong>Question 4.</strong> Please reflect on how google my maps may assist you on your own research of interest. (15 points)</p><p><img src='img/submission.png' alt='' /></p><p>Once you finish this PE, you need to submit the PE report to <strong>Canvas Dropbox</strong>. On the assignment tab,  check the item of this PE, press the <code>Submit Assignment</code> button to submit your PE report. Please contact the instructor or TA if you have any difficulty. Note: only submit your PE report in Word or PDF format.</p></div>
+</body>
+</html>

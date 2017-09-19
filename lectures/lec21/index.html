@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cell Tower Heat Map </title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="http://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+<div id="map" style="width: 900px; height: 600px"></div>
+<script>
+
+    var map = L.map('map').setView([44.1, -120.5], 7);
+
+    L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; \<a href="http://openstreetmap.org"\>OpenStreetMap\</a\> Contributors',
+        maxZoom: 18,
+    }).addTo(map);
+
+    var heat = null;
+    // Get GeoJSON and put on it on the map when it loads
+    $.getJSON("assets/cell_towers.geojson",function(data){
+        // set cellTowers to the dataset, and add the cell towers GeoJSON layer to the map
+        cell_tower_data = [];
+        for (var i = 0; i < data.features.length; i++ ) {
+            cell_tower_data[i] = [data.features[i].geometry.coordinates[0][1], data.features[i].geometry.coordinates[0][0]]
+        }
+
+        heat = L.heatLayer(cell_tower_data,{
+            radius: 35,
+            blur: 10,
+            maxZoom: 17,
+            gradient: {0.05: 'blue', 0.25: 'lime',  0.27: 'yellow', 0.3: 'red'}
+        }).addTo(map);
+    });
+
+</script>
+</body>
+</html>

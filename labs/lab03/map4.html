@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cell Towers in Oregon (2009)</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+<!-- Our web map and content will go here -->
+<div id="wrapper">
+    <div id="map" style="width: 900px; height: 600px;"></div>
+    <div id ="controls">
+        <div id="credits"><p> Winter 2017 | GEOG 371 | Geovisualization: Web Mapping &copy; Bo Zhao, CEOAS, OSU</p></div>
+    </div>
+</div>
+<script>
+
+    /**
+     * Created by jakob on 1/2/2017.
+     */
+
+    var mymap = L.map('map', {center: [44.13, -119.93], zoom: 7});
+
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
+        maxZoom: 11,
+        minZoom: 6,
+        attribution: 'Cell Tower Data &copy; Map Cruzin | Oregon counties &copy; Oregon Explorer | Base Map &copy; Mapbox',
+        id: 'mapbox.light'
+    }).addTo(mymap);
+
+    // Create Custom Icons Here
+    var TowerIcon = L.Icon.extend({
+        options:{
+            shadowUrl: 'img/ct_sd.png',
+            iconSize: [18,18],
+            shadowSize: [25,18],
+            iconAnchor: [16, 16],
+            shadowAnchor: [16, 16],
+            popupAnchor: [-8, -18]
+        }
+    });
+
+    var tower1Icon = new TowerIcon({iconUrl: 'img/ct1.png'});
+    var tower2Icon = new TowerIcon({iconUrl: 'img/ct2.png'});
+    var tower3Icon = new TowerIcon({iconUrl: 'img/ct3.png'});
+    var tower4Icon = new TowerIcon({iconUrl: 'img/ct4.png'});
+    var tower5Icon = new TowerIcon({iconUrl: 'img/ct5.png'});
+    var tower6Icon = new TowerIcon({iconUrl: 'img/ct6.png'});
+    var tower7Icon = new TowerIcon({iconUrl: 'img/ct7.png'});
+    var tower8Icon = new TowerIcon({iconUrl: 'img/ct8.png'});
+    var tower9Icon = new TowerIcon({iconUrl: 'img/ct9.png'});
+
+
+    var cellTowers = null;
+    <!--dwqewqeqw-->
+
+    //Get GeoJSON and put on it on the map when it loads
+    $.getJSON("assets/cell_towers.geojson", function(data){
+        // add the cell tower GeoJSON layer to the map
+        cellTowers = L.geoJson(data,{
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(feature.properties.company);
+            }, pointToLayer: function (feature, latlng) {
+                var marker = null;
+                if (feature.properties.company == "New Cingular"){
+                    marker = L.marker(latlng,{icon: tower1Icon});
+                } else if (feature.properties.company == "Cello"){
+                    marker = L.marker(latlng,{icon: tower2Icon});
+                } else if (feature.properties.company == "Hood River Cellular"){
+                    marker = L.marker(latlng,{icon: tower3Icon});
+                } else if (feature.properties.company == "Medford Cellular"){
+                    marker = L.marker(latlng,{icon: tower4Icon});
+                } else if (feature.properties.company == "Verizon"){
+                    marker = L.marker(latlng,{icon: tower5Icon});
+                } else if (feature.properties.company == "Oregon RSA"){
+                    marker = L.marker(latlng,{icon: tower6Icon});
+                } else if (feature.properties.company == "RSS Minnesota"){
+                    marker = L.marker(latlng,{icon: tower7Icon});
+                } else if (feature.properties.company == "Salem Cellular"){
+                    marker = L.marker(latlng,{icon: tower8Icon});
+                } else {
+                    marker = L.marker(latlng,{icon: tower9Icon});
+                }
+                return marker;
+            }
+        }).addTo(mymap);
+    });
+
+    // Set function for color ramp
+    function setColor(density){
+        return density > 18 ? '#b30000' :
+            density > 13 ? '#e34a33' :
+                density > 10 ? '#fc8d59' :
+                    density >  5 ? '#fdcc8a' :
+                        '#fef0d9';
+    }
+
+    // Set style function that sets fill color property equal to cell tower density
+    function style(feature) {
+        return {
+            fillColor: setColor(feature.properties.CT_CNT),
+            fillOpacity: 0.2,
+            weight: 2,
+            opacity: 1,
+            color: '#ffffff',
+            dashArray: '4'
+        };
+    }
+
+     //Null variable that will hold neighborhoods layer
+    var countiesLayer = null;
+
+    // Add Neighborhood Polygons
+    $.getJSON("assets/counties.geojson",function(data){
+        countiesLayer = L.geoJson(data, {style: style}).addTo(mymap);
+    });
+
+    //    var countiesLayer2 = null;
+    //    var API = "http://128.193.64.28:8080/geoserver/ceoas/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ceoas:Oregon%20Counties&maxFeatures=50&outputFormat=application%2Fjson"
+    //    $.getJSON( API, {
+    //        format: "json"
+    //    })
+    //        .success(function(data){
+    //        countiesLayer2 = L.geoJson(data).addTo(mymap);
+    //    });
+
+</script>
+</body>
+</html>
