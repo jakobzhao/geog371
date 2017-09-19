@@ -43,6 +43,6 @@ Html, CSS, Javascript, Markdown and GeoJson
 	
 Jquery, Bootstrap, Leaflet, Storymap.js, cesium
 
-<img src="img/logo.png" width="30%" height="30%"></img>
+<img src="img/logo.png" width="30%" height="30%" />
 
 This course material is maintained by the [Cartography and Geovisualization Group at Oregon State University](http://geoviz.ceoas.oregonstate.edu). 
