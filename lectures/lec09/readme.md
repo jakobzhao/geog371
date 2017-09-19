@@ -1,8 +1,8 @@
 # Map Client III: Web Map Interaction
 
-> Winter 2017 | Geography 371 | Geovisualization: Web Mapping
+> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >
-> Instructor: Bo Zhao | TA: Andy Wilson | Location: 235 Wilkinson | Time: Friday 2-2:50pm
+> Instructor: Bo Zhao | Location: 235 Wilkinson | Time: Wednesday 1200 to 1250
 
 **Learning Objectives**
 

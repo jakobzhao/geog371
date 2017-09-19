@@ -1,8 +1,8 @@
 # GEOG 371: Web Mapping
 >
->Instructor: Bo Zhao, zhao2@oregonstate.edu | Office Hours: 2-3pm W or by appointment @ Strand Ag 347
+>Instructor: Bo Zhao, zhao2@oregonstate.edu | Office Hours: 1400 to 1500 W or by appointment @ Strand Ag 347
 >
->Lecture: MWF 12-12:50pm @WLKN 235 | Lab: Th 10-11:50am @WLKN 210
+>Lecture: MWF 1200 to 1250 @WLKN 235 | Lab: Th 1000 to 1150 @WLKN 210
 >
 >Catalog course description: GEOVISUALIZATION: WEB MAPPING (4).
 >Current developments in Internet mapping and advanced cartographic skills applied to web-based maps. Techniques of Internet mapping and principles of web-based cartography, including multimedia, animation, 3D visualization, and user interface design. PREREQS: GEOG 201 or GEO 301.
