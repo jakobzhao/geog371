@@ -7,7 +7,7 @@
 >Catalog course description: GEOVISUALIZATION: WEB MAPPING (4).
 >Current developments in Internet mapping and advanced cartographic skills applied to web-based maps. Techniques of Internet mapping and principles of web-based cartography, including multimedia, animation, 3D visualization, and user interface design. PREREQS: GEOG 201 or GEO 301.
 
-Welcome to GEOG 371: Web Mapping :gift_heart:! This course introduces current developments of Internet mapping and advanced cartographic skills in web mapping.  By using virtual globe libraries (Cesium), open source mapping clients (Leaflet) and web mapping services (Mapbox, GeoServer), students can learn both the techniques of Internet mapping and the principles of web-based cartography, including multimedia, animation, 3D visualization, and user interface design. The lectures will focus on the theories and principles behind the Internet mapping, including distributed component technologies, graphic designs, and network communications. The lab exercises will focus on the practical applications and web design skills for Internet mapping services. The mid-term focuses on basic web mapping concepts and programming techniques. There is no final exam, but each student is required to design a web interactive map and deploy it to an openly accessible server. Feel free to contact Prof. Zhao for more information.
+Welcome to GEOG 371: Web Mapping :gift_heart:! This course introduces current developments in web mapping and advanced cartographic skills applied to interactive map design. By using open sourced frameworks (Leaflet, Cesium, storymap.js, Bootstrap, jQuery), project management services (GitHub), web mapping services (GeoServer, MapBox), students can learn both the principles of web-based cartography and the practical skills for web mapping, and also absorb both aesthetics and critique of interactive map. The lectures focus on the theories and principles behind web mapping, including system architecture, responsive design, user graphic design, map design and geo-narrative. The lab exercises focus on practical skills for web programming, 2d and 3d web mapping, web mapping services, and digital storytelling. The mid-term focuses on basic concepts and web programming techniques. There is no final exam, but each student is expected to design a web maps and deploy it to an openly accessible server. Feel free to contact Dr. Bo Zhao for more information.
 
 
 | Week  | Lecture (M)                              | Lecture (W)                              | Lab (Th)                                 | Lecture (F)                              | Reading                                  |
@@ -26,7 +26,7 @@ Welcome to GEOG 371: Web Mapping :gift_heart:! This course introduces current de
 
 ### Texts
 
-There is no required textbook. Required papers and online materials will be available on the course github.
+No required textbook, but required papers and online materials will be available on the course repository on GitHub.
 
 ### Programming Languages
 
