@@ -14,7 +14,7 @@ or
 $ python --version
 ```
 
-![](../img/cmd.png)
+![](img/cmd.png)
 
 > **Note:** `$` indicates where a line of code starts.
 
@@ -22,25 +22,25 @@ It will show you the version of the python interpreter you’ve got and it will 
 
 - You’re lucky if it was there by default. Less work actually. If it was not installed by any chance, install it by downloading python from https://www.python.org/downloads/.  For this lecture, please install Python 2.x.y. (x and y indicate a release number, make sure it is 2 rather than 3). Make sure you download the right python version matching your OS system (Windows or Mac).
 
-![](../img/python-download.png)
+![](img/python-download.png)
 
 ## 2. Create a Test Directory and Enable SimpleHTTPServer
 
 - Create a test directory where you don’t mess with system files. For example, we can create a server under our workspace at `C:/workspace`. In this workspace, we created a directory called `wk01_4_lec3` and also I have added some test files for testing (the test files could be those files unzipped from the lecture package).
 
-![](../img/cmd-cd-workspace.png)
+![](img/cmd-cd-workspace.png)
 
 - Your prerequisites are ready now. All you have to do is try python’s `SimpleHTTPServer` module by issuing below command within your test directory (IC:/workspace/wk01_4_lec3`).
 
-![](../img/cmd-py-simplehttpserver.png)
+![](img/cmd-py-simplehttpserver.png)
 
 - After enabling `SimpleHTTPServer` successfully, it will start serving files through port number `8000`. You just have to open up a web browser and enter `localhost:8000`).
 
-![](../img/localhost800.png)
+![](img/localhost800.png)
 
 - SimpleHTTPServer serves your files successfully. You can see what has happened at the terminal, after you accessed your server through web browser by having a look at where you executed your command.
 
-![](../img/data-transfer-localhost.png)
+![](img/data-transfer-localhost.png)
 
 > **Note:** 
 > By default python’s SimpleHTTPServer serves files and directories through port `8000`, but you can define a different port number (Here I am using port `80`) as you desire with the python command as shown below.
