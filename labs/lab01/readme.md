@@ -280,21 +280,21 @@ Once you uploaded the `readme.md` to the root, you can see your resume showing o
 
 Before your submission of this PE (Practical Exercise), please make sure both the **github repository** and the **github page** work properly. In this lab, you need to submit the url of the github repository (it should be in the format of `https://www.github.com/[account_username]/[account_username].github.io`) to the **Canvas Dropbox** of this course. To do that, check the item of this PE on the assignment tab, and then press the `Submit Assignment` button. Please contact the instructor if you have any difficulty in submitting the url link. Here are the grading criteria:
 
-1\. Register a github account, follow the instructor's github account, and also `star` the course github/website. (10 POINTS)
+1\. Register a github account, follow the instructor's github account, and also `star` the course github/website. (6 POINTS)
 
 2\. The repositary name should be named after `[account_username].github.io`. (5 POINTS)
 
-3\. The github page function of the repositary should work properly. That said, I can visit your online resume at `https://[account_username].github.io/resume`. (5 POINTS);
+3\. The github page function of the repositary should work properly. That said, I can visit your online resume at `https://[account_username].github.io/resume` (5 POINTS);
 
 4\. To hone your skills in Markdown, the resume could be built upon the template in `Section 3.2`, but we still encourage you customize your resume as well. From the formatting perspective, your online resume should contain:
 
-* Different levels of headers (5 POINTS);
-* Blockquotes (5 POINTS);
-* url links (5 POINTS);
+* Different levels of headers (4 POINTS);
+* Blockquotes (4 POINTS);
+* url links (4 POINTS);
 * one or several images (10 POINTS);
-* A list (5 POINTS);
-* A table (5 POINTS); and
-* One or several emoji icons (5 POINTS).
+* A list (4 POINTS);
+* A table (4 POINTS); and
+* One or several emoji icons (4 POINTS).
 
 > **Note:** Lab assignments are required to be submitted electronically to Canvas unless stated otherwise. Efforts will be made to have them graded and returned within one week after they are submitted.Lab assignments are expected to be completed by the due date. ***A late penalty of at least 10 percentage units will be taken off each day after the due date.***
 
