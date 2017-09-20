@@ -33,11 +33,11 @@ Html, CSS, Javascript, Markdown and GeoJson
 
 ### Desktop Software
 	
-[Webstorm](https://www.jetbrains.com/webstorm/buy/#edition=discounts), [Typora](https://typora.io), [QGIS](http://www.qgis.org/en/site/), and [GeoServer](http://geoserver.org/)
+[Chrome](https://www.google.com/chrome/browser/desktop/index.html), [Webstorm](https://www.jetbrains.com/webstorm/buy/#edition=discounts), [Typora](https://typora.io), [QGIS](http://www.qgis.org/en/site/), and [GeoServer](http://geoserver.org/)
 	
 ### Web Services
 
-[GitHub](https://github.com/), [Mapbox](https://www.mapbox.com/), [W3Schools](https://www.w3schools.com/), and [geojson.io](http://geojson.io)
+[GitHub](https://github.com/), [jsfiddle](https://jsfiddle.net/), [Mapbox](https://www.mapbox.com/), [W3Schools](https://www.w3schools.com/), and [geojson.io](http://geojson.io)
 	
 ### Libraries for Web Mapping
 	
