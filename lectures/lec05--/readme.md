@@ -1,8 +1,8 @@
 # Web Programming Basics II: Javascript
 
-> Winter 2017 | Geography 371 | Geovisualization: Web Mapping
+> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >
-> Instructor: Bo Zhao | TA: Andy Wilson | Location: 210 Wilkinson | Time: Thursday 2-3:50pm
+> Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
 >
 > Assigned: 01/19/2017 | Due: `01/26/2017 @11:59pm` | Points Available = 50
 
