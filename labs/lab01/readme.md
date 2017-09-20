@@ -287,14 +287,14 @@ Before your submission of this PE (Practical Exercise), please make sure both th
 3\. The github page function of the repositary should work properly. That said, I can visit your online resume at `https://[account_username].github.io/resume`. (5 POINTS);
 
 4\. To hone your skills in Markdown, the resume could be built upon the template in `Section 3.2`, but we still encourage you customize your resume as well. From the formatting perspective, your online resume should contain:
-* different levels of headers;
-* Blockquotes;
-* url links;
-* one or several images;
-* A list;
-* A table;
-* One or Several Emoji icons (a usage guideline )
-* Use a A different styles, links, images
+
+* Different levels of headers (5 POINTS);
+* Blockquotes (5 POINTS);
+* url links (5 POINTS);
+* one or several images (10 POINTS);
+* A list (5 POINTS);
+* A table (5 POINTS); and
+* One or several emoji icons (5 POINTS).
 
 > **Note:** Lab assignments are required to be submitted electronically to Canvas unless stated otherwise. Efforts will be made to have them graded and returned within one week after they are submitted.Lab assignments are expected to be completed by the due date. ***A late penalty of at least 10 percentage units will be taken off each day after the due date.***
 
