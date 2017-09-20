@@ -44,10 +44,9 @@ Html, CSS, Javascript, Markdown and GeoJson
 Jquery, Bootstrap, Leaflet, Storymap.js, Cesium
 
 ## Previous Years
-### 2017 Winter
-![](resources/img/2017_winter.png)
+### [2017 Winter](http://geoviz.ceoas.oregonstate.edu/project_gallery/)
 
-[Student Project Gallery](http://geoviz.ceoas.oregonstate.edu/project_gallery/)
+![](resources/img/2017_winter.png)
 
 
 ## Credits
