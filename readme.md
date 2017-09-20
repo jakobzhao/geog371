@@ -24,6 +24,8 @@ Welcome to GEOG 371: Web Mapping :gift_heart:! This course introduces current de
 | Wk 09 | [3D Web Mapping III: Thematic Map on a Virtual Globe](lectures/lec25) | Final Project Discussion and Preparation | Lab 6: Cont'd                            | *Thanksgiving Break*                       |                                          |
 | Wk 10 | [Emerging Topics on Web Mapping](lectures/lec26)           | Final Project Discussion and Preparation | Final Project Discussion and Preparation | Final Project Presentation               | [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md) |
 
+[Download the syllabus](research/syllabus.pdf)
+
 ### Texts
 
 No required textbook, but required papers and online materials will be available on the course repository on GitHub.
