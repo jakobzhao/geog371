@@ -1,4 +1,4 @@
-# Practical Exercise 1: Project Management
+# Practical Exercise 1: Project Management for Web Mapping
 
 > Winter 2017 | Geography 371 | Geovisualization: Web Mapping
 >
@@ -6,7 +6,7 @@
 >
 > Assigned: 09/21/2017 | Due: `09/28/2017 @11:59pm` | Points Available = 50
 
-Welcome to the lab session of GEOG 371: Web Mapping! As the first lab, we will introduce the Digital Earth Lab at Wilkinson 210, download the course material and more importantly, help you get familiar with the major operations on web mapping project management. You will start with registering a github account, and learn how to use several software products, such as Webstorm, Typora, and Git. To test the learning objectives, we will ask you to publish your resume on github. Okay, let us get started!
+Welcome to the lab session of GEOG 371: Web Mapping! As the first lab, we will introduce the Digital Earth Lab at Wilkinson 210, download the course material and more importantly, help you get familiar with the major operations on web mapping project management. You will start with installing the required software, registering a github account, and learn how to operate several software products, such as Webstorm, Typora, and Git. To test your learning outcomes, you will be asked to generate a  repository of your online resume on GitHub. Okay, let us get started!
 
 # 1. Preparations
 
@@ -276,3 +276,26 @@ Once you uploaded the `readme.md` to the root, you can see your resume showing o
 
 3\. It usually takes several seconds to 1~2 minutes to apply this setting. If this setting is activated, you can read your resume from `http://[account_username].github.io`.
 
+## 4. Deliverable
+
+Before your submission of this PE (Practical Exercise), please make sure both the **github repository** and the **github page** work properly. In this lab, you need to submit the url of the github repository (it should be in the format of `https://www.github.com/[account_username]/[account_username].github.io`) to the **Canvas Dropbox** of this course. To do that, check the item of this PE on the assignment tab, and then press the `Submit Assignment` button. Please contact the instructor if you have any difficulty in submitting the url link. Here are the grading criteria:
+
+1\. Register a github account, follow the instructor's github account, and also `star` the course github/website. (10 POINTS)
+
+2\. The repositary name should be named after `[account_username].github.io`. (5 POINTS)
+
+3\. The github page function of the repositary should work properly. That said, I can visit your online resume at `https://[account_username].github.io/resume`. (5 POINTS);
+
+4\. To hone your skills in Markdown, the resume could be built upon the template in `Section 3.2`, but we still encourage you customize your resume as well. From the formatting perspective, your online resume should contain:
+* different levels of headers;
+* Blockquotes;
+* url links;
+* one or several images;
+* A list;
+* A table;
+* One or Several Emoji icons (a usage guideline )
+* Use a A different styles, links, images
+
+> **Note:** Lab assignments are required to be submitted electronically to Canvas unless stated otherwise. Efforts will be made to have them graded and returned within one week after they are submitted.Lab assignments are expected to be completed by the due date. ***A late penalty of at least 10 percentage units will be taken off each day after the due date.***
+
+> If you have a genuine reason(known medical condition, a pile-up of due assignments on other courses, ROTC,athletics teams, job interview, religious obligations etc.) for being unable to complete work on time, then some flexibility is possible. However, if in my judgment you could reasonably have let me know beforehand that there would likely be a delay, and then a late penalty will still be imposed if I don't hear from you until after the deadline has passed. For unforeseeable problems,I can be more flexible. If there are ongoing medical, personal, or other issues that are likely to affect your work all semester, then please arrange to see me to discuss the situation. There will be NO make-up exams except for circumstances like those above.
