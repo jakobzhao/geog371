@@ -20,10 +20,10 @@ The lab generally opens 8am-5pm , a detailed schedule can be found at [http://du
 
 For this lab, you will need to install the following software:
 
-- **Webstorm:** A professional web mapping programming development environment ([Click here for the installation instruction](https://www.jetbrains.com/webstorm/buy/#edition=discounts)). and make sure you install the edition **for students and teachers**). Once you installed it, you will need to register it, usually the registration need to be renewed on an anual basis; 
-
+- **Webstorm:** A professional web mapping programming development environment ([Click here for the installation instruction](https://www.jetbrains.com/webstorm/buy/#edition=discounts)). and make sure you install the edition **for students and teachers**). Once you installed it, you will need to register it, usually the registration need to be renewed on an anual basis;
 
 - **Typora:** An editor for composing Markdown files ([Click here to download Typora](https://typora.io/)); and
+
 - **Git:** A version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people ([Click here to download, choose the right platform, and then install](https://git-scm.com/downloads)). 
 
 If **Git** is successfully installed, type `git` in command prompt (if you are a window user) or terminal (if you are a mac or linux user), the following screen will be shown up.
