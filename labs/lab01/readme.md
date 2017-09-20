@@ -8,7 +8,7 @@
 
 Welcome to the lab session of GEOG 371: Web Mapping. As the first lab of this course, we will introduce the Digital Earth Lab at Wilkinson 210, download the course material and more importantly, help you be familiar with the major steps of managing a web mapping project. To do that, you will start with registering a github account, and learn how to use several software products, such as Webstorm, Typora, and Git. To test the learning objectives, we will ask you to publish your resume on github. Okay, let us kick off this lab! 
 
-# 1. Preprations
+# 1. Preparations
 
 ## 1.1 Digital Earth Lab @ Oregon State University
 
@@ -216,7 +216,7 @@ Summary of your role
 [University 2]: http://www.example.com/company2
 [University 3]: http://www.example.com/company2
 ```
-
+>**Note:** This resume template is from [http://www.jasonfilley.com/resumeinmarkdown.html](http://www.jasonfilley.com/resumeinmarkdown.html).
 ### 3.3 Upload files to GitHub
 
 Once you have drafted out your resume in the `readme.md` file. You will upload this file to the **root** of the project repository `https://github.com/[account_username]/[account_username].github.io` on GitHub. You can use two ways as listed below interchangeably. 
