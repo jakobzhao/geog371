@@ -6,7 +6,7 @@
 >
 > Assigned: 09/21/2017 | Due: `09/28/2017 @11:59pm` | Points Available = 50
 
-Welcome to the lab session of GEOG 371: Web Mapping. As the first lab of this course, we will introduce the Digital Earth Lab at Wilkinson 210, download the course material and more importantly, help you be familiar with the major steps of managing a web mapping project. To do that, you will start with registering a github account, and learn how to use several software products, such as Webstorm, Typora, and Git. To test the learning objectives, we will ask you to publish your resume on github. Okay, let us kick off this lab! 
+Welcome to the lab session of GEOG 371: Web Mapping! As the first lab, we will introduce the Digital Earth Lab at Wilkinson 210, download the course material and more importantly, help you get familiar with the major operations on web mapping project management. You will start with registering a github account, and learn how to use several software products, such as Webstorm, Typora, and Git. To test the learning objectives, we will ask you to publish your resume on github. Okay, let us get started!
 
 # 1. Preparations
 

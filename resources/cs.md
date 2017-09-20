@@ -20,7 +20,7 @@ GEOGCS["WGS 84",
     AUTHORITY["EPSG","4326"]]
 ```
 
-![](../img/4326.png)
+![](img/4326.png)
 
 ## Web Mercator
 
@@ -52,7 +52,7 @@ PROJCS["WGS 84 / Pseudo-Mercator",
     AUTHORITY["EPSG","3857"]]
 ```
 
-![](../img/3857.png)
+![](img/3857.png)
 
 > **900913**: Due to slow adoption by standards body European Petroleum Survey Group (EPSG), the Web Mercator is represented by a confusing series of standard names and ids, including 900913, EPSG:3785 and EPSG:3857.
 >
