@@ -1,18 +1,17 @@
 # GEOG 371: Web Mapping
 >
->Instructor: Bo Zhao, zhao2@oregonstate.edu | Office Hours: 1400 to 1500 W or by appointment @ Strand Ag 347
+>Instructor: Bo Zhao, zhao2@oregonstate.edu | Office Hours: W 1400-1500 or by appt. @STRAND 347
 >
->Lecture: MWF 1200 to 1250 @WLKN 235 | Lab: Th 1000 to 1150 @WLKN 210
+>Lecture: MWF 1200 - 1250 @WLKN 235 | Lab: Th 1000 to 1150 @WLKN 210
 >
 >Catalog course description: GEOVISUALIZATION: WEB MAPPING (4).
 >Current developments in Internet mapping and advanced cartographic skills applied to web-based maps. Techniques of Internet mapping and principles of web-based cartography, including multimedia, animation, 3D visualization, and user interface design. PREREQS: GEOG 201 or GEO 301.
 
 Welcome to GEOG 371: Web Mapping :gift_heart:! This course introduces current developments in web mapping and advanced cartographic skills applied to interactive map design. By using open sourced libraries (Leaflet, Cesium, storymap.js, Bootstrap, jQuery), free or open source software (QGIS, Webstorm), project management services (GitHub), and web mapping services (GeoServer, MapBox), students can learn both the principles of web-based cartography and the practical skills for web mapping, and develop the capabilities of map aesthetics and critique. The lectures focus on the theories and principles behind web mapping, including system architecture, responsive design, user graphic design, map design and geo-narrative. The lab exercises focus on practical skills for web programming, 2d and 3d web mapping, web mapping services, and digital storytelling. The mid-term focuses on basic concepts and web programming techniques. There is no final exam, but each student is expected to design a web maps and deploy it to an openly accessible server. Feel free to contact Dr. Bo Zhao for more information.
 
-
 | Week  |               Lecture (M)                |               Lecture (W)                |                 Lab (Th)                 |               Lecture (F)                |                 Reading                  |
 | :---: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
-| Wk 00 |                  *N/A*                   |  [Intro to the course](lectures/lec01)   | [Lab 1: Project Management](labs/lab01)  |  [Intro to Web Mapping](lectures/lec02)  | [Markdown, Links and Command Lines](readings/wk00.md) |
+| Wk 00 |                  *N/A*                   |  [Intro to the Course](lectures/lec01)   | [Lab 1: Project Management](labs/lab01)  |  [Intro to Web Mapping](lectures/lec02)  | [Markdown, Links and Command Lines](readings/wk00.md) |
 | Wk 01 | [Web Programming Basics I: HTML 5 and CSS](lectures/lec03) | [System Architecture for Web Mapping](lectures/lec04) | [Lab 2: Web Programming Basics](labs/lab02) | [Web Programming Basics II: Javascript](lectures/lec05) | [HTML, CSS and Javascript](readings/wk01.md) |
 | Wk 02 | [Spatial Data for Web Mapping](lectures/lec06) | [Map Client I: Basics and Geographic Features](lectures/lec07) |          Lab 3: Web Map Design           | [Map Client II: Map Events and Mashup](lectures/lec08) |  [Leaflet and JQuery](readings/wk02.md)  |
 | Wk 03 | [Map Client III: Web Map Interaction](lectures/lec09) | [Map Server I: Intro to GeoServer](lectures/lec10) |              Lab 3: Cont'd               | [Map Server II: Styling](lectures/lec11) |    [GeoServer docs](readings/wk03.md)    |
