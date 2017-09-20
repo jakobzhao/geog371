@@ -13,7 +13,7 @@
 
 ## 1. Overview
 
-Web mapping (Internet Map, Internet mapping, Web GIS, Internet GIS) is the process of using maps on the Internet. Web mapping usually involves a web browser or other user agent capable of client-server interactions. Questions of quality, usability, social benefits, and legal constraints are driving its evolution.
+Web mapping (Internet mapping, Web GIS, Internet GIS) is the process of using maps on the Internet. Web mapping usually involves a web browser or other user agent capable of client-server interactions. Questions of quality, usability, social benefits, and legal constraints are driving its evolution.
 
 A web map on the World Wide Web is both served and consumed, thus web mapping is more than just web based cartography, it is a service by which consumers may choose what the map will show. Web GIS emphasizes geodata processing aspects more involved with design aspects such as data acquisition and server software architecture such as data storage and algorithms, than it does the end-user reports themselves.
 
