@@ -22,7 +22,7 @@ For this lab, you will need to install the following software:
 
 - **Webstorm:** A professional web mapping programming development environment ([Click here for the installation instruction](https://www.jetbrains.com/webstorm/buy/#edition=discounts)). and make sure you install the edition **for students and teachers**). Once you installed it, you will need to register it, usually the registration need to be renewed on an anual basis;
 
-- **Typora:** An editor for composing Markdown files ([Click here to download Typora](https://typora.io/)); and
+- **Typora:** An editor for composing Markdown files ([Click here to download Typora](https://typora.io/)). Typora is dedicated to process markdown files. It can browse, edit, and even convert markdown files to pdf or word documents; and
 
 - **Git:** A version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people ([Click here to download, choose the right platform, and then install](https://git-scm.com/downloads)). 
 
@@ -105,74 +105,148 @@ In the root of this downloaded repository, there are folders like labs, lectures
 
 ![](img/typora_syllabus.png)
 
-8\. One of the benefits of hosting the course material on GitHub is that you can easily update your project repository by two commend lines `git checkout -force` and `git pull` in the root directory of the repository.
+8\. One benefits of hosting the course material on GitHub is that you can easily update your project repository by implementing a combination of two command lines `git checkout --force` and `git pull` in the root directory of the repository. Once the two commands are executed. An update notice will be shown as below.
 
+```powershell
+C:\Workspace\geog371>git checkout --force
+Your branch is up-to-date with 'origin/master'.
 
+C:\Workspace\geog371>git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/jakobzhao/geog371
+   13b2cab..baf74b1  master     -> origin/master
+Updating 13b2cab..baf74b1
+Fast-forward
+ readme.md | 3 ++-
+```
 
-Before we jump to next section, we recommend you 
+Now, the course material on your local computer is updated. 
+
+> **Note:** In order to ensure you are reading the latest version of the lecture or lab handouts, you need to synchronize the course material, especially before class. 
+>
+> If you implement the above two commands in a Mac or Linux system, you might need to add `sudo` before `git`to preventing a lack of privilege issue. For example, `sudo git clone`, `sudo git checkout --force`. In general, the command `sudo` will assign the superuser privilege to the current command line. 
+
+9\. Before we jump to the next section, please
 
 - Star the repository by pressing the `star` button on the top right, and;
 - Navigate to Dr. Zhao's front page at [https://github.com/jakobzhao](https://github.com/jakobzhao), and click the `Follow` button to be a follower. 
 
+## 3\. Project management
 
-## Create a Project Repo
+In this section, we will introduce a series of operations related to project management, such as create a project repository, compile a markdown file, and upload files to GitHub, and at last, publish a repository.
 
-a new repo named as [username].github.com
+### 3.1 Create a repository for your project
+
+1\. Navigate to [https://github.com/new](https://github.com/new), and input the your repository name in the blank text box for `Repository name`. For example, the repository name of the course material is `geog371`. Here, please name your repository in the format of **[account_username].github.io**. So, if your account_username is `jakobzhao`, this repository name will be **jakobzhao.github.io**. 
+
+![""](img/create-new-repository-2.png)
+
+2\. Also, please makes sure you **CHECK** the box "Initialize this repository with a README". For other options, you can leave them by default. 
+
+![](img/create-new-repository-3.png)
+
+3\. Next, click the `Create repository` button. A new repository `[account_username].github.io` is accordingly created. You can access this repository through the link `https://github.com/[account_username]/[account_username].github.io`. For example,  for the repository I just created, I can access the repository through the link [https://github.com/jakobzhao/jakobzhao.github.io](https://github.com/jakobzhao/jakobzhao.github.io).
+
+### 3.2 Compile a Markdown file
+
+1\. On your local computer, please create a file, and name it `readme.md`.
+
+2\. Open this file `readme.md` with `Typora`. Next, please write down your resume in the opened-up editor.  Here is a template for you to start with:
+
+```markdown
+#Your Name
+
+1234 Main St., City, State 12345
+
+(555) 555-5555
+
+your.name@example.com
+
+http://www.example.com
+
+http://www.linkedin.com/in/yourname
+
+#Summary
+
+Quick Summary (not objective) specifically highlighting why you qualify for the job.
+
+#Work Experience (only last 10 years)
+
+## University Name 1 (City, State)
+*[Company 1][] description, particularly if not well-known.*
+
+**Position Title (include alternate titles in parentheses)** (Start Date - End Date)
+
+Summary of your role
+
+- Accomplishment that contains **bold text**.
+- Accomplishment
+- Accomplishment
+- Accomplishment
+
+## University Name 2 (City, State)
+*[Company 2][] description, particularly if not well-known.*
+
+**Position Title (include alternate titles in parentheses)** (Start Date - End Date)
+
+Summary of your role
+
+- Accomplishment that contains **bold text**.
+- Accomplishment
+- Accomplishment
+- Accomplishment
+
+## University Name 3 (City, State)
+*[Company 3][] description, particularly if not well-known.*
+
+**Position Title (include alternate titles in parentheses)** (Start Date - End Date)
+
+Summary of your role
+
+- Accomplishment
+- Accomplishment
+- Accomplishment
+- Accomplishment
 
 
-创建 readme.md
-license
+[University 1]: http://www.example.com/company1
+[University 2]: http://www.example.com/company2
+[University 3]: http://www.example.com/company2
+```
 
-## Project Edit
+### 3.3 Upload files to GitHub
 
-readme.md
+Once you have drafted out your resume in the `readme.md` file. You will upload this file to the **root** of the project repository `https://github.com/[account_username]/[account_username].github.io` on GitHub. You can use three ways as listed below interchangeably. 
 
-typora  编辑
+#### 3.3.1 Drag & drop
 
-编辑自己的Resume
+1\. Since the `readme.md` file will be uploaded to the root of the repository, you need to navigate to the front page of your repository  `https://github.com/[account_username]/[account_username].github.io` using a web browser such as Chrome.
 
-> 要求
+2\. Next, use your mouse to drag the `readme.md` file to the front page of the project repository. Once you see a notice saying **Drop to upload your files**, you can now release your mouse. A new interface will appear as below. Certainly, you can drag and drop multiple files and/or folders. In this lab, we just upload one single file.
 
-> 我希望有表格，图片。
+![](img/after-the-drop.png)
 
-> Skills
+3\. Before you press the green button `Commit Changes`,  you can add a name and/or some descriptions for this commit. It will help you organize and keep a record of your repository.
 
-图片放到 img 里面。
+#### 3.3.2 Git push
 
-图片，列表，
+You can also upload the `readme.md` through `git push` command.
 
-## Project Uploading
+1\. Download the repository   `https://github.com/[account_username]/[account_username].github.io`  following the instruction in Section 2 ***"Download the course material”***.
 
-拖拽，
-
-## Project Clone
-
-working dir
-clone
-
-> question：clone course material
+2\. In the root directory of the downloaded repository, please implement the command `git push`. Again you might need to add `sudo` in front to avoid the privilege deny issue.
 
 
-## Update Project
 
-Open project in web storm
+### 3.3.3 WebStorm commit 
 
-create a img folder
-
-put head.png in the same folder
-
-
-## Publish your resume: The Magic of Git Page
+### 3.4 Publish your repository
 
 github page  open
 
 visit  github.io and github.com
 
 describe the difference you see.
-
-
-
-> question: a CV
-
-
-A new repo:
