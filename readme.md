@@ -56,6 +56,5 @@ Html, CSS, Javascript, Markdown and GeoJson
 
 ![](resources/img/2017-envchallenge.png)
 
-
 ### Credits
 <img src="resources/img/logo.png" width="25%" height="25%" align="right" />This course material is maintained by the [Cartography and Geovisualization Group at Oregon State University](http://geoviz.ceoas.oregonstate.edu). Some of the material in this course is based on the classes taught at MIT and Penn State University. We have heavily drawn on materials and examples found online and tried our best to give credit by linking to the original source. Please contact us if you find materials where the credit is missing or that you would rather have removed.
