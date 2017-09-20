@@ -12,7 +12,7 @@ Welcome to the lab session of GEOG 371: Web Mapping. As the first lab of this co
 
 ## 1.1 Digital Earth Lab @ Oregon State University
 
-Digital Earth Lab is a teaching facility primarily for GIS, remote sensing, cartography, numerical analysis, and scientific visualization. The classroom is a facility of the OSU College of Earth, Ocean, and Atmospheric Science and is supported by the OSU Media Services. The lab was originally funded by a NASA infrastructure grant to Sherm Bloomer (professor & Dean, College of Science) and Nick Pisias (professor & former associate dean of COAS). Digital Earth is located in 210 Wilkinson Hall and is one of the most advanced teaching facilities on the Oregon State campus. We have been operational since the beginning of Spring term, 1999.
+Digital Earth Lab is a teaching facility primarily for GIS, remote sensing, cartography, numerical analysis, and scientific visualization. The classroom is a facility of the OSU College of Earth, Ocean, and Atmospheric Science and is supported by the OSU Media Services. The lab was originally funded by a NASA infrastructure grant to Sherm Bloomer (professor & Dean, College of Science) and Nick Pisias (professor & former associate dean of CEOAS). Digital Earth is located in 210 Wilkinson Hall and is one of the most advanced teaching facilities on the Oregon State campus. We have been operational since the beginning of Spring term, 1999.
 
 The lab generally opens 8am-5pm , a detailed schedule can be found at [http://dusk.geo.orst.edu/de/de_teach.html](http://dusk.geo.orst.edu/de/de_teach.html). The manager of the facility is Cory Langhoff. If you need afterhours access, contact Cory Langhoff [langhofc@oregonstate.edu](mailto:langhofc@oregonstate.edu), or dial 7-2532 to make arrangements. Please ahead of time.
 
@@ -219,7 +219,7 @@ Summary of your role
 
 ### 3.3 Upload files to GitHub
 
-Once you have drafted out your resume in the `readme.md` file. You will upload this file to the **root** of the project repository `https://github.com/[account_username]/[account_username].github.io` on GitHub. You can use three ways as listed below interchangeably. 
+Once you have drafted out your resume in the `readme.md` file. You will upload this file to the **root** of the project repository `https://github.com/[account_username]/[account_username].github.io` on GitHub. You can use two ways as listed below interchangeably. 
 
 #### 3.3.1 Drag & drop
 
@@ -237,16 +237,42 @@ You can also upload the `readme.md` through `git push` command.
 
 1\. Download the repository   `https://github.com/[account_username]/[account_username].github.io`  following the instruction in Section 2 ***"Download the course material”***.
 
-2\. In the root directory of the downloaded repository, please implement the command `git push`. Again you might need to add `sudo` in front to avoid the privilege deny issue.
+2\. In the root directory of the downloaded repository, please copy the edited `readme.md` to replace the existing  `readme.md`in the root. 
 
+3\. After this replacement, you can push this change to the remote repository by implementing two command lines `git commit` and  `git push`.  As listed below.
 
+```powershell
+c:\Workspace\jakobzhao.github.io>git commit -m "update the readme.md"
+[master a85f998] update the readme.md
+ 1 files changed, 106 insertions(+), 32 deletions(-)
+ create mode 100644 labs/lab01/img/after-the-drop.png
+ 
+c:\Workspace\geog371>git push
+fatal: TaskCanceledException encountered.
+   A task was canceled.
+Username for 'https://github.com': jakobzhao
+Password for 'https://jakobzhao@github.com':
+Counting objects: 9, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 99.58 KiB | 0 bytes/s, done.
+Total 9 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 4 local objects.
+To https://github.com/jakobzhao/jakobzhao.github.io.git
+   b237d06..a85f998  master -> master
+```
 
-### 3.3.3 WebStorm commit 
+> **Note:** Again, if you use a Mac or Linux, you might need to add `sudo` in front of the command line to avoid the privilege deny issue. 
+>
+> Also, the command prompt or terminal may ask you for GitHub username and password, please be prepared with such information.
 
 ### 3.4 Publish your repository
 
-github page  open
+Once you uploaded the `readme.md` to the root, you can see your resume showing on the front page. Moreover, GitHub provide a new function named **GitHub Page** that converts a markdown file directly as a web page. Because your resume is located at the root of the repository named  `[account_username].github.io`  , you can directly access your resume by visiting `http://[account_username].github.io`  if you implement the following steps.
 
-visit  github.io and github.com
+1\. please click the `Settings`tab on the top bar of the repository front page. 
 
-describe the difference you see.
+2\. On the “GitHub Pages” Section, please click on the  `Source`  dropdown list and choose `master branch`.  Next, press the `Save` button.
+
+3\. It usually takes several seconds to 1~2 minutes to apply this setting. If this setting is activated, you can read your resume from `http://[account_username].github.io`.
+
