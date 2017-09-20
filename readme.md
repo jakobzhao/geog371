@@ -10,7 +10,6 @@
 Welcome to GEOG 371: Web Mapping :gift_heart:! This course introduces current developments of Internet mapping and advanced cartographic skills in web mapping.  By using virtual globe libraries (Cesium), open source mapping clients (Leaflet) and web mapping services (Mapbox, GeoServer), students can learn both the techniques of Internet mapping and the principles of web-based cartography, including multimedia, animation, 3D visualization, and user interface design. The lectures will focus on the theories and principles behind the Internet mapping, including distributed component technologies, graphic designs, and network communications. The lab exercises will focus on the practical applications and web design skills for Internet mapping services. The mid-term focuses on basic web mapping concepts and programming techniques. There is no final exam, but each student is required to design a web interactive map and deploy it to an openly accessible server. Feel free to contact Prof. Zhao for more information.
 
 
-
 | Week  | Lecture (M)                              | Lecture (W)                              | Lab (Th)                                 | Lecture (F)                              | Reading                                  |
 | ----- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
 | Wk 00 | *N/A*                                      | [Intro to the course](lectures/lec01)                      | [Lab 1: Project Management](labs/lab01)                | [Intro to Web Mapping](lectures/lec02)                     | [Markdown, Links and Command Lines](readings/wk00.md) |
@@ -44,14 +43,13 @@ Html, CSS, Javascript, Markdown and GeoJson
 	
 ### Libraries for Web Mapping
 	
-Jquery, Bootstrap, Leaflet, Storymap.js, Cesium
+[Jquery](https://jquery.com/), [Bootstrap](http://getbootstrap.com/), [Leaflet](https://leafletjs.com), [Storymap.js](https://github.com/jakobzhao/storymap), and [Cesium](cesiumjs.org)
 
 ### Previous Years
 
 #### [2017 Winter](http://geoviz.ceoas.oregonstate.edu/project_gallery/)
 
 ![](resources/img/2017_winter.png)
-
 
 ### Credits
 <img src="resources/img/logo.png" width="25%" height="25%" align="right" />This course material is maintained by the [Cartography and Geovisualization Group at Oregon State University](http://geoviz.ceoas.oregonstate.edu). Some of the material in this course is based on the classes taught at MIT and Penn State University. We have heavily drawn on materials and examples found online and tried our best to give credit by linking to the original source. Please contact us if you find materials where the credit is missing or that you would rather have removed.
