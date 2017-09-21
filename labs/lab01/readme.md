@@ -265,6 +265,10 @@ To https://github.com/jakobzhao/jakobzhao.github.io.git
    b237d06..a85f998  master -> master
 ```
 
+> **Note:** Again, if you use a Mac or Linux, you might need to add `sudo` in front of the command line to avoid the privilege deny issue.
+>
+> Also, the command prompt or terminal may ask you for GitHub username and password, please be prepared with such information.
+
 #### 3.3.3 WebStorm Commit
 
 We can also use Webstorm to upload files to github repository or more geranlly, commit changes. Compared with the first two solutions, I personally recommend you use Webstrom if you prefer graphic user interfaces and work on your local computer.
@@ -273,9 +277,10 @@ We can also use Webstorm to upload files to github repository or more geranlly, 
 
 2\. In the root directory of the downloaded repository, please copy the edited `resume.md` to the root.
 
-> **Note:** As you might already aware of, the first two steps are as same as the solution 2 described in 3.3.2. The difference is, solution 2 works on a terminal/command prompt environment (a command-lline user interface), while solution 3 works in Webstorm (a graphic user interface).
-
 3\. Open the prorgam `Webstorm`. By default, the welcome window will pop up. In this welcome window, click `Open` button on the bottom right. Then, another new window `Open File or Project` will pop up. Seelct the downloaded repository. The name should be in the format of `[account_username].github.io`.
+
+![](img/open_webstorm_project.png)
+
 
 4\. Once you open this repository, you can edit the `resume.md`.
 
@@ -285,17 +290,13 @@ We can also use Webstorm to upload files to github repository or more geranlly, 
 
 ![](img/commit_change.png)
 
-7\. Before you commit, honor your mouse on the `Commit` button on the bottom right, then a dropdown menu, **Choose `Commit and push`**. Then continue with
+7\. Before you commit, hover your mouse on the `Commit` button, then a dropdown menu will show up, **Choose `Commit and Push...`**. Then on the newly poped up window, click "push" to finish.
 
-commit_change.png
 
-`commit and push`
-
-![](img/open_webstorm_project.png)
-
-> **Note:** Again, if you use a Mac or Linux, you might need to add `sudo` in front of the command line to avoid the privilege deny issue. 
+> **Note**: As you might already aware of, the first two steps are as same as those in the solution 2. The difference is, solution 2 works on a terminal/command prompt environment (a command-lline user interface), while solution 3 works in Webstorm (a graphic user interface).
 >
-> Also, the command prompt or terminal may ask you for GitHub username and password, please be prepared with such information.
+> Using either of the three solutions, you can upload your resume or any other files to github. Then, log on to this repository on github to see whether the uploaded content is applied.
+
 
 ### 3.4 Publish your repository
 
