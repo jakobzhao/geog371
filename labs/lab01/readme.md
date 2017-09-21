@@ -59,7 +59,14 @@ C:\Users\[your_username]>cd C:\Workspace
 C:\Workspace>
 ```
 
-5\. Having the **git url**, we will need to use the command `git clone`to clone the GitHub repository. 
+> **Note:** If you are working on any computer in the Digital Earth Lab, the folder "Workspace" under the root of C drive. Also, you might not have the privilege to make such a folder. So to work on any computer in the Digital Earth Lab, you can navigate to the Desktop folder. See the command lines below.
+
+```powershell
+C:\Users\[your_username]>cd Desktop
+C:\Users\[your_username]\Desktop>
+```
+
+5\. Having the **git url**, we will need to use the command `git clone` to clone the GitHub repository to your local computer.
 
  ```powershell
 C:\Workspace\git clone https://github.com/jakobzhao/geog371.git
@@ -153,10 +160,10 @@ In this section, we will introduce a series of operations related to project man
 
 1\. On your local computer, create a text file, and name it `resume.md`.
 
-2\. Open this file `resume.md` with `Typora`. In the Typora's editor, you can work on your resume. If you are not familiar with Markdown, please refer to a tutorial at [here](https://guides.github.com/features/mastering-markdown/). Or you can start with copying and pasting the template below.
+2\. Open this file `resume.md` with `Typora`. In the Typora's editor, you can work on your resume. If you are not familiar with Markdown, please refer to a tutorial at [here](https://guides.github.com/features/mastering-markdown/). Or you can start with copying and pasting the template below. Notably, this template is only for your reference. You probably do not want to share too much about your personal information such as phone number, address and etc.
 
 ```markdown
-#Your Name
+# Your Name
 
 1234 Main St., City, State 12345
 
@@ -168,16 +175,17 @@ http://www.example.com
 
 http://www.linkedin.com/in/yourname
 
-#Summary
+# Summary
 
 Quick Summary (not objective) specifically highlighting why you qualify for the job.
 
-#Work Experience (only last 10 years)
+# Work Experience (only last 10 years)
 
 ## University Name 1 (City, State)
-*[Company 1][] description, particularly if not well-known.*
 
-**Position Title (include alternate titles in parentheses)** (Start Date - End Date)
+* [University 1][] description, particularly if not well-known.*
+
+** Position Title (include alternate titles in parentheses)** (Start Date - End Date)
 
 Summary of your role
 
@@ -187,9 +195,9 @@ Summary of your role
 - Accomplishment
 
 ## University Name 2 (City, State)
-*[Company 2][] description, particularly if not well-known.*
+*[University 2][] description, particularly if not well-known.*
 
-**Position Title (include alternate titles in parentheses)** (Start Date - End Date)
+** Position Title (include alternate titles in parentheses)** (Start Date - End Date)
 
 Summary of your role
 
@@ -199,9 +207,9 @@ Summary of your role
 - Accomplishment
 
 ## University Name 3 (City, State)
-*[Company 3][] description, particularly if not well-known.*
+* [University 3][] description, particularly if not well-known.*
 
-**Position Title (include alternate titles in parentheses)** (Start Date - End Date)
+** Position Title (include alternate titles in parentheses)** (Start Date - End Date)
 
 Summary of your role
 
