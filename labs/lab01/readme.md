@@ -281,7 +281,15 @@ We can also use Webstorm to upload files to github repository or more geranlly, 
 
 5\. To update any edit changes, on the top menu, Click `VCS` on the top menu, and then 'commit...` on the dropdown menu.
 
-6\.
+6\. On the poped up `Commit Changes` window, make sure you check the `Unversioned Files` box if there is, also, you need to leave the `Commit Message` and input the name of the author who made this change.
+
+![](img/commit_change.png)
+
+7\. Before you commit, honor your mouse on the `Commit` button on the bottom right, then a dropdown menu, **Choose `Commit and push`**. Then continue with
+
+commit_change.png
+
+`commit and push`
 
 ![](img/open_webstorm_project.png)
 
