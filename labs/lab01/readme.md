@@ -251,10 +251,10 @@ You can also upload the `resume.md` through `git push` command on either command
 
 2\. In the root directory of the downloaded repository, please copy the edited `resume.md` to the root.
 
-3\. Next, you can push this change to the remote repository by implementing two command lines `git commit` and  `git push`.  As listed below.
-
+3\. Next, you can push this change to the remote repository by implementing two command lines `git commit` and  `git push`. Since you have add new `untracked` files to this repository, you need to also implement another command line `git add` prior to the `git push`. As listed below.
 ```powershell
-c:\Workspace\jakobzhao.github.io>git commit -m "update the resume.md"
+c:\Workspace\jakobzhao.github.io>git add -A
+c:\Workspace\jakobzhao.github.io>git commit -a -m "update the resume.md"
 c:\Workspace\geog371>git push
 Username for 'https://github.com': jakobzhao
 Password for 'https://jakobzhao@github.com':
@@ -262,6 +262,8 @@ Password for 'https://jakobzhao@github.com':
 
 > **Note:** Again, if you use a Mac or Linux, you might need to add `sudo` in front of the command line to avoid the privilege deny issue. Besides, the command prompt or terminal may ask you for GitHub username and password, please be prepared with such information.
 >
+
+In a nutshell, to push a change from your local computer to GitHub, you will need to (1) `git clone` a repository from GitHub, (2) `git add` the untracked file to the repository, (3) `git commit` that you have made a change, and at last, (4) `git push` your changes to the GitHub repository.
 
 #### 3.3.3 WebStorm Commit
 
