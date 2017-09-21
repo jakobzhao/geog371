@@ -1,9 +1,7 @@
 # Practical Exercise 1: Project Management for Web Mapping
 
 > Winter 2017 | Geography 371 | Geovisualization: Web Mapping
->
 > **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 1000 - 1150
->
 > **Assigned:** 09/21/2017 | **Due:** `09/28/2017 @11:59pm` | **Points Available** = 50
 
 Welcome to the lab session of **GEOG 371: Web Mapping**! In this lab, we will briefly introduce the Digital Earth Lab at Wilkinson 210, download the course material and more importantly, help you get familiar with the major operations on project management for web mapping. In practice, you will start with installing the required software (on your own computer or laptop), registering a GitHub account, and learn how to use several software products, such as Webstorm, Typora, and Git. To test your learning outcomes, you will be asked to generate a  GitHub repository to publish your resume on the web. Okay, let us get started!
