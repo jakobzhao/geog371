@@ -7,9 +7,9 @@
 **Learning Objectives**
 
 - Understand the basic concepts related to web mapping;
-- Get to know the types of web maps, and its major components;
+- Get to know the 4 major types of web maps, and its major components;
 - Walk through a brief history of web mapping; and
-- Understand web mapping API -  Commercial vs. Open Source.
+- Understand web mapping API -  Commercial/proprietary vs. Open Source.
 
 ## 1. Overview
 
