@@ -281,8 +281,6 @@ We can also use Webstorm to upload files to GitHub repository or more generally,
 7\. Before you commit, hover your mouse on the `Commit` button, then a dropdown menu will show up, **Choose `Commit and Push...`**. Then on the newly popped up window, click `push` to finish.
 
 
-
-
 > **Note**: As you might already aware of, the first two steps are as same as those in the solution 2. The difference is, solution 2 works on a terminal/command prompt environment (a command-lline user interface), while solution 3 works in Webstorm (a graphic user interface).
 >
 > Using either of the three solutions, you can upload your resume or any other files to GitHub. Then, log on to this repository on GitHub to see whether the uploaded content is applied.
