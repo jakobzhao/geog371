@@ -6,21 +6,21 @@
 >
 > **Assigned:** 09/21/2017 | **Due:** `09/28/2017 @11:59pm` | **Points Available** = 50
 
-Welcome to the lab session of GEOG 371: Web Mapping! As the first lab, we will introduce the Digital Earth Lab at Wilkinson 210, download the course material and more importantly, help you get familiar with the major operations on web mapping project management. You will start with installing the required software, registering a github account, and learn how to operate several software products, such as Webstorm, Typora, and Git. To test your learning outcomes, you will be asked to generate a  repository of your online resume on GitHub. Okay, let us get started!
+Welcome to the lab session of **GEOG 371: Web Mapping**! In this lab, we will briefly introduce the Digital Earth Lab at Wilkinson 210, download the course material and more importantly, help you get familiar with the major operations on project management for web mapping. In practice, you will start with installing the required software (on your own computer or laptop), registering a GitHub account, and learn how to use several software products, such as Webstorm, Typora, and Git. To test your learning outcomes, you will be asked to generate a  GitHub repository to publish your resume on the web. Okay, let us get started!
 
 # 1. Preparations
 
 ## 1.1 Digital Earth Lab @ Oregon State University
 
-Digital Earth Lab is a teaching facility primarily for GIS, remote sensing, cartography, numerical analysis, and scientific visualization. The classroom is a facility of the OSU College of Earth, Ocean, and Atmospheric Science and is supported by the OSU Media Services. The lab was originally funded by a NASA infrastructure grant to Sherm Bloomer (professor & Dean, College of Science) and Nick Pisias (professor & former associate dean of CEOAS). Digital Earth is located in 210 Wilkinson Hall and is one of the most advanced teaching facilities on the Oregon State campus. We have been operational since the beginning of Spring term, 1999.
+Digital Earth Lab is a teaching facility primarily for GIS, remote sensing, cartography, numerical analysis, and scientific visualization. The classroom is a facility of the OSU College of Earth, Ocean, and Atmospheric Science and is supported by the OSU Media Services. The lab was originally funded by a NASA infrastructure grant to Sherm Bloomer (Professor & Dean, College of Science) and Nick Pisias (Professor & former associate dean of CEOAS). Digital Earth is located in 210 Wilkinson Hall and is one of the most advanced teaching facilities on the Oregon State campus. We have been operational since the beginning of Spring term, 1999.
 
-The lab generally opens 8am-5pm , a detailed schedule can be found at [http://dusk.geo.orst.edu/de/de_teach.html](http://dusk.geo.orst.edu/de/de_teach.html). The manager of the facility is Cory Langhoff. If you need afterhours access, contact Cory Langhoff [langhofc@oregonstate.edu](mailto:langhofc@oregonstate.edu), or dial 7-2532 to make arrangements. Please ahead of time.
+The lab generally opens 8am-5pm , a detailed schedule can be found at [http://dusk.geo.orst.edu/de/de_teach.html](http://dusk.geo.orst.edu/de/de_teach.html). The manager of the facility is Cory Langhoff. If you need afterhours access, contact Cory by email [langhofc@oregonstate.edu](mailto:langhofc@oregonstate.edu), or dial 7-2532 to make arrangements.
 
 ## 1.2 Software Setup
 
-For this lab, your computer will need to install the following software:
+For this lab, you will use Webstorm, typora and git. Also these software products have already been installed in the computers in the Digital Earth Lab, except Typora (but you can always use text editor alternatives, such as Webstorm, Notepad, Brackets, and etc.). But I highly recommend you to install all these three.
 
-- **Webstorm:** A professional web mapping programming development environment ([Click here for the installation instruction](https://www.jetbrains.com/webstorm/buy/#edition=discounts)). and make sure you install the edition **for students and teachers**). Check a turoial on install Webstorm at [here](install_webstorm.md);
+- **Webstorm:** A professional web mapping programming development environment ([Click here for the installation instruction](https://www.jetbrains.com/webstorm/buy/#edition=discounts)). and make sure you install the edition **for students and teachers**). Check a tutorial on installing Webstorm at [here](install_webstorm.md);
 
 - **Typora:** An editor for composing Markdown files ([Click here to download Typora](https://typora.io/)). Typora is dedicated to process markdown files. It can browse, edit, and even convert markdown files to pdf or word documents; and
 
@@ -30,13 +30,13 @@ If **Git** is successfully installed, type `git` in command prompt (if you are a
 
 ![](img/git-command.png)
 
-Once you have `git`  up and running, you can sync the course material and also publish your own project repository.  We will talk about that in details in the following sections of this lab.
+Using `git`, you can synchronize the course materials and also publish your own GitHub repository.  We will talk about that later in this lab.
 
-### 1.3 Register a Github account
+### 1.3 Register a GitHub account
 
-1\. You will apply for a Github account for managing and sychronizing your web mapping project. If you do not have a Github account yet, please sign up at [https://www.github.com](https://www.github.com)
+1\. You will apply for a GitHub account for managing and synchronizing your web mapping project. If you do not have a GitHub account yet, please sign up at [https://www.github.com](https://www.github.com)
 
-> **Do you know the differences between Git and Github?**
+> **Do you know the differences between Git and GitHub?**
 >
 > **Git** is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for software development, but it can be used to keep track of changes in any files. Git was created by **Linus Torvalds** in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development.
 >
@@ -44,22 +44,22 @@ Once you have `git`  up and running, you can sync the course material and also p
 
 ## 2\. Download the course material
 
-In this course, all the material is stored on GitHub. We will go through the steps how to download the course materials as below.
+In this course, all the material is stored on GitHub. We will go through the steps on how to download the material as below.
 
-1\. Every project is stored on GitHub as a repository. The repository for this course is located at [https://github.com/jakobzhao/geog371](https://github.com/jakobzhao/geog371). Please navigate to this url on a browser like Chrome. As shown, this course is created by me, my GitHub account name is `jakobzhao`, and the repository name is `geog371`. 
+1\. On GitHub, each project is stored as a project repository. The repository for this course is located at [https://github.com/jakobzhao/geog371](https://github.com/jakobzhao/geog371). Please navigate to this url on a browser such as `Chrome`. As indicated by the course website url, this repository is created by me; my GitHub account name is `jakobzhao`, while the repository name is `geog371`. 
 
 2\. On the front page of this repository, please click the green button named after `Clone or download` . To download the course material, you can click the `Download ZIP` button, as a result, a compressed file of the course material will be downloaded. 
 
-3\. However, we recommend you to clone this project repository. You can get the **git url** of this repository on the popped up information panel [https://github.com/jakobzhao/geog371.git](https://github.com/jakobzhao/geog371.git).
+3\. However, **we recommend you to clone this project repository**. You can get the **git url** of this repository on the same information window. The git url is [https://github.com/jakobzhao/geog371.git](https://github.com/jakobzhao/geog371.git).
 
-4\. Next, open your working space on your own computer through commend prompt if you are a Windows user or through terminal if you are a Mac or Linux user. For example, the working space of my computer is located as `C:\Workspace`.
+4\. Next, open your working space on your local computer through command prompt if you are on Windows or through terminal if you are on a Mac or Linux. For example, the working space of my computer is located as `C:\Workspace`.
 
 ```powershell
 C:\Users\[your_username]>cd C:\Workspace
 C:\Workspace>
 ```
 
-5\. Having the **git url**, we can use the command `git clone` in order to clone/download the repository of the course materials. 
+5\. Having the **git url**, we will need to use the command `git clone`to clone the GitHub repository. 
 
  ```powershell
 C:\Workspace\git clone https://github.com/jakobzhao/geog371.git
@@ -72,7 +72,7 @@ Resolving deltas: 100% (214/214), done.
 Checking out files: 100% (650/650), done.
  ```
 
-6\. To read the content in the downloaded repository, we need to `cd` into the directory of this repository. If you are on a Mac or Linux, type `ls` to check the file list of this repository, or try `dir` if you are on a Windows. Take windows for example.
+6\. To review the files and folders in the downloaded/cloned repository, you need to `cd` into the root directory of this repository. If you are on a Mac or Linux, type `ls` to check the file list of this repository, or try `dir` if you are on a Windows. Take windows for example.
 
 ```powershell
 C:\Workspace>cd geog371
@@ -87,7 +87,6 @@ C:\Workspace\geog371>dir
 09/19/2017  09:12 PM    <DIR>          ..
 09/19/2017  01:41 AM               412 .gitignore
 09/19/2017  09:49 PM    <DIR>          .idea
-09/19/2017  01:41 AM    <DIR>          img
 09/19/2017  02:19 AM    <DIR>          labs
 09/19/2017  01:41 AM    <DIR>          lectures
 09/19/2017  01:41 AM             7,816 LICENSE
@@ -96,16 +95,16 @@ C:\Workspace\geog371>dir
 09/19/2017  04:35 AM             6,011 readme.md
 09/19/2017  01:41 AM    <DIR>          resources
                3 File(s)         14,239 bytes
-               9 Dir(s)  903,569,551,360 bytes free
+               8 Dir(s)  903,569,551,360 bytes free
 ```
 
-In the root of this downloaded repository, there are folders like labs, lectures and readings, and files like readme.md and LICENSE. 
+In the root directory, there are folders like labs, lectures and readings, and files like readme.md and LICENSE. 
 
 7\. Next, we open the `readme.md` file using `Typora`.  If the previous steps work successfully, we can read the similar content as shown below.
 
 ![](img/typora_syllabus.png)
 
-8\. One benefits of hosting the course material on GitHub is that you can easily update your project repository by implementing a combination of two command lines `git checkout --force` and `git pull` in the root directory of the repository. Once the two commands are executed. An update notice will be shown as below.
+8\. Once the course material is hosted on GitHub, it can be easily shared with a larger community and update. To synchronize the course material on remote GitHub repository to your local computer, you need to implement two sequential command lines `git checkout --force` and `git pull` in the root directory of the repository. Once the two commands are executed. An update notice will be shown as below.
 
 ```powershell
 C:\Workspace\geog371>git checkout --force
@@ -125,36 +124,36 @@ Fast-forward
 
 Now, the course material on your local computer is updated. 
 
-> **Note:** In order to ensure you are reading the latest version of the lecture or lab handouts, you need to synchronize the course material, especially before class. 
+> **Note:** To ensure you are reading the latest version of the lecture or lab handouts, you need to regularly synchronize the course material, especially before class. 
 >
-> If you implement the above two commands in a Mac or Linux system, you might need to add `sudo` before `git`to preventing a lack of privilege issue. For example, `sudo git clone`, `sudo git checkout --force`. In general, the command `sudo` will assign the superuser privilege to the current command line. 
+> If you implement the above two commands in a Mac or Linux system, you might need to add `sudo` before `git`to a lack-of-privilege issue. For example, `sudo git clone`, `sudo git checkout --force`. In general, the command `sudo` will assign the superuser privilege to the command line. 
 
-9\. Before we jump to the next section, please
+9\. Before we jump to the next section, please:
 
 - Star the repository by pressing the `star` button on the top right, and;
 - Navigate to Dr. Zhao's front page at [https://github.com/jakobzhao](https://github.com/jakobzhao), and click the `Follow` button to be a follower. 
 
 ## 3\. Project management
 
-In this section, we will introduce a series of operations related to project management, such as create a project repository, compile a markdown file, and upload files to GitHub, and at last, publish a repository.
+In this section, we will introduce a series of operations related to project management, such as create a project repository, compile a markdown file, and upload files to GitHub, and at last, publish a repository. As a practice, we will build a GitHub repository for your online resume.
 
 ### 3.1 Create a repository for your project
 
-1\. Navigate to [https://github.com/new](https://github.com/new), and input the your repository name in the blank text box for `Repository name`. For example, the repository name of the course material is `geog371`. Here, please name your repository in the format of **[account_username].github.io**. So, if your account_username is `jakobzhao`, this repository name will be **jakobzhao.github.io**. 
+1\. Navigate to [https://github.com/new](https://github.com/new), and input your repository name in the blank text box for `Repository name`. Here, please name your repository in the format of **[account_username].github.io**. So, if your account_username is `jakobzhao`, this repository name will be **jakobzhao.github.io**. 
 
 ![""](img/create-new-repository-2.png)
 
-2\. Also, please makes sure you **CHECK** the box "Initialize this repository with a README". For other options, you can leave them by default. 
+2\. Besides, make sure you **CHECK** the box `Initialize this repository with a README`. You can leave other options by default. 
 
 ![](img/create-new-repository-3.png)
 
-3\. Next, click the `Create repository` button. A new repository `[account_username].github.io` is accordingly created. You can access this repository through the link `https://github.com/[account_username]/[account_username].github.io`. For example,  for the repository I just created, I can access the repository through the link [https://github.com/jakobzhao/jakobzhao.github.io](https://github.com/jakobzhao/jakobzhao.github.io).
+3\. Next, click the `Create repository` button. As a result, a new repository `[account_username].github.io` is created. You can access this repository through the link `https://github.com/[account_username]/[account_username].github.io`. For example,  you can access the repository I created through this link [https://github.com/jakobzhao/jakobzhao.github.io](https://github.com/jakobzhao/jakobzhao.github.io).
 
-### 3.2 Compile a Markdown file
+### 3.2 Craft a Markdown file
 
-1\. On your local computer, please create a file, and name it `resume.md`.
+1\. On your local computer, create a text file, and name it `resume.md`.
 
-2\. Open this file `resume.md` with `Typora`. In the editor, you can start to craft your resume. If you are not familiar with Markdown, copy and paste the template below to get started.
+2\. Open this file `resume.md` with `Typora`. In the Typora's editor, you can work on your resume. If you are not familiar with Markdown, please refer to a tutorial at [here](https://guides.github.com/features/mastering-markdown/). Or you can start with copying and pasting the template below.
 
 ```markdown
 #Your Name
@@ -218,27 +217,29 @@ Summary of your role
 ```
 >**Note:** This resume template is from [http://www.jasonfilley.com/resumeinmarkdown.html](http://www.jasonfilley.com/resumeinmarkdown.html).
 
-3\. In fact, you can use any text editor to generate Markdown files. If you do not have `Typora` at hand, you can also use `Webstorm` to craft Markdown files. To enable `Webstorm` to recognize the markdown syntax, you need to install a plugin named `Markdown Navigator`. To do that, open `Webstorm`, on the top menu, navigate through `File->Settings...`. In the popped up wind, click `Plugins` tab, and then click the "install jetbrain plugin.." on the bottom left of the window. In the newly poped-up window, search "markdown navigator" in the search box, as a result, the plugin "Markdown Navigator" appears, and you will need to install this plugin by pressing the green botton "install". Once installed, you will need to restart `WebStorm` to activiate this change. Please let the instructor know if you meet any difficulty in installing this plugin.
+3\. In fact, you can use any text editor to generate Markdown files. If you do not have `Typora` at hand, you can use `Webstorm` as well. To enable `Webstorm` to recognize the markdown syntax, you will need to install a plugin named `Markdown Navigator`. To do that, open `Webstorm`, on the top menu, navigate through `File->Settings...`. In the popped up window, click `Plugins` tab, and then click the `install jetbrain plugin...` on the bottom left of the window. In the newly popped-up window, search "markdown navigator" in the search box, as a result, the plugin "Markdown Navigator" will be found out. Then, you will need to install this plugin by pressing the green button `install`. Once installed, you might want to restart `WebStorm` to activate this change. Please let the instructor know if you meet any difficulty in installing this plugin.
 
 ### 3.3 Upload files to GitHub
 
-Once you have drafted out your resume in the `resume.md` file. You will upload this file to the **root** of the project repository `https://github.com/[account_username]/[account_username].github.io` on GitHub. You can use two ways as listed below interchangeably.
+Once you have drafted out your resume in the `resume.md` file. You will upload this file to the **root** of the project repository `https://github.com/[account_username]/[account_username].github.io` . In general, there are three solutions to complete this task, we will introduce them one by one.
 
 #### 3.3.1 Drag & drop
 
-1\. Since the `resume.md` file will be uploaded to the root of the repository, you need to navigate to the front page of your repository `https://github.com/[account_username]/[account_username].github.io` using a web browser such as Chrome.
+1\. Open a web browser such as `Chrome`, navigate to the front page of the repository you have just created.
 
-2\. Next, use your mouse to drag the `resume.md` file to the front page of the project repository. Once you see a notice saying **Drop to upload your files**, you can now release your mouse. A new interface will appear as below. Certainly, you can drag and drop multiple files and/or folders. In this lab, we just upload one single file.
+2\. Next, use your mouse to drag the `resume.md` file to the front page. Once you see a notice saying **Drop to upload your files**, you can then release your mouse. A new interface will appear as below. 
+
+> **Note:** Certainly, you can drag and drop multiple files and/or folders. In this lab, we just upload one single file.
 
 ![](img/after-the-drop.png)
 
-3\. Before you press the green button `Commit Changes`, you can add a name and/or some descriptions for this commit. It will help you organize and keep a record of your repository.
+3\. Before pressing the green button `Commit Changes`, you might want to add a title and/or some descriptions for this commit. It will help you organize your commits.
 
 #### 3.3.2 Git push
 
-You can also upload the `resume.md` through `git push` command.
+You can also upload the `resume.md` through `git push` command on either command prompt or terminal.
 
-1\. Download the repository   `https://github.com/[account_username]/[account_username].github.io`  following the instruction in Section 2 ***"Download the course material”***.
+1\. Download the repository  `https://github.com/[account_username]/[account_username].github.io`  following the instruction in Section 2 ***"Download the course material”***.
 
 2\. In the root directory of the downloaded repository, please copy the edited `resume.md` to the root.
 
@@ -246,82 +247,68 @@ You can also upload the `resume.md` through `git push` command.
 
 ```powershell
 c:\Workspace\jakobzhao.github.io>git commit -m "update the resume.md"
-[master a85f998] update the resume.md
- 1 files changed, 106 insertions(+), 32 deletions(-)
- create mode 100644 labs/lab01/img/after-the-drop.png
- 
 c:\Workspace\geog371>git push
-fatal: TaskCanceledException encountered.
-   A task was canceled.
 Username for 'https://github.com': jakobzhao
 Password for 'https://jakobzhao@github.com':
-Counting objects: 9, done.
-Delta compression using up to 8 threads.
-Compressing objects: 100% (9/9), done.
-Writing objects: 100% (9/9), 99.58 KiB | 0 bytes/s, done.
-Total 9 (delta 4), reused 0 (delta 0)
-remote: Resolving deltas: 100% (1/1), completed with 4 local objects.
-To https://github.com/jakobzhao/jakobzhao.github.io.git
-   b237d06..a85f998  master -> master
 ```
 
-> **Note:** Again, if you use a Mac or Linux, you might need to add `sudo` in front of the command line to avoid the privilege deny issue.
+> **Note:** Again, if you use a Mac or Linux, you might need to add `sudo` in front of the command line to avoid the privilege deny issue. Besides, the command prompt or terminal may ask you for GitHub username and password, please be prepared with such information.
 >
-> Also, the command prompt or terminal may ask you for GitHub username and password, please be prepared with such information.
 
 #### 3.3.3 WebStorm Commit
 
-We can also use Webstorm to upload files to github repository or more geranlly, commit changes. Compared with the first two solutions, I personally recommend you use Webstrom if you prefer graphic user interfaces and work on your local computer.
+We can also use Webstorm to upload files to GitHub repository or more generally, commit changes. Compared with the first two solutions, I recommend you use Webstorm if you prefer graphic user interfaces.
 
-1\. Download the repository   `https://github.com/[account_username]/[account_username].github.io`  following the instruction in Section 2 ***"Download the course material”***.
+1\. Download the repository  `https://github.com/[account_username]/[account_username].github.io`  following the instruction in Section 2 ***"Download the course material”***.
 
 2\. In the root directory of the downloaded repository, please copy the edited `resume.md` to the root.
 
-3\. Open the prorgam `Webstorm`. By default, the welcome window will pop up. In this welcome window, click `Open` button on the bottom right. Then, another new window `Open File or Project` will pop up. Seelct the downloaded repository. The name should be in the format of `[account_username].github.io`.
+3\. Open the program `Webstorm`. By default, the welcome window will pop up. In this welcome window, click `Open` button on the bottom right. Then, another new window `Open File or Project` will pop up. Select the downloaded repository. The name should be in the format of `[account_username].github.io`.
 
 ![](img/open_webstorm_project.png)
 
 
-4\. Once you open this repository, you can edit the `resume.md`.
+4\. Once you open this repository, you can edit the `resume.md` in Webstorm.
 
-5\. To update any edit changes, on the top menu, Click `VCS` on the top menu, and then 'commit...` on the dropdown menu.
+5\. To update any edit changes, on the top menu, Click `VCS` on the top menu, and then `commit...` on the dropdown menu.
 
-6\. On the poped up `Commit Changes` window, make sure you check the `Unversioned Files` box if there is, also, you need to leave the `Commit Message` and input the name of the author who made this change.
+6\. On the popped-up `Commit Changes` window, make sure you check the `Unversioned Files` box if there is, also, you need to leave some message in the `Commit Message` textbox and input the name of the author who made this change.
 
 ![](img/commit_change.png)
 
-7\. Before you commit, hover your mouse on the `Commit` button, then a dropdown menu will show up, **Choose `Commit and Push...`**. Then on the newly poped up window, click "push" to finish.
+7\. Before you commit, hover your mouse on the `Commit` button, then a dropdown menu will show up, **Choose `Commit and Push...`**. Then on the newly popped up window, click `push` to finish.
 
 
 > **Note**: As you might already aware of, the first two steps are as same as those in the solution 2. The difference is, solution 2 works on a terminal/command prompt environment (a command-lline user interface), while solution 3 works in Webstorm (a graphic user interface).
 >
-> Using either of the three solutions, you can upload your resume or any other files to github. Then, log on to this repository on github to see whether the uploaded content is applied.
-
+> Using either of the three solutions, you can upload your resume or any other files to GitHub. Then, log on to this repository on GitHub to see whether the uploaded content is applied.
+>
+> Now you have already known how to commit a change. In practice, you will use this operation very frequently. Other than committing changes, you may also need to synchronize your latest version of your GitHub repository. Please think about how can we do that on Webstorm.
 
 ### 3.4 Publish your repository
 
-Once you uploaded the `resume.md` to the root, you can see your resume showing on the front page. Moreover, GitHub provide a new function named **GitHub Page** that converts a markdown file directly as a web page. Because your resume is located at the root of the repository named  `[account_username].github.io`  , you can directly access your resume by visiting `http://[account_username].github.io`  if you implement the following steps.
+Once the `resume.md` is uploaded to the root of the GitHub Repository, you can see this file listed in the root. Moreover, GitHub provide a new function named **GitHub Page** that converts a markdown file as a web page. Because your resume is located at the root of the repository, you can directly access your resume by visiting `http://[account_username].github.io/resume` if you implement the following steps.
 
 1\. please click the `Settings`tab on the top bar of the repository front page. 
 
-2\. On the “GitHub Pages” Section, please click on the  `Source`  dropdown list and choose `master branch`.  Next, press the `Save` button.
+2\. On the `GitHub Pages` Section, please click the  `Source`  dropdown list and choose `master branch`.  Next, press the `Save` button.
 
-3\. It usually takes several seconds to 1~2 minutes to apply this setting. If this setting is activated, you can read your resume from `http://[account_username].github.io`.
+3\. It usually takes several seconds to 1~2 minutes to apply this setting. If this setting is activated, you can read your resume from `http://[account_username].github.io/resume`.
 
 ## 4. Deliverable
 
-Before your submission of this PE (Practical Exercise), please make sure both the **github repository** and the **github page** work properly. In this lab, you need to submit the url of the github repository (it should be in the format of `https://www.github.com/[account_username]/[account_username].github.io`) to the **Canvas Dropbox** of this course. To do that, check the item of this PE on the assignment tab, and then press the `Submit Assignment` button. Please contact the instructor if you have any difficulty in submitting the url link. Here are the grading criteria:
+Before submitting this PE (Practical Exercise), please make sure both the **GitHub repository** and the **GitHub page** work properly. In this lab, you are excepted to submit the url of the GitHub repository to the **Canvas Dropbox** of this course. This url should be in the format of `https://www.github.com/[account_username]/[account_username].github.io`. To do that, check the item of this PE on the assignment tab, and then press the `Submit Assignment` button. Please contact the instructor if you have any difficulty in submitting the url link. Here are the grading criteria:
 
-1\. Register a github account, follow the instructor's github account, and also `star` the course github/website. (6 POINTS)
+1\. A GitHub account is registered, You have followed the instructor's GitHub account and `star-ed` the course GitHub repository. (6 POINTS)
 
 2\. The repository should be named after `[account_username].github.io`. (5 POINTS)
 
-3\. The github page function of the repository should work properly. That said, your online resume can be visited from `https://[account_username].github.io/resume` (5 POINTS);
+3\. The `GitHub page` function of the repository should work properly. That said, your resume can be visited from `https://[account_username].github.io/resume` (5 POINTS);
 
-4\. To hone your skills in Markdown, the resume could be built upon the template that was shown in `Section 3.2`, but we still encourage you customize your resume. In terms of the format, your online resume should contain:
+4\. To hone your skills in generating Markdown files, the resume could be built upon the template that was shown in `Section 3.2`, but we still encourage you customize your resume. In terms of the format, your online resume should contain:
 
 * different levels of headers (4 POINTS);
-* blockquotes (4 POINTS);
+* block quotes (4 POINTS);
 * url links (4 POINTS);
 * one or several images (10 POINTS);
 * A list (4 POINTS);
