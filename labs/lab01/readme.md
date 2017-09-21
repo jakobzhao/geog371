@@ -2,9 +2,9 @@
 
 > Winter 2017 | Geography 371 | Geovisualization: Web Mapping
 >
-> Instructor: Bo Zhao  Location:  Wilkinson 210 | Time: Thursday 1000 to 1150
+> **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 1000 - 1150
 >
-> Assigned: 09/21/2017 | Due: `09/28/2017 @11:59pm` | Points Available = 50
+> **Assigned:** 09/21/2017 | **Due:** `09/28/2017 @11:59pm` | **Points Available** = 50
 
 Welcome to the lab session of GEOG 371: Web Mapping! As the first lab, we will introduce the Digital Earth Lab at Wilkinson 210, download the course material and more importantly, help you get familiar with the major operations on web mapping project management. You will start with installing the required software, registering a github account, and learn how to operate several software products, such as Webstorm, Typora, and Git. To test your learning outcomes, you will be asked to generate a  repository of your online resume on GitHub. Okay, let us get started!
 
@@ -212,9 +212,9 @@ Summary of your role
 - Accomplishment
 
 
-[University 1]: http://www.example.com/company1
-[University 2]: http://www.example.com/company2
-[University 3]: http://www.example.com/company2
+[University 1]: http://www.univ1.edu
+[University 2]: http://www.univ2.edu
+[University 3]: http://www.univ3.edu
 ```
 >**Note:** This resume template is from [http://www.jasonfilley.com/resumeinmarkdown.html](http://www.jasonfilley.com/resumeinmarkdown.html).
 
