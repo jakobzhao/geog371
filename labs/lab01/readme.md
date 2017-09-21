@@ -152,9 +152,9 @@ In this section, we will introduce a series of operations related to project man
 
 ### 3.2 Compile a Markdown file
 
-1\. On your local computer, please create a file, and name it `readme.md`.
+1\. On your local computer, please create a file, and name it `resume.md`.
 
-2\. Open this file `readme.md` with `Typora`. Next, please write down your resume in the opened-up editor.  Here is a template for you to start with:
+2\. Open this file `resume.md` with `Typora`. Next, please write down your resume in the opened-up editor.  Here is a template for you to start with:
 
 ```markdown
 #Your Name
@@ -217,33 +217,34 @@ Summary of your role
 [University 3]: http://www.example.com/company2
 ```
 >**Note:** This resume template is from [http://www.jasonfilley.com/resumeinmarkdown.html](http://www.jasonfilley.com/resumeinmarkdown.html).
+
 ### 3.3 Upload files to GitHub
 
-Once you have drafted out your resume in the `readme.md` file. You will upload this file to the **root** of the project repository `https://github.com/[account_username]/[account_username].github.io` on GitHub. You can use two ways as listed below interchangeably. 
+Once you have drafted out your resume in the `resume.md` file. You will upload this file to the **root** of the project repository `https://github.com/[account_username]/[account_username].github.io` on GitHub. You can use two ways as listed below interchangeably.
 
 #### 3.3.1 Drag & drop
 
-1\. Since the `readme.md` file will be uploaded to the root of the repository, you need to navigate to the front page of your repository  `https://github.com/[account_username]/[account_username].github.io` using a web browser such as Chrome.
+1\. Since the `resume.md` file will be uploaded to the root of the repository, you need to navigate to the front page of your repository `https://github.com/[account_username]/[account_username].github.io` using a web browser such as Chrome.
 
-2\. Next, use your mouse to drag the `readme.md` file to the front page of the project repository. Once you see a notice saying **Drop to upload your files**, you can now release your mouse. A new interface will appear as below. Certainly, you can drag and drop multiple files and/or folders. In this lab, we just upload one single file.
+2\. Next, use your mouse to drag the `resume.md` file to the front page of the project repository. Once you see a notice saying **Drop to upload your files**, you can now release your mouse. A new interface will appear as below. Certainly, you can drag and drop multiple files and/or folders. In this lab, we just upload one single file.
 
 ![](img/after-the-drop.png)
 
-3\. Before you press the green button `Commit Changes`,  you can add a name and/or some descriptions for this commit. It will help you organize and keep a record of your repository.
+3\. Before you press the green button `Commit Changes`, you can add a name and/or some descriptions for this commit. It will help you organize and keep a record of your repository.
 
 #### 3.3.2 Git push
 
-You can also upload the `readme.md` through `git push` command.
+You can also upload the `resume.md` through `git push` command.
 
 1\. Download the repository   `https://github.com/[account_username]/[account_username].github.io`  following the instruction in Section 2 ***"Download the course material”***.
 
-2\. In the root directory of the downloaded repository, please copy the edited `readme.md` to replace the existing  `readme.md`in the root. 
+2\. In the root directory of the downloaded repository, please copy the edited `resume.md` to the root.
 
 3\. After this replacement, you can push this change to the remote repository by implementing two command lines `git commit` and  `git push`.  As listed below.
 
 ```powershell
-c:\Workspace\jakobzhao.github.io>git commit -m "update the readme.md"
-[master a85f998] update the readme.md
+c:\Workspace\jakobzhao.github.io>git commit -m "update the resume.md"
+[master a85f998] update the resume.md
  1 files changed, 106 insertions(+), 32 deletions(-)
  create mode 100644 labs/lab01/img/after-the-drop.png
  
@@ -268,7 +269,7 @@ To https://github.com/jakobzhao/jakobzhao.github.io.git
 
 ### 3.4 Publish your repository
 
-Once you uploaded the `readme.md` to the root, you can see your resume showing on the front page. Moreover, GitHub provide a new function named **GitHub Page** that converts a markdown file directly as a web page. Because your resume is located at the root of the repository named  `[account_username].github.io`  , you can directly access your resume by visiting `http://[account_username].github.io`  if you implement the following steps.
+Once you uploaded the `resume.md` to the root, you can see your resume showing on the front page. Moreover, GitHub provide a new function named **GitHub Page** that converts a markdown file directly as a web page. Because your resume is located at the root of the repository named  `[account_username].github.io`  , you can directly access your resume by visiting `http://[account_username].github.io`  if you implement the following steps.
 
 1\. please click the `Settings`tab on the top bar of the repository front page. 
 
