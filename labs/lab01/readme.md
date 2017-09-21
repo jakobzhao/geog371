@@ -1,7 +1,7 @@
 # Practical Exercise 1: Project Management for Web Mapping
 
 > Winter 2017 | Geography 371 | Geovisualization: Web Mapping
-
+>
 > **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 1000 - 1150
 >
 > **Assigned:** 09/21/2017 | **Due:** `09/28/2017 @11:59pm` | **Points Available** = 50
