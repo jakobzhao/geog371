@@ -18,7 +18,7 @@ The lab generally opens 8am-5pm , a detailed schedule can be found at [http://du
 
 ## 1.2 Software Setup
 
-For this lab, you will need to install the following software:
+For this lab, your computer will need to install the following software:
 
 - **Webstorm:** A professional web mapping programming development environment ([Click here for the installation instruction](https://www.jetbrains.com/webstorm/buy/#edition=discounts)). and make sure you install the edition **for students and teachers**). Check a turoial on install Webstorm at [here](install_webstorm.md);
 
@@ -30,7 +30,7 @@ If **Git** is successfully installed, type `git` in command prompt (if you are a
 
 ![](img/git-command.png)
 
-Once you have `git`  up and running,  you can sync the course material and also publish your own project repository.  We will talk about that in details in the following sections of this lab.
+Once you have `git`  up and running, you can sync the course material and also publish your own project repository.  We will talk about that in details in the following sections of this lab.
 
 ### 1.3 Register a Github account
 
@@ -154,7 +154,7 @@ In this section, we will introduce a series of operations related to project man
 
 1\. On your local computer, please create a file, and name it `resume.md`.
 
-2\. Open this file `resume.md` with `Typora`. Next, please write down your resume in the opened-up editor.  Here is a template for you to start with:
+2\. Open this file `resume.md` with `Typora`. In the editor, you can start to craft your resume. If you are not familiar with Markdown, copy and paste the template below to get started.
 
 ```markdown
 #Your Name
@@ -218,6 +218,8 @@ Summary of your role
 ```
 >**Note:** This resume template is from [http://www.jasonfilley.com/resumeinmarkdown.html](http://www.jasonfilley.com/resumeinmarkdown.html).
 
+3\. In fact, you can use any text editor to generate Markdown files. If you do not have `Typora` at hand, we can also use Webstorm to craft Markdown files. To enable `Webstorm` to recognize the markdown syntax, you need to install a plugin named `Markdown Navigator`.
+
 ### 3.3 Upload files to GitHub
 
 Once you have drafted out your resume in the `resume.md` file. You will upload this file to the **root** of the project repository `https://github.com/[account_username]/[account_username].github.io` on GitHub. You can use two ways as listed below interchangeably.
@@ -262,6 +264,7 @@ remote: Resolving deltas: 100% (1/1), completed with 4 local objects.
 To https://github.com/jakobzhao/jakobzhao.github.io.git
    b237d06..a85f998  master -> master
 ```
+
 
 > **Note:** Again, if you use a Mac or Linux, you might need to add `sudo` in front of the command line to avoid the privilege deny issue. 
 >
