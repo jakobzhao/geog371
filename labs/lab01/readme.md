@@ -218,7 +218,7 @@ Summary of your role
 ```
 >**Note:** This resume template is from [http://www.jasonfilley.com/resumeinmarkdown.html](http://www.jasonfilley.com/resumeinmarkdown.html).
 
-3\. In fact, you can use any text editor to generate Markdown files. If you do not have `Typora` at hand, we can also use Webstorm to craft Markdown files. To enable `Webstorm` to recognize the markdown syntax, you need to install a plugin named `Markdown Navigator`.
+3\. In fact, you can use any text editor to generate Markdown files. If you do not have `Typora` at hand, you can also use `Webstorm` to craft Markdown files. To enable `Webstorm` to recognize the markdown syntax, you need to install a plugin named `Markdown Navigator`. To do that, open `Webstorm`, on the top menu, navigate through `File->Settings...`. In the popped up wind, click `Plugins` tab, and then click the "install jetbrain plugin.." on the bottom left of the window. In the newly poped-up window, search "markdown navigator" in the search box, as a result, the plugin "Markdown Navigator" appears, and you will need to install this plugin by pressing the green botton "install". Once installed, you will need to restart `WebStorm` to activiate this change. Please let the instructor know if you meet any difficulty in installing this plugin.
 
 ### 3.3 Upload files to GitHub
 
@@ -242,7 +242,7 @@ You can also upload the `resume.md` through `git push` command.
 
 2\. In the root directory of the downloaded repository, please copy the edited `resume.md` to the root.
 
-3\. After this replacement, you can push this change to the remote repository by implementing two command lines `git commit` and  `git push`.  As listed below.
+3\. Next, you can push this change to the remote repository by implementing two command lines `git commit` and  `git push`.  As listed below.
 
 ```powershell
 c:\Workspace\jakobzhao.github.io>git commit -m "update the resume.md"
@@ -265,6 +265,25 @@ To https://github.com/jakobzhao/jakobzhao.github.io.git
    b237d06..a85f998  master -> master
 ```
 
+#### 3.3.3 WebStorm Commit
+
+We can also use Webstorm to upload files to github repository or more geranlly, commit changes. Compared with the first two solutions, I personally recommend you use Webstrom if you prefer graphic user interfaces and work on your local computer.
+
+1\. Download the repository   `https://github.com/[account_username]/[account_username].github.io`  following the instruction in Section 2 ***"Download the course material”***.
+
+2\. In the root directory of the downloaded repository, please copy the edited `resume.md` to the root.
+
+> **Note:** As you might already aware of, the first two steps are as same as the solution 2 described in 3.3.2. The difference is, solution 2 works on a terminal/command prompt environment (a command-lline user interface), while solution 3 works in Webstorm (a graphic user interface).
+
+3\. Open the prorgam `Webstorm`. By default, the welcome window will pop up. In this welcome window, click `Open` button on the bottom right. Then, another new window `Open File or Project` will pop up. Seelct the downloaded repository. The name should be in the format of `[account_username].github.io`.
+
+4\. Once you open this repository, you can edit the `resume.md`.
+
+5\. To update any edit changes, on the top menu, Click `VCS` on the top menu, and then 'commit...` on the dropdown menu.
+
+6\.
+
+![](img/open_webstorm_project.png)
 
 > **Note:** Again, if you use a Mac or Linux, you might need to add `sudo` in front of the command line to avoid the privilege deny issue. 
 >
