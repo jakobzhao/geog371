@@ -20,7 +20,7 @@ The lab generally opens 8am-5pm , a detailed schedule can be found at [http://du
 
 For this lab, you will need to install the following software:
 
-- **Webstorm:** A professional web mapping programming development environment ([Click here for the installation instruction](https://www.jetbrains.com/webstorm/buy/#edition=discounts)). and make sure you install the edition **for students and teachers**). Once you installed it, you will need to register it, usually the registration need to be renewed on an annual basis;
+- **Webstorm:** A professional web mapping programming development environment ([Click here for the installation instruction](https://www.jetbrains.com/webstorm/buy/#edition=discounts)). and make sure you install the edition **for students and teachers**). Check a turoial on install Webstorm at [here](install_webstorm.md);
 
 - **Typora:** An editor for composing Markdown files ([Click here to download Typora](https://typora.io/)). Typora is dedicated to process markdown files. It can browse, edit, and even convert markdown files to pdf or word documents; and
 
@@ -282,14 +282,14 @@ Before your submission of this PE (Practical Exercise), please make sure both th
 
 1\. Register a github account, follow the instructor's github account, and also `star` the course github/website. (6 POINTS)
 
-2\. The repositary name should be named after `[account_username].github.io`. (5 POINTS)
+2\. The repository should be named after `[account_username].github.io`. (5 POINTS)
 
-3\. The github page function of the repositary should work properly. That said, I can visit your online resume at `https://[account_username].github.io/resume` (5 POINTS);
+3\. The github page function of the repository should work properly. That said, your online resume can be visited from `https://[account_username].github.io/resume` (5 POINTS);
 
-4\. To hone your skills in Markdown, the resume could be built upon the template in `Section 3.2`, but we still encourage you customize your resume as well. From the formatting perspective, your online resume should contain:
+4\. To hone your skills in Markdown, the resume could be built upon the template that was shown in `Section 3.2`, but we still encourage you customize your resume. In terms of the format, your online resume should contain:
 
-* Different levels of headers (4 POINTS);
-* Blockquotes (4 POINTS);
+* different levels of headers (4 POINTS);
+* blockquotes (4 POINTS);
 * url links (4 POINTS);
 * one or several images (10 POINTS);
 * A list (4 POINTS);
