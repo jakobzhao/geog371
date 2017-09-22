@@ -18,6 +18,7 @@ $ python --version
 
 > **Note:** `$` indicates where a line of code starts.
 
+
 It will show you the version of the python interpreter you’ve got and it will give you an error message if it is not installed.
 
 - You’re lucky if it was there by default. Less work actually. If it was not installed by any chance, install it by downloading python from https://www.python.org/downloads/.  For this lecture, please install Python 2.x.y. (x and y indicate a release number, make sure it is 2 rather than 3). Make sure you download the right python version matching your OS system (Windows or Mac).

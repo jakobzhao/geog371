@@ -8,15 +8,15 @@
 
 - Understand how to organize files on a server.
 - Get to know the web development environment (IDE);
-- Understand the basic command or terminal operations to nagivate and locate a directory;
+- Understand the basic command or terminal operations to navigate and locate a directory;
 - Set up a testing/debugging web server; and
 - Walk through the basics of HTML and CSS;
 
-Today, let us switch gear to some heavy lifting of Web Programming. This lecture focuses on some of the fundamentals and concepts behind a web page, starting from web hosting, IDE (Integrated Development Environment), and then moving through the basic building blocks of HTML and styling with CSS. JavaScript will be introduced in a lab session.
+Today, let us switch gear to some heavy lifting of Web Programming. This lecture focuses on some of the fundamentals and concepts behind a web page, starting from web hosting, IDE (Integrated Development Environment), and then moving through the basic building blocks of HTML and styling with CSS. JavaScript will be introduced later.
 
 ## 1. Introduction
 
-A web page is a document suitable for display and distribution over the internet. At the most basic level, a web page is a text document containing code (often HyperText Markup Language, often shortened to `HTML`), that is located at a node on the internet. This node is called a 'server', as it serves the file to the world wide web, allowing your computer, the 'client', to access it.
+A web page is a document suitable for display and distribution over the internet. At the most basic level, a web page is a text document containing code (often HyperText Markup Language, shortened to `HTML`), that is located at a node on the internet. This node is called a 'server', as it serves the file to the world wide web, allowing your computer, the 'client', to access it.
 
 When you open a web browser, such as `Chrome`, `Firefox` or `Internet Explorer`, and input a URL, something like www.oregonstate.edu into the address bar, the web browser navigates to the node you have specified and requests this document, which it reads, interprets, and displays on your screen depending on the interpretation of the document. This means a couple of things:
 
@@ -27,27 +27,33 @@ When you open a web browser, such as `Chrome`, `Firefox` or `Internet Explorer`,
 
 The next important topic to discuss up front is the file structure. There are often a lot of files located on a server. When you navigate to a website, how does the browser know which file to initially read?
 
-Standard protocol is that a file named **index** is what will be provided by default when a browser finds your site. This index file must be in the base level of your web folder, and is what users will see when they navigate to your web site. All code for today will be contained in a file we will create and save in our webspace as `index.html` (**note** the HTML file extension, indicating the file is written in HTML). The file structure found in my directory looks like the following.
+Standard protocol is that a file named **index** is what will be provided by default when a browser finds your site. This index file must be in the base level of your web folder, and is what users will see when they navigate to your web site. All code for today will be contained in a file we will create and save in our webspace as `index.html`
 
-```bat
-  wk01_4_lec03
-    │  index.html
-    ├─css
-    ├─img
-    └─js
+> **Note:** the HTML file extension, indicating the file is written in HTML). The file structure found in my directory looks like the following.
+
+```
+ Geog371
+   lectures
+     lec03
+      │  index.html
+      ├─css
+      ├─img
+      └─js
 ```
 
-You can have supplemental files, such as images, style files, scripts, and other items in your root directory alongside the `index.html` standing alone or in subdirectories. You can see in my structure I have `img` for holding images, `css` for holding style files, `js` for scripts, and usually a folder named `assets` or `data` is used for holding miscellaneous items. When a browser gets to my files, they will be provided the `index.html` file.
+You can also have supplemental files, such as images, style files, scripts, and other items in your root directory alongside the `index.html` standing alone or in subdirectories. You can see in the above-listed file structure, I have `img` for holding images, `css` for holding style files, `js` for scripts, and usually another folder named `assets` or `data` for holding miscellaneous items.
 
-To host a web application, you need to move the codes and the supplemental files to the server. For most of the lecture and lab demos, your local computer/laptop acts as a server, then the files (codes and supplemental files) should be dragged and saved in a specific folder (e.g., a folder named "www") which will be the hosting place of the server. If the server is a remote computer or in the cloud (e.g., the google cloud platform), you can use an `FTP` connected to your hosting space, or drag and drop into your www folder. 
+***How is everything related?***
 
-*How is everything related?*
+<img src="img/environment.png" alt="Drawing" style="text-align: center; width: 100%;"/>
 
-<img src="img/environment.png" alt="Drawing" style="text-align: center; width: 75%;"/>
+To host a web application, you need to move the codes and the supplemental files to the server. For most of the lecture and lab demos, you can launch a web server on your computer by python SimpleHTTPServer or a server integrated in Webstorm, also you can host your web map through github page.
+
+> **Note:** If you have your own dedicated server, you may need to dragged and saved the files in a specific folder (e.g., a folder named "www") which will be the hosting place of the server. If the server is a remote computer or in the cloud (e.g., the google cloud platform), you can use an `FTP` ot `SSH` connected to your hosting space, or drag and drop into your www folder.
 
 ## 3. Use an IDE
 
-While you can get away with using a basic text editor to create HTML files, there are Integrated Development Environment (IDE) designed to make your life easier by color coding code snips and autocompleting lines. Download and install one of the following text editing software if you don’t already have one. In this lecture, you will mainly use `Webstorm` to edit HTML, CSS, and Javascript files. Besides, we have `Webstorm` installed in the Digital Earth Lab, and you can install an educational version of `Webstorm` on your own machine, no matter you are a Mac or Windows users.
+While you can get away with using a basic text editor to create HTML files, there are Integrated Development Environment (IDE) designed to make your life easier by color coding code snips and autocompleting lines. Download and install one of the following text editing software if you don’t already have one. In this lecture, you will mainly use `Webstorm` to edit HTML, CSS, and Javascript files. We also have `Webstorm` installed in the Digital Earth Lab, and you can install an educational version of `Webstorm` on your own machine, no matter you are a Mac or Windows users.
 
 - `Webstorm` - (Windows, Mac, or Linux) One of cross-platform IDEs primarily for web, JavaScript and TypeScript development. Many of JetBrain's other IDEs include the feature set of WebStorm via plugins.
 - `Sublime Text` – (Windows, Mac, or Linux) One of the most popular and well-loved text editors around. Free to download and use, but will occasionally show a pop-up window if you don’t purchase it. This is what I’ll be using during the workshop
@@ -58,25 +64,31 @@ While you can get away with using a basic text editor to create HTML files, ther
 
 Enough front matter, let's get going on our web page!
 
-
 ## 4. Start up a Web Server
 
-To work with our website, we need our computer to act like a webserver, allowing it to access files online. There are many tools for doing this, and one is built right into python. If you use a Mac or Linux, please open `Terminal`, if on Windows, open `cmd.exe`. In the main working interface, use the command `cd` to **change directory** to the folder in which your website files reside. Once there, type the following to start a simple Python server.
+For testing and debugging purpose, we need our computer to act like a WebServer, allowing it to access files online. There are many tools for doing this, and one is built right into python. If you use a Mac or Linux, please open `Terminal`, if on Windows, open command prompt. In the main working interface, use the command `cd` to **change directory** to the folder in which your website files are located. Once there, type the following to start a simple Python server.
 
 ```bash
 $ python -m SimpleHTTPServer 8000
 ```
 
+> **Note:** If the above command line does not work, probably your computer has not installed python yet. Please follow a tutorial at [here](../../resources/SimpleHTTPServer.md) to install a SimpleHTTPServer.
 
 Now open a browser and access your site at: **http://localhost:8000**
 
-Modify and change folders in web folder, save and then **refresh your page**. Your page will appear as it would if it were live on the internet, except only visible to you locally.
+8000 is the default port of SimpleHTTPServer. Other than 8000, you can also try 80 that is the default port of Http service. for example:
 
-If you select Webstorm as the IDE (this is what we suggested for this course), you do not need to start the Python server by inputing commands in the Terminal or cmd.exe. In your main working window of Webstorm, click one of the browser icons at the top right, you will automatically launch an server environment and switch to the browser. We will talk more about this later.
+```bash
+$ python -m SimpleHTTPServer 80
+```
+
+Now you can access your site **http://localhost** without specifying a port.
+
+Other than setting up a Server environment through python SimpleHTTPServer, you can also If you work in Webstorm (what we suggested for this course), you do not need to start the Python server by inputting commands in the Terminal or Command promt. In Webstorm's main window, click one of the browser icons at the top right, a server environment will automatically launch, and a browser showing the web page will be opened up.
 
 ![](img/webstorm.png)
 
-> Click the chrome icon to open the "index.html" in a browser, a server environment will automatically set up.
+> Click the chrome icon on the top right of Webstorm interface to open the "index.html" in Chrome, a server environment will automatically set up.
 
 ## 5. HTML: The Core Concepts
 
