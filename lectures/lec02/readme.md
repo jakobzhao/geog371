@@ -129,7 +129,6 @@ This section contains some of the milestones of web mapping, online mapping serv
 
 - 2001: **GeoServer**, started by The Open Planning Project (TOPP), a non-profit technology incubator based in New York. TOPP was creating a suite of tools to enable open democracy and to help make government more transparent.
 
-  ![](img/geoserver.jpg)
 
 - 2001: **Tirolatlas**, A highly interactive online atlas, the first to be based on the SVG standard.
 
