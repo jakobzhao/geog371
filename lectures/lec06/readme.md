@@ -10,13 +10,11 @@
 - Review the data tier in a web mapping architecture; 
 - Understand the differences between file server and database server;
 - Get to know the major geospatial data formats for web mapping, shapefile, kml, geojson and topojson; 
-- Able to read, edit, display, convert GeoJson files. 
+- Able to read, edit, display, convert GeoJson files.
 
 ## 1. The data tier of your web mapping architecture
 
 In the previous lecture, you learned that system architecture for web mapping include a data tier. This could be as simple as several shapefiles sitting in a folder on your server, or it could be as complex as several enterprise-grade servers housing an ecosystem of standalone files and relational databases. Indeed, in our system architecture diagram, I have represented the data tier as containing a file server and a database server.
-
-![Data tier in web mapping architecture](img/architecture.png)
 
 ### 1.1 Data tier in web mapping architecture
 
