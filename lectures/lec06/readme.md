@@ -2,7 +2,8 @@
 
 > Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >
-> Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
+
 
 **Learning Objectives**
 
@@ -13,9 +14,9 @@
 
 ## 1. The data tier of your web mapping architecture
 
-In the previous lecture, you learned that system architectures for web mapping include a data tier. This could be as simple as several shapefiles sitting in a folder on your server machine, or it could be as complex as several enterprise-grade servers housing an ecosystem of standalone files and relational databases. Indeed, in our system architecture diagram, I have represented the data tier as containing a file server and a database server.
+In the previous lecture, you learned that system architecture for web mapping include a data tier. This could be as simple as several shapefiles sitting in a folder on your server, or it could be as complex as several enterprise-grade servers housing an ecosystem of standalone files and relational databases. Indeed, in our system architecture diagram, I have represented the data tier as containing a file server and a database server.
 
-![Data tier in web mapping architecture](img/data_architecture.png)
+![Data tier in web mapping architecture](img/architecture.png)
 
 ### 1.1 Data tier in web mapping architecture
 
@@ -40,7 +41,7 @@ This section describes in greater detail some of the spatial data formats that h
 
 ### 2.1 Open data formats and proprietary formats
 
-In this course, we will be using **open data formats, in other words, formats that are openly documented and have no legal restrictions or royalty requirements on their creation and use by any software package**. You are likely familiar with many of these, such as shapefiles, KML files, JPEGs, and so forth. In contrast, **proprietary data formats are created by a particular software vendor and are either undocumented or cannot legally be created from scratch or extended by any other developer**. The Esri file geodatabase is an example of a well-known proprietary format. Although Esri has released an API for creating file geodatabases, the underlying format cannot be extended or reverse engineered.
+In this course, we will use **open data formats, in other words, formats that are openly documented and have no legal restrictions or royalty requirements on their creation and use by any software package**. You are likely familiar with many of these, such as shapefiles, KML files, JPEGs, and so forth. In contrast, **proprietary data formats are created by a particular software vendor and are either undocumented or cannot legally be created from scratch or extended by any other developer**. The Esri file geodatabase is an example of a well-known proprietary format. Although Esri has released an API for creating file geodatabases, the underlying format cannot be extended or reverse engineered.
 
 Some of the most widely-used open data formats were actually designed by proprietary software vendors who made the deliberate decision to release them as open formats. Two examples are the Esri shapefile and the Adobe PDF. Although opening a data format introduces the risk that open source alternatives will compete with the vendor's functionality, it increases the interoperability of the vendor's software, and, if uptake is widespread, augments the vendor's clout and credibility within the software community.
 
@@ -62,10 +63,13 @@ SpatiaLite is an extension supporting spatial data in the SQLite database. As it
 
 SpatiaLite is not as mature as PostGIS, but it is growing in popularity, and you will see a button in QGIS called `Add SpatiaLite Layer`. SpatiaLite is a more self-contained and flexible choice than shapefiles, KML, etc., for this type of task.
 
+**MongoDB**
+
+MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas. MongoDB’s geospatial indexing allows you to efficiently execute spatial queries on a collection that contains geospatial shapes and points. This tutorial will briefly introduce the concepts of geospatial indexes, and then demonstrate their use with $geoWithin, $geoIntersects, and geoNear.
+
 ### 2.3 File-based data
 
 File-based data includes shapefiles, KML files, GeoJSON, and many other types of text-based files. Each of the vector formats has some mechanism of storing the geometry (i.e., vertex coordinates) and attributes of each feature. Some of the formats such as KML may also store styling information.
-
 
 Below are some of the file-based data formats you're most likely to encounter.
 
@@ -136,7 +140,7 @@ The key XML tag behind KML is the **placemark**. This defines a geographic featu
 </kml>
 ```
 
-Open this kml in http://geojson.io/, you will see how these placemarks look like:
+Open this kml in [http://geojson.io](http://geojson.io), you will see how these placemarks look like:
 
 ![](img/kml_map.png)
 
