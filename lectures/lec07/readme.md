@@ -15,13 +15,8 @@ In this lecture, we move forward to make a web map from scratch! To do that, thi
 
 ## 1. Introduction
 
-### 1.1 Web maps recap
 
-The term *"web map"* often implies a map that is not simply on the web, but rather one that is powered by the web. A digital map is a map on a computer, a web map is depends on the internet. It is usually interactive, and **not always self-contained**, meaning it can **grab components from other locations on the web**.
-
-The two big concepts are **tiles**, which are gridded images that make up the *basemaps*, and **geographic features**, which can be points, lines/polylines, and polygons, are used for displaying thematic layers. Tiles are static and non-interactive, while the geographic features layers can be dynamic and offer user interaction.
-
-### 1.2 What is Leaflet?
+### 1.1 What is Leaflet?
 
 Leaflet is an open-source JavaScript library for interactive web maps. It's lightweight, simple, and flexible, and is probably the most popular open-source mapping library at the moment. Leaflet is developed by Vladimir Agafonkin (currently of MapBox) and other contributors.
 
@@ -33,7 +28,7 @@ What Leaflet does not do: Provide any data for you! Leaflet is a framework for s
 
 We will start with an empty webpage, then progressively add components to make a Leaflet map. It assumes a basic knowledge of HTML and JavaScript, or at the very least assumes the will to tinker with the code to better understand what it does. It won't explain every little object or array, but will contain plenty of links. Many code blocks will show only a snippet of code, highlighting the changes over previous examples. Click the "View this example on its own" link underneath a map to see complete code. For thorough documentation, see the Leaflet site.
 
-### 1.3 Use an IDE (Webstorm) and start up a Server
+### 1.2 Use an IDE (Webstorm) and start up a Server
 
 To put your map on the web, you need to host the web page and geospatial data to the server. So, you need to transfer the web pages and data to the remote server (e.g., Google cloud platform) or to set up the local computer as a server. Regarding setting up a local server, you can try Webstorm debugging/execution environment or python SimpleHTTPServer, such as:
 
