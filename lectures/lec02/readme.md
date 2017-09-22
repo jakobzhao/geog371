@@ -15,7 +15,7 @@
 
 Web mapping (also known as Internet mapping, Web GIS, Internet GIS) is the process of using maps on the Internet. Web mapping usually involves a web browser or other user agent capable of client-server interactions. Questions of quality, usability, social benefits, and legal constraints are driving its evolution. A web map is both served and consumed, thus web mapping is more than just web based cartography, it is a service by which consumers may choose what the map will show. Web GIS emphasizes geospatial data processing aspects more involved with design aspects such as data acquisition and server software architecture such as data storage and algorithms, than it does the end-user reports themselves.
 
-![](img/architecture.png)
+![](img/architecture.jpg)
 
 > System Architecture of web mapping
 
@@ -31,15 +31,15 @@ A first classification of web maps has been made by Kraak in 2001. He distinguis
 
 Analytical web maps offer GIS analytical functions. The borderline between analytical web maps and web GIS is fuzzy. Parts of the analysis can be carried out by web mapping servers. Nowadays, web clients can be used for geospatial analytics as well.
 
-![](img/tin.png)
+![](img/tin.jpg)
 
 > [Turf.js](http://turfjs.org/) -- A JavaScript library for spatial data analysis. Turf.js is mainly designed for analyzing vector data set.
 
-![](img/heatmap.png)
+![](img/heatmap.jpg)
 
 > [Making Heatmap using Leaflet.js](https://www.patrick-wied.at/static/heatmapjs/plugin-leaflet-layer.html)
 
-![](img/geotiff.png)
+![](img/geotiff.jpg)
 
 > You can also use Geotiff.js and Plotty.js to visual and analyze raster data. Check [here](https://constantinius.github.io/foss4g-geotiff.js-plotty.js/#/) for details.
 
@@ -47,11 +47,11 @@ Analytical web maps offer GIS analytical functions. The borderline between analy
 
 Realtime maps show the situation of a phenomenon in close to realtime (only a few seconds or minutes delay). They are usually animated. Data is collected by sensors and the maps are generated or updated at regular intervals or on demand. Animated maps show changes in the map over time by animating one of the graphical or temporal variables. 
 
-![](img/arcgis_event.png)
+![](img/arcgis_event.jpg)
 
 > Real -Time GIS supported by ArcGIS Event
 
-![](img/noise.png)
+![](img/noise.jpg)
 
 > [TimeDimension plugin for leaflet](http://apps.socib.es/Leaflet.TimeDimension/examples/example14.html)
 
@@ -59,7 +59,7 @@ Realtime maps show the situation of a phenomenon in close to realtime (only a fe
 
 Collaborative maps are a developing potential. In proprietary or open source collaborative software, users collaborate to create and improve the web mapping experience, such as [OpenStreetMap](https://www.openstreetmap.org/), [WikiMapia](http://wikimapia.org/).
 
-![](img/osm.png)
+![](img/osm.jpg)
 
 > [OpenStreetMap (a provider preview)](https://leaflet-extras.github.io/leaflet-providers/preview/)
 
@@ -67,7 +67,7 @@ Collaborative maps are a developing potential. In proprietary or open source co
 
 The traditional atlas goes through a remarkably large transition when hosted on the web. Atlases can cease their printed editions or offer printing on demand. Some atlases also offer raw data downloads of the underlying geospatial data sources.
 
-![](img/atlas.png)
+![](img/atlas.jpg)
 
 > [Online atlas of Canada](http://www.nrcan.gc.ca/earth-sciences/geography/atlas-canada)
 
@@ -75,7 +75,7 @@ The traditional atlas goes through a remarkably large transition when hosted on 
 
 Static web pages are view only without animation or interactivity. These files are created once, often manually, and infrequently updated. Typical graphics formats for static web maps are PNG, JPEG, GIF, or TIFF for raster files, SVG, PDF or SWF for vector files. These include scanned paper maps not designed as screen maps. 
 
-![](img/d3.png)
+![](img/d3.jpg)
 
 > A static web map made by D3 + TopoJSON, rendered by SVG (Mike Bostock 2012), check it out at [here](https://bost.ocks.org/mike/map/)
 
@@ -87,7 +87,7 @@ This section contains some of the milestones of web mapping, online mapping serv
 
 - 1993: **Xerox PARC Map Viewer**, The first mapserver based on `CGI/Perl`, allowed reprojection styling and definition of map extent. Map Viewer used a customized CGI server module written in Perl. Map images were generated in GIF format from two server side programs. MAP-WRITER created the raster images from the geographic database and RASTOGIF would convert the raster image into the GIF format.
 
-  ![](img/xerox_map_viewe.png)
+  ![](img/xerox_map_viewe.jpg)
 
 - 1994: The World Wide Earthquake Locator, the first interactive web mapping mashup was released, based on the Xerox PARC map view.
 
@@ -129,7 +129,7 @@ This section contains some of the milestones of web mapping, online mapping serv
 
 - 2001: **GeoServer**, started by The Open Planning Project (TOPP), a non-profit technology incubator based in New York. TOPP was creating a suite of tools to enable open democracy and to help make government more transparent.
 
-  ![](img/geoserver.png)
+  ![](img/geoserver.jpg)
 
 - 2001: **Tirolatlas**, A highly interactive online atlas, the first to be based on the SVG standard.
 
@@ -165,19 +165,19 @@ This section contains some of the milestones of web mapping, online mapping serv
 
 - 2010: **MapBox** is founded. Mapbox is a large provider of custom online maps for websites such as Foursquare, Pinterest, Evernote, the Financial Times, The Weather Channel and Uber Technologies. Since 2010, it has rapidly expanded the niche of custom maps, as a response to the limited choice offered by map providers such as Google Maps and OpenStreetMap. Mapbox is the creator of, or a significant contributor to some open source mapping libraries and applications, including the MBTiles specification, the TileMill cartography IDE, the Leaflet JavaScript library, and the CartoCSS map styling language and parser.
 
-  ![](img/mapbox.png)
+  ![](img/mapbox.jpg)
 
 - 2011: **CARTO** (formerly CartoDB) is a Software as a Service (SaaS) **cloud computing** platform that provides GIS and web mapping tools for display in a web browser. 
 
-  ![](img/carto.png)
+  ![](img/carto.jpg)
 
 - 2011: **Leaflet**, the initial release, an open-source JavaScript libraryfor **mobile-friendly** interactive maps.
 
-  ![](img/leaflet.png)
+  ![](img/leaflet.jpg)
 
 - 2011: **Cesium**, an open-source JavaScript library for world-class **3D** globes and maps, enable users to create the leading 3D globe and map for static and time-dynamic content.
 
-  ![](img/cesium.png)
+  ![](img/cesium.jpg)
 
 - 2012: Apple removes Google Maps as the default mapping app and replaces it with its own mapping app.
 

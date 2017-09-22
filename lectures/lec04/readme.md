@@ -13,7 +13,7 @@
 
 It can take several different physical machines to create, serve, and use a web map. These are often depicted in diagrams as separate levels, or tiers of architecture. In this course, you'll likely use just one machine to play all these roles; however, it's important to understand how the tiers fit together.
 
-![System architecture for GIS web services](img/architecture.png)
+![System architecture for GIS web services](img/architecture.jpg)
 
 >  **System architecture for web mapping**.  
 >

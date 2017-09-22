@@ -45,7 +45,7 @@ You can also have supplemental files, such as images, style files, scripts, and 
 
 ***How is everything related?***
 
-<img src="img/environment.png" alt="Drawing" style="text-align: center; width: 100%;"/>
+<img src="img/environment.jpg" alt="Drawing" style="text-align: center; width: 100%;"/>
 
 To host a web application, you need to move the codes and the supplemental files to the server. For most of the lecture and lab demos, you can launch a web server on your computer by python SimpleHTTPServer or a server integrated in Webstorm, also you can host your web map through github page.
 
@@ -86,7 +86,7 @@ Now you can access your site **http://localhost** without specifying a port.
 
 Other than setting up a Server environment through python SimpleHTTPServer, you can also If you work in Webstorm (what we suggested for this course), you do not need to start the Python server by inputting commands in the Terminal or Command promt. In Webstorm's main window, click one of the browser icons at the top right, a server environment will automatically launch, and a browser showing the web page will be opened up.
 
-![](img/webstorm.png)
+![](img/webstorm.jpg)
 
 > Click the chrome icon on the top right of Webstorm interface to open the "index.html" in Chrome, a server environment will automatically set up.
 
@@ -145,7 +145,7 @@ The [Document Object Model](https://www.w3.org/DOM/) represents the hierarchy of
 
 *The DOM Tree*
 
-![](img/dom.png)
+![](img/dom.jpg)
 
 ### Common Tags
 
@@ -256,7 +256,7 @@ You have many options for links. For example, if you want a link to open in a ne
 
 Adding an image is just as easy as adding a hyperlink, although a bit different. An image is not stored on your webpage, but it sits on your server, just like your other files. When you display an image in an html file, you are linking to the image. The HTML tells the browser to locate and display it. Therefore, we will follow a multiple step process.
 
-- Locate the folder named `img` that you copied to your web directory. You will find one image here named **osu.png**. In this folder, you'll store all subsequent images you want to use in your page.
+- Locate the folder named `img` that you copied to your web directory. You will find one image here named **osu.jpg**. In this folder, you'll store all subsequent images you want to use in your page.
 - Use the `img` tag to link to that image in your `index.html`
 
 Now we can add the image to our index.html. The following line of code uses the img tag, and then links to our image. We will use the `src` attribute to name the source of the image. The image is coming from our own server, we don't need to go externally to get it, so we can put the name of the folder and image as our image address.
@@ -268,7 +268,7 @@ Copy and paste this following line in between the `body` tags in your `index.htm
 If you want to add an image from another page, you can simply include the URL at which the image is located. The following links to an image on Wikimedia.
 
 ```xml
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Oregon_State_Athletics_logo.svg/400px-Oregon_State_Athletics_logo.svg.png"/>
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Oregon_State_Athletics_logo.svg/400px-Oregon_State_Athletics_logo.svg.jpg"/>
 ```
 
 ### Our Code
@@ -296,7 +296,7 @@ At present, your document will look something like the following.
 
 Our page, with this code, contains a bit more content now.
 
-<img src="img/simple_page.png" alt="page" />
+<img src="img/simple_page.jpg" alt="page" />
 
 > *What does our DOM Tree look like at this point?*
 
@@ -380,7 +380,7 @@ p {
 
 CSS follows the DOM model, with styles applied to elements higher in the DOM applied to those that are descendents. If selectors are defined in multiple locations in your CSS, which one gets precedence?
 
-![](img/dom.png)
+![](img/dom.jpg)
 
 There are two general rules.
 
@@ -456,7 +456,7 @@ a circle {
 
 Every element in your document is represented by a box. These boxes allow you to set properties such as margins around items.
 
-![](img/padding-width.png)
+![](img/padding-width.jpg)
 
 - `Padding` - The content is surrounded by the padding area, exists between the content and the border.
 

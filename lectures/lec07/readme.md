@@ -2,16 +2,16 @@
 
 > Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >
-> Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
 
 **Learning Objectives**
 
-- Get to know the most popular web map client library - Leaflet;
+- Get to know the most popular web map client library/framework - Leaflet;
 - Use Leaflet to create a map, geographic feature;
 - Link external javascript libs to a web map application; and
 - Add geospatial data to a leaflet based map.
 
-This week, we move forward to make a web map from scratch! To do that, this lecture starts with introducing Leaflet - a Javascript library used to create interactive, web-based, mobile-friendly maps. With Leaflet, you can create a simple map in as little as three lines of code, or you can build complex, dynamic, and complex maps that contain hundreds of lines. This lecture assumes you have worked through the previous lectures and lab exercises, and have a working knowledge of HTML, CSS and JavaScript.
+In this lecture, we move forward to make a web map from scratch! To do that, this lecture starts with introducing Leaflet - a Javascript library used to create interactive, web-based, mobile-friendly maps. With Leaflet, you can create a simple map in as little as three lines of code, or you can build complex, dynamic, and complex maps that contain hundreds of lines. This lecture assumes you have worked through the previous lectures and lab exercises, and have a working knowledge of HTML, CSS and JavaScript.
 
 ## 1. Introduction
 
@@ -27,13 +27,13 @@ Leaflet is an open-source JavaScript library for interactive web maps. It's ligh
 
 What Leaflet does web maps with tiled base layers, panning and zooming, and feature layers that you supply. It handles various basic tasks like converting data to map layers and mouse interactions, and it's easy to extend with plugins. It will also work well across most types of devices. 
 
-What Leaflet does not do: Provide any data for you! Leaflet is a framework for showing and interacting with map data, but it's up to you to provide that data, including a basemap. Leaflet is also not GIS, although it can be combined with tools like **ArcGIS**, **MapBox**, or **CartoDB** for GIS-like capabilities. (1) If you need total freedom of form, interaction, transitions, and map projections, consider working with something like D3. (2) If you need word with 3D virtual globe, cesium is alternative.  
+What Leaflet does not do: Provide any data for you! Leaflet is a framework for showing and interacting with map data, but it's up to you to provide that data, including a basemap. Leaflet is also not GIS, although it can be combined with tools like **ArcGIS**, **MapBox**, or **CartoDB** for GIS-like capabilities.
+- *If you need total freedom of form, interaction, transitions, and map projections, consider working with something like D3.*
+- *If -you need word with 3D virtual globe, cesium is alternative.*
 
 We will start with an empty webpage, then progressively add components to make a Leaflet map. It assumes a basic knowledge of HTML and JavaScript, or at the very least assumes the will to tinker with the code to better understand what it does. It won't explain every little object or array, but will contain plenty of links. Many code blocks will show only a snippet of code, highlighting the changes over previous examples. Click the "View this example on its own" link underneath a map to see complete code. For thorough documentation, see the Leaflet site.
 
-### 1.3 Use an IDE and start up a Server
-
-Use an IDE for writing your code, such as **Webstorm**, **Sublime Text**,  or **Notepad++**. 
+### 1.3 Use an IDE (Webstorm) and start up a Server
 
 To put your map on the web, you need to host the web page and geospatial data to the server. So, you need to transfer the web pages and data to the remote server (e.g., Google cloud platform) or to set up the local computer as a server. Regarding setting up a local server, you can try Webstorm debugging/execution environment or python SimpleHTTPServer, such as:
 
@@ -47,7 +47,7 @@ Now open a browser and access your site at: http://localhost:8000
 
 We will start from scratch to build a web map, with a tile base layer, some mapped data, and some basic interactivity. 
 
-![](img/polygon.png)
+![](img/polygon.jpg)
 
 ### 2.1 Create a working directory
 
@@ -129,7 +129,7 @@ The last step in getting a basic map running is add a layer. We are going to use
 
 ```html
 // Add OpenStreetMap tile layer to map element
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap' }).addTo(map);
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.jpg', { attribution: '&copy; OpenStreetMap' }).addTo(map);
 ```
 
 > Note the attribution. Here we can provide reference for the source of the base map, and any other attribution for map elements we want to provide. It will appear in the lower right corner of our map by default, but you can change this. Read more about attribution here.
@@ -138,13 +138,13 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '&copy; Op
 
 Save your HTML document and open your web browser to your localhost server (http://localhost:8000). You will see the map we just created!
 
-![](img/basemap.png)
+![](img/basemap.jpg)
 
 **Additional Tile Layers**
 
 There are a number of resources that have tile layers you can use with Leaflet JS. An excellent resource for examining and previewing tile layers is called Leaflet Provider. Scan [through available tile layers and preview them](http://leaflet-extras.github.io/leaflet-providers/preview/), and try replacing the L.tileLayer with one of the other tile layers in your code.
 
-![](img/layer_preview.png)
+![](img/layer_preview.jpg)
 
 **Loading a WMS**
 
@@ -163,7 +163,7 @@ To add a point to your map, we use the `L.marker` class. To add a point, we spec
 var myDataPoint = L.marker([44.56822, -123.28034]).addTo(map);
 ```
 
-![](img/marker.png)
+![](img/marker.jpg)
 
 ### 3.2 Adding Polylines
 
@@ -176,7 +176,7 @@ To add a polyline (a line that can have multiple segments) to your map, we use t
 var myDataLine = L.polyline([[44.5656915, -123.2775289], [44.5656992, -123.2778923], [44.5662266, -123.2778722], [44.5682559, -123.2778293], [44.5682445, -123.2800823]],
     {color: 'red', weight: 5}).addTo(map);
 ```
-![](img/polyline.png)
+![](img/polyline.jpg)
 
 
 ### 2.3 Adding Polygons
@@ -190,7 +190,7 @@ var myArea = L.polygon([[44.5651985, -123.2769978],[44.566131, -123.2769978], [4
 ```
 Save your document and refresh your browser.
 
-![](img/polygon.png)
+![](img/polygon.jpg)
 
 ### 3.4 Other Simple Vector Data Types
 

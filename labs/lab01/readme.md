@@ -28,7 +28,7 @@ For this lab, you will use Webstorm, typora and git. Also these software product
 
 If **Git** is successfully installed, type `git` in command prompt (if you are a Windows user) or terminal (if you are a Mac or Linux user), the following screen will be shown up.
 
-![](img/git-command.png)
+![](img/git-command.jpg)
 
 Using `git`, you can synchronize the course materials and also publish your own GitHub repository.  We will talk about that later in this lab.
 
@@ -109,7 +109,7 @@ In the root directory, there are folders like labs, lectures and readings, and f
 
 7\. Next, we open the `readme.md` file using `Typora`.  If the previous steps work successfully, we can read the similar content as shown below.
 
-![](img/typora_syllabus.png)
+![](img/typora_syllabus.jpg)
 
 8\. Once the course material is hosted on GitHub, it can be easily shared with a larger community and update. To synchronize the course material on remote GitHub repository to your local computer, you need to implement two sequential command lines `git checkout --force` and `git pull` in the root directory of the repository. Once the two commands are executed. An update notice will be shown as below.
 
@@ -148,11 +148,11 @@ In this section, we will introduce a series of operations related to project man
 
 1\. Navigate to [https://github.com/new](https://github.com/new), and input your repository name in the blank text box for `Repository name`. Here, please name your repository in the format of **[account_username].github.io**. So, if your account_username is `jakobzhao`, this repository name will be **jakobzhao.github.io**. 
 
-![""](img/create-new-repository-2.png)
+![""](img/create-new-repository-2.jpg)
 
 2\. Besides, make sure you **CHECK** the box `Initialize this repository with a README`. You can leave other options by default. 
 
-![](img/create-new-repository-3.png)
+![](img/create-new-repository-3.jpg)
 
 3\. Next, click the `Create repository` button. As a result, a new repository `[account_username].github.io` is created. You can access this repository through the link `https://github.com/[account_username]/[account_username].github.io`. For example,  you can access the repository I created through this link [https://github.com/jakobzhao/jakobzhao.github.io](https://github.com/jakobzhao/jakobzhao.github.io).
 
@@ -239,7 +239,7 @@ Once you have drafted out your resume in the `resume.md` file. You will upload t
 
 > **Note:** Certainly, you can drag and drop multiple files and/or folders. In this lab, we just upload one single file.
 
-![](img/after-the-drop.png)
+![](img/after-the-drop.jpg)
 
 3\. Before pressing the green button `Commit Changes`, you might want to add a title and/or some descriptions for this commit. It will help you organize your commits.
 
@@ -275,18 +275,18 @@ We can also use Webstorm to upload files to GitHub repository or more generally,
 
 3\. Open the program `Webstorm`. By default, the welcome window will pop up. In this welcome window, click `Open` button on the bottom right. Then, another new window `Open File or Project` will pop up. Select the downloaded repository. The name should be in the format of `[account_username].github.io`.
 
-![](img/open_webstorm_project.png)
+![](img/open_webstorm_project.jpg)
 
 
 4\. Once you open this repository, you can edit the `resume.md` in Webstorm.
 
 5\. To update any edit changes, on the top menu, Click `VCS` on the top menu, and then `commit...` on the dropdown menu.
 
-![](img/commit.png)
+![](img/commit.jpg)
 
 6\. On the popped-up `Commit Changes` window, make sure you check the `Unversioned Files` box if there is, also, you need to leave some message in the `Commit Message` textbox and input the name of the author who made this change.
 
-![](img/commit_change.png)
+![](img/commit_change.jpg)
 
 7\. Before you commit, hover your mouse on the `Commit` button, then a dropdown menu will show up, **Choose `Commit and Push...`**. Then on the newly popped up window, click `push` to finish.
 
