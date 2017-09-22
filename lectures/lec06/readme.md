@@ -83,12 +83,6 @@ Mandatory files
 | LAYER.dbf | Feature attributes     |
 
 
-
-
-**.shp** — shape format; the feature geometry itself
-**.shx** — shape index format; a positional index of the feature geometry to allow seeking forwards and backwards quickly
-**.dbf** — attribute format; columnar attributes for each shape, in dBase IV format
-
 Other common files
 
 
