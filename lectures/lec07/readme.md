@@ -17,7 +17,7 @@ In this lecture, we move forward to make a web map from scratch! To do that, thi
 
 ### 1.1 Web maps recap
 
-The term *"web map"* often implies a map that is not simply on the web, but rather one that is powered by the web. A digital map is a map on a computer, a web map is depends on the internet. It is usually interactive, and not always self-contained, meaning it can **grab components from other locations on the web**.
+The term *"web map"* often implies a map that is not simply on the web, but rather one that is powered by the web. A digital map is a map on a computer, a web map is depends on the internet. It is usually interactive, and **not always self-contained**, meaning it can **grab components from other locations on the web**.
 
 The two big concepts are **tiles**, which are gridded images that make up the *basemaps*, and **geographic features**, which can be points, lines/polylines, and polygons, are used for displaying thematic layers. Tiles are static and non-interactive, while the geographic features layers can be dynamic and offer user interaction.
 
