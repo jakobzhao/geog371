@@ -32,10 +32,12 @@ When you are working with javascript, some of your main goals will be to:
 
 JavaScript can be added to your website by either typing in script between two script tags, or by linking a JavaScript file to your site. Please download the zipped package of this practical exercise, unzip it in your workspace, and you will see the dictorery strucuture below,
 ```powershell
-wk02_3_lab02
-│  index.html
-└─js
-   └──main.js
+geog371
+    labs
+        lab02
+        │  index.html
+        └─js
+           └──main.js
 ```
 Please activate a web server environment under the unzipped directory  by **SimpleHTTPServer** or **WebStorm**.  Then visit `index.html` on Google Chrome. For example, if you activate a web server environment by SimpleHTTPServer with default setting, you may need to visit http://localhost:8000/index.html.
 
