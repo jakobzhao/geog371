@@ -147,4 +147,4 @@ $( document ).ready(function() {
 });
 ```
 
-In this lecture, the instructor has  introduced some fundamental concepts about JQuery. If you are interested in a deeper understanding of JQuery, you can try out its tutorial on W3Schools. Though JQuery touches upon a wide range of operations, the concepts listed above, especially the selectors, mouse event, and the `.on()` methods  will be frequently used in your labs, final projects and futher works..
+In this lecture, the instructor has  introduced some fundamental concepts about JQuery. If you are interested in a deeper understanding of JQuery, you can try out its tutorial on W3Schools. Though JQuery touches upon a wide range of operations, the concepts listed above, especially the selectors, mouse event, and the `.on()` methods  will be frequently used in your labs, final projects and future works..
