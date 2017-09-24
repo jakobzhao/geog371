@@ -28,6 +28,13 @@ What Leaflet does not do: Provide any data for you! Leaflet is a framework for s
 
 We will start with an empty webpage, then progressively add components to make a Leaflet map. It assumes a basic knowledge of HTML and JavaScript, or at the very least assumes the will to tinker with the code to better understand what it does. It won't explain every little object or array, but will contain plenty of links. Many code blocks will show only a snippet of code, highlighting the changes over previous examples. Click the "View this example on its own" link underneath a map to see complete code. For thorough documentation, see the Leaflet site.
 
+
+The latest stable Leaflet release is hosted on a CDN — to start using it straight away, place this in the head of your HTML code:
+```html
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+```
+
 ### 1.2 Use an IDE (Webstorm) and start up a Server
 
 To put your map on the web, you need to host the web page and geospatial data to the server. So, you need to transfer the web pages and data to the remote server (e.g., Google cloud platform) or to set up the local computer as a server. Regarding setting up a local server, you can try Webstorm debugging/execution environment or python SimpleHTTPServer, such as:

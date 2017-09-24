@@ -3,25 +3,26 @@
 <head>
     <title>Leaflet Map</title>
     <!-- External Stylesheets -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+    <!-- Add the Leaflet JavaScript library -->
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
 <!-- Our web map and content will go here -->
 <div id="map" style="width: 900px; height: 600px"></div>
-<!-- Add the Leaflet JavaScript library -->
-<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 <script>
     // Create variable to hold map element, give initial settings to map
-    var map = L.map('map',{ center: [44.56576, -123.27888], zoom: 16});
+    var map = L.map('map', {center: [44.56576, -123.27888], zoom: 16});
 
     // Add OpenStreetMap tile layer to map element
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
 
     // load GeoJSON from an external file
-    $.getJSON("assets/geog371.geojson",function(data){
+    $.getJSON("assets/geog371.geojson", function (data) {
         // add GeoJSON layer to the map once the file is loaded
-        L.geoJson(data,{
+        L.geoJson(data, {
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(feature.properties.name);
             }

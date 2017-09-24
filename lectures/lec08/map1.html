@@ -3,19 +3,24 @@
 <head>
     <title>Leaflet Map</title>
     <!-- External Stylesheets -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+    <!-- Add the Leaflet JavaScript library -->
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
 </head>
 <body>
 <!-- Our web map and content will go here -->
 <div id="map" style="width: 900px; height: 600px"></div>
-<!-- Add the Leaflet JavaScript library -->
-<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 <script>
     // Create variable to hold map element, give initial settings to map
-    var map = L.map('map',{ center: [44.56576, -123.27888], zoom: 16});
+    var map = L.map('map', {
+        center: [44.56576, -123.27888],
+        zoom: 16
+    });
 
     // Add OpenStreetMap tile layer to map element
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
 
     // Create point feature for Wilkinson Hall
     var myDataPoint = L.marker([44.56822, -123.28034]).addTo(map);
@@ -23,10 +28,28 @@
     myDataPoint.bindPopup("<h3>Wilkinson Hall</h3><p>Corvallis, Oregon<br>College of Earth, Ocean, and Atmostpheric Sciences</p>");
 
     // Create line feature for the Route from Wilkinson Hall to Strand Ag Hall, style and add to map
-    var myDataLine = L.polyline([[44.5656915, -123.2775289], [44.5656992, -123.2778923], [44.5662266, -123.2778722], [44.5682559, -123.2778293], [44.5682445, -123.2800823]], {color: 'red', weight: 5}).addTo(map);
+    var myDataLine = L.polyline([
+        [44.5656915, -123.2775289],
+        [44.5656992, -123.2778923],
+        [44.5662266, -123.2778722],
+        [44.5682559, -123.2778293],
+        [44.5682445, -123.2800823]
+    ], {
+        color: 'red',
+        weight: 5
+    }).addTo(map);
 
     // Create area feature for Strand Ag Hall, style and add to map
-    var myArea = L.polygon([[44.5651985, -123.2769978],[44.566131, -123.2769978], [44.5661339, -123.2775027], [44.5651985, -123.2775182], [44.5651985, -123.2769978],], {color: 'orange', weight: 5}).addTo(map);
+    var myArea = L.polygon([
+        [44.5651985, -123.2769978],
+        [44.566131, -123.2769978],
+        [44.5661339, -123.2775027],
+        [44.5651985, -123.2775182],
+        [44.5651985, -123.2769978]
+    ], {
+        color: 'orange',
+        weight: 5
+    }).addTo(map);
 
 
     // Create an Empty Popup
@@ -42,9 +65,6 @@
 
     // Listen for a click event on the Map element
     map.on('click', onMapClick);
-
-
-
 </script>
 </body>
 </html>
