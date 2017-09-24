@@ -91,13 +91,13 @@ Save and refresh. Click on the data features to see the pop ups in action.
 
 More on events is found in the [Leaflet documentation](http://leafletjs.com/reference.html), under each object, look at the events and properties that are available for you to utilize and manipulate.
 
-## 3. Use JQuery and add a GeoJSON
+## 3. Use leaflet-ajax plugin to add a GeoJSON
 
 Learning the fundamentals of adding small datasets to our map along with some basic interactivity is important, but often times you will be adding larger datasets to our maps, sometimes containing hundreds of features. Leaflet is designed to work natively with a data format called GeoJSON. GeoJSON is JavaScript object that contains geographic data. This might not make sense right now, and that is fine, we will discuss JavaScript in depth in the next session. But for now, lets look at one way to load a GeoJSON into our map.
 
 **The GeoJSON**
 
-In the downloaded materials, there is a data folder that contains a file called **"geog371.geojson"**. This is a dataset of several geographic features containing the lecture, lab, and office hour location of the course Geography 371, and the route linking the lecture and lab location to the office hour location.  Open up the GeoJSON in webstorm or other IDEs to see what a GeoJSON looks like. Also, you open this geojson file by a web application at http://www.geojson.io.  As shown below.
+In the downloaded materials, there is a data folder `assets` that contains a file called **"geog371.geojson"**. This is a dataset of several geographic features containing the lecture, lab, and office hour location of the course Geography 371, and the route linking the lecture and lab location to the office hour location.  Open up the GeoJSON in webstorm or other IDEs to see what a GeoJSON looks like. Also, you open this geojson file by a web application at http://www.geojson.io.  As shown below.
 
 ![](img/geojsonio.png)
 
@@ -108,29 +108,31 @@ The first thing is add a super useful JavaScript library called `jQuery` to our 
 Enter the following line of code at the bottom of the body section to add the jQuery library to our page after the lines that add the Leaflet JavaScript library.
 
 ```html
+<head>
+    ...
+     <!-- External Stylesheets -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+     <!-- Add the Leaflet JavaScript library -->
+     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+</head>
 <body>
     ...
-        <!-- HTML Page Elements are here -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- Web Map Scripts are here -->
-    ...
+     <!-- HTML Page Elements are here -->
+     <script> ... </script>
 </body>
 ```
 
 ### 3.2 Add the GeoJSON
 
-To add the GeoJSON to your map, use  [$.getJSON()](http://api.jquery.com/jquery.getjson/) . The `$` signifies we are using an object from the jQuery library, and getJSON is the object. Within the brackets, we put the location of the GeoJSON on our server `assets/geog371.geojson`, then a callback function `function(data)` that executes if the GeoJSON is found. The callback function will contain the code that will add the GeoJSON to our map.
 
-To add the GeoJSON to the map, use [L.geoJson()](http://leafletjs.com/reference.html#geojson) the Leaflet library. Pass the dataset to `L.geoJson`, then add it to the map element. Simple enough right?
+To add the GeoJSON to the map, use `L.geoJson.ajax()` function. Simple enough right?
 
 Add the following code to your `script`, between the script tags.
 
 ```js
 // load GeoJSON from an external file
-$.getJSON("assets/geog371.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-});
+L.geoJson.ajax("assets/geog371.geojson").addTo(map);
 ```
 
 Simple enough right? Click save and refresh your page to see the GeoJSON added to the map.
@@ -139,18 +141,15 @@ Simple enough right? Click save and refresh your page to see the GeoJSON added t
 
 ### 3.3 Add Popups to Show the feature name
 
-We can see the points, but they might not be very useful without adding popups. We can add popups in a very similar manner as above, except since we are using a full dataset, it doesn't make much sense to add them one by one. The `L.geoJson` object has a option called `onEachFeature` that runs a function on each feature when it is added to the map. We can use this to run a function that adds a popup to each feature when it is added to the map. The syntax, which goes in brackets after we specify the data we are adding, looks like the following. Enter this into your `getJSON` and `L.geoJson` functions.
+We can see the points, but they might not be very useful without adding popups. We can add popups in a very similar manner as above, except since we are using a full dataset, it doesn't make much sense to add them one by one. The `L.geoJson` object has a option called `onEachFeature` that runs a function on each feature when it is added to the map. We can use this to run a function that adds a popup to each feature when it is added to the map. The syntax, which goes in brackets after we specify the data we are adding, looks like the following. Enter this into your `L.geoJson` functions.
 
 ```js
 // load GeoJSON from an external file
-$.getJSON("assets/geog371.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data,{
-        onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.name);
-        }
-    }).addTo(map);
-});
+L.geoJson.ajax("assets/geog371.geojson", {
+    onEachFeature: function(feature, layer) {
+        layer.bindPopup(feature.properties.name);
+    }
+}).addTo(map);
 ```
 
 Once entered, save and refresh your page. Click on one of the popups, you will see the name of the feature appear. 
@@ -161,6 +160,6 @@ Once entered, save and refresh your page. Click on one of the popups, you will s
 
 There are also a couple of very useful plugins, one called [Leaflet Omnivore](https://github.com/mapbox/leaflet-omnivore), that can read in other data formats, and [Leaflet Shapefile](https://github.com/calvinmetcalf/leaflet.shapefile), that will add a shapefile to your map. We will cover these at a later date, when we look at plugins and the additional capabilities they add to Leaflet.
 
-##  4. Concluding remarks
+## 4. Concluding remarks
 
 To wrap up, lets leave it here for this lesson. We covered the majority of fundamentals for creating, adding data, and displaying a Leaflet map. Continue to explore [the documentation on the Leaflet site](http://leafletjs.com/reference.html) to see what you can do with the various elements of the map we worked on in this session.

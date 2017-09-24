@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cell Towers in Oregon (2009)</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
@@ -11,8 +11,9 @@
 <!-- Our web map and content will go here -->
 <div id="wrapper">
     <div id="map" style="width: 900px; height: 600px;"></div>
-    <div id ="controls">
-        <div id="credits"><p> Winter 2017 | GEOG 371 | Geovisualization: Web Mapping &copy; Bo Zhao, CEOAS, OSU</p></div>
+    <div id="controls">
+        <div id="credits"><p> Winter 2017 | GEOG 371 | Geovisualization: Web Mapping &copy; Bo Zhao, CEOAS, OSU</p>
+        </div>
     </div>
 </div>
 <script>
@@ -32,10 +33,10 @@
 
     // Create Custom Icons Here
     var TowerIcon = L.Icon.extend({
-        options:{
+        options: {
             shadowUrl: 'img/ct_sd.png',
-            iconSize: [18,18],
-            shadowSize: [25,18],
+            iconSize: [18, 18],
+            shadowSize: [25, 18],
             iconAnchor: [16, 16],
             shadowAnchor: [16, 16],
             popupAnchor: [-8, -18]
@@ -57,31 +58,31 @@
     <!--dwqewqeqw-->
 
     //Get GeoJSON and put on it on the map when it loads
-    $.getJSON("assets/cell_towers.geojson", function(data){
+    $.getJSON("assets/cell_towers.geojson", function (data) {
         // add the cell tower GeoJSON layer to the map
-        cellTowers = L.geoJson(data,{
+        cellTowers = L.geoJson(data, {
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(feature.properties.company);
             }, pointToLayer: function (feature, latlng) {
                 var marker = null;
-                if (feature.properties.company == "New Cingular"){
-                    marker = L.marker(latlng,{icon: tower1Icon});
-                } else if (feature.properties.company == "Cello"){
-                    marker = L.marker(latlng,{icon: tower2Icon});
-                } else if (feature.properties.company == "Hood River Cellular"){
-                    marker = L.marker(latlng,{icon: tower3Icon});
-                } else if (feature.properties.company == "Medford Cellular"){
-                    marker = L.marker(latlng,{icon: tower4Icon});
-                } else if (feature.properties.company == "Verizon"){
-                    marker = L.marker(latlng,{icon: tower5Icon});
-                } else if (feature.properties.company == "Oregon RSA"){
-                    marker = L.marker(latlng,{icon: tower6Icon});
-                } else if (feature.properties.company == "RSS Minnesota"){
-                    marker = L.marker(latlng,{icon: tower7Icon});
-                } else if (feature.properties.company == "Salem Cellular"){
-                    marker = L.marker(latlng,{icon: tower8Icon});
+                if (feature.properties.company == "New Cingular") {
+                    marker = L.marker(latlng, {icon: tower1Icon});
+                } else if (feature.properties.company == "Cello") {
+                    marker = L.marker(latlng, {icon: tower2Icon});
+                } else if (feature.properties.company == "Hood River Cellular") {
+                    marker = L.marker(latlng, {icon: tower3Icon});
+                } else if (feature.properties.company == "Medford Cellular") {
+                    marker = L.marker(latlng, {icon: tower4Icon});
+                } else if (feature.properties.company == "Verizon") {
+                    marker = L.marker(latlng, {icon: tower5Icon});
+                } else if (feature.properties.company == "Oregon RSA") {
+                    marker = L.marker(latlng, {icon: tower6Icon});
+                } else if (feature.properties.company == "RSS Minnesota") {
+                    marker = L.marker(latlng, {icon: tower7Icon});
+                } else if (feature.properties.company == "Salem Cellular") {
+                    marker = L.marker(latlng, {icon: tower8Icon});
                 } else {
-                    marker = L.marker(latlng,{icon: tower9Icon});
+                    marker = L.marker(latlng, {icon: tower9Icon});
                 }
                 return marker;
             }
@@ -89,11 +90,11 @@
     });
 
     // Set function for color ramp
-    function setColor(density){
+    function setColor(density) {
         return density > 18 ? '#b30000' :
             density > 13 ? '#e34a33' :
                 density > 10 ? '#fc8d59' :
-                    density >  5 ? '#fdcc8a' :
+                    density > 5 ? '#fdcc8a' :
                         '#fef0d9';
     }
 
@@ -109,11 +110,11 @@
         };
     }
 
-     //Null variable that will hold neighborhoods layer
+    //Null variable that will hold neighborhoods layer
     var countiesLayer = null;
 
     // Add Neighborhood Polygons
-    $.getJSON("assets/counties.geojson",function(data){
+    $.getJSON("assets/counties.geojson", function (data) {
         countiesLayer = L.geoJson(data, {style: style}).addTo(mymap);
     });
 
