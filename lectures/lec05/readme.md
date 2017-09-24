@@ -15,15 +15,8 @@ After a self-learning of this week's reading list as well as the Lab 2, you migh
 
 JQuery is free, open-source software using the permissive MIT License. Web analysis indicates that it is the most widely deployed JavaScript library by a large margin. JQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. JQuery also provides capabilities for developers to create plug-ins on top of the JavaScript library. This enables developers to create abstractions for low-level interaction and animation, advanced effects and high-level, theme-able widgets. The modular approach to the JQuery library allows the creation of powerful dynamic web pages and Web applications.
 
-- JQuery is Used by over 55% of the 10,000 most visited websites, JQuery is the most popular JavaScript library in use today.
-- 19,909,315 websites are using JQuery!
-- 216,123 websites within the top million most visited sites use JQuery!
-- Microsoft and Nokia have announced plans to bundle JQuery on their platforms. Microsoft is adopting it initially within Visual Studio.
-- JQuery 2.0 will completely drop support for Old-IE.
-- There are at least 4,830 official JQuery plugins on the query plugin website!
 
-
-## 1\. Include the Library
+## 1\. Include Javascript Library
 
 The jQuery library is a single JavaScript file containing all of its common DOM, event, effects, and Ajax functions. It can be included within a Web page by linking to a local copy or to one of the many copies available from public servers. jQuery has a content delivery network (CDN) hosted by MaxCDN. Google and Microsoft host it as well.
 
