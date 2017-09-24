@@ -52,7 +52,7 @@ Html, CSS, Javascript, Markdown and GeoJson
 
 ![](resources/img/2017_winter.jpg)
 
-- [A story map on Infrastructure for Water Management](http://rawgit.com/cartobaldrica/water_atlas/master/infrastructure_index.html) from a former student has won the environmental challenge 2017
+- :trophy: [A story map on Infrastructure for Water Management](http://rawgit.com/cartobaldrica/water_atlas/master/infrastructure_index.html) from a former student has won the environmental challenge 2017
 
 ![](resources/img/2017-envchallenge.jpg)
 
