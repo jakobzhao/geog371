@@ -37,21 +37,21 @@ cellTowers = L.geoJson.ajax("assets/cell_towers.geojson", {
     },
     pointToLayer: function (feature, latlng) {
         var marker = null;
-        if (feature.properties.company == "New Cingular"){
+        if (feature.properties.company === "New Cingular"){
             marker = L.marker(latlng,{icon: tower1Icon});
-        } else if (feature.properties.company == "Cello"){
+        } else if (feature.properties.company === "Cello"){
             marker = L.marker(latlng,{icon: tower2Icon});
-        } else if (feature.properties.company == "Hood River Cellular"){
+        } else if (feature.properties.company === "Hood River Cellular"){
             marker = L.marker(latlng,{icon: tower3Icon});
-        } else if (feature.properties.company == "Medford Cellular"){
+        } else if (feature.properties.company === "Medford Cellular"){
             marker = L.marker(latlng,{icon: tower4Icon});
-        } else if (feature.properties.company == "Verizon"){
+        } else if (feature.properties.company === "Verizon"){
             marker = L.marker(latlng,{icon: tower5Icon});
-        } else if (feature.properties.company == "Oregon RSA"){
+        } else if (feature.properties.company === "Oregon RSA"){
             marker = L.marker(latlng,{icon: tower6Icon});
-        } else if (feature.properties.company == "RSS Minnesota"){
+        } else if (feature.properties.company === "RSS Minnesota"){
             marker = L.marker(latlng,{icon: tower7Icon});
-        } else if (feature.properties.company == "Salem Cellular"){
+        } else if (feature.properties.company === "Salem Cellular"){
             marker = L.marker(latlng,{icon: tower8Icon});
         } else {
             marker = L.marker(latlng,{icon: tower9Icon});
