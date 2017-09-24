@@ -376,6 +376,8 @@ p {
 - A # before a selector indicates that the selector is an id.
 - A . before a selector indicates that the selector is a class.
 
+A W3School CSS Selector test can be found at [here](https://www.w3schools.com/cssref/trysel.asp).
+
 ### Inheritance and Order of Operations
 
 CSS follows the DOM model, with styles applied to elements higher in the DOM applied to those that are descendents. If selectors are defined in multiple locations in your CSS, which one gets precedence?
