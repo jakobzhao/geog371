@@ -23,12 +23,7 @@
 
     var mymap = L.map('map', {center: [44.13, -119.93], zoom: 7});
 
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
-        maxZoom: 11,
-        minZoom: 6,
-        attribution: 'Cell Tower Data &copy; Map Cruzin | Oregon counties &copy; Oregon Explorer | Base Map &copy; Mapbox',
-        id: 'mapbox.light'
-    }).addTo(mymap);
+    L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
 
     // Create Custom Icons Here
     var TowerIcon = L.Icon.extend({

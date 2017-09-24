@@ -4,12 +4,7 @@
 
 var mymap = L.map('map', {center: [44.13, -119.93], zoom: 7});
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
-    maxZoom: 11,
-    minZoom: 6,
-    attribution: 'Cell Tower Data &copy; Map Cruzin | Oregon counties &copy; Oregon Explorer | Base Map &copy; Mapbox',
-    id: 'mapbox.light'
-}).addTo(mymap);
+L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
 
 // Create Custom Icons Here
 var TowerIcon = L.Icon.extend({
@@ -33,39 +28,38 @@ var tower7Icon = new TowerIcon({iconUrl: 'img/ct7.png'});
 var tower8Icon = new TowerIcon({iconUrl: 'img/ct8.png'});
 var tower9Icon = new TowerIcon({iconUrl: 'img/ct9.png'});
 
-var cellTowers = null;
+var cellTowers;
 
 // Get GeoJSON and put on it on the map when it loads
-$.getJSON("assets/cell_towers.geojson", function(data){
-    // add the cell tower GeoJSON layer to the map
-    cellTowers = L.geoJson(data,{
-        onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.company);
-        }, pointToLayer: function (feature, latlng) {
-            var marker = null;
-            if (feature.properties.company == "New Cingular"){
-                marker = L.marker(latlng,{icon: tower1Icon});
-            } else if (feature.properties.company == "Cello"){
-                marker = L.marker(latlng,{icon: tower2Icon});
-            } else if (feature.properties.company == "Hood River Cellular"){
-                marker = L.marker(latlng,{icon: tower3Icon});
-            } else if (feature.properties.company == "Medford Cellular"){
-                marker = L.marker(latlng,{icon: tower4Icon});
-            } else if (feature.properties.company == "Verizon"){
-                marker = L.marker(latlng,{icon: tower5Icon});
-            } else if (feature.properties.company == "Oregon RSA"){
-                marker = L.marker(latlng,{icon: tower6Icon});
-            } else if (feature.properties.company == "RSS Minnesota"){
-                marker = L.marker(latlng,{icon: tower7Icon});
-            } else if (feature.properties.company == "Salem Cellular"){
-                marker = L.marker(latlng,{icon: tower8Icon});
-            } else {
-                marker = L.marker(latlng,{icon: tower9Icon});
-            }
-            return marker;
+cellTowers = L.geoJson.ajax("assets/cell_towers.geojson", {
+    onEachFeature: function (feature, layer) {
+        layer.bindPopup(feature.properties.company);
+    },
+    pointToLayer: function (feature, latlng) {
+        var marker = null;
+        if (feature.properties.company == "New Cingular"){
+            marker = L.marker(latlng,{icon: tower1Icon});
+        } else if (feature.properties.company == "Cello"){
+            marker = L.marker(latlng,{icon: tower2Icon});
+        } else if (feature.properties.company == "Hood River Cellular"){
+            marker = L.marker(latlng,{icon: tower3Icon});
+        } else if (feature.properties.company == "Medford Cellular"){
+            marker = L.marker(latlng,{icon: tower4Icon});
+        } else if (feature.properties.company == "Verizon"){
+            marker = L.marker(latlng,{icon: tower5Icon});
+        } else if (feature.properties.company == "Oregon RSA"){
+            marker = L.marker(latlng,{icon: tower6Icon});
+        } else if (feature.properties.company == "RSS Minnesota"){
+            marker = L.marker(latlng,{icon: tower7Icon});
+        } else if (feature.properties.company == "Salem Cellular"){
+            marker = L.marker(latlng,{icon: tower8Icon});
+        } else {
+            marker = L.marker(latlng,{icon: tower9Icon});
         }
-    }).addTo(mymap);
-});
+        return marker;
+    }
+}).addTo(mymap);
+
 
 // Set function for color ramp
 function setColor(density){
@@ -89,13 +83,12 @@ function style(feature) {
 }
 
 // Null variable that will hold counties layer
-var countiesLayer = null;
+var countiesLayer;
 
 // Add Counties Polygons
-$.getJSON("assets/counties.geojson",function(data){
-    countiesLayer = L.geoJson(data, {style: style}).addTo(mymap);
-});
-
+countiesLayer = L.geoJson.ajax("assets/counties.geojson", {
+    style: style
+}).addTo(mymap);
 
 // Create Leaflet Control Object for Legend
 var legend = L.control({position: 'topright'});
@@ -127,5 +120,4 @@ legend.onAdd = function () {
 
 // Add Legend to Map
 legend.addTo(mymap);
-
 L.control.scale({position: 'bottomleft'}).addTo(mymap);

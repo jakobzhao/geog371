@@ -2,9 +2,9 @@
 
 > Winter 2017 | Geography 371 | Geovisualization: Web Mapping
 >
-> Instructor: Bo Zhao  Location: 210 Wilkinson | Time: Thursday 1000 to 1150
+> **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 1000 - 1150
 >
-> Assigned: 01/26/2017 | Due: `02/09/2017 @11:59pm` | Points Available = 50
+> **Assigned:** 09/21/2017 | **Due:** `09/28/2017 @11:59pm` | **Points Available** = 50
 
 It's time to look at some cartographic components of our map, including map elements, symbolization, and customization. When creating a web map, one of the key components is styling your elements to provide proper symbolization for your data. This increases legibility for users and can give your map an appealing, custom design. Elements that can be custom designed include thematic layers (points, lines, and polygons), basemaps (tile layers), interactive features (the components of the map that allow for user interaction), and legends and supplemental information (such as supplemental prose and titles).
 
