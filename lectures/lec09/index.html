@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <title>Map Client III: Web Map Interaction</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
-
     <style>
         html { height:100%;}
         body { height:100%;}
@@ -48,7 +46,7 @@
         }
     </style>
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-    <script type="text/javascript" src="assets/us-states.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 </head>
 <body>
 <div id='map'></div>
@@ -108,10 +106,7 @@
             fillOpacity: 0.7
         });
 
-        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-            layer.bringToFront();
-        }
-
+        layer.bringToFront();
         info.update(layer.feature.properties);
     }
 
@@ -134,7 +129,7 @@
         });
     }
 
-    geojson = L.geoJson(statesData, {
+    geojson = L.geoJson.ajax("assets/us-states.geojson", {
         style: style,
         onEachFeature: onEachFeature
     }).addTo(map);
@@ -167,7 +162,6 @@
     };
 
     legend.addTo(map);
-
 
 </script>
 </body>

@@ -26,12 +26,12 @@ Each feature of our GeoJSON data ([us-states.js](assets/us-states.js)) will look
 
 ```js
 {
-    "type": "Feature",
-    "properties": {
-        "name": "Oregon",
-        "density": 40.33
-    },
-    "geometry": ...
+  "type": "Feature",
+  "properties": {
+    "name": "Oregon",
+    "density": 40.33
+  },
+  "geometry": ...
     ...
 }
 ```
@@ -40,18 +40,12 @@ The GeoJSON with state shapes is from [Mike Bostock](http://bost.ocks.org/mike) 
 
 ##  2. Basic states map
 
-Let’s display our states data on a map with a custom Mapbox style for nice grayscale tiles that look perfect as a background for visualizations:
+Let’s display our states data on a map with a  CartoDB style for nice grayscale tiles that look perfect as a background for visualizations:
 
 ```js
-var mapboxAccessToken = {your access token here};
-var map = L.map('map').setView([37.8, -96], 4);
-
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + mapboxAccessToken, {
-    id: 'mapbox.light',
-    attribution: ...
-}).addTo(map);
-
-L.geoJson(statesData).addTo(map);
+var map = L.map('map').setView([37.8, -96], 5);
+L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(map);
+geojson = L.geoJson.ajax("assets/us-states.geojson").addTo(map);
 ```
 ![](img/states.png)
 
@@ -76,17 +70,19 @@ Next we define a styling function for our GeoJSON layer so that its fillColor de
 
 ```js
 function style(feature) {
-    return {
-        fillColor: getColor(feature.properties.density),
-        weight: 2,
-        opacity: 1,
-        color: 'white',
-        dashArray: '3',
-        fillOpacity: 0.7
-    };
+  return {
+    fillColor: getColor(feature.properties.density),
+    weight: 2,
+    opacity: 1,
+    color: 'white',
+    dashArray: '3',
+    fillOpacity: 0.7
+  };
 }
 
-L.geoJson(statesData, {style: style}).addTo(map);
+geojson = L.geoJson.ajax("assets/us-states.geojson", {
+  style: style
+}).addTo(map);
 ```
 
 Looks much better now!
@@ -99,19 +95,17 @@ Now let’s make the states highlighted visually in some way when they are hover
 
 ```js
 function highlightFeature(e) {
-    var layer = e.target;
+  var layer = e.target;
 
-    layer.setStyle({
-        weight: 5,
-        color: '#666',
-        dashArray: '',
-        fillOpacity: 0.7
-    });
-
-    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-        layer.bringToFront();
-    }
+  layer.setStyle({
+    weight: 5,
+    color: '#666',
+    dashArray: '',
+    fillOpacity: 0.7
+  });
+  layer.bringToFront();
 }
+
 ```
 
 Here we get access to the layer that was hovered through `e.target`, set a thick grey border on the layer as our highlight effect, also bringing it to the front so that the border doesn't clash with nearby states (but not for IE, Opera or Edge, since they have problems doing bringToFront on mouseover).
