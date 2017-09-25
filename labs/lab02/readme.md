@@ -4,7 +4,7 @@
 >
 > **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 1000 - 1150
 >
-> **Assigned:** 09/21/2017 | **Due:** `09/28/2017 @11:59pm` | **Points Available** = 50
+> **Assigned:** 09/28/2017 | **Due:** `10/05/2017 @11:59pm` | **Points Available** = 50
 
 ## 1. Preparation
 
