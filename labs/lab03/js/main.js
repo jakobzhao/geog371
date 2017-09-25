@@ -77,7 +77,6 @@ function setColor(density) {
     return colors[flag];
 }
 
-
 // Set style function that sets fill color property equal to cell tower density
 function style(feature) {
     return {
