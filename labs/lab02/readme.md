@@ -63,7 +63,7 @@ function helloworld() {
 
 ### 1.2 JavaScript Consoles
 
-Regarding this exercise, you may use [REPL.IT](https://repl.it/) - an online sandbox for testing all the JavaScript
+Regarding this exercise, you may use [jsFiddler](https://jsfiddle.net/) - an online sandbox for testing all the JavaScript
 code snippets.
 
 >  **Snippet** is a programming term for a small region of re-usable source **code**, machine **code**, or text.Ordinarily, these are formally defined operative units to incorporate intolarger programming modules. **Snippet** management is a feature of some texteditors, program source **code** editors, IDEs, and related software.
@@ -756,6 +756,7 @@ Please create a PE report as a word document, and answer all the following quest
 > C. variable carName;
 
 Once you finish this PE, you need to submit the PE report to **Canvas Dropbox**. On the assignment tab,  check the item of this PE, press the `Submit Assignment` button to submit your PE report. Please contact the instructor or TA if you have any difficulty. Note: only submit your PE report in Word or PDF format.
+
 
 ## Reference
 
