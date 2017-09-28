@@ -41,7 +41,7 @@ geog371
            └──main.js
         └─img
 ```
-Please activate a web server environment under the unzipped directory  by **SimpleHTTPServer** or **WebStorm**.  Then visit `index.html` on Google Chrome. For example, if you activate a web server environment by SimpleHTTPServer with default setting, you may need to visit http://localhost:8000/index.html.
+Please activate a web server environment under the lab02 directory by **SimpleHTTPServer** or **WebStorm**.  Then visit `index.html` on Google Chrome. For example, if you activate a web server environment by SimpleHTTPServer with default setting, you may need to visit http://localhost:8000/index.html.
 
 At the bottom of the body section, you will see the following code. This will read all code found in the `main.js` file that is in the js folder.
 
