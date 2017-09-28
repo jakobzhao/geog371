@@ -236,7 +236,7 @@ var array1 = [ 1, 3, 5 ]; //populated array
 You can access array elements much like in Python. Note the first position is 0.
 
 ```javascript
-array1[];
+array1;
 [1, 3, 5]
 array1[0];
 [1]
