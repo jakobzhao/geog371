@@ -709,7 +709,7 @@ Please create a PE report as a word document, and answer all the following quest
 >
 > C. function:myFunction()
 
-**Question 6.** How to write an IF statement for executing some code if "i" is NOT equal to 5? (5 points)
+**Question 5.** How to write an IF statement for executing some code if "i" is NOT equal to 5? (5 points)
 
 > A. if i =! 5 then
 >
@@ -719,7 +719,7 @@ Please create a PE report as a word document, and answer all the following quest
 >
 > D.if i <> 5
 
-**Question 7.** How does a FOR loop start? (5 points)
+**Question 6.** How does a FOR loop start? (5 points)
 
 > A. for i = 1 to 5
 >
@@ -729,7 +729,7 @@ Please create a PE report as a word document, and answer all the following quest
 >
 > D. for (i = 0; i <= 5; i++)
 
-**Question 8.** What is the correct way to write a JavaScript array? (5 points)
+**Question 7.** What is the correct way to write a JavaScript array? (5 points)
 
 > A. var colors = ["red", "green", "blue"]
 >
@@ -739,7 +739,7 @@ Please create a PE report as a word document, and answer all the following quest
 >
 > D. var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")
 
-**Question 9.** Which event occurs when the user clicks on an HTML element? (5 points)
+**Question 8.** Which event occurs when the user clicks on an HTML element? (5 points)
 
 > A. onmouseclick
 >
@@ -749,7 +749,7 @@ Please create a PE report as a word document, and answer all the following quest
 >
 > D. onchange
 
-**Question 10.** How do you declare a JavaScript variable? (5 points)
+**Question 9.** How do you declare a JavaScript variable? (5 points)
 
 > A. v carName;
 >
