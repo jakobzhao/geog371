@@ -30,14 +30,16 @@ When you are working with javascript, some of your main goals will be to:
 
 ### 1.1 Link a JavaScript document to your web site/page
 
-JavaScript can be added to your website by either typing in script between two script tags, or by linking a JavaScript file to your site. Please download the zipped package of this practical exercise, unzip it in your workspace, and you will see the dictorery strucuture below,
+JavaScript can be added to your website by either typing in script between two script tags, or by linking a JavaScript file to your site. Please synchronize all the course material, the file structure for this lab is structured as below:
 ```powershell
 geog371
     labs
         lab02
         │  index.html
+        │  readme.md
         └─js
            └──main.js
+        └─img
 ```
 Please activate a web server environment under the unzipped directory  by **SimpleHTTPServer** or **WebStorm**.  Then visit `index.html` on Google Chrome. For example, if you activate a web server environment by SimpleHTTPServer with default setting, you may need to visit http://localhost:8000/index.html.
 
