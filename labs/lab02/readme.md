@@ -506,9 +506,9 @@ var number = 100;
 
 if(number == 100){
     console.log("Number is 100");
-} else if(number < 100){
+} else if (number < 100){
     console.log("Number is less than 100.");
-} else (number > 100){
+} else {
     console.log("Number is greater than 100.");
 };
 ```
