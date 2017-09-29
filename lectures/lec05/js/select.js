@@ -13,7 +13,6 @@ $(document).ready(function() {
         windowSource:'iframe',
         windowPadding:0,
         loader:1,
-        loaderImagePath:'animationProcessing.gif',
         loaderHeight:16,
         loaderWidth:17,
         windowSourceAttrURL:'title'
