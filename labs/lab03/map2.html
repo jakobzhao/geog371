@@ -21,9 +21,9 @@
      * Created by jakob on 1/2/2017.
      */
 
-    var mymap = L.map('map', {center: [44.13, -119.93], zoom: 7});
+    var map = L.map('map', {center: [44.13, -119.93], zoom: 7});
 
-    L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
+    L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(map);
 
     // Add cell towers GeoJSON Data
     // Null variable that will hold rodent violation data
@@ -36,7 +36,7 @@
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(feature.properties.company);
             }
-        }).addTo(mymap);
+        }).addTo(map);
     });
 
 

@@ -21,34 +21,16 @@ L.geoJson.ajax("assets/cell_towers.geojson", {
         layer.bindPopup(feature.properties.company);
     },
     pointToLayer: function (feature, latlng) {
-        switch (feature.properties.company) {
-            case "New Cingular":
-                id = 0;
-                break;
-            case "Cellco":
-                id = 1;
-                break;
-            case "RCC Minnesota":
-                id = 2;
-                break;
-            case "Verizon":
-                id = 3;
-                break;
-            case "US Cellular":
-                id = 4;
-                break;
-            case "Hood River Cellular":
-                id = 5;
-                break;
-            case "Medford Cellular":
-                id = 6;
-                break;
-            case "Oregon RSA":
-                id = 7;
-                break;
-            default:
-                id = 8;// "Salem Cellular"
-        }
+        var id = 0;
+        if (feature.properties.company == "New Cingular") { id = 0; }
+        else if (feature.properties.company == "Cellco")  { id = 1; }
+        else if (feature.properties.company == "RCC Minnesota")  { id = 2; }
+        else if (feature.properties.company == "Verizon")  { id = 3; }
+        else if (feature.properties.company == "US Cellular")  { id = 4; }
+        else if (feature.properties.company == "Hood River Cellular")  { id = 5; }
+        else if (feature.properties.company == "Medford Cellular")  { id = 6; }
+        else if (feature.properties.company == "Oregon RSA")  { id = 7; }
+        else { id = 8;} // "Salem Cellular"
         return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-signal marker-color-' + (id + 1).toString() })});
     }
 }).addTo(mymap);
@@ -57,24 +39,13 @@ L.geoJson.ajax("assets/cell_towers.geojson", {
 // Set function for color ramp
 colors = chroma.scale('OrRd').mode('hsl').colors(5); //colors = chroma.scale('OrRd').colors(5);
 function setColor(density) {
-    flag = 0;
-    switch (true) {
-        case density > 18:
-            flag = 4;
-            break;
-        case density > 13 && density <= 18:
-            flag = 3;
-            break;
-        case density > 10 && density <= 13:
-            flag = 2;
-            break;
-        case density > 5 &&  density <= 10:
-            flag = 1;
-            break;
-        case density <= 5:
-            flag = 0;
-    }
-    return colors[flag];
+    var id = 0;
+    if (density > 18) { id = 4; }
+    else if (density > 13 && density <= 18) { id = 3; }
+    else if (density > 10 && density <= 13) { id = 2; }
+    else if (density > 5 &&  density <= 10) { id = 1; }
+    else  { id = 0; }
+    return colors[id];
 }
 
 // Set style function that sets fill color property equal to cell tower density
