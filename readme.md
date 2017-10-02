@@ -22,7 +22,7 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
 | Wk 07 |      TweetMap       |        [HeatMap](lectures/lec21)        |              Lab 5: Cont'd               |              *Veterans Day*              |                                          |
 | Wk 08 | [Map Design IV: Map Critiques](lectures/lec22) | [3D Web Mapping I: Basics](lectures/lec23) | Lab 6:  Thematic Map on the Virtual Globe | [3D Web Mapping II: Build a Virtual Environment](lectures/lec24) |                                          |
 | Wk 09 | [3D Web Mapping III: Thematic Map on a Virtual Globe](lectures/lec25) | Final Project Discussion and Preparation |              Lab 6: Cont'd               |           *Thanksgiving Break*           |                                          |
-| Wk 10 | [Emerging Topics on Web Mapping](lectures/lec26) | Final Project Discussion and Preparation | Final Project Discussion and Preparation |        Final Project Presentation        | [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md) |
+| Wk 10 | [Emerging Topics on Web Mapping](lectures/lec26) | Final Project Discussion and Preparation | Final Project Discussion and Preparation |        Final Project Presentation       | [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md) |
 
 [**Syllabus**](resources/syllabus.pdf)
 
