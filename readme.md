@@ -25,6 +25,7 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
 | Wk 10 | [Emerging Topics on Web Mapping](lectures/lec26) | Final Project Discussion and Preparation | Final Project Discussion and Preparation |        Final Project Presentation        | [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md) |
 
 [**Download the syllabus**](resources/syllabus.pdf)
+[**Final Project Guideline**](project/readme.md)
 
 ### Texts
 
