@@ -14,7 +14,7 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
 | :---: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
 | Wk 00 |                  *N/A*                   |  [Intro to the Course](lectures/lec01)   | [Lab 1: Project Management for Web Mapping](labs/lab01)  |  [Intro to Web Mapping](lectures/lec02)  | [Markdown, Links and Command Lines](readings/wk00.md) |
 | Wk 01 | [Web Programming Basics I: HTML 5 and CSS](lectures/lec03) | [System Architecture for Web Mapping](lectures/lec04) | [Lab 2: Web Programming Basics II: Javascript](labs/lab02) | [Web Programming Basics III: JQuery](lectures/lec05) | [HTML, CSS and Javascript](readings/wk01.md) |
-| Wk 02 | [Spatial Data for Web Mapping](lectures/lec06), :raised_hands:[Final Project Guidelines](project/readme.md) | [Map Client I: Basics and Geographic Features](lectures/lec07) |          Lab 3: Web Map Design           | [Map Client II: Map Events and Mashup](lectures/lec08) |  [Leaflet and JQuery](readings/wk02.md)  |
+| Wk 02 | [Spatial Data for Web Mapping](lectures/lec06), :raised_hands:[Final Project Guidelines](project/readme.md) | [Map Client I: Basics and Geographic Features](lectures/lec07) |          Lab 3: Web Map Design           | [Map Client II: Map Events and Mashup](lectures/lec08) |  [Leaflet and GeoJson](readings/wk02.md)  |
 | Wk 03 | [Map Client III: Web Map Interaction](lectures/lec09) | [Map Server I: Intro to GeoServer](lectures/lec10) |              Lab 3: Cont'd               | [Map Server II: Styling](lectures/lec11) |    [GeoServer docs](readings/wk03.md)    |
 | Wk 04 | [Map Server III: Web Map Services](lectures/lec12) |  [Base Map and Mapbox](lectures/lec13)   |          Lab 4: Web Map Service          | [Map Server IV: Map Tiles](lectures/lec14) | [Bing Map Tile, and GeoWebCache](readings/wk04.md) |
 | Wk 05 |               Midterm Exam               | [Map Design I: Web Template and Framework](lectures/lec15) |              Lab 4: Cont'd               | [Map Design II: Bootstrap](lectures/lec16) | [Bootstrap docs, Kosara and Mackinlay (2013)](readings/wk05.md) |
@@ -24,7 +24,7 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
 | Wk 09 | [3D Web Mapping III: Thematic Map on a Virtual Globe](lectures/lec25) | Final Project Discussion and Preparation |              Lab 6: Cont'd               |           *Thanksgiving Break*           |                                          |
 | Wk 10 | [Emerging Topics on Web Mapping](lectures/lec26) | Final Project Discussion and Preparation | Final Project Discussion and Preparation |        Final Project Presentation        | [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md) |
 
-[**Download the syllabus**](resources/syllabus.pdf)
+[**Syllabus**](resources/syllabus.pdf)
 
 [**Final Project Guideline**](project/readme.md)
 
