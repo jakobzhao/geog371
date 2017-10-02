@@ -15,7 +15,7 @@ GeoServer can render geospatial data as images and return them for viewing in a 
 
 ## Preparation
 
-Before get started, we will synchronize some files to GeoServer. If your GeoServer is installed in your local computer, you can just simply put the data in a directory under your workspace, if the GeoServer is on a remote Server such as the compute engine in Google Cloud, we can, as briefly introduced in the previous lecture, upload the data through FTP or GitHub. Today, we would like to talk about how to synchronize data from GitHub to a GeoServer, no matter it is deployed locally or remotely.   
+Before get started, we will synchronize some files to GeoServer. If your GeoServer is installed in your local computer, you can just simply put the data in a directory under your workspace, if the GeoServer is on a remote Server such as the compute engine in Google Cloud, we can, as briefly introduced in the previous lecture, upload the data through FTP or GitHub. Today, we would like to talk about how to synchronize data from GitHub to a GeoServer, no matter it is deployed locally or remotely.
 
 1\. Please make sure the machine which hosting GeoServer has installed a shell program `git`. Type `git` in command prompt or terminal to see whether `git` is installed or not. If not, you need follow an instruction at https://git-scm.com/book/en/v2/Getting-Started-Installing-Git to install `git`. Usually, a Linux Server, such as your Google Cloud Server, has installed `git` by default. 
 

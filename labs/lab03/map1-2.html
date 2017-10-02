@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cell Towers in Oregon (2009)</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.vectorgrid@1.2.0"></script>
+
+</head>
+<body>
+<!-- Our web map and content will go here -->
+<div id="wrapper">
+    <div id="map" style="width: 900px; height: 600px;"></div>
+    <div id="controls">
+        <div id="credits"><p> Winter 2017 | GEOG 371 | Geovisualization: Web Mapping &copy; Bo Zhao, CEOAS, OSU</p>
+        </div>
+    </div>
+</div>
+<script>
+
+    var map = L.map('map', {center: [44.13, -119.93], zoom: 3});
+
+    L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(map);
+
+    var mapboxUrl = "https://d2munx5tg0hw47.cloudfront.net/tiles/{z}/{x}/{y}.mapbox";
+
+//    var mapboxVectorTileOptions = {
+//        rendererFactory: L.canvas.tile,
+//        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://www.mapbox.com/about/maps/">MapBox</a>',
+//        vectorTileLayerStyles: vectorTileStyling,
+//        token: 'pk.eyJ1IjoiaXZhbnNhbmNoZXoiLCJhIjoiY2l6ZTJmd3FnMDA0dzMzbzFtaW10cXh2MSJ9.VsWCS9-EAX4_4W1K-nXnsA'
+//    };
+
+
+    var mapboxPbfLayer = L.vectorGrid.protobuf(mapboxUrl);
+
+    mapboxPbfLayer.addTo(map)
+
+
+</script>
+</body>
+</html>
