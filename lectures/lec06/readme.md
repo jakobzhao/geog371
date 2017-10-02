@@ -13,9 +13,9 @@
 
 ## 1. The data tier of your web mapping architecture
 
-In the previous lecture, you learned that system architecture for web mapping include a data tier. This could be as simple as several shapefiles sitting in a folder on your server, or it could be as complex as several enterprise-grade servers housing an ecosystem of standalone files and relational databases. Indeed, in our system architecture diagram, I have represented the data tier as containing a file server and a database server.
+In the previous lecture, you learned that system architecture for web mapping include a data tier. This could be as simple as several shapefiles in a folder on the server, or it could be as complex as several enterprise-grade servers housing an ecosystem of standalone files and relational databases. Indeed, in our system architecture diagram, I have represented the data tier as containing a file server and/or a database server.
 
-### 1.1 Data tier in web mapping architecture
+### 1.1 Data tier in system architecture of web mapping
 
 The **data tier** contains your datasets that will be included in the web map. Almost certainly, it will house the data for your thematic web map layers. It may also hold the data for your base maps, if you decide to create your own basemap and tile sets. Other times, you will pull in base maps, and quite possibly some thematic layers, from other peoples' servers, relieving yourself of the burden of maintaining the data. For example, some of the popular thematic base layers are from `Mapbox`, `Google maps`, `Bing maps` and `OpenStreetMaps`.
 
@@ -30,7 +30,6 @@ When designing your data tier, you will need to decide whether to store your dat
 Databases are more appropriate when you have a lot of data to store, the data is being edited frequently by different parties, you need to allow different tiers of security privileges, or you are maintaining relational tables to link datasets. Databases can also offer powerful native options for running SQL queries and calculating spatial relationships (such as intersections).
 
 If you have a long-running GIS project housed in a database and you just now decided to expose it on the web, you will need to decide whether to keep the data in the database or extract copies of the data into file-based datasets.
-
 
 ## 2. Common open formats for spatial data
 
@@ -62,7 +61,7 @@ SpatiaLite is not as mature as PostGIS, but it is growing in popularity, and you
 
 **MongoDB**
 
-MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas. MongoDB’s geospatial indexing allows you to efficiently execute spatial queries on a collection that contains geospatial shapes and points. This tutorial will briefly introduce the concepts of geospatial indexes, and then demonstrate their use with $geoWithin, $geoIntersects, and geoNear.
+MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas. MongoDB’s geospatial indexing allows you to efficiently execute spatial queries on a collection that contains geospatial shapes and points. This tutorial will briefly introduce the concepts of geospatial indexes, and then demonstrate their use with $geoWithin, $geoIntersects, and $geoNear.
 
 ### 2.3 File-based data
 
@@ -159,7 +158,6 @@ JavaScript Object Notation (JSON) is a structured means of arranging data in a h
 Following this pattern, GeoJSON is a form of JSON developed for representing vector features. The [GeoJSON Specification](http://geojson.org/geojson-spec.html) gives some basic examples of how different entities such as point, lines, and polygons are structured.
 
 you can use `.json` or `.geojson` as the extension of a GeoJson file, but you might as well choose to save GeoJSON features into a `.js` (JavaScript) file that can be referenced by your web map. Other times, you may encounter web services that return GeoJSON.
-
 
 GeoJSON is a widely-used data format for displaying vectors in web maps. It is based on JavaScript object notation, a simple and minimalist format for expressing data structures using syntax from JavaScript. In GeoJSON, a vector feature and its attributes are represented as a JavaScript object, allowing for easy parsing of the geometry and fields.
 
@@ -311,17 +309,18 @@ A reference implementation of the [TopoJSON specification]( https://github.com/t
 
 Many GIS programs can read vector data out of other types of text files such as .gpx (popular format for GPS tracks) and various types of .csv (comma-separated value files often used with Microsoft Excel) that include longitude (X) and latitude (Y) columns. You can engineer your web map to parse and read these files, or you may want to use your scripting skills to get the data into another standard format before deploying it in your web map. This is where Python skills and helper libraries can be handy.
 
-**Raster formats**
+**Raster formats: GeoTIFF raster image**
 
-Most raster formats are openly documented and do not require royalties or attribution. These include JPEG, PNG, TIFF, BMP, and others. The GIF format previously used a patented compression format, but those patents have expired.
+Most raster formats are openly documented and do not require royalties or attribution. These include JPEG, PNG, TIFF, BMP, and others. The GIF format previously used a patented compression format, but those patents have expired. Raster data is currently made available in GeoTIFF format with Deflate compression. See the [GeoTIFF Specification](https://trac.osgeo.org/geotiff/) for more details about this format.
 
-**GeoTIFF raster image** 
+**Map tiles**
 
-Raster data is currently made available in GeoTIFF format with Deflate compression. See the [GeoTIFF Specification](https://trac.osgeo.org/geotiff/) for more details about this format.
+Usually the base maps are stored as tile layers, designed for fast and simple access by web maps. Tile layers are also useful when you need to expose a map or layer on the web for the visualization of relatively static data. Tile layers come in different formats based on the original source data. Tile layers can be stored as prerendered raster tiles or as vector tiles. Both raster and vector tiles are designed to provide high-performance and high-scalability delivery of map data for visualization purposes.
+
 
 ## 3. Geospatial data conversion: Shapefile to GeoJson
 
-Geojson is one of the most popular geospatial data format for web based geovisualization. This tutorial will show you how to convert a shapefile to a geojson data step by step. Though there are multiple online or desktop based tools we could implement the conversion. Here, we would recommend using QGIS, mainly because it is intuitive to understand the conversion process and easy to use. Once you are familiar with QGIS, I believe you will be more confident in switching to other geospatial data conversion tools (e.g., ogr2ogr).
+This section will show you how to convert a shapefile to a geojson data step by step. Though there are multiple online or desktop based tools we could implement the conversion. Here, we would recommend using QGIS, mainly because it is intuitive to understand the conversion process and easy to use. Once you are familiar with QGIS, I believe you will be more confident in switching to other geospatial data conversion tools (e.g., ogr2ogr).
 
 1\. Above all, we need to get some geospatial data. So, we download the shapefile of Oregon Counties (2015) from the data repository at [oregon explorer](http://oregonexplorer.info/data). This specific data set is located at [http://spatialdata.oregonexplorer.info/geoportal/details;id=361c06fee9de4e24a72e280fb386a771](http://spatialdata.oregonexplorer.info/geoportal/details;id=361c06fee9de4e24a72e280fb386a771). There is another copy of this data set in this repository at [assets/orcnty2015.zip](assets/orcnty2015.zip).
 
@@ -345,7 +344,6 @@ We are going to transform this current 7 file folder into a single, compact form
 
 ![](img/qgis-general-tab.jpg)
 
-
 For our purposes we will convert our shapefile into a GeoJson and into a geographic projection for web mapping. EPSG is a coded value that is used to identify certain projections, which in this case is 4269. We want to convert this to 4326, WGS84, a more suitable web mapping projection.
 
 6\. Close the Layer Properties page, and then Right click on the shapefile `orcntypoly` in the Table of Contents, and click Save as.
@@ -368,7 +366,6 @@ For our purposes we will convert our shapefile into a GeoJson and into a geograp
 9\. The file will be automatically added to the current project view.
 
 ![](img/gis-geojson-mapview.jpg)
-
 
 10\. Now you can open the geojson file in a text editor (e.g., webstorm) to view the json structure.
 
