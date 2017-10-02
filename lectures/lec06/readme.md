@@ -4,7 +4,6 @@
 >
 > **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
 
-
 **Learning Objectives**
 
 - Review the data tier in a web mapping architecture; 
