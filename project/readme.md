@@ -14,7 +14,7 @@ Regarding the final project, you are expected to work individually or in pair to
     - Project title
     - Project description
     - Project goal (such as, what is the message you want to deliver through the map?)
-    - Technical Summary: You are required to explain (1) system archtecture, (2) the main functions of your web map using ** either a screenshot of the web map or a code snippet of the function, and a concomitant description**.
+    - Technical Summary: You are required to explain (1) system architecture, (2) the main functions of your web map using **either a screenshot of the web map or a code snippet of the function, and a concomitant description**.
     - Reflection on the course of designing your web map:
     - Data source
     - Libraries (e.g., Leaflet) and Web Services (e.g., github, basemap) in use
