@@ -24,7 +24,7 @@ What Leaflet does web maps with tiled base layers, panning and zooming, and feat
 
 What Leaflet does not do: Provide any data for you! Leaflet is a framework for showing and interacting with map data, but it's up to you to provide that data, including a basemap. Leaflet is also not GIS, although it can be combined with tools like **ArcGIS**, **MapBox**, or **CartoDB** for GIS-like capabilities.
 - *If you need total freedom of form, interaction, transitions, and map projections, consider working with something like D3.*
-- *If -you need word with 3D virtual globe, cesium is alternative.*
+- *If you need a 3D virtual globe, cesium is alternative.*
 
 We will start with an empty webpage, then progressively add components to make a Leaflet map. It assumes a basic knowledge of HTML and JavaScript, or at the very least assumes the will to tinker with the code to better understand what it does. It won't explain every little object or array, but will contain plenty of links. Many code blocks will show only a snippet of code, highlighting the changes over previous examples. Click the "View this example on its own" link underneath a map to see complete code. For thorough documentation, see the Leaflet site.
 
@@ -89,14 +89,14 @@ Within the head section, after title, copy and paste the following. This adds th
 
 ```html
 <!-- External Stylesheets -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
 ```
 
 Link to the JavaScript library at the bottom of the body section of our site, putting it at the bottom allows our page to load faster. Copy and paste the following. This adds the Leaflet JS file to our web page and is the Leaflet Javascript library.
 
 ```html
 <!-- Add the Leaflet JavaScript library -->
-<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
 ```
 
 We can now begin working with the Leaflet library.
@@ -131,14 +131,16 @@ The last step in getting a basic map running is add a layer. We are going to use
 
 ```html
 // Add OpenStreetMap tile layer to map element
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.jpg', { attribution: '&copy; OpenStreetMap' }).addTo(map);
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
 ```
 
 > Note the attribution. Here we can provide reference for the source of the base map, and any other attribution for map elements we want to provide. It will appear in the lower right corner of our map by default, but you can change this. Read more about attribution here.
 
 **Our Basic Map**
 
-Save your HTML document and open your web browser to your localhost server (http://localhost:8000). You will see the map we just created!
+Save your HTML document and open your web browser to your localhost server (http://localhost:8000). You will see the map we just created! Or you can open this map through the internal web server of Webstorm. After you synchronize your data to Github, you can even see your web map on the github page website.
 
 ![](img/basemap.jpg)
 
@@ -210,6 +212,8 @@ There are a number of other simple data types and groups you can add, read more 
 Leaflet also supports adding groups of features using class called [L.featureGroup](http://leafletjs.com/reference.html#featuregroup). If we wanted, we could have restructured our code to the point, line, and polygon above by placing them all in a feature group.
 
 Additionally, Leaflet is designed work natively with GeoJson. We will look at how to get GeoJson to a Leaflet Map later.
+
+> **Note:** once you write up your codes
 
 ## References:
 

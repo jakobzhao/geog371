@@ -101,7 +101,7 @@ In the downloaded materials, there is a data folder `assets` that contains a fil
 
 ![](img/geojsonio.png)
 
-### 3.1 Use the JQuery JavaScript Library
+### 3.1 Use leaflet.ajax JavaScript Library
 
 The first thing is add a super useful JavaScript library called `jQuery` to our page. jQuery makes it easy to manipulate a web page by finding elements on the page, setting their styles and properties, handling interaction events, and more. It has a nice helper method, called `getJSON()`, we will to use to load our GeoJSON file onto our map.
 
