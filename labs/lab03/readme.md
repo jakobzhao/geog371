@@ -199,9 +199,8 @@ In `assets` directory, you'll see another dataset  `counties.geojson`. This file
 
 
 ```js
-// Null variable that will hold neighborhoods layer
-var neighborhoodsLayer = null;
-L.geoJson.ajax("assets/counties.geojson"}).addTo(map);
+// create the county layer
+L.geoJson.ajax("assets/counties.geojson").addTo(mymap);
 ```
 
 Save and refresh your map. Counties of Oregon will be displayed on the map, symbolized in a default blue.
