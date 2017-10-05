@@ -10,7 +10,7 @@ When creating a web map, one of the key components is styling your elements to p
 
 This lab, we will make a web map of cell towers in Oregon. To do that, we collected all the county boundaries from [Oregon Explorer](http://oregonexplorer.info), and the national distribution of cell towers from [Map Cruzin](http://www.mapcruzin.com/google-earth-maps-resources/kml/us-cell.kmz). To get a visual, this is what we are going to make today.
 
-![](img/final_map.png)
+![](img/final_map.jpg)
 
 To get started, setup your development environment in a easy to access location on your machine. Sync this lecture's material, and start up your local server by python SimpleHTTPServer or Webstorm.
 
@@ -35,7 +35,7 @@ Within the script tags, I have added the map object and tile layer for us to use
 var mymap = L.map('map', {center: [44.13, -119.93], zoom: 7});
 
 // 2. Add a base map.
-L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.jpg', {
     maxZoom: 11,
     minZoom: 6,
     detectRetina: true, //support Retina Display if the client uses high resolution monitor.
@@ -45,7 +45,7 @@ L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 
 Please visit http://localhost:8000/map1.html to see the map at the current stage.
 
-![](img/map1.png)
+![](img/map1.jpg)
 
 The base map (in tile layer) I am using comes from CartoDB. The light color helps the main features/theme of a web map stand out. In addition to major map providers (Google map, bing map, openstreetmap, mapbox, cartodb), you can look for a list of base map from [Leaflet providers](http://leaflet-extras.github.io/leaflet-providers/preview/), many local municipalities and regions around the globe maintain tile layers that can be accessed through GIS software and mapping libraries. Google search the area in which you are working to see if they maintain base maps, most often you will find Web Map Services (WMS) - a map services we will learn in later, that can be loaded into your map as a base using the Leaflet WMS loader object, `L.tileLayer.WMS`.
 
@@ -73,7 +73,7 @@ cellTowers.addTo(mymap);
 
 The cellTowers object will hold the contents of the GeoJSON data, so we can refer to it easily. Save and refresh your map. You should see the points populate. That is a lot of cell towers!  Please open **map2.html** to see the map at the current stage.
 
-![](img/map2.png)
+![](img/map2.jpg)
 
 ## 2. Custom Point Markers
 
@@ -180,7 +180,7 @@ onEachFeature: function (feature, layer) {
 ```
 Click save and refresh your map in your browser. Check out our map. We have changed icon to cell tower! Please visit http://localhost:8000/map3.html to see the map at the current stage.
 
-![](3.png)
+![](3.jpg)
 
 
 ## 3. Polygon Data and Symbolization
@@ -196,7 +196,7 @@ L.geoJson.ajax("assets/counties.geojson"}).addTo(map);
 
 Save and refresh your map. Counties of Oregon will be displayed on the map, symbolized in a default blue.
 
-![](img/4-1.png)
+![](img/4-1.jpg)
 
 
 Let's do something about that default blue and thematically style our data to these polygons useful by turning them into a choropleth layer. The counties.geojson file contains numbers of cell towers in each county, calculated in QGIS. Symbolize the counties on the map by the number of counties. This is a three step process. `L.geoJson.ajax()` contains a style option that contains styling properties.
@@ -254,7 +254,7 @@ L.geoJson.ajax("assets/counties.geojson", {
 
 Save and refresh your map. Load your page to see our styled polygons!
 
-![](img/map4.png)
+![](img/map4.jpg)
 
 ## 4. Map Elements
 
@@ -394,7 +394,7 @@ credits p {
 ```
 Save and refresh your map. It will look like the following!
 
-![](img/final_map.png)
+![](img/final_map.jpg)
 
 Challenge!! Can you add some interactivity by using JavaScript to implement buttons, checkboxes, and toggles?
 
@@ -427,7 +427,7 @@ Regarding the grading criteria, this web map of airports needs include:
     ├─css
     │      main.css
     ├─img
-    │      xxx.png
+    │      xxx.jpg
     └─js
             main.js
 ```
