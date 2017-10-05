@@ -394,7 +394,7 @@ Save and refresh your map. Open Sans will now be your preferred font!
 Lastly, to help you explore the power of CSS, style the credits at the bottom of your page. Because the div containing the credits has `id="credits"`, we can style it using #credits. All of the contents in the credits div are between two paragraph tags. CSS styling is written in a nested fashion, to style everything that is in a p element within the `#credits div`, we use `#credits p`. Add the following snippet between the style tags in the head section of the document.
 
 ```css
-credits p {
+#credits p {
 	margin-top: 5px;
 	font-size: 12px;
 	text-align: right;
