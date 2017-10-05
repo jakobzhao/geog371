@@ -1,4 +1,4 @@
-# Practical Exercise 3: Thematic Web Map Design
+# Lab 3: Thematic Web Map Design
 
 > Winter 2017 | Geography 371 | Geovisualization: Web Mapping
 >
@@ -22,11 +22,7 @@ With your localhost running, open up the **map1.html** in your IDE (Webstorm) to
 
 View this Example View the map1.html document in Webstorm (or your IDE of choice). Here you will see our HTML, with some CSS styling at the top, a couple of div page elements for our map components, linked scripts, and custom scripts. The page elements are as follows:
 
-`wrapper`: the main container for our map in the body. Our whole map and interface will fall inside the wrapper element;
-
 `map`: the element our map will be attached to;
-
-`controls`: the element in which we can put any buttons or controls;
 
 `credits`: an element inside controls where we can put our contact and copyright information.
 
@@ -116,20 +112,22 @@ for (i = 0; i < 9; i++) {
 
 Next, we will assign the style class to each category. We number the company name from 0 to 8, and then add the color class (from `marker-color-1` to `marker-color-9`) to markers.
 
+We have nine different wireless companies, such as New Cingular, Verizon, Cello, Salem Cellular, etc. When the GeoJSON is added to the map, we need to check the features when we apply the custom icon to see what the value of feature.property.company is. If it is equal to "Verizon", we want the icon to be set to one of the towerXIcon (X = 1, 2, 3...9). Here we learned about conditionals, specifically `If.. Else` statements. To accomplish this, we can put a conditional in our call to the GeoJSON that checks to see if a case status is equal to "Verizon" and then sets an icon, and if it is not, will run the else statement, setting the icon equal to other companies, and so on so forth. The code will look like this:
+
  ```
 function (feature, latlng) {
-            var id = 0;
-            if (feature.properties.company == "New Cingular") { id = 0; }
-            else if (feature.properties.company == "Cellco")  { id = 1; }
-            else if (feature.properties.company == "RCC Minnesota")  { id = 2; }
-            else if (feature.properties.company == "Verizon")  { id = 3; }
-            else if (feature.properties.company == "US Cellular")  { id = 4; }
-            else if (feature.properties.company == "Hood River Cellular")  { id = 5; }
-            else if (feature.properties.company == "Medford Cellular")  { id = 6; }
-            else if (feature.properties.company == "Oregon RSA")  { id = 7; }
-            else { id = 8;} // "Salem Cellular"
-            return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-signal marker-color-' + (id + 1).toString() })});
-        }
+    var id = 0;
+    if (feature.properties.company == "New Cingular") { id = 0; }
+    else if (feature.properties.company == "Cellco")  { id = 1; }
+    else if (feature.properties.company == "RCC Minnesota")  { id = 2; }
+    else if (feature.properties.company == "Verizon")  { id = 3; }
+    else if (feature.properties.company == "US Cellular")  { id = 4; }
+    else if (feature.properties.company == "Hood River Cellular")  { id = 5; }
+    else if (feature.properties.company == "Medford Cellular")  { id = 6; }
+    else if (feature.properties.company == "Oregon RSA")  { id = 7; }
+    else { id = 8;} // "Salem Cellular"
+    return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-signal marker-color-' + (id + 1).toString() })});
+}
  ```
 
 ### 2.3. Apply an Icon
@@ -143,12 +141,6 @@ The marker should adopt an icon. The icon is from [Font Awesome](http://fontawes
 *Use `point to layer` option of `L.geoJson` to set the icon*
 
 With our icon loaded into our document, we need to replace the default icons created when we add the GeoJSON. This is a process of setting the icon option to TowerIcon for each marker when it is added to our map. To set the icon for a GeoJSON, we need to create a layer from the GeoJSON (we can style it if it is a layer) by using the `pointToLayer` option of `L.geoJson`.
-
-**Use a Conditional in our get GeoJSON to determine status**
-
-We have in our document nine icons for different wireless companies, such as New Cingular, Verizon, Cello, Salem Cellular, etc. When the GeoJSON is added to the map, we need to check the features when we apply the custom icon to see what the value of feature.property.company is. If it is equal to "Verizon", we want the icon to be set to one of the towerXIcon (X = 1, 2, 3...9). Here we learned about conditionals, specifically `If.. Else` statements. To accomplish this, we can put a conditional in our call to the GeoJSON that checks to see if a case status is equal to "Verizon" and then sets an icon, and if it is not, will run the else statement, setting the icon equal to other companies, and so on so forth. The code will look like this:
-
-
 
 ```js
 pointToLayer: function (feature, latlng) {
@@ -165,8 +157,8 @@ pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-signal marker-color-' + (id + 1).toString() })});
     }
 ```
-Note there are *two equal signs (==)*, this is because JavaScript is very particular about operators. To read more, check out this documentation from `w3schools`. Modify the code within the `L.geoJSON` pointToLayer option, where we set the style previously, to be the following, including the conditional statement to check the status.
 
+Note there are *two equal signs (==)*, this is because JavaScript is very particular about operators. To read more, check out this documentation from `w3schools`. Modify the code within the `L.geoJSON` pointToLayer option, where we set the style previously, to be the following, including the conditional statement to check the status.
 
 **Options available for `L.geoJson` include**:
 
@@ -188,45 +180,50 @@ onEachFeature: function (feature, layer) {
 ```
 Click save and refresh your map in your browser. Check out our map. We have changed icon to cell tower! Please visit http://localhost:8000/map3.html to see the map at the current stage.
 
+![](3.png)
+
 
 ## 3. Polygon Data and Symbolization
 
-In our data folder, you'll see a second dataset, counties.geojson. The counties GeoJSON file contains all the counties of Oregon. Each county contains the number of cell towers. This number is pre-calculated in QGIS. To add the data to the map, create another `L.geoJson` object using the jQuery `$.getJSON` method. Enter the following lines of code at the end of your script, staying within the `script` tags.
+In our data folder, you'll see a second dataset, counties.geojson. The counties GeoJSON file contains all the counties of Oregon. Each county contains the number of cell towers. This number is pre-calculated in QGIS. To add the data to the map, create another `L.geoJson` object using the ajax() method. Enter the following lines of code at the end of your script, staying within the `script` tags.
 
 
 ```js
 // Null variable that will hold neighborhoods layer
 var neighborhoodsLayer = null;
-
-// Add Neighborhood Polygons
-$.getJSON("data/cambridge_neighborhoods.geojson",function(data){
-    neighborhoodsLayer = L.geoJson(data).addTo(mymap);
-});
+L.geoJson.ajax("assets/counties.geojson"}).addTo(map);
 ```
 
 Save and refresh your map. Counties of Oregon will be displayed on the map, symbolized in a default blue.
 
+![](img/4-1.png)
 
-On its own (take a look at Page Source) Let's do something about that default blue and thematically style our data to these polygons useful by turning them into a choropleth layer. The neighborhoods GeoJSON file contains numbers of cell towers in each county, calculated in QGIS. Symbolize the counties on the map by the number of counties. This is a three step process. `L.geoJSON` contains a style option that contains styling properties.
+
+Let's do something about that default blue and thematically style our data to these polygons useful by turning them into a choropleth layer. The counties.geojson file contains numbers of cell towers in each county, calculated in QGIS. Symbolize the counties on the map by the number of counties. This is a three step process. `L.geoJson.ajax()` contains a style option that contains styling properties.
 
 ### 3.1 Set up function for Color Ramp
 
-The first step is to set up a function for our color ramp. This is where we set up our classification breaks and color scheme. Setting up a classification scheme can be tricky. The easiest way to set up a standard classification scheme is to use QGIS, select something like Jenk's Natural Breaks, and copy the break numbers. Or you can check out a color ramp from [colorbrewer2.org]() To set up the function for our classes and colors, create a function, call it setColor, and then return your classes. Enter the following function in your script tags.
+The first step is to set up a function for our color ramp. This is where we set up our classification breaks and color scheme. Setting up a classification scheme can be tricky. The easiest way to set up a standard classification scheme is to use QGIS, select something like Jenk's Natural Breaks, and copy the break numbers. Or you can check out a color ramp from [colorbrewer2.org]() In this lab, you will use chroma.js to get an array of colors. And then set up the setColor function that returns the value of a color based on the input value (the density of cell tower lying in a county). Appand the following code snippet in the script tag.
 
 ```js
-// Set function for color ramp
-function setColor(density){
-    return density > 18 ? '#b30000' :
-           density > 13 ? '#e34a33' :
-           density > 10 ? '#fc8d59' :
-           density >  5 ? '#fdcc8a' :
-                          '#fef0d9';
+// Create an array of colors
+colors = chroma.scale('OrRd').mode('hsl').colors(5); //colors = chroma.scale('OrRd').colors(5);
+
+// setColor function will return a color value using an input value (the density)
+function setColor(density) {
+    var id = 0;
+    if (density > 18) { id = 4; }
+    else if (density > 13 && density <= 18) { id = 3; }
+    else if (density > 10 && density <= 13) { id = 2; }
+    else if (density > 5 &&  density <= 10) { id = 1; }
+    else  { id = 0; }
+    return colors[id];
 }
 ```
 
-### 3.2 Set style GeoJSON style function
+### 3.2 Set style GeoJson style function
 
-Next, set up a function that will set the properties for the L.geoJson style option. Call this function style, pass it a GeoJson feature when invoked. Set the fillColor property to be equal to the setColor function, passing it the `CN_CNT` property (the number of cell towers) from the GeoJSON. Enter the following code into your script.
+Next, set up a function that will set the properties for the `L.geoJson.ajax()` style option. Call this function style, pass it a GeoJson feature when invoked. Set the fillColor property to be equal to the setColor function, passing it the `CN_CNT` property (the number of cell towers) from the input geojson data. Enter the following code into your script.
 
 ```js
 // Set style function that sets fill color property equal to cell tower density
@@ -242,17 +239,17 @@ function style(feature) {
 }
 ```
 
-fillColor and fillOpacity set properties for the fill, and weight, opacity, color, and dashArray set properties for the border.
+While `fillColor` and `fillOpacity` properties for the fill; `weight`, `opacity`, `color`, and `dashArray` properties for the border.
 
 ### 3.3 Set style option for the GeoJSON
 
 The final step is to set the style option for the neighborhoods layer GeoJSON. Find the Add Neighborhoods Polygons block of code and modify it to include the style option. Set style equal to style to run the style function when the GeoJSON is create. Below shows the code of adding the county polygons to the map.
 
 ```js
-// Add Counties Polygons
-$.getJSON("assets/counties.geojson",function(data){
-    countiesLayer = L.geoJson(data, {style: style}).addTo(mymap);
-});
+// Add Neighborhood Polygons
+L.geoJson.ajax("assets/counties.geojson", {
+    style: style
+}).addTo(map);
 ```
 
 Save and refresh your map. Load your page to see our styled polygons!
@@ -277,26 +274,26 @@ legend.onAdd = function () {
     // Create Div Element and Populate it with HTML
     var div = L.DomUtil.create('div', 'legend');
     div.innerHTML += '<b># Cell Tower</b><br />';
-    div.innerHTML += '<i style="background: #b30000; opacity: 0.5"></i><p>19+</p>';
-    div.innerHTML += '<i style="background: #e34a33; opacity: 0.5"></i><p>14-18</p>';
-    div.innerHTML += '<i style="background: #fc8d59; opacity: 0.5"></i><p>11-13</p>';
-    div.innerHTML += '<i style="background: #fdcc8a; opacity: 0.5"></i><p> 6-10</p>';
-    div.innerHTML += '<i style="background: #fef0d9; opacity: 0.5"></i><p> 0- 5</p>';
+    div.innerHTML += '<i style="background: ' + colors[4] + '; opacity: 0.5"></i><p>19+</p>';
+    div.innerHTML += '<i style="background: ' + colors[3] + '; opacity: 0.5"></i><p>14-18</p>';
+    div.innerHTML += '<i style="background: ' + colors[2] + '; opacity: 0.5"></i><p>11-13</p>';
+    div.innerHTML += '<i style="background: ' + colors[1] + '; opacity: 0.5"></i><p> 6-10</p>';
+    div.innerHTML += '<i style="background: ' + colors[0] + '; opacity: 0.5"></i><p> 0- 5</p>';
     div.innerHTML += '<hr><b>Company<b><br />';
-    div.innerHTML += '<img src="img/ct1.png"><p> New Cingular</p>';
-    div.innerHTML += '<img src="img/ct2.png"><p> Cello</p>';
-    div.innerHTML += '<img src="img/ct3.png"><p> Hood River Cellular</p>';
-    div.innerHTML += '<img src="img/ct4.png"><p> Medford Cellular</p>';
-    div.innerHTML += '<img src="img/ct5.png"><p> Verizon</p>';
-    div.innerHTML += '<img src="img/ct6.png"><p> Oregon RSA</p>';
-    div.innerHTML += '<img src="img/ct7.png"><p> RSS MInnesota</p>';
-    div.innerHTML += '<img src="img/ct8.png"><p> Salem Cellular</p>';
-    div.innerHTML += '<img src="img/ct9.png"><p> US Cellular</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color-1"></i><p> New Cingular</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color-2"></i><p> Cello</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color-3"></i><p> RCC Minnesota</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color-4"></i><p> Verizon</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color-5"></i><p> US Cellular</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color-6"></i><p> Hood River Cellular</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color-7"></i><p> Medford Cellular</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color-8"></i><p> Oregon RSA</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color-9"></i><p> Salem Cellular</p>';
     // Return the Legend div containing the HTML content
     return div;
 };
 
-// Add Legend to Map
+// Add a legend to map
 legend.addTo(mymap);
 ```
 
@@ -309,7 +306,7 @@ If we save and refresh, the items you see won't make much sense, we need to use 
 ```css
 .legend {
     line-height: 16px;
-    width: 130px;
+    width: 140px;
     color: #333333;
     font-family: 'Open Sans', Helvetica, sans-serif;
     padding: 6px 8px;
@@ -350,8 +347,8 @@ This is not the only way to create a legend. An alternative method uses a `For` 
 The Leaflet Control object allows you to add a number of elements, including attribution and zoom controls. One easy component to add is a scale bar. In your script, enter the following line to add a scale bar to your map.
 
 ```js
-// Add Scale Bar to Map
-L.control.scale({position: 'bottomleft'}).addTo(map);
+// Add a scale bar to map
+L.control.scale({position: 'bottomleft'}).addTo(mymap);
 ```
 
 Save and refresh. The current state of our map.
@@ -403,38 +400,45 @@ Challenge!! Can you add some interactivity by using JavaScript to implement butt
 
 ## 6. Deliverable
 
-Please walk through the web map of cell towers in Oregon (2009) step by step. After you successfully deploy the cell tower map, this practical exercise asks you build another web map of airports in United States.  In the package for this lab, you will see two geojson files in the `assets` folder , one is `airports.geojson`, another is `us-states.geojson`. In addition, the `img` folder contains three icons may be useful, an airport icon `airport1.png` in black, an airport icon `airport2.png` in red, and an airport shadow icon `airport_sd.png`. 
+After you successfully deploy this cell tower map, you are expected to build another web map of airports in United States. In the `assets` directory of this lab, you will see two geojson files: one is [`airports.geojson`](assets/airports.geojson), another is [`us-states.geojson`](assets/us-states.geojson).
 
-`airports.geojson` is a geojson data file containing all the airports in United States. This data is converted from a shapefile, which was downloaded and unzipped from https://catalog.data.gov/dataset/usgs-small-scale-dataset-airports-of-the-united-states-201207-shapefile. For each airport feature, the field `CNTL_TWR` indicates whether the airport has an air traffic control tower. If there is a tower, the value of `CNTL_TWR` is 'Y', otherwise 'N'. Please use the two different airport icons (e.g., `airport1.png` and `airport2.png`. These two airport icons were converted from the airport svg file from https://commons.wikimedia.org/wiki/File:Plane_icon_nose_up.svg) to visualize whether an arbitrary airport has a control tower or not.  **(10 points)**
+`airports.geojson` contains all the airports in United States. This data is converted from a shapefile, which was downloaded and unzipped from https://catalog.data.gov/dataset/usgs-small-scale-dataset-airports-of-the-united-states-201207-shapefile. For each airport feature, the field `CNTL_TWR` indicates whether the airport has an air traffic control tower or not. If there is a tower, the value of `CNTL_TWR` is 'Y', otherwise 'N'. You may need to find an appropriate icon on `font awesome`. **(10 points)**
 
-`us-states.geojson` is a geojson data file containing all the states boundaries of United States. This data is acquired from from [Mike Bostock](http://bost.ocks.org/mike) of [D3](http://d3js.org/). The `count` field indicates the number of airports within the boundary of the state under investigation. So please make a choropleth map based on the count of airports within each state.  **(10 points)**
+`us-states.geojson` is a geojson data file containing all the states boundaries of United States. This data is acquired from from [Mike Bostock](http://bost.ocks.org/mike) of [D3](http://d3js.org/). The `count` field indicates the number of airports within the boundary of the state under investigation. So please make a choropleth map based on the number of airports within each state.  **(10 points)**
 
-Regarding the web map of airports in United States, we would like to see (part of the grading criteria)
+Regarding the grading criteria, this web map of airports needs include:
 
 - an appropriate basemap;  **(5 points)**
 - some interactive elements, like a clickable marker; **(5points)**
-- the fundamental web map elements, such as legend, scale bar,  credit;  **(5 points)**
-- add on a new feature (e.g., a map control? a map event, a new map object, etc.) which is not introduced in this lab as well as other lectures of the web map client series; **(10 points)**
-- wrap up a few words on the new feature. These words, coupled with a short introduction to this web map. These text should be added to the web map page as a short paragraph within the `<p>` tag. **(5points)**
+- some map elements, such as legend, scale bar,  credit;  **(5 points)**
+- add on a new feature (e.g., a map control, a map event, or a new map object, etc.) which is not introduced in this lab as well as other lectures of the web map client series; **(10 points)**
 
-Once you finish this PE, please make sure the program is executable in a web environment (testing it with python SimpleHTTPServer or Webstorm), and then compressed the folder of all the files (web page, icon images, and javascript scripts) as a zip file PE3.zip to **Canvas Dropbox**. The internal structure of the zipped package should be something looks like the file structure below. Please contact the instructor or TA if you have any difficulty in compressing the files. 
+- you will need to synchronize this project to a github repository. And make sure the web map is accessible from a url link, which should be similar to `http://[your_github_username].github.io/[your_repository_name]/index.html`. (You may want to check out previous lecture or lab handouts on project management and hosting via github); **(10 points)**
+
+- please make sure the internal structure of the files in your project repository is well organized. For example, it may be similiar to the file structure below.
 
 ```powershell
-PE3.zip
-│index.html
-├─assets
-│      airports.geojson
-│      us-states.geojson
-├─css
-│      main.css
-├─img
-│      airport1.png
-│      airport2.png
-│      airport_sd.png
-└─js
-        main.js
+[your_repository_name]
+    │index.html
+    │readme.md
+    ├─assets
+    │      airports.geojson
+    │      us-states.geojson
+    ├─css
+    │      main.css
+    ├─img
+    │      xxx.png
+    └─js
+            main.js
 ```
-On the assignment tab,  check the item of PE 3, press the `Submit Assignment` button to submit your PE zipped program. Note: only submit everything in a zipped file.
+
+- write up a project description in the `readme.md` file. This file will introduce the project name, a brief introduction, the major functions(especially the function which was not covered in the lectures), libraries, data sources, credit, acknowledgement, and other necessary information.
+
+
+Before submitting this lab, please make sure both the **GitHub repository** and the **GitHub page** work properly. In this lab, you are excepted to submit the url of the GitHub repository to the **Canvas Dropbox** of this course. This url should be in the format of `https://www.github.com/[your_github_username]/[your_repository_name]`. To do that, check the item of this lab on the assignment tab, and then press the `Submit Assignment` button. Please contact the instructor if you have any difficulty in submitting the url link. Here are the grading criteria:
+
+
+> If you have a genuine reason(known medical condition, a pile-up of due assignments on other courses, ROTC,athletics teams, job interview, religious obligations etc.) for being unable to complete work on time, then some flexibility is possible. However, if in my judgment you could reasonably have let me know beforehand that there would likely be a delay, and then a late penalty will still be imposed if I don't hear from you until after the deadline has passed. For unforeseeable problems,I can be more flexible. If there are ongoing medical, personal, or other issues that are likely to affect your work all semester, then please arrange to see me to discuss the situation. There will be NO make-up exams except for circumstances like those above.
 
 ## Reference
 
@@ -444,12 +448,4 @@ On the assignment tab,  check the item of PE 3, press the `Submit Assignment` bu
 
 [3] Boundary: http://oregonexplorer.info/ExternalContent/SpatialDataForDownload/RCE_counties.zip
 
-[4] open source icon http://ionicons.com/
-
-[5] Cell tower Icon http://www.freeiconspng.com/free-images/tower-icon-25704
-
-[6] Marker Shadow Maker https://dominoc925-pages.appspot.com/webapp/create_icon_shadow/default.html
-
-[7] Marker color http://www.pantone.com/fashion-color-report-fall-2016#intro
-
-[8] Add topojson instead of geojson http://blog.webkid.io/maps-with-leaflet-and-topojson/
+[4] Add topojson instead of geojson http://blog.webkid.io/maps-with-leaflet-and-topojson/

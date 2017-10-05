@@ -12,18 +12,15 @@
 </head>
 <body>
 <!-- Our web map and content will go here -->
-<div id="wrapper">
-    <div id="map" style="width: 900px; height: 600px;"></div>
-    <div id="controls">
-        <div id="credits"><p> Winter 2017 | GEOG 371 | Geovisualization: Web Mapping &copy; Bo Zhao, CEOAS, OSU</p>
-        </div>
-    </div>
+<div id="map" style="width: 900px; height: 600px;"></div>
+<div id="credits">
+    <p> Winter 2017 | GEOG 371 | Geovisualization: Web Mapping &copy; Bo Zhao, CEOAS, OSU</p>
 </div>
 <script>
 
-    var map = L.map('map', {center: [44.13, -119.93], zoom: 7});
+    var mymap = L.map('map', {center: [44.13, -119.93], zoom: 7});
 
-    L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(map);
+    L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
 
     var colors = chroma.scale('Set2').mode('lch').colors(9);
 
@@ -50,7 +47,7 @@
             else { id = 8;} // "Salem Cellular"
             return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-signal marker-color-' + (id + 1).toString() })});
         }
-    }).addTo(map);
+    }).addTo(mymap);
 
 
     // Set function for color ramp
@@ -82,7 +79,7 @@
     // Add Neighborhood Polygons
     L.geoJson.ajax("assets/counties.geojson", {
         style: style
-    }).addTo(map);
+    }).addTo(mymap);
 
 </script>
 </body>

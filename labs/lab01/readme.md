@@ -1,4 +1,4 @@
-# Practical Exercise 1: Project Management for Web Mapping
+# Lab 1: Project Management for Web Mapping
 
 > Winter 2017 | Geography 371 | Geovisualization: Web Mapping
 >
@@ -309,7 +309,7 @@ Once the `resume.md` is uploaded to the root of the GitHub Repository, you can s
 
 ## 4. Deliverable
 
-Before submitting this PE (Practical Exercise), please make sure both the **GitHub repository** and the **GitHub page** work properly. In this lab, you are excepted to submit the url of the GitHub repository to the **Canvas Dropbox** of this course. This url should be in the format of `https://www.github.com/[account_username]/[account_username].github.io`. To do that, check the item of this PE on the assignment tab, and then press the `Submit Assignment` button. Please contact the instructor if you have any difficulty in submitting the url link. Here are the grading criteria:
+Before submitting this lab, please make sure both the **GitHub repository** and the **GitHub page** work properly. In this lab, you are excepted to submit the url of the GitHub repository to the **Canvas Dropbox** of this course. This url should be in the format of `https://www.github.com/[account_username]/[account_username].github.io`. To do that, check the item of this lab on the assignment tab, and then press the `Submit Assignment` button. Please contact the instructor if you have any difficulty in submitting the url link. Here are the grading criteria:
 
 1\. A GitHub account is registered, You have followed the instructor's GitHub account and `star-ed` the course GitHub repository. (6 POINTS)
 

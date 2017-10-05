@@ -99,6 +99,8 @@ legend.onAdd = function () {
     return div;
 };
 
-// Add Legend to Map
+// Add a legend to map
 legend.addTo(mymap);
+
+// Add a scale bar to map
 L.control.scale({position: 'bottomleft'}).addTo(mymap);

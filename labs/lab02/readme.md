@@ -1,4 +1,4 @@
-# Practical Exercise 2: Web Programming Basics II: Javascript
+# Lab 2: Web Programming Basics II: Javascript
 
 > Winter 2017 | Geography 371 | Geovisualization: Web Mapping
 >
@@ -70,7 +70,7 @@ code snippets.
 
 >  **Snippet** is a programming term for a small region of re-usable source **code**, machine **code**, or text.Ordinarily, these are formally defined operative units to incorporate intolarger programming modules. **Snippet** management is a feature of some texteditors, program source **code** editors, IDEs, and related software.
 
-Or in this Practical Exercise, we recommend to test Javascript codes with In-browser console, such as Firefox firebug,  google in-browser console, etc. Open up your browser (Google Chrome), navigate to a page (e.g., www.google.com), and open the browser JavaScript console and dosome basic coding to show some of the principles.
+Or in this lab, we recommend to test Javascript codes with In-browser console, such as Firefox firebug,  google in-browser console, etc. Open up your browser (Google Chrome), navigate to a page (e.g., www.google.com), and open the browser JavaScript console and dosome basic coding to show some of the principles.
 
 Chrome’s integrated JavaScript console allows you to inputand explore JavaScript. Use **CTRL+SHIFT+J** (Windows) / **CMD+OPTION+J** (Mac) to open the console. 
 
@@ -757,7 +757,7 @@ Please create a PE report as a word document, and answer all the following quest
 >
 > C. variable carName;
 
-Once you finish this PE, you need to submit the PE report to **Canvas Dropbox**. On the assignment tab,  check the item of this PE, press the `Submit Assignment` button to submit your PE report. Please contact the instructor or TA if you have any difficulty. Note: only submit your PE report in Word or PDF format.
+Once you finish this lab, you need to submit the lab report to **Canvas Dropbox**. On the assignment tab,  check the item of this lab, press the `Submit Assignment` button to submit your lab report. Please contact the instructor or TA if you have any difficulty. Note: only submit your lab report in Word or PDF format.
 
 
 ## Reference
