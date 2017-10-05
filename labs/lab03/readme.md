@@ -87,17 +87,26 @@ Second, you can make your own icons by using an existing image or creating one u
 
 ### 2.1 Create the color scheme for markers
 
-Since we will use chroma.js to get the color set and then utilize $ to capture the head tag, we need to include both chroma.js and jquery in the head tag.
+Since we will use chroma.js to get the color set and then utilize `$` to capture the `head` tag, we need to include both chroma.js and jquery in the head tag.
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
 ```
 
-Chroma.js is a javascript library to manipulate colors. First, we need to create a set of random colors for each cell tower company. To use this set of random colors, we will dynamically build style classes, each of which will include one color built by chroma.js. The style classes are from `marker-color-1` to `marker-color-9`.Below we shows the code snippet how it works.
+
+[ColorBrewer](http://colorbrewer2.org/) is an online tool designed to help people select good color schemes for maps and other graphics. It provides three types of palettes: sequential, diverging and qualitative.
+
+- Sequential palettes are suited to ordered data that progress from low to high.
+- Diverging palettes are suited to centered data with extremes in either direction.
+- Qualitative palettes are suited to nominal or categorical data.
+
+![](img/colorbrewer.jpg)
+
+[Chroma.js](https://gka.github.io/chroma.js/) is a javascript library to manipulate colors. First, we need to create a set of random colors for each cell tower company. The color should follow the qualitative palettes. Therefore, in the code below, I select the `set2` category. To use these colors, we dynamically build style classes, each of which will include a color property. Below we shows the code snippet how it works. The style classes are from `marker-color-1` to `marker-color-9`.
 
 ```javascript
-// 4. build up a set of colors from colorbrewer's set2 category
+// 4. build up a set of colors from colorbrewer's "set2" category
 var colors = chroma.scale('Set2').mode('lch').colors(9);
 
 // 5. dynamically append style classes to this page. This style classes will be used for colorize the markers.
@@ -112,7 +121,7 @@ for (i = 0; i < 9; i++) {
 
 Next, we will assign the style class to each category. We number the company name from 0 to 8, and then add the color class (from `marker-color-1` to `marker-color-9`) to markers.
 
-We have nine different wireless companies, such as New Cingular, Verizon, Cello, Salem Cellular, etc. When the GeoJSON is added to the map, we need to check the features when we apply the custom icon to see what the value of feature.property.company is. If it is equal to "Verizon", we want the icon to be set to one of the towerXIcon (X = 1, 2, 3...9). Here we learned about conditionals, specifically `If.. Else` statements. To accomplish this, we can put a conditional in our call to the GeoJSON that checks to see if a case status is equal to "Verizon" and then sets an icon, and if it is not, will run the else statement, setting the icon equal to other companies, and so on so forth. The code will look like this:
+We have nine different wireless companies, such as New Cingular, Verizon, Cello, Salem Cellular, etc. If the value of `feature.property.company` is equal to "New Cingular", we want it to be set to a marker-color-1 class, and so on so forth. Here we use`If.. Else` statements. To accomplish this, we can put a conditional in our call to the GeoJSON that checks to see if a case status is equal to "New Cingular" and then sets the id value, and if not, the else statement will run, setting other id value to other companies. The code will look like this:
 
 ```javascript
 function (feature, latlng) {
@@ -203,7 +212,7 @@ Let's do something about that default blue and thematically style our data to th
 
 ### 3.1 Set up function for Color Ramp
 
-The first step is to set up a function for our color ramp. This is where we set up our classification breaks and color scheme. Setting up a classification scheme can be tricky. The easiest way to set up a standard classification scheme is to use QGIS, select something like Jenk's Natural Breaks, and copy the break numbers. Or you can check out a color ramp from [colorbrewer2.org]() In this lab, you will use chroma.js to get an array of colors. And then set up the setColor function that returns the value of a color based on the input value (the density of cell tower lying in a county). Appand the following code snippet in the script tag.
+The first step is to set up a function for our color ramp. This is where we set up our classification breaks and color scheme. Setting up a classification scheme can be tricky. The easiest way to set up a standard classification scheme is to use QGIS, select something like Jenk's Natural Breaks, and copy the break numbers. Or you can check out a color ramp from [colorbrewer2.org]() In this lab, you will use chroma.js to get an array of colors. Since the input data is ordered data that progress from low to high, we will use a sequential color palette `OrRd` (meaning from Orange to Red). Then, we will set up the setColor function that returns the value of a color based on the input value (the density of cell tower lying in a county). Append the following code snippet in the script tag.
 
 ```js
 // Create an array of colors
@@ -380,7 +389,7 @@ body {
 
 Save and refresh your map. Open Sans will now be your preferred font!
 
-**Style the Credits using CSS**
+**Style the credits using CSS**
 
 Lastly, to help you explore the power of CSS, style the credits at the bottom of your page. Because the div containing the credits has id="credits", we can style it using #credits. All of the contents in the credits div are between two paragraph tags. CSS styling is written in a nested fashion, to style everything that is in a p element within the #credits div, we use #credits p. Add the following snippet between the style tags in the head section of the document.
 
@@ -402,20 +411,20 @@ Challenge!! Can you add some interactivity by using JavaScript to implement butt
 
 After you successfully deploy this cell tower map, you are expected to build another web map of airports in United States. In the `assets` directory of this lab, you will see two geojson files: one is [`airports.geojson`](assets/airports.geojson), another is [`us-states.geojson`](assets/us-states.geojson).
 
-`airports.geojson` contains all the airports in United States. This data is converted from a shapefile, which was downloaded and unzipped from https://catalog.data.gov/dataset/usgs-small-scale-dataset-airports-of-the-united-states-201207-shapefile. For each airport feature, the field `CNTL_TWR` indicates whether the airport has an air traffic control tower or not. If there is a tower, the value of `CNTL_TWR` is 'Y', otherwise 'N'. You may need to find an appropriate icon on `font awesome`. **(10 points)**
+`airports.geojson` contains all the airports in United States. This data is converted from a shapefile, which was downloaded and unzipped from https://catalog.data.gov/dataset/usgs-small-scale-dataset-airports-of-the-united-states-201207-shapefile. For each airport feature, the field `CNTL_TWR` indicates whether the airport has an air traffic control tower or not. If there is a tower, the value of `CNTL_TWR` is 'Y', otherwise 'N'. You may need to find an appropriate icon on `font awesome`. **(6 points)**
 
-`us-states.geojson` is a geojson data file containing all the states boundaries of United States. This data is acquired from from [Mike Bostock](http://bost.ocks.org/mike) of [D3](http://d3js.org/). The `count` field indicates the number of airports within the boundary of the state under investigation. So please make a choropleth map based on the number of airports within each state.  **(10 points)**
+`us-states.geojson` is a geojson data file containing all the states boundaries of United States. This data is acquired from from [Mike Bostock](http://bost.ocks.org/mike) of [D3](http://d3js.org/). The `count` field indicates the number of airports within the boundary of the state under investigation. So please make a choropleth map based on the number of airports within each state.  **(5 points)**
 
 Regarding the grading criteria, this web map of airports needs include:
 
 - an appropriate basemap;  **(5 points)**
 - some interactive elements, like a clickable marker; **(5points)**
-- some map elements, such as legend, scale bar,  credit;  **(5 points)**
-- add on a new feature (e.g., a map control, a map event, or a new map object, etc.) which is not introduced in this lab as well as other lectures of the web map client series; **(10 points)**
+- some map elements, such as legend, scale bar, credit;  **(5 points)**
+- add on a new feature (e.g., a map control, a map event, or a new map object, etc.) which is not introduced in this lab as well as other lectures of the web map client series; **(6 points)**
 
-- you will need to synchronize this project to a github repository. And make sure the web map is accessible from a url link, which should be similar to `http://[your_github_username].github.io/[your_repository_name]/index.html`. (You may want to check out previous lecture or lab handouts on project management and hosting via github); **(10 points)**
+- you will need to synchronize this project to a github repository. And make sure the web map is accessible from a url link, which should be similar to `http://[your_github_username].github.io/[your_repository_name]/index.html`. (You may want to check out previous lecture or lab handouts on project management and hosting via github); **(6 points)**
 
-- please make sure the internal structure of the files in your project repository is well organized. For example, it may be similiar to the file structure below.
+- please make sure the internal structure of the files in your project repository is well organized. For example, it may be similiar to the file structure below. **(4 points)**
 
 ```powershell
 [your_repository_name]
@@ -432,7 +441,7 @@ Regarding the grading criteria, this web map of airports needs include:
             main.js
 ```
 
-- write up a project description in the `readme.md` file. This file will introduce the project name, a brief introduction, the major functions(especially the function which was not covered in the lectures), libraries, data sources, credit, acknowledgement, and other necessary information.
+- write up a project description in the `readme.md` file. This file will introduce the project name, a brief introduction, the major functions(especially the function which was not covered in the lectures), libraries, data sources, credit, acknowledgement, and other necessary information. **(8 points)**
 
 
 Before submitting this lab, please make sure both the **GitHub repository** and the **GitHub page** work properly. In this lab, you are excepted to submit the url of the GitHub repository to the **Canvas Dropbox** of this course. This url should be in the format of `https://www.github.com/[your_github_username]/[your_repository_name]`. To do that, check the item of this lab on the assignment tab, and then press the `Submit Assignment` button. Please contact the instructor if you have any difficulty in submitting the url link. Here are the grading criteria:
