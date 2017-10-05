@@ -6,21 +6,21 @@
 >
 > **Assigned:** 10/05/2017 | **Due:** `10/19/2017 @11:59pm` | **Points Available** = 50
 
-When creating a web map, one of the key components is styling your elements to provide proper symbolization for your data. This increases legibility for users and can give your map an appealing, custom design. Elements that can be custom designed include thematic layers (points, lines, and polygons), basemaps (tile layers), interactive features (the components of the map that allow for user interaction), and legends and supplemental information (such as supplemental prose and titles).
+In this lab, we will design an thematic map about cell towers in Oregon. When creating a web map, one of the key components is styling your elements to provide proper symbolization for your data. This increases legibility for users and can give your map an appealing, custom design. Elements that can be custom designed include thematic layers (i.e., points, lines, and polygons), base maps (as a leaflet `tileLayer`), interactive features (the components of the map that allow for user interaction), and legends and supplemental information (such as credits, acknowledgements, etc.).
 
-This lab, we will make a web map of cell towers in Oregon. To do that, we collected all the county boundaries from [Oregon Explorer](http://oregonexplorer.info), and the national distribution of cell towers from [Map Cruzin](http://www.mapcruzin.com/google-earth-maps-resources/kml/us-cell.kmz). To get a visual, this is what we are going to make today.
+To do that, the county boundaries is from [Oregon Explorer](http://oregonexplorer.info), and the spatial distribution of cell towers is from [Map Cruzin](http://www.mapcruzin.com/google-earth-maps-resources/kml/us-cell.kmz). Below is the web map you will make by walking through this lab handout.
 
 ![](img/final_map.jpg)
 
-To get started, setup your development environment in a easy to access location on your machine. Sync this lecture's material, and start up your local server by python SimpleHTTPServer or Webstorm.
+To get started, please synchronize the course material to the working space of your local computer. If you are working in the Digital Earth Lab, please synchronize your course material on the desktop directory.  The material for this lab is located at `[your_working_space]/geog371/labs/lab03`. Next, open the course material in Webstorm. 
 
 ## 1. Set up our Map and Add Data
 
-With your localhost running, open up the **map1.html** in your IDE (Webstorm) to prepare for editing. When open, you should see a basic map showing the extent of Oregon State.
+Open `map1.html` in your IDE (Webstorm) to prepare for editing.
 
 **The extent of Oregon State**
 
-View this Example View the map1.html document in Webstorm (or your IDE of choice). Here you will see our HTML, with some CSS styling at the top, a couple of div page elements for our map components, linked scripts, and custom scripts. The page elements are as follows:
+In map1.html, you will see a HTML page, with some CSS styling at the top, a couple of div page elements for our map components, linked scripts, and custom scripts. The page elements are as follows:
 
 `map`: the element our map will be attached to;
 
@@ -28,7 +28,7 @@ View this Example View the map1.html document in Webstorm (or your IDE of choice
 
 **The Script**
 
-Within the script tags, I have added the map object and tile layer for us to use. You've seen the script before. This script creates our map object and adds a basemap.
+Within the script tags, I have added the map object and tile layer for us to use. You've seen the script before. This script creates our map object and adds a base map.
 
 ```js
 // 1. Create a map object.
@@ -43,23 +43,25 @@ L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.jpg', {
 }).addTo(mymap);
 ```
 
-Please visit http://localhost:8000/map1.html to see the map at the current stage.
+Please  click the chrome button on the top right, you should see a basic map showing the extent of Oregon.
+
+> **Note:** Please think about how to host this html via python SimpleHTTPServer.
 
 ![](img/map1.jpg)
 
-The base map (in tile layer) I am using comes from CartoDB. The light color helps the main features/theme of a web map stand out. In addition to major map providers (Google map, bing map, openstreetmap, mapbox, cartodb), you can look for a list of base map from [Leaflet providers](http://leaflet-extras.github.io/leaflet-providers/preview/), many local municipalities and regions around the globe maintain tile layers that can be accessed through GIS software and mapping libraries. Google search the area in which you are working to see if they maintain base maps, most often you will find Web Map Services (WMS) - a map services we will learn in later, that can be loaded into your map as a base using the Leaflet WMS loader object, `L.tileLayer.WMS`.
+The base map (in tile layer) comes from CartoDB. The light color helps the main features/theme of a web map stand out. In addition to some popular map providers (e.g., Google maps, Bing map, OpenStreetMap, Mapbox, CartoDB, or a list of base map from [Leaflet providers](http://leaflet-extras.github.io/leaflet-providers/preview/)), you can also find many local municipalities and regions around the globe maintain tile layers that can be accessed through GIS software and mapping libraries. Google search your study area combined with another keyword "tile server", you may find some base maps, mostly these base maps are in Web Map Services (WMS) - a map services we will learn in later, that can be loaded into your map as a base map using the Leaflet WMS loader object, `L.tileLayer.WMS`.
 
->  **Note:** If the provided basemaps do not carter to your flavor, you can create custom tiles that can be served to your maps. This topic, on the whole, is large and we will have another series of lectures that introduces creating web map services by GeoServer.
+>  **Note:** If the provided base maps do not carter to your flavor, you can create custom tiles that can be served to your maps. This topic, on the whole, is large and we will have another series of lectures that introduces creating web map services by GeoServer.
 
 **Add the Cell Towers Data**
 
-Next, we want to add the data set to the map. To do that, we will add another Javascript library leaflet.ajax in the head tag.
+Next, we want to add the cell tower data set to the map. To do that, we will use another Javascript library [`leaflet.ajax`](https://github.com/calvinmetcalf/leaflet-ajax) in the `head` element.
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 ```
 
-In the directory `assets` of this lab, you will find a geojson data file `cell_towers.geojson`. At the end of our script, within the script tags, enter the following code to add the cell towers and bind a popup.
+In the directory `assets`, you will find a geojson file - `cell_towers.geojson`. Enter the following code snippet to add the cell towers to the map.
 
 ```js
 // 3.Add cell towers GeoJSON Data
@@ -71,31 +73,30 @@ cellTowers= L.geoJson.ajax("assets/cell_towers.geojson");
 cellTowers.addTo(mymap);
 ```
 
-The cellTowers object will hold the contents of the GeoJSON data, so we can refer to it easily. Save and refresh your map. You should see the points populate. That is a lot of cell towers!  Please open **map2.html** to see the map at the current stage.
+The `cellTowers` object hold the GeoJSON data, and then it adds to the `mymap` object. Save and refresh your map. You should see the points populate. That is a lot of cell towers!  Please open **map2.html** to see how the map looks like.
 
 ![](img/map2.jpg)
 
 ## 2. Custom Point Markers
 
-Our point markers showing the cell towers are the default blue Leaflet map pin. While these markers are fine, if you are showing multiple properties or want to create unique symbols, you can set your point symbols to be represented by an icon of your choosing. The steps towards doing this are quite easy, and you can use the Leaflet icon class to set up your parameters. You have two choices for your custom icons. First, you can use existing icons or grab a library of pre made icons. Here are two nice leaflet plugins:
-
-- Mapbox Maki: Allows you to use icons from the terrific Mapbox Maki library.
-
-- Font Awesome: Allows for use of the fantastically useful open source.
-
-Second, you can make your own icons by using an existing image or creating one using graphics software (i.e. Illustrator, Photoshop). If your graphic is saved as an image (the most space efficient images for the web are usually in `png` or `jpg` format), and upload it to your server for use as an icon. If you want a higher level of customization, or the icons found in **Font Awesome** or **Maki** do not work for you, create your own! In this course, we will mainly focus on the first option.
+Our point markers showing the cell towers are in the default blue Leaflet map pin. While these markers are fine, if you are showing multiple properties or want to create unique symbols, you can set your point symbols to be represented by an icon of your choosing. The steps towards doing this are straightforward. In this lab, we will introduce how to apply a custom icon using **Font Awesome**. 
 
 ### 2.1 Create the color scheme for markers
 
-Since we will use chroma.js to get the color set and then utilize `$` to capture the `head` tag, we need to include both chroma.js and jquery in the head tag.
+[**Font Awesome**](http://fontawesome.io/) allows you to add icons by CSS classes. To apply Font Awesome, you will need to include its css link in the `head` element of a web map.
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+```
+
+In addition, we will use another library `chroma.js` to colorize the icon, and utilize `$` of `jQuery` to manipulate `html` elements. [Chroma.js](https://gka.github.io/chroma.js/) is a javascript library to manipulate colors. Therefore, we need to include both `chroma.js` and `jQuery` in the head tag.
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
 ```
 
-
-[ColorBrewer](http://colorbrewer2.org/) is an online tool designed to help people select good color schemes for maps and other graphics. It provides three types of palettes: sequential, diverging and qualitative.
+Furthermore, we also need some predefined color ramp to symbolize geographic features. [ColorBrewer](http://colorbrewer2.org/) is an online tool designed to help people select good color schemes for maps and other graphics. It provides three types of palettes: sequential, diverging and qualitative.
 
 - Sequential palettes are suited to ordered data that progress from low to high.
 - Diverging palettes are suited to centered data with extremes in either direction.
@@ -103,7 +104,9 @@ Since we will use chroma.js to get the color set and then utilize `$` to capture
 
 ![](img/colorbrewer.jpg)
 
-[Chroma.js](https://gka.github.io/chroma.js/) is a javascript library to manipulate colors. First, we need to create a set of random colors for each cell tower company. The color should follow the qualitative palettes. Therefore, in the code below, I select the `set2` category. To use these colors, we dynamically build style classes, each of which will include a color property. Below we shows the code snippet how it works. The style classes are from `marker-color-1` to `marker-color-9`.
+> **Note:** Color palettes from Color Brewer
+
+We need to create a set of random colors for representing cell tower of different companies. The color should follow the qualitative palettes because this palettes can better visual the nominal and categorical data. Therefore, we select the `set2` category. Since there are 9 cell towers in Oregon, we will create nine different colors. To apply these colors, we dynamically build classes and then embed these classes in `style` elements.  The style classes are from `marker-color-1` to `marker-color-9`. Each class include a color `property`. Below is the code snippet.
 
 ```javascript
 // 4. build up a set of colors from colorbrewer's "set2" category
@@ -115,13 +118,13 @@ for (i = 0; i < 9; i++) {
 }
 ```
 
->**Note:** The reason why we categorize the companies in 9 classes, because we know there are 9 in Oregon.
+>**Note:**  Refer to the color palettes from color brewer, and try other palettes such as `Set1`, `Dark2` , etc.
 
-### 2.2 Assign the color class to each categories
+### 2.2 Assign a style class to each company
 
-Next, we will assign the style class to each category. We number the company name from 0 to 8, and then add the color class (from `marker-color-1` to `marker-color-9`) to markers.
+Next, we will assign a style class to each company. We have nine different wireless companies, such as New Cingular, Verizon, Cello, Salem Cellular, etc.  We number the company name from 0 to 8, and then assign the style class (from `marker-color-1` to `marker-color-9`) to markers. If the value of `feature.property.company` is equal to "New Cingular", we set `marker-color-1` class to it, and so on so forth.
 
-We have nine different wireless companies, such as New Cingular, Verizon, Cello, Salem Cellular, etc. If the value of `feature.property.company` is equal to "New Cingular", we want it to be set to a marker-color-1 class, and so on so forth. Here we use`If.. Else` statements. To accomplish this, we can put a conditional in our call to the GeoJSON that checks to see if a case status is equal to "New Cingular" and then sets the id value, and if not, the else statement will run, setting other id value to other companies. The code will look like this:
+Here we use`If.. Else` statements. To do this, we can put a conditional statement to see if the `feature.property.company` is equal to a specific company name.  If it equals, we set the id value, and if not, the else statement will run, setting other id value. Below is the code snippet.
 
 ```javascript
 function (feature, latlng) {
@@ -137,19 +140,17 @@ function (feature, latlng) {
     else { id = 8;} // "Salem Cellular"
     return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-signal marker-color-' + (id + 1).toString() })});
 }
- ```
+```
 
 ### 2.3. Apply an Icon
 
-The marker should adopt an icon. The icon is from [Font Awesome](http://fontawesome.io/icons/). To use an icon, you will simply link the class with the marker. An javacript object or html element can have multiple class. To apply multiple classes, you will need to leave a space between each class. For example, `fa` will inform the element, the font awesome will be applied, and `fa-signal` will inform the specific icon will be in use. And the `marker-color-1~9` deals with color, font-size, as well as text-shadow.
+We apply an icon to each marker. To apply that, you will simply link the class with the marker. Notably, an javascript object or html element can carry multiple class. In our case, a class `fa` informs that the font awesome will be applied, and another class `fa-signal` informs that an icon showing a signal will be added. And other classes `marker-color-1~9` deal with color, font-size, as well as text-shadow.
 
->**Note:** If you feel a little confused about the style properties, please try to change the values to some extreme numbers to see the differences. For example, you can change the font-size from 15 to 100, and then refresh the web page.
+>**Note:** If you feel a little confused about the style properties of a class, please try to change the property value to some extreme numbers, and then see the differences. For example, you can change the font-size from 15 to 100, and then see what has been changed.
 
-### 2.4 Point to Layer
+**Use `point to layer` option of `L.geoJson` to set the icon**
 
-*Use `point to layer` option of `L.geoJson` to set the icon*
-
-With our icon loaded into our document, we need to replace the default icons created when we add the GeoJSON. This is a process of setting the icon option to TowerIcon for each marker when it is added to our map. To set the icon for a GeoJSON, we need to create a layer from the GeoJSON (we can style it if it is a layer) by using the `pointToLayer` option of `L.geoJson`.
+To set the icon for a GeoJSON, we need to create a layer from the GeoJSON (we can style it if it is a layer) by using the `pointToLayer` option of `L.geoJson`. `pointToLayer` runs a function when the GeoJSON is loaded that takes a feature and latitude and longitude and creates a marker at that latitude and longitude.
 
 ```js
 pointToLayer: function (feature, latlng) {
@@ -167,7 +168,7 @@ pointToLayer: function (feature, latlng) {
     }
 ```
 
-Note there are *two equal signs (==)*, this is because JavaScript is very particular about operators. To read more, check out this documentation from `w3schools`. Modify the code within the `L.geoJSON` pointToLayer option, where we set the style previously, to be the following, including the conditional statement to check the status.
+> **Note:** there are *two equal signs (==)*, this is because JavaScript is very particular about operators. To read more, check out this documentation from `w3schools`.
 
 **Options available for `L.geoJson` include**:
 
@@ -177,7 +178,7 @@ Note there are *two equal signs (==)*, this is because JavaScript is very partic
 - `filter`: Function that will be used to decide whether to show a feature or not.
 - `coordsToLatLng`: Function that will be used for converting GeoJSON coordinates to LatLng points (if not specified, coordinates will be assumed to be WGS84 — standard [longitude, latitude] values in degrees).
 
-We are using onEachFeature to set the popup, but you can see that in order to set a icon, we need to use `pointToLayer`. In pseudo-code, pointToLayer runs a function when the GeoJSON is loaded that takes a feature and latitude and longitude and creates a marker at that latitude and longitude. Marker has an option called icon that you set to be our towerIcon variable. Once set, return the marker. This will replace the default blue map pin with our rodentIcon. The code looks like the following. Replace your `L.geoJson` call with this. Note the addition of the pointToLayer option.
+In addition to `pointToLayer`, we will use `onEachFeature` option to set the popup.
 
 ```js
 // assign a function to the onEachFeature parameter of the cellTowers object.
@@ -187,14 +188,14 @@ onEachFeature: function (feature, layer) {
     layer.bindPopup(feature.properties.company);
 },
 ```
-Click save and refresh your map in your browser. Check out our map. We have changed icon to cell tower! Please visit http://localhost:8000/map3.html to see the map at the current stage.
+ Please open **map3.html** to see how the map looks like. We have changed icon to cell tower! 
 
-![](map3.jpg)
+![](img/map3.jpg)
 
 
 ## 3. Polygon Data and Symbolization
 
-In our data folder, you'll see a second dataset, counties.geojson. The counties GeoJSON file contains all the counties of Oregon. Each county contains the number of cell towers. This number is pre-calculated in QGIS. To add the data to the map, create another `L.geoJson` object using the ajax() method. Enter the following lines of code at the end of your script, staying within the `script` tags.
+In `assets` directory, you'll see another dataset  `counties.geojson`. This file stores all the counties of Oregon. Each county contains the number of cell towers; this number is pre-calculated in QGIS. To add the data to the map, create another `L.geoJson` object using the `ajax()` method. Enter the following code at the end of your script, staying within the `script` tags.
 
 
 ```js
@@ -205,14 +206,14 @@ L.geoJson.ajax("assets/counties.geojson"}).addTo(map);
 
 Save and refresh your map. Counties of Oregon will be displayed on the map, symbolized in a default blue.
 
-![](img/4-1.jpg)
+![](img/map4-1.jpg)
 
 
-Let's do something about that default blue and thematically style our data to these polygons useful by turning them into a choropleth layer. The counties.geojson file contains numbers of cell towers in each county, calculated in QGIS. Symbolize the counties on the map by the number of counties. This is a three step process. `L.geoJson.ajax()` contains a style option that contains styling properties.
+Let's do something about that default blue and thematically style our data to these polygons useful by turning them into a choropleth layer. The `counties.geojson` file contains numbers of cell towers in each county, calculated in QGIS.  To symbolize the counties  by the number of counties, we will use the `style` option that contains styling properties.
 
-### 3.1 Set up function for Color Ramp
+### 3.1 Set a sequential color palette
 
-The first step is to set up a function for our color ramp. This is where we set up our classification breaks and color scheme. Setting up a classification scheme can be tricky. The easiest way to set up a standard classification scheme is to use QGIS, select something like Jenk's Natural Breaks, and copy the break numbers. Or you can check out a color ramp from [colorbrewer2.org]() In this lab, you will use chroma.js to get an array of colors. Since the input data is ordered data that progress from low to high, we will use a sequential color palette `OrRd` (meaning from Orange to Red). Then, we will set up the setColor function that returns the value of a color based on the input value (the density of cell tower lying in a county). Append the following code snippet in the script tag.
+The first step is to set up a function to create classification breaks. One way to hard code the colors is to make the color scheme via QGIS, selecting some classification rule like Jenk's Natural Breaks, and copy the break numbers as well as color value. Or you can check out a color ramp from [colorbrewer2.org](). In this lab, you will use `chroma.js` to dynamically create an array of colors. Since the number of cell tower in each county is ordered data that progress from low to high, we will use a sequential color palette `OrRd` (meaning from Orange to Red). Then, we develop a `setColor` function that returns the color value using the number of cell tower lying in a county. Add the following code snippet in the `script` element.
 
 ```js
 // Create an array of colors
@@ -230,9 +231,9 @@ function setColor(density) {
 }
 ```
 
-### 3.2 Set style GeoJson style function
+### 3.2 Apply the color palette
 
-Next, set up a function that will set the properties for the `L.geoJson.ajax()` style option. Call this function style, pass it a GeoJson feature when invoked. Set the fillColor property to be equal to the setColor function, passing it the `CN_CNT` property (the number of cell towers) from the input geojson data. Enter the following code into your script.
+Next, develop a function that will set the style option of  `L.geoJson.ajax()` object. We name this function `style` and it can accept a GeoJson feature. Having the feature loaded, this function sets the `fillColor` property with `setColor` function as well as an input value - `feature.properties.CN_CNT`.  Then, we add the following code snippet in the `script` element.
 
 ```js
 // Set style function that sets fill color property equal to cell tower density
@@ -248,11 +249,11 @@ function style(feature) {
 }
 ```
 
-While `fillColor` and `fillOpacity` properties for the fill; `weight`, `opacity`, `color`, and `dashArray` properties for the border.
+While `fillColor` and `fillOpacity` properties are for the fill; `weight`, `opacity`, `color`, and `dashArray` properties are for the border.
 
-### 3.3 Set style option for the GeoJSON
+### 3.3 Set style option
 
-The final step is to set the style option for the neighborhoods layer GeoJSON. Find the Add Neighborhoods Polygons block of code and modify it to include the style option. Set style equal to style to run the style function when the GeoJSON is create. Below shows the code of adding the county polygons to the map.
+The final step is to set the style option for the county layer. Below shows the code of adding the county polygons to the map, and also applying the style.
 
 ```js
 // Add Neighborhood Polygons
@@ -306,7 +307,9 @@ legend.onAdd = function () {
 legend.addTo(mymap);
 ```
 
-So, what did we do here? First, we created an instance of a  **Leaflet Control object**, calling it Legend, and used the position option to tell it to locate in the top right of our map. Next, we used the onAdd method of the control to run a function when the legend is added. That function creates a new div in the DOM, giving it a class of legend. This will let us use CSS to style everything using the legend tag. In the newly created div, we are going to populate it with HTML by using a built-in JavaScript DOM method called innerHTML. Using innerHTML allows us to change the content of the HTML and add to the legend div. Using the plus-equal `+=` instead of equal `=` is the syntax for append. Everytime this is used, code following is appended to existing code. In this, we write the HTML we want to use in our legend. Note, the `i` tag represents our legend icons. Within the HTML, fill in the colors and ranges so that they match our data classification. After the HTML is appended, return the div element. Lastly, add the legend to the map.
+So, what did we do here? First, we created an instance of a  **Leaflet Control object**, calling it legend, and used the position option to tell it to locate in the top right of our map. Next, we used the `onAdd` method of the control to run a function when the legend is added. That function created a new div in the DOM, giving it a class of legend. This allowed the CSS to style everything using the legend element. In the newly created div, we are going to populate it with HTML by using a built-in JavaScript DOM method called innerHTML. Using innerHTML allows us to change the content of the HTML and add to the legend div. Using the plus-equal `+=` instead of equal `=` is the syntax for append. Every time this is used, code following is appended to existing code. In this, we write the HTML we want to use in our legend. Note, the `i` tag represents our legend icons. Within the HTML, fill in the colors and ranges so that they match our data classification. After the HTML is appended, return the div element. Lastly, add the legend to the map.
+
+> **Note:** Instead of using innerHTML, what in jQuery can we use to do the same task?
 
 **Use CSS to Style**
 
