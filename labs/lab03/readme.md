@@ -350,13 +350,11 @@ If we save and refresh, the items you see won't make much sense, we need to use 
 }
 ```
 
-First, we set properties for the legend using `.legend` to style the legend class. We set a line height, color, font, padding, background, drop shadow, and border corner radius. Next we set our icon (i) tag, this should be set to float: left; so that elements will align into columns, then we set properties for the image (img) tag, making them the same size and giving them the same float as the icons. Lastly, we style our paragraph tag (p), making sure line-height is consistent with the others. Save and refresh your map. You should see your styled legend applied to your map.
-
-This is not the only way to create a legend. An alternative method uses a `For` loop conditional statement to add legend elements based on the number of data classification categories you have. A [legend section of the choropleth tutorial](http://leafletjs.com/examples/choropleth.html#custom-legend-control) at the Leaflet homepage shows this, take a look.
+First, we set properties for the legend using `.legend` to style the legend class. We set a line height, color, font, padding, background, drop shadow, and border corner radius. Next we set our icon (`i`) tag, this should be set to float: left; so that elements will align into columns, then we set properties for the image (`img`) tag, making them the same size and giving them the same float as the icons. Lastly, we style our paragraph tag (`p`), making sure line-height is consistent with the others. Save and refresh your map. You should see your styled legend applied to your map.
 
 ### 4.2 Add a Scale Bar
 
-The Leaflet Control object allows you to add a number of elements, including attribution and zoom controls. One easy component to add is a scale bar. In your script, enter the following line to add a scale bar to your map.
+The Leaflet Control object allows you to add a number of elements, including attribution and zoom controls. To add a scale bar, please enter the following line to add a scale bar to your map.
 
 ```js
 // Add a scale bar to map
@@ -394,7 +392,7 @@ Save and refresh your map. Open Sans will now be your preferred font!
 
 **Style the credits using CSS**
 
-Lastly, to help you explore the power of CSS, style the credits at the bottom of your page. Because the div containing the credits has id="credits", we can style it using #credits. All of the contents in the credits div are between two paragraph tags. CSS styling is written in a nested fashion, to style everything that is in a p element within the #credits div, we use #credits p. Add the following snippet between the style tags in the head section of the document.
+Lastly, to help you explore the power of CSS, style the credits at the bottom of your page. Because the div containing the credits has `id="credits"`, we can style it using #credits. All of the contents in the credits div are between two paragraph tags. CSS styling is written in a nested fashion, to style everything that is in a p element within the `#credits div`, we use `#credits p`. Add the following snippet between the style tags in the head section of the document.
 
 ```css
 credits p {
@@ -407,8 +405,6 @@ credits p {
 Save and refresh your map. It will look like the following!
 
 ![](img/final_map.jpg)
-
-Challenge!! Can you add some interactivity by using JavaScript to implement buttons, checkboxes, and toggles?
 
 ## 6. Deliverable
 
