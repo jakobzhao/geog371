@@ -4,7 +4,12 @@
 
 var mymap = L.map('map', {center: [44.13, -119.93], zoom: 7});
 
-L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
+L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    maxZoom: 11,
+    minZoom: 6,
+    detectRetina: true, //support Retina Display if the client uses high resolution monitor.
+    attribution: 'Cell Tower Data &copy; Map Cruzin | Oregon counties &copy; Oregon Explorer | Base Map &copy; CartoDB'
+}).addTo(mymap);
 
 
 //https://github.com/gka/chroma.js/blob/master/src/colors/colorbrewer.coffee

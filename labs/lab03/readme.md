@@ -4,15 +4,15 @@
 >
 > **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 1000 - 1150
 >
-> **Assigned:** 09/21/2017 | **Due:** `09/28/2017 @11:59pm` | **Points Available** = 50
+> **Assigned:** 10/05/2017 | **Due:** `10/19/2017 @11:59pm` | **Points Available** = 50
 
-It's time to look at some cartographic components of our map, including map elements, symbolization, and customization. When creating a web map, one of the key components is styling your elements to provide proper symbolization for your data. This increases legibility for users and can give your map an appealing, custom design. Elements that can be custom designed include thematic layers (points, lines, and polygons), basemaps (tile layers), interactive features (the components of the map that allow for user interaction), and legends and supplemental information (such as supplemental prose and titles).
+When creating a web map, one of the key components is styling your elements to provide proper symbolization for your data. This increases legibility for users and can give your map an appealing, custom design. Elements that can be custom designed include thematic layers (points, lines, and polygons), basemaps (tile layers), interactive features (the components of the map that allow for user interaction), and legends and supplemental information (such as supplemental prose and titles).
 
 This lab, we will make a web map of cell towers in Oregon. To do that, we collected all the county boundaries from [Oregon Explorer](http://oregonexplorer.info), and the national distribution of cell towers from [Map Cruzin](http://www.mapcruzin.com/google-earth-maps-resources/kml/us-cell.kmz). To get a visual, this is what we are going to make today.
 
 ![](img/final_map.png)
 
-To get started, setup your development environment in a easy to access location on your machine. Download this lecture's package from Canvas, unzip the contents, and start up your localhost server in that location (the development environment). Again, you can start up your local server by python SimpleHTTPServer or Webstorm. 
+To get started, setup your development environment in a easy to access location on your machine. Sync this lecture's material, and start up your local server by python SimpleHTTPServer or Webstorm.
 
 ## 1. Set up our Map and Add Data
 
@@ -35,15 +35,15 @@ View this Example View the map1.html document in Webstorm (or your IDE of choice
 Within the script tags, I have added the map object and tile layer for us to use. You've seen the script before. This script creates our map object and adds a basemap.
 
 ```js
-// Create Map Object
+// 1. Create a map object.
 var mymap = L.map('map', {center: [44.13, -119.93], zoom: 7});
 
-// Add Base Layer
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
+// 2. Add a base map.
+L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
     maxZoom: 11,
     minZoom: 6,
-    attribution: 'Cell Tower Data &copy; Map Cruzin | Oregon counties &copy; Oregon Explorer | Base Map &copy; Mapbox',
-    id: 'mapbox.light'
+    detectRetina: true, //support Retina Display if the client uses high resolution monitor.
+    attribution: 'Cell Tower Data &copy; Map Cruzin | Oregon counties &copy; Oregon Explorer | Base Map &copy; CartoDB'
 }).addTo(mymap);
 ```
 
@@ -51,31 +51,31 @@ Please visit http://localhost:8000/map1.html to see the map at the current stage
 
 ![](img/map1.png)
 
-The tile layer I am using comes from Map Box. The light color helps the main features/theme of a web map stand out. In addition to worldwide base layers you find from major organizations (Google map, bing map, openstreetmap), many local municipalities and regions around the globe maintain tile layers that can be accessed through GIS software and mapping libraries. Google search the area in which you are working to see if they maintain base maps, most often you will find Web Map Services (WMS) - a map services we will learn in later, that can be loaded into your map as a base using the Leaflet WMS loader object, `L.tileLayer.WMS`.
+The base map (in tile layer) I am using comes from CartoDB. The light color helps the main features/theme of a web map stand out. In addition to major map providers (Google map, bing map, openstreetmap, mapbox, cartodb), you can look for a list of base map from [Leaflet providers](http://leaflet-extras.github.io/leaflet-providers/preview/), many local municipalities and regions around the globe maintain tile layers that can be accessed through GIS software and mapping libraries. Google search the area in which you are working to see if they maintain base maps, most often you will find Web Map Services (WMS) - a map services we will learn in later, that can be loaded into your map as a base using the Leaflet WMS loader object, `L.tileLayer.WMS`.
 
->  **Note:** If the provided basemaps do not carter to your flavor, you can create custom tiles that can be served to your maps. This topic, on the whole, is large and we will have another series of lectures that introduces creating web map services by GeoServer. 
+>  **Note:** If the provided basemaps do not carter to your flavor, you can create custom tiles that can be served to your maps. This topic, on the whole, is large and we will have another series of lectures that introduces creating web map services by GeoServer.
 
 **Add the Cell Towers Data**
 
-Next, we want to add the dataset to the map. Note that I have included the jQuery library in our document so we can use an Asynchronous call to get external data (AJAX) and the `$.getJSON` method to add our dataset from an external location. In the data folder of the downloaded materials, you will find our dataset, `cell_towers.geojson`. At the end of our script, within the script tags, enter the following code to add the cell towers dataset and bind a popup.
+Next, we want to add the data set to the map. To do that, we will add another Javascript library leaflet.ajax in the head tag.
 
-```js
-// Add cell towers GeoJSON Data
-// Null variable that will hold rodent violation data
-var cellTowers = null;
-
-// Get GeoJSON and put on it on the map when it loads
-$.getJSON("assets/cell_towers.geojson",function(data){
-    // set cellTowers to the dataset, and add the cell towers GeoJSON layer to the map
-    cellTowers = L.geoJson(data,{
-		onEachFeature: function (feature, layer) {
-			layer.bindPopup(feature.properties.company);
-		}
-	}).addTo(mymap);
-});
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 ```
 
-The cellTowers variable will hold the contents of our GeoJSON, so we can refer to it easily. Save and refresh your map. You should see the points populate. That is a lot of cell towers! Please open **map2.html** to see the map at the current stage.
+In the directory `assets` of this lab, you will find a geojson data file `cell_towers.geojson`. At the end of our script, within the script tags, enter the following code to add the cell towers and bind a popup.
+
+```js
+// 3.Add cell towers GeoJSON Data
+// Null variable that will hold rodent violation data
+var cellTowers = null;
+// Get GeoJSON and put on it on the map when it loads
+cellTowers= L.geoJson.ajax("assets/cell_towers.geojson");
+// Add the cellTowers to the map.
+cellTowers.addTo(mymap);
+```
+
+The cellTowers object will hold the contents of the GeoJSON data, so we can refer to it easily. Save and refresh your map. You should see the points populate. That is a lot of cell towers!  Please open **map2.html** to see the map at the current stage.
 
 ![](img/map2.png)
 
@@ -87,54 +87,86 @@ Our point markers showing the cell towers are the default blue Leaflet map pin. 
 
 - Font Awesome: Allows for use of the fantastically useful open source.
 
-Second, you can make your own icons by using an existing image or creating one using graphics software (i.e. Illustrator, Photoshop). If your graphic is saved as an image (the most space efficient images for the web are usually in `png` or `jpg` format), and upload it to your server for use as an icon. If you want a higher level of customization, or the icons found in **Font Awesome** or **Maki** do not work for you, create your own!
+Second, you can make your own icons by using an existing image or creating one using graphics software (i.e. Illustrator, Photoshop). If your graphic is saved as an image (the most space efficient images for the web are usually in `png` or `jpg` format), and upload it to your server for use as an icon. If you want a higher level of customization, or the icons found in **Font Awesome** or **Maki** do not work for you, create your own! In this course, we will mainly focus on the first option.
 
-### 2.1 Create a Custom Marker
+### 2.1 Create the color scheme for markers
 
-In the downloaded data package for this week, you will see a folder named `img`. It contains a handful of images that can be used as markers. To get started, since we are working with rodent incidents, lets change our default blue map pin to be an icon of a cell tower: (`ct.png`).
+Since we will use chroma.js to get the color set and then utilize $ to capture the head tag, we need to include both chroma.js and jquery in the head tag.
 
-*Use the `L.icon` object and create a holder for our custom cell tower icon.*
-
-The first task is to create an object that will hold our custom icon. Enter the following code to create our custom rodent icon, within the script tags. Note it will be a global variable, meaning we can use the variable at any location in our script.
-
-```js
-// Create Custom Icons Here
-var towerIcon = L.icon({
-  iconUrl:      'img/ct.png',
-  shadowUrl:    'img/ct_sd.png',
-  iconSize:     [18, 18],
-  shadowSize:   [25, 18],
-  iconAnchor:   [16, 16],
-  shadowAnchor: [16, 16],
-  popupAnchor:  [-8, -18]
-});
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
 ```
 
-This code used the Leaflet Icon class (`L.icon`) to set up the icon. `L.icon` requires a path to your icon, then takes a handful of other options that allow you a high level of control. Creating this icon as an object and saving it as TowerIcon will allow us to set the display of feature to this icon. Let's talk a bit more about these options.
+Chroma.js is a javascript library to manipulate colors. First, we need to create a set of random colors for each cell tower company. To use this set of random colors, we will dynamically build style classes, each of which will include one color built by chroma.js. The style classes are from `marker-color-1` to `marker-color-9`.Below we shows the code snippet how it works.
 
-- `iconUrl`: contains the path to your icon
-- `shadowUrl`: contains the path to the icon shadow to give a 3D feel to your map
-- `iconSize`: sets the size of your icon in pixels. Best to work at size, okay to scale down, never scale up
-- `shadowSize`: sets icon shadow image size
-- `iconAnchor`: sets anchor point (where the icon is located in respect to the feature latitude and longitude
-- `shadowAnchor`: sets anchor point of shadow
-- `popupAnchor`: sets anchor point of bottom of popup
+```javascript
+// 4. build up a set of colors from colorbrewer's set2 category
+var colors = chroma.scale('Set2').mode('lch').colors(9);
+
+// 5. dynamically append style classes to this page. This style classes will be used for colorize the markers.
+for (i = 0; i < 9; i++) {
+    $('head').append($("<style> .marker-color-" + (i + 1).toString() + " { color: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
+}
+```
+
+>**Note:** The reason why we categorize the companies in 9 classes, because we know there are 9 in Oregon.
+
+### 2.2 Assign the color class to each categories
+
+Next, we will assign the style class to each category. We number the company name from 0 to 8, and then add the color class (from `marker-color-1` to `marker-color-9`) to markers.
+
+ ```
+function (feature, latlng) {
+            var id = 0;
+            if (feature.properties.company == "New Cingular") { id = 0; }
+            else if (feature.properties.company == "Cellco")  { id = 1; }
+            else if (feature.properties.company == "RCC Minnesota")  { id = 2; }
+            else if (feature.properties.company == "Verizon")  { id = 3; }
+            else if (feature.properties.company == "US Cellular")  { id = 4; }
+            else if (feature.properties.company == "Hood River Cellular")  { id = 5; }
+            else if (feature.properties.company == "Medford Cellular")  { id = 6; }
+            else if (feature.properties.company == "Oregon RSA")  { id = 7; }
+            else { id = 8;} // "Salem Cellular"
+            return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-signal marker-color-' + (id + 1).toString() })});
+        }
+ ```
+
+### 2.3. Apply an Icon
+
+The marker should adopt an icon. The icon is from [Font Awesome](http://fontawesome.io/icons/). To use an icon, you will simply link the class with the marker. An javacript object or html element can have multiple class. To apply multiple classes, you will need to leave a space between each class. For example, `fa` will inform the element, the font awesome will be applied, and `fa-signal` will inform the specific icon will be in use. And the `marker-color-1~9` deals with color, font-size, as well as text-shadow.
+
+>**Note:** If you feel a little confused about the style properties, please try to change the values to some extreme numbers to see the differences. For example, you can change the font-size from 15 to 100, and then refresh the web page.
+
+### 2.4 Point to Layer
 
 *Use `point to layer` option of `L.geoJson` to set the icon*
 
-With our icon loaded into our document, we need to replace the default icons created when we add the GeoJSON. This is a process of setting the icon option to TowerIcon for each marker when it is added to our map. To set the icon for a GeoJSON, we need to create a layer from the GeoJSON (we can style it if it is a layer) by using the `pointToLayer` option of `L.geoJson`. **Our GeoJSON is added to our map using jQuery with the following block of code, please recall how we can invoke a jQuery object ($) in a Javascript code block. Hint: Linking external libraries in HTML**.
+With our icon loaded into our document, we need to replace the default icons created when we add the GeoJSON. This is a process of setting the icon option to TowerIcon for each marker when it is added to our map. To set the icon for a GeoJSON, we need to create a layer from the GeoJSON (we can style it if it is a layer) by using the `pointToLayer` option of `L.geoJson`.
+
+**Use a Conditional in our get GeoJSON to determine status**
+
+We have in our document nine icons for different wireless companies, such as New Cingular, Verizon, Cello, Salem Cellular, etc. When the GeoJSON is added to the map, we need to check the features when we apply the custom icon to see what the value of feature.property.company is. If it is equal to "Verizon", we want the icon to be set to one of the towerXIcon (X = 1, 2, 3...9). Here we learned about conditionals, specifically `If.. Else` statements. To accomplish this, we can put a conditional in our call to the GeoJSON that checks to see if a case status is equal to "Verizon" and then sets an icon, and if it is not, will run the else statement, setting the icon equal to other companies, and so on so forth. The code will look like this:
+
+
 
 ```js
-// Get GeoJSON and put on it on the map when it loads
-$.getJSON("assets/cell_towers.geojson",function(data){
-  // set cellTowers to the dataset, and add the cell tower GeoJSON layer to the map
-    cellTowers = L.geoJson(data,{
-        onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.company);
-        }
-    }).addTo(mymap);
-});
+pointToLayer: function (feature, latlng) {
+    var id = 0;
+    if (feature.properties.company == "New Cingular") { id = 0; }
+    else if (feature.properties.company == "Cellco")  { id = 1; }
+    else if (feature.properties.company == "RCC Minnesota")  { id = 2; }
+    else if (feature.properties.company == "Verizon")  { id = 3; }
+    else if (feature.properties.company == "US Cellular")  { id = 4; }
+    else if (feature.properties.company == "Hood River Cellular")  { id = 5; }
+    else if (feature.properties.company == "Medford Cellular")  { id = 6; }
+    else if (feature.properties.company == "Oregon RSA")  { id = 7; }
+    else { id = 8;} // "Salem Cellular"
+    return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-signal marker-color-' + (id + 1).toString() })});
+    }
 ```
+Note there are *two equal signs (==)*, this is because JavaScript is very particular about operators. To read more, check out this documentation from `w3schools`. Modify the code within the `L.geoJSON` pointToLayer option, where we set the style previously, to be the following, including the conditional statement to check the status.
+
 
 **Options available for `L.geoJson` include**:
 
@@ -147,119 +179,14 @@ $.getJSON("assets/cell_towers.geojson",function(data){
 We are using onEachFeature to set the popup, but you can see that in order to set a icon, we need to use `pointToLayer`. In pseudo-code, pointToLayer runs a function when the GeoJSON is loaded that takes a feature and latitude and longitude and creates a marker at that latitude and longitude. Marker has an option called icon that you set to be our towerIcon variable. Once set, return the marker. This will replace the default blue map pin with our rodentIcon. The code looks like the following. Replace your `L.geoJson` call with this. Note the addition of the pointToLayer option.
 
 ```js
-// Get GeoJSON and put on it on the map when it loads
-$.getJSON("assets/cell_towers.geojson",function(data){
-  // set cellTowers to the dataset, and add the cell tower GeoJSON layer to the map
-    cellTowers = L.geoJson(data,{
-        onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.company);
-        }, pointToLayer: function (feature, latlng) {
-                     var marker = L.marker(latlng,{icon: towerIcon});
-                     return marker;
-                 }
-    }).addTo(mymap);
-});
+// assign a function to the onEachFeature parameter of the cellTowers object.
+// Then each (point) feature will bind a popup window.
+// The content of the popup window is the value of `feature.properties.company`
+onEachFeature: function (feature, layer) {
+    layer.bindPopup(feature.properties.company);
+},
 ```
-
-Click save and refresh your map in your browser. Check out our map. We have changed the icon to a cell tower!
-
-### 2.2 Manipulate Icons
-
-If we want to symbolize which wireless company the cell tower belongs to, we can create an icon class. One of the goals of programming is to **never repeat code**, and creating a class for the icons will allow us specify anchors and sizes once, and we can change out icons. In our GeoJSON, the status property contains this information for each feature and can be accessed by feature.properties.status. We probably don't want to enter all of the specifics on sizes and anchors again, they will remain the same. We can create a class of icons that will allow us to only specify our icon image, keeping all other options unchanged.
-
-**Icon Class**
-
-```js
-// Create Custom Icons Here
-var TowerIcon = L.Icon.extend({
-    options:{
-        shadowUrl: 'img/ct_sd.png',
-        iconSize: [18,18],
-        shadowSize: [25,18],
-        iconAnchor: [16, 16],
-        shadowAnchor: [16, 16],
-        popupAnchor: [-8, -18]
-    }
-});
-
-var tower1Icon = new TowerIcon({iconUrl: 'img/ct1.png'});
-var tower2Icon = new TowerIcon({iconUrl: 'img/ct2.png'});
-var tower3Icon = new TowerIcon({iconUrl: 'img/ct3.png'});
-var tower4Icon = new TowerIcon({iconUrl: 'img/ct4.png'});
-var tower5Icon = new TowerIcon({iconUrl: 'img/ct5.png'});
-var tower6Icon = new TowerIcon({iconUrl: 'img/ct6.png'});
-var tower7Icon = new TowerIcon({iconUrl: 'img/ct7.png'});
-var tower8Icon = new TowerIcon({iconUrl: 'img/ct8.png'});
-var tower9Icon = new TowerIcon({iconUrl: 'img/ct9.png'});
-```
-
-The class option is built on top of, or extends, the `L.icon` object. More reading can be found on defining icon classes in the Leaflet documentation. An important note, classes begin with a capital letter (Icon versus icon).
-
-**Use a Conditional in our get GeoJSON to determine status**
-
-We have in our document nine icons for different wireless companies, such as New Cingular, Verizon, Cello, Salem Cellular, etc. When the GeoJSON is added to the map, we need to check the features when we apply the custom icon to see what the value of feature.property.company is. If it is equal to "Verizon", we want the icon to be set to one of the towerXIcon (X = 1, 2, 3...9). Here we learned about conditionals, specifically `If.. Else` statements. To accomplish this, we can put a conditional in our call to the GeoJSON that checks to see if a case status is equal to "Verizon" and then sets an icon, and if it is not, will run the else statement, setting the icon equal to other companies, and so on so forth. The code will look like this:
-
-```js
-if (feature.properties.company == "New Cingular"){
-    marker = L.marker(latlng,{icon: tower1Icon});
-} else if (feature.properties.company == "Cello"){
-    marker = L.marker(latlng,{icon: tower2Icon});
-} else if (feature.properties.company == "Hood River Cellular"){
-    marker = L.marker(latlng,{icon: tower3Icon});
-} else if (feature.properties.company == "Medford Cellular"){
-    marker = L.marker(latlng,{icon: tower4Icon});
-} else if (feature.properties.company == "Verizon"){
-    marker = L.marker(latlng,{icon: tower5Icon});
-} else if (feature.properties.company == "Oregon RSA"){
-    marker = L.marker(latlng,{icon: tower6Icon});
-} else if (feature.properties.company == "RSS Minnesota"){
-    marker = L.marker(latlng,{icon: tower7Icon});
-} else if (feature.properties.company == "Salem Cellular"){
-    marker = L.marker(latlng,{icon: tower8Icon});
-} else {
-    marker = L.marker(latlng,{icon: tower9Icon});
-}
-return marker;
-```
-
-Note there are *two equal signs (==)*, this is because JavaScript is very particular about operators. To read more, check out this documentation from `w3schools`. Modify the code within the `L.geoJSON` pointToLayer option, where we set the style previously, to be the following, including the conditional statement to check the status.
-
-```js
-// Get GeoJSON and put on it on the map when it loads
-$.getJSON("assets/cell_towers.geojson", function(data){
-    // add the cell tower GeoJSON layer to the map
-    cellTowers = L.geoJson(data,{
-        onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.company);
-        }, pointToLayer: function (feature, latlng) {
-            var marker = null;
-            if (feature.properties.company == "New Cingular"){
-                marker = L.marker(latlng,{icon: tower1Icon});
-            } else if (feature.properties.company == "Cello"){
-                marker = L.marker(latlng,{icon: tower2Icon});
-            } else if (feature.properties.company == "Hood River Cellular"){
-                marker = L.marker(latlng,{icon: tower3Icon});
-            } else if (feature.properties.company == "Medford Cellular"){
-                marker = L.marker(latlng,{icon: tower4Icon});
-            } else if (feature.properties.company == "Verizon"){
-                marker = L.marker(latlng,{icon: tower5Icon});
-            } else if (feature.properties.company == "Oregon RSA"){
-                marker = L.marker(latlng,{icon: tower6Icon});
-            } else if (feature.properties.company == "RSS Minnesota"){
-                marker = L.marker(latlng,{icon: tower7Icon});
-            } else if (feature.properties.company == "Salem Cellular"){
-                marker = L.marker(latlng,{icon: tower8Icon});
-            } else {
-                marker = L.marker(latlng,{icon: tower9Icon});
-            }
-            return marker;
-        }
-    }).addTo(mymap);
-});
-```
-
-
-Please visit http://localhost:8000/map3.html to see the map at the current stage.
+Click save and refresh your map in your browser. Check out our map. We have changed icon to cell tower! Please visit http://localhost:8000/map3.html to see the map at the current stage.
 
 
 ## 3. Polygon Data and Symbolization

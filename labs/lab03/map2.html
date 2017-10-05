@@ -5,7 +5,7 @@
     <title>Cell Towers in Oregon (2009)</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 </head>
 <body>
 <!-- Our web map and content will go here -->
@@ -16,28 +16,24 @@
     </div>
 </div>
 <script>
+    // 1. Create a map object.
+    var mymap = L.map('map', {center: [44.13, -119.93], zoom: 7});
 
-    /**
-     * Created by jakob on 1/2/2017.
-     */
+    // 2. Add a base map.
+    L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+        maxZoom: 11,
+        minZoom: 6,
+        detectRetina: true, //support Retina Display if the client uses high resolution monitor.
+        attribution: 'Cell Tower Data &copy; Map Cruzin | Oregon counties &copy; Oregon Explorer | Base Map &copy; CartoDB'
+    }).addTo(mymap);
 
-    var map = L.map('map', {center: [44.13, -119.93], zoom: 7});
-
-    L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(map);
-
-    // Add cell towers GeoJSON Data
+    // 3. Add cell towers GeoJSON Data
     // Null variable that will hold rodent violation data
     var cellTowers = null;
-
     // Get GeoJSON and put on it on the map when it loads
-    $.getJSON("assets/cell_towers.geojson",function(data){
-        // set cellTowers to the dataset, and add the cell towers GeoJSON layer to the map
-        cellTowers = L.geoJson(data,{
-            onEachFeature: function (feature, layer) {
-                layer.bindPopup(feature.properties.company);
-            }
-        }).addTo(map);
-    });
+    cellTowers= L.geoJson.ajax("assets/cell_towers.geojson");
+    // Add the cellTowers to the map.
+    cellTowers.addTo(mymap);
 
 
 </script>
