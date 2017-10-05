@@ -114,7 +114,7 @@ Next, we will assign the style class to each category. We number the company nam
 
 We have nine different wireless companies, such as New Cingular, Verizon, Cello, Salem Cellular, etc. When the GeoJSON is added to the map, we need to check the features when we apply the custom icon to see what the value of feature.property.company is. If it is equal to "Verizon", we want the icon to be set to one of the towerXIcon (X = 1, 2, 3...9). Here we learned about conditionals, specifically `If.. Else` statements. To accomplish this, we can put a conditional in our call to the GeoJSON that checks to see if a case status is equal to "Verizon" and then sets an icon, and if it is not, will run the else statement, setting the icon equal to other companies, and so on so forth. The code will look like this:
 
- ```
+```javascript
 function (feature, latlng) {
     var id = 0;
     if (feature.properties.company == "New Cingular") { id = 0; }
@@ -180,7 +180,7 @@ onEachFeature: function (feature, layer) {
 ```
 Click save and refresh your map in your browser. Check out our map. We have changed icon to cell tower! Please visit http://localhost:8000/map3.html to see the map at the current stage.
 
-![](3.jpg)
+![](map3.jpg)
 
 
 ## 3. Polygon Data and Symbolization
@@ -384,7 +384,7 @@ Save and refresh your map. Open Sans will now be your preferred font!
 
 Lastly, to help you explore the power of CSS, style the credits at the bottom of your page. Because the div containing the credits has id="credits", we can style it using #credits. All of the contents in the credits div are between two paragraph tags. CSS styling is written in a nested fashion, to style everything that is in a p element within the #credits div, we use #credits p. Add the following snippet between the style tags in the head section of the document.
 
-```
+```css
 credits p {
 	margin-top: 5px;
 	font-size: 12px;
