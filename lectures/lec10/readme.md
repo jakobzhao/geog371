@@ -288,7 +288,7 @@ Configuring a new layer (Part 3)
 The url to access this page is 
 
 ```powershell
-http://128.193.64.28:8080/geoserver/ceoas/wms?service=WMS&version=1.1.0&request=GetMap&layers=ceoas:ore_counties&styles=&bbox=-124.56655744698392,41.99208155840781,-116.46353407190144,46.23746362317423&width=768&height=402&srs=EPSG:4326&format=application/openlayers
+http://mapious.ceoas.oregonstate.edu/geoserver/ceoas/wms?service=WMS&version=1.1.0&request=GetMap&layers=ceoas:ore_counties&styles=&bbox=-124.56655744698392,41.99208155840781,-116.46353407190144,46.23746362317423&width=768&height=402&srs=EPSG:4326&format=application/openlayers
 ```
 
 ## 5. After-class Practices

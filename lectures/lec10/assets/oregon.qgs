@@ -1,11 +1,11 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.18.3">
+<qgis projectname="" version="2.18.10">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="ore_counties20170129211949850" name="ore_counties">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="ore_counties20170129211949850" source="C:/Workspace/geog371/lectures/lec10/assets/ore_counties.shp" name="ore_counties">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -22,7 +22,7 @@
     <projections>1</projections>
     <destinationsrs>
       <spatialrefsys>
-        <proj4>+proj=lcc +lat_1=43 +lat_2=45.5 +lat_0=41.75 +lon_0=-120.5 +x_0=399999.9999984001 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=ft +no_defs</proj4>
+        <proj4>+proj=lcc +lat_1=43 +lat_2=45.5 +lat_0=41.75 +lon_0=-120.5 +x_0=399999.9999984 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=ft +no_defs</proj4>
         <srsid>957</srsid>
         <srid>2992</srid>
         <authid>EPSG:2992</authid>
@@ -55,7 +55,7 @@
     </legendlayer>
   </legend>
   <projectlayers>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>ore_counties20170129211949850</id>
       <datasource>./ore_counties.shp</datasource>
       <keywordList>
@@ -75,36 +75,9 @@
         </spatialrefsys>
       </srs>
       <provider encoding="UTF-8">ogr</provider>
-      <previewExpression></previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
-      <defaults>
-        <default field="AREA" expression=""/>
-        <default field="PERIMETER" expression=""/>
-        <default field="COUNTY_" expression=""/>
-        <default field="COUNTY_ID" expression=""/>
-        <default field="COUNTY" expression=""/>
-        <default field="NAME" expression=""/>
-        <default field="OID_" expression=""/>
-        <default field="ID" expression=""/>
-        <default field="COUNTY_1" expression=""/>
-        <default field="STFID" expression=""/>
-        <default field="COFIPS" expression=""/>
-        <default field="YEAR" expression=""/>
-        <default field="TOTAL_POP" expression=""/>
-        <default field="RURAL" expression=""/>
-        <default field="POV_RATE" expression=""/>
-        <default field="CHILD_POV_" expression=""/>
-        <default field="POV_R" expression=""/>
-        <default field="UNEMPLOYE" expression=""/>
-        <default field="SEASONALS" expression=""/>
-        <default field="COST_BUR" expression=""/>
-        <default field="FARMLAND" expression=""/>
-        <default field="METSTATUS" expression=""/>
-        <default field="SHAPE_area" expression=""/>
-        <default field="SHAPE_len" expression=""/>
-      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -468,6 +441,7 @@
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -493,7 +467,7 @@
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="AREA" index="0" name=""/>
         <alias field="PERIMETER" index="1" name=""/>
@@ -523,7 +497,7 @@
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="1852667244">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="AREA"/>
           <column width="-1" hidden="0" type="field" name="PERIMETER"/>
@@ -552,10 +526,10 @@
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -580,6 +554,33 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
+      <defaults>
+        <default field="AREA" expression=""/>
+        <default field="PERIMETER" expression=""/>
+        <default field="COUNTY_" expression=""/>
+        <default field="COUNTY_ID" expression=""/>
+        <default field="COUNTY" expression=""/>
+        <default field="NAME" expression=""/>
+        <default field="OID_" expression=""/>
+        <default field="ID" expression=""/>
+        <default field="COUNTY_1" expression=""/>
+        <default field="STFID" expression=""/>
+        <default field="COFIPS" expression=""/>
+        <default field="YEAR" expression=""/>
+        <default field="TOTAL_POP" expression=""/>
+        <default field="RURAL" expression=""/>
+        <default field="POV_RATE" expression=""/>
+        <default field="CHILD_POV_" expression=""/>
+        <default field="POV_R" expression=""/>
+        <default field="UNEMPLOYE" expression=""/>
+        <default field="SEASONALS" expression=""/>
+        <default field="COST_BUR" expression=""/>
+        <default field="FARMLAND" expression=""/>
+        <default field="METSTATUS" expression=""/>
+        <default field="SHAPE_area" expression=""/>
+        <default field="SHAPE_len" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
     </maplayer>
   </projectlayers>
   <properties>
