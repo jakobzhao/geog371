@@ -82,17 +82,17 @@ L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(
 Add add the style class for map, for the goal of expanding the map to full screen.
 
 ```css
-    /*full screen the map*/
-    html { height:100%;}
-    body {
-        height:100%;
-        padding: 0;
-        margin: 0;
-    }
-    #map {
-        width: 100%;
-        height: 100%;
-    }
+/*full screen the map*/
+html { height:100%;}
+body {
+    height:100%;
+    padding: 0;
+    margin: 0;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
 ```
 
 ![](img/states.jpg)
