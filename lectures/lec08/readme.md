@@ -103,7 +103,7 @@ In the downloaded materials, there is a data folder `assets` that contains a fil
 
 ### 3.1 Use leaflet.ajax JavaScript Library
 
-The first thing is add a super useful JavaScript library called `jQuery` to our page. jQuery makes it easy to manipulate a web page by finding elements on the page, setting their styles and properties, handling interaction events, and more. It has a nice helper method, called `getJSON()`, we will to use to load our GeoJSON file onto our map.
+The first thing is add a super useful JavaScript library called `jQuery` to our page. leaflet.ajax makes it easy to manipulate a web page by finding elements on the page, setting their styles and properties, handling interaction events, and more. It has a nice helper method, called `getJson()`, we will to use to load our GeoJSON file onto our map.
 
 Enter the following line of code at the bottom of the body section to add the jQuery library to our page after the lines that add the Leaflet JavaScript library.
 
