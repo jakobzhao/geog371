@@ -14,7 +14,7 @@ This Practical Exercise will help you publish a base map of Corvallis using GeoS
 
 To style and publish the map, you will need to work on a remote web map server at [http://geoserver.mapio.us](http://geoserver.mapio.us). This server is dedicated for the use of GEOG 371 students. Towards the end of this course, you might also publish your final project application on this server.  You have already received an Email about your login information. If  you have not, please contact the instructor.
 
-![](img/login-email.png)
+![](img/login-email2.png)
 
 Please use the provided account information to login in [http://geoserver.mapio.us](http://geoserver.mapio.us).
 
