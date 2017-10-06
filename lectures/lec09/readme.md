@@ -13,7 +13,7 @@
 
 This lecture creates a colorful interactive [choropleth map](http://en.wikipedia.org/wiki/Choropleth_map) of US States Population Density with the help of [GeoJSON](http://leafletjs.com/examples/geojson/) and some custom controls.
 
-![](img/final_map.png)
+![](img/final_map.jpg)
 
 > **Note:**  A choropleth map is a thematic map in which areas are shaded or patterned in proportion to the measurement of the statistical variable being displayed on the map, such as population density or per-capita income. The choropleth map provides an easy way to visualize how a measurement varies across a geographic area or it shows the level of variability within a region.
 
@@ -38,74 +38,133 @@ Each feature of our GeoJSON data ([us-states.js](assets/us-states.js)) will look
 
 The GeoJSON with state shapes is from [Mike Bostock](http://bost.ocks.org/mike) of [D3](http://d3js.org/), extended with density values from [US Census Bureau (2011)](http://www.census.gov/) and assigned to states data JS variable.
 
-##  2. Basic states map
+## 2. empty html page and prerequisite libraries
 
-Let’s display our states data on a map with a  CartoDB style for nice grayscale tiles that look perfect as a background for visualizations:
+We will creat an empty html page and the prerequisite libraries. Other than the `leaflet` fundamental libraries, we will use `chroma.js` to colorize the geographic feature, `jQuery` to manipulate html elements, and leaflet.ajax to load geojson data. So, we will add these three libraries in the `head` elements. As the code snippet showing below.
 
+```html
+<head>
+    <title>Map Client III: Web Map Interaction</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+    <style>
+        ...
+    </style>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
+</head>
+<body>
+    <script>
+        //Here goes the javascript code.
+    </script>
+</body>
+</html>
+```
+
+
+##  2. Map object and the base layer
+
+Let’s display our states data on a map with a CartoDB style for nice grayscale tiles that look perfect as a background for visualizations.
+above all, create the div element holding the map element.
+```html
+<div id='map'></div>
+```
+and then, create the javascript object of the map, and anchor it to the div element.
 ```js
+// 1. create the map object and the base layer.
 var map = L.map('map').setView([37.8, -96], 5);
 L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(map);
-geojson = L.geoJson.ajax("assets/us-states.geojson").addTo(map);
 ```
-![](img/states.png)
 
-##  3. Adding some color
+Add add the style class for map, for the goal of expanding the map to full screen.
 
-Now we need to color the states according to their population density. Regarding using color on web environment, please refer to [a tutorial on color at W3Schools]( http://www.w3schools.com/colors/default.asp). the Choosing nice colors for a map can be tricky, but there’s a great tool that can help with it — [ColorBrewer](http://colorbrewer2.org/). Using the values we got from it, we create a function that returns a color based on population density:
+```css
+    /*full screen the map*/
+    html { height:100%;}
+    body {
+        height:100%;
+        padding: 0;
+        margin: 0;
+    }
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+```
+
+![](img/states.jpg)
+
+##  3. Adding colors
+
+Now we need to color the states according to their population density. Regarding using color on web environment, please refer to [a tutorial on color at W3Schools]( http://www.w3schools.com/colors/default.asp). the Choosing nice colors for a map can be tricky, but there’s a great tool that can help with it — [ColorBrewer](http://colorbrewer2.org/). Also,
 
 ```js
+// 2. Create the chorepleth map with interactive functions.
+// determine the number of classes and their respective break values.
+var grades = [0, 10, 20, 50, 100, 200, 500, 1000];
+
+// determine the color ramp. The number of colors is determined by the number of classes.
+// try different interpolation method lch, lab, hsl
+// var colors = chroma.scale(['yellow', 'navy']).mode('hsl').colors(grades.length);
+var colors = chroma.scale('YlOrRd').colors(grades.length);
+
+// get the color based on the class which the input value falls in.
 function getColor(d) {
-    return d > 1000 ? '#800026' :
-           d > 500  ? '#BD0026' :
-           d > 200  ? '#E31A1C' :
-           d > 100  ? '#FC4E2A' :
-           d > 50   ? '#FD8D3C' :
-           d > 20   ? '#FEB24C' :
-           d > 10   ? '#FED976' :
-                      '#FFEDA0';
+    for (var i = 0; i < grades.length - 1; i++) {
+        if ( d > grades[i] && d < grades[i+1] ) return colors[i];
+    }
+    if (d > grades[grades.length - 1]) return colors[grades.length];
 }
 ```
 
 Next we define a styling function for our GeoJSON layer so that its fillColor depends onfeature.properties.density property, also adjusting the appearance a bit and adding a nice touch with dashed stroke.
 
 ```js
+// determine the style class based on the input feature
 function style(feature) {
-  return {
-    fillColor: getColor(feature.properties.density),
-    weight: 2,
-    opacity: 1,
-    color: 'white',
-    dashArray: '3',
-    fillOpacity: 0.7
-  };
+    return {
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7,
+        fillColor: getColor(feature.properties.density)
+    };
 }
 
 geojson = L.geoJson.ajax("assets/us-states.geojson", {
-  style: style
+    style: style
 }).addTo(map);
 ```
 
 Looks much better now!
 
-![](img/choropleth.png)
+![](img/choropleth.jpg)
 
 ## 4. Adding Interaction
 
 Now let’s make the states highlighted visually in some way when they are hovered with a mouse. First we’ll define an event listener for layer mouseover event:
 
 ```js
+// 3.2.1 highlight a feature when the mouse hovers on it.
 function highlightFeature(e) {
-  var layer = e.target;
-
-  layer.setStyle({
-    weight: 5,
-    color: '#666',
-    dashArray: '',
-    fillOpacity: 0.7
-  });
-  layer.bringToFront();
+    // e indicates the current event
+    var layer = e.target; //the target capture the object which the event associates with
+    layer.setStyle({
+        weight: 8,
+        opacity: 0.8,
+        color: '#e3e3e3',
+        fillColor: '#1ce3d7',
+        fillOpacity: 0.5
+    });
+    // bring the layer to the front.
+    layer.bringToFront();
+    // select the update class, and update the contet with the input value.
+    $(".update").html('<b>' + layer.feature.properties.name + '</b>   ' + layer.feature.properties.density + ' people / mi<sup>2</sup>');
 }
-
 ```
 
 Here we get access to the layer that was hovered through `e.target`, set a thick grey border on the layer as our highlight effect, also bringing it to the front so that the border doesn't clash with nearby states (but not for IE, Opera or Edge, since they have problems doing bringToFront on mouseover).
@@ -113,8 +172,10 @@ Here we get access to the layer that was hovered through `e.target`, set a thick
 Next we’ll define what happens on mouseout:
 
 ```js
+// 3.2.3 reset the hightlighted feature when the mouse is out of its region.
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
+    $(".update").html("Hover over a state");
 }
 ```
 
@@ -123,28 +184,32 @@ The handy `geojson.resetStyle` method will reset the layer style to its default 
 ```js
 var geojson;
 // ... our listeners
-geojson = L.geoJson(...);
+geojson = L.geoJson.ajax(...);
 ```
 
 As an additional touch, let’s define a click listener that zooms to the state:
 
 ```js
+// 3.2.2 zoom to the highlighted feature when the mouse is clicking onto it.
 function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
 }
 ```
+
 Now we’ll use the onEachFeature option to add the listeners on our state layers:
 
 ```js
+// 3.3 add these event the layer obejct.
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
-        mouseout: resetHighlight,
-        click: zoomToFeature
+        click: zoomToFeature,
+        mouseout: resetHighlight
     });
 }
 
-geojson = L.geoJson(statesData, {
+// 3.4 assign the geojson data path, style option and onEachFeature option. And then Add the geojson layer to the map.
+geojson = L.geoJson.ajax("assets/us-states.geojson", {
     style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
@@ -155,25 +220,12 @@ This makes the states highlight nicely on hover and gives us the ability to add 
 
 We could use the usual popups on click to show information about different states, but we’ll choose a different route — showing it on state hover inside a custom control.
 
+![](/img/info-control.jpg)
+
 Here’s the code for our control:
 
-```js
-var info = L.control();
-
-info.onAdd = function (map) {
-    this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
-    this.update();
-    return this._div;
-};
-
-// method that we will use to update the control based on feature properties passed
-info.update = function (props) {
-    this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-        '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
-        : 'Hover over a state');
-};
-
-info.addTo(map);
+```html
+<div class='info'><h1>US Population Density</h1><div class='update'>Hover over a state</div></div>
 ```
 
 We need to update the control when the user hovers over a state, so we’ll also modify our listeners as follows:
@@ -181,73 +233,94 @@ We need to update the control when the user hovers over a state, so we’ll also
 ```js
 function highlightFeature(e) {
     ...
-    info.update(layer.feature.properties);
+    $(".update").html('<b>' + layer.feature.properties.name + '</b>   ' + layer.feature.properties.density + ' people / mi<sup>2</sup>');
 }
 
 function resetHighlight(e) {
     ...
-    info.update();
+    $(".update").html("Hover over a state");
 }
 ```
 The control also needs some CSS styles to look nice:
 
 ```css
 .info {
+    z-index: 1000;
+    position: absolute;
+    right: 20px;
+    top: 20px;
     padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;
+    font: 14px Arial, Helvetica, sans-serif;
+    text-align: right;
     background: white;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
-.info h4 {
+.info h1 {
+    font-size: 16px;
     margin: 0 0 5px;
-    color: #777;
+    color: #777777;
 }
 ```
 
 ## 6. Custom Legend Control
 
-Creating a control with a legend is easier, since it is static and doesn’t change on state hover. JavaScript code:
+Creating a control with a legend is easier, since it is static and doesn’t change on state hover. Html code:
 
+![](img/legend.jpg)
+
+```html
+<div class='legend'></div>
+```
+
+And the javascript code:
 ```js
-var legend = L.control({position: 'bottomright'});
-
-legend.onAdd = function (map) {
-
-    var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 10, 20, 50, 100, 200, 500, 1000],
-        labels = [];
-
-    // loop through our density intervals and generate a label with a colored square for each interval
-    for (var i = 0; i < grades.length; i++) {
-        div.innerHTML +=
-            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
-    }
-
-    return div;
-};
-
-legend.addTo(map);
+// 4. create the legend
+var labels = [];
+for (var i = 0; i < grades.length - 1; i++) {
+    labels.push('<i style="background:' + colors[i] + '"></i> ' + grades[i] + ' - ' + grades[i + 1]);
+}
+labels.push('<i style="background:' + colors[grades.length - 1] + '"></i> ' + grades[grades.length - 1] + ' +');
+$(".legend").html(labels.join('<br>'));
 ```
 
 CSS styles for the control (we also reuse the info class defined earlier):
 
 ```css
+/*legend panel*/
 .legend {
-    line-height: 18px;
-    color: #555;
+    z-index: 1000;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 6px 8px;
+    font: 14px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
 .legend i {
     width: 18px;
-    height: 18px;
+    height: 16px;
     float: left;
     margin-right: 8px;
     opacity: 0.7;
 }
 ```
-![](img/final_map.png)
+
+### 7. Credits.
+
+At last, we add the credits on the data, and information about the author.
+
+```js
+// 5. create the credits
+map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a> | This map is made by <a href="http://geoviz.ceoas.oregonstate.edu">Bo Zhao</a>');
+```
+
+![](img/final_map.jpg)
+
 
 ## Reference
 
