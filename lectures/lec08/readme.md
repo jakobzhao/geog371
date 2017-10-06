@@ -32,7 +32,7 @@ myDataPoint.bindPopup("<h3>Wilkinson Hall</h3><p>Corvallis, Oregon<br>College of
 
 ![](img/html_popup.png)
 
-This means, within our popup, we can add links, images, lists, and many other HTML elements. This can also include pictures like what we have done in practical exercise 1. Also, we can even include videos, tweets, and etc.  
+This means, within our popup, we can add links, images, lists, and many other HTML elements. This can also include pictures. Also, we can even include videos, tweets, and etc.  
 
 > **Question:** How can we add a YouTube clip to the pop-up info windows?
 
