@@ -13,6 +13,8 @@
 
 This lecture creates a colorful interactive [choropleth map](http://en.wikipedia.org/wiki/Choropleth_map) of US States Population Density with the help of [GeoJSON](http://leafletjs.com/examples/geojson/) and some custom controls.
 
+> **Note:** This lecture is modified from the leaflet tutorial at [here](http://leafletjs.com/examples/choropleth/). The look of the web map is similar but the source codes was changed a lot.  We built this application on Jquery and Chroma.js. When you walk through this handout, I would encourage you refer to the tutorial on left. Okay, let us get started!
+
 ![](img/final_map.jpg)
 
 > **Note:**  A choropleth map is a thematic map in which areas are shaded or patterned in proportion to the measurement of the statistical variable being displayed on the map, such as population density or per-capita income. The choropleth map provides an easy way to visualize how a measurement varies across a geographic area or it shows the level of variability within a region.
