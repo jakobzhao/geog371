@@ -384,4 +384,5 @@ SLD code with no validation errors
 ## References
 
 [1] http://workshops.boundlessgeo.com/geoserver-intro/styling/index.html
+
 [2] Google Earth http://workshops.boundlessgeo.com/geoserver-intro/googleearth/index.html

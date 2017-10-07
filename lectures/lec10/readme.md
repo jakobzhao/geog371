@@ -9,7 +9,7 @@
 - The major web map servers;
 - The basic terminology of GeoServer;
 - The Web Interface of GeoServer; and
-- Publish a web map layer using a shapefile. 
+- Publish a web map layer using a shapefile.
 
 ## 1. Map Server Overview
 
@@ -19,7 +19,7 @@ A web mapping server may use HTTP, but employ specialized protocols, such as **
 
 Some popular web mapping servers:
 
-- [GeoServer](http://geoserver.org/)
+- [GeoServer](http://GeoServer.org/)
 - [MapServer](http://mapserver.org/)
 - [Mapnik](http://mapnik.org/)
 - [ArcGIS Server](http://www.esri.com/software/arcgis/arcgisserver/index.html)
@@ -27,6 +27,8 @@ Some popular web mapping servers:
 > **Note:** Other web-based map services such as Google Maps have their own server technology and specialized protocols as well.
 
 GeoServer is an open source software server written in Java that allows users to share and edit geospatial data. Designed for interoperability, it publishes data from any major spatial data source using open standards. Being a community-driven project, GeoServer is developed, tested, and supported by a diverse group of individuals and organizations from around the world.
+
+>GeoServer implements standard open web protocols established by the [Open Geospatial Consortium (OGC)](http://www.opengeospatial.org/), a standards organization. GeoServer is the reference implementation of the OGC Web Feature Service (WFS) and Web Coverage Service (WCS) standards, and contains as well a high performance certified compliant Web Map Service (WMS). It is through these protocols that GeoServer can serve data and maps in an efficient and powerful way.
 
 **Data sources**
 
@@ -48,11 +50,7 @@ The following is a list of the most common data formats supported by GeoServer. 
   - DB2
   - SQL Server
 
->GeoServer implements standard open web protocols established by the [Open Geospatial Consortium (OGC)](http://www.opengeospatial.org/), a standards organization. GeoServer is the reference implementation of the OGC Web Feature Service (WFS) and Web Coverage Service (WCS) standards, and contains as well a high performance certified compliant Web Map Service (WMS). It is through these protocols that GeoServer can serve data and maps in an efficient and powerful way.
-
-The next sections will give an overview of the two protocols most commonly used by GeoServer.
-
-## 2. GeoServer Concepts
+## 2. GeoServer Management Structure
 
 You’ll encounter lots of terminology when working with GeoServer, and some of it may be unfamiliar, especially if you are unaccustomed to web mapping. This section will introduce some of the most commonly-used terms used in GeoServer. All of these terms will be uses in the upcoming sections.
 
@@ -112,19 +110,19 @@ GeoServer includes a web-based administration interface. Most GeoServer configur
 
 ### 3.1 Viewing
 
-The default location of the GeoServer web admin interface is http://localhost:8080/geoserver. The initial page is called the Welcome page.
+The default location of the GeoServer web admin interface is http://localhost:8080/GeoServer. The initial page is called the Welcome page.
 
 ![](img/tour_welcome.png)
 
-> **Note:** If your GeoServer is on a remote web location, please change localhost with the external IP of your remote server (such as your server on Google Cloud Platform. For example, you can access my server at http://128.193.64.28:8080/geoserver/)
+> **Note:** If your GeoServer is on a remote web location, please change localhost with the external IP of your remote server (such as your server on Google Cloud Platform. For example, you can access my server at http://128.193.64.28:8080/GeoServer/)
 
 To return to the Welcome page from anywhere, just click the GeoServer logo in the top left corner of the page.
 
 ### 3.2 Authentication
 
-For security reasons, most GeoServer configuration tasks require you to be logged in first. By default, the GeoServer administration credentials are `admin` and `geoserver`, although this can and should be changed.
+For security reasons, most GeoServer configuration tasks require you to be logged in first. By default, the GeoServer administration credentials are `admin` and `GeoServer`, although this can and should be changed.
 
-For security reasons, most GeoServer configuration tasks require you to be logged in first. By default, the GeoServer administration credentials are **`admin`** and **`geoserver`**, although this can and should be changed.
+For security reasons, most GeoServer configuration tasks require you to be logged in first. By default, the GeoServer administration credentials are **`admin`** and **`GeoServer`**, although this can and should be changed.
 
 1\. Log in using the default credentials.
 
@@ -288,20 +286,23 @@ Configuring a new layer (Part 3)
 The url to access this page is 
 
 ```powershell
-http://mapious.ceoas.oregonstate.edu/geoserver/ceoas/wms?service=WMS&version=1.1.0&request=GetMap&layers=ceoas:ore_counties&styles=&bbox=-124.56655744698392,41.99208155840781,-116.46353407190144,46.23746362317423&width=768&height=402&srs=EPSG:4326&format=application/openlayers
+http://mapious.ceoas.oregonstate.edu/GeoServer/ceoas/wms?service=WMS&version=1.1.0&request=GetMap&layers=ceoas:ore_counties&styles=&bbox=-124.56655744698392,41.99208155840781,-116.46353407190144,46.23746362317423&width=768&height=402&srs=EPSG:4326&format=application/openlayers
 ```
+
+
+### layergroup
+
+Also , GeoServer allows you combine several layers as a layer group. This is useful when creating a **base map**, or other situations when more than one separate layer needs to be requested simultaneously or frequently. Since layers typically contain only a single type of geometry, using a layer group also allows you to combine data types in one single WMS request. If you are interested in creating a layer group, please follow the instruction  ["create Layer Groups"](http://docs.GeoServer.org/latest/en/user/data/webadmin/layergroups.html)
 
 ## 5. After-class Practices
 
-GeoServer can also publish **raster** imagery. This could be simple georeferenced images (such as Blue Marble imagery), multi-band DEM (digital elevation model) data, or many other options. If you are interested in creating a raster imagery layer, please follow the guideline ["create raster imagry layer"](http://geoserver.geo-solutions.it/edu/en/pretty_maps/styling_raster.html)  or another one ["create a geotiff layer"](http://wiki.ieee-earth.org/index.php?title=Documents/GEOSS_Tutorials/GEOSS_Provider_Tutorials/Web_Coverage_Service_Tutorial_for_GEOSS_Providers/Section_4_:_Provisioning%2F%2FUsing_the_service_or_application/Section_4.3_:_Detailed_steps_of_the_Use_Cases/4.3.1_Offering_a_GeoTiff_dataset_with_Geoserver to create a raster layer).
-
-Also , Geoserver allows you combine several layers as a layer group. This is useful when creating a **base map**, or other situations when more than one separate layer needs to be requested simultaneously or frequently. Since layers typically contain only a single type of geometry, using a layer group also allows you to combine data types in one single WMS request. If you are interested in creating a layer group, please follow the instruction  ["create Layer Groups"](http://docs.geoserver.org/latest/en/user/data/webadmin/layergroups.html)
+GeoServer can also publish **raster** imagery. This could be simple georeferenced images (such as Blue Marble imagery), multi-band DEM (digital elevation model) data, or many other options. If you are interested in creating a raster imagery layer, please follow the guideline ["create raster imagry layer"](http://GeoServer.geo-solutions.it/edu/en/pretty_maps/styling_raster.html)  or another one ["create a geotiff layer"](http://wiki.ieee-earth.org/index.php?title=Documents/GEOSS_Tutorials/GEOSS_Provider_Tutorials/Web_Coverage_Service_Tutorial_for_GEOSS_Providers/Section_4_:_Provisioning%2F%2FUsing_the_service_or_application/Section_4.3_:_Detailed_steps_of_the_Use_Cases/4.3.1_Offering_a_GeoTiff_dataset_with_Geoserver) to create a raster layer.
 
 
 Even though the Layer Importer generated unique styles for each layer, this layer group doesn’t look very nice. The following section will discuss the next important step of making maps: **styling**.
 
 ## References
 
-[1] OSGEO (2016) GeoServer: Introduction, retrieved Decemeber 28, 2016 from http://docs.geoserver.org/latest/en/user/introduction/index.html#introduction
+[1] OSGEO (2016) GeoServer: Introduction, retrieved Decemeber 28, 2016 from http://docs.GeoServer.org/latest/en/user/introduction/index.html#introduction
 
-[2] http://workshops.boundlessgeo.com/geoserver-intro/data/index.html
+[2] http://workshops.boundlessgeo.com/GeoServer-intro/data/index.html
