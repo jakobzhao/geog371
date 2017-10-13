@@ -48,7 +48,6 @@ cd ~/Workspace
 sudo git clone https://github.com/jakobzhao/geog371.git
 ```
 
-![](img/git-clone.png)
 
 5\. After successfully synced the material, you will see them in a sub-directory named **geog371/lec11/**, which contains the lecture material for today.
 
