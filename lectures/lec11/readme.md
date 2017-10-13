@@ -50,10 +50,10 @@ sudo git clone https://github.com/jakobzhao/geog371.git
 
 ![](img/git-clone.png)
 
-5\. After successfully synced the material, you will see them in a sub-directory named **geog371**, which contains the lecture material for today.
+5\. After successfully synced the material, you will see them in a sub-directory named **geog371/lec11/**, which contains the lecture material for today.
 
 ```powershell
-jakobzhao@geog371:~/workspace/geog371$ tree
+bo@bo-nuc:~/Workspace/geog371/lectures/lec11$ tree
 .
 ├── assets
 │   ├── cities.cpg
@@ -78,7 +78,7 @@ jakobzhao@geog371:~/workspace/geog371$ tree
 2 directory, 45 files
 ```
 
-> **note:** in order to browse the files under a directory. you will use the command `tree`. If you are in a windows or mac os system, you will have `tree` command by default. For some server system, such as the Google cloud platform we are using, it does not go with a `tree` command, you need to install it by the following command in the terminal: `sudo apt-get install tree`. Then, navigate to the subdirectory `geog371-lec10`, and type `tree`,  you will see the above file tree of the subdirectory.
+> **note:** in order to browse the files under a directory. you will use the command `tree`. If you are in a windows or mac os system, you will have `tree` command by default. For some server system which does not go with a `tree` command, you need to install it by the following command in the terminal: `sudo apt-get install tree`. Then, navigate to the subdirectory `geog371/lectures/lec11`, and type `tree`,  you will see the above file tree of the subdirectory.
 
 ## 1. Styled Layer Descriptor
 
@@ -187,7 +187,7 @@ When applied to a hypothetical layer, the result would look like this:
 
 >  Simple style applied to a layer
 >
->  Access the layer at [http://128.193.64.28:8080/geoserver/ceoas/wms?service=WMS&version=1.1.0&request=GetMap&layers=ceoas:cities&styles=&bbox=-175.22056447761656,-41.29997393927641,179.21664709402887,64.15002361973922&width=768&height=330&srs=EPSG:4326&format=application/openlayers#toggle](http://128.193.64.28:8080/geoserver/ceoas/wms?service=WMS&version=1.1.0&request=GetMap&layers=ceoas:cities&styles=&bbox=-175.22056447761656,-41.29997393927641,179.21664709402887,64.15002361973922&width=768&height=330&srs=EPSG:4326&format=application/openlayers#toggle)
+>  Access the layer at [http://mapious.ceoas.oregonstate.edu/geoserver/mapious/wms?service=WMS&version=1.1.0&request=GetMap&layers=mapious:cities&styles=&bbox=-175.22056447761656,-41.29997393927641,179.21664709402887,64.15002361973922&width=768&height=330&srs=EPSG:4326&format=application/openlayers](http://mapious.ceoas.oregonstate.edu/geoserver/mapious/wms?service=WMS&version=1.1.0&request=GetMap&layers=mapious:cities&styles=&bbox=-175.22056447761656,-41.29997393927641,179.21664709402887,64.15002361973922&width=768&height=330&srs=EPSG:4326&format=application/openlayers)
 
 ### 1.4 Another SLD example
 
@@ -293,7 +293,7 @@ It is helpful to break the SLD down into components when it gets large. There ar
 
 >  The result of the above style
 >
->  Access the layer at [http://128.193.64.28:8080/geoserver/ceoas/wms?service=WMS&version=1.1.0&request=GetMap&layers=ceoas:cities%20step2&styles=&bbox=-175.22056447761656,-41.29997393927641,179.21664709402887,64.15002361973922&width=768&height=330&srs=EPSG:4326&format=application/openlayers](http://128.193.64.28:8080/geoserver/ceoas/wms?service=WMS&version=1.1.0&request=GetMap&layers=ceoas:cities%20step2&styles=&bbox=-175.22056447761656,-41.29997393927641,179.21664709402887,64.15002361973922&width=768&height=330&srs=EPSG:4326&format=application/openlayers)
+>  Access the layer at [http://mapious.ceoas.oregonstate.edu/geoserver/mapious/wms?service=WMS&version=1.1.0&request=GetMap&layers=mapious:cities2&styles=&bbox=-175.22056447761656,-41.29997393927641,179.21664709402887,64.15002361973922&width=768&height=330&srs=EPSG:4326&format=application/openlayers](http://mapious.ceoas.oregonstate.edu/geoserver/mapious/wms?service=WMS&version=1.1.0&request=GetMap&layers=mapious:cities2&styles=&bbox=-175.22056447761656,-41.29997393927641,179.21664709402887,64.15002361973922&width=768&height=330&srs=EPSG:4326&format=application/openlayers)
 
 **SLD Cookbook**
 
@@ -325,7 +325,7 @@ The GeoServer documentation (available at http://docs.geoserver.org) contains a 
 
 The earth:countries layer in the layer list
 
-5. You are now back at the layer configuration page. Notice there are four tabs on this page, `Data` (the default), `Publishing`, `Dimensions`, and `Tile Caching`. Click on the `Publishing` tab, then scroll down to the entry that says `Default Styles`. Make a note of the name of the style. (In the case of `ceoas:ore_counties`, the name of the style is called `polygon`.)
+5. You are now back at the layer configuration page. Notice there are four tabs on this page, `Data` (the default), `Publishing`, `Dimensions`, and `Tile Caching`. Click on the `Publishing` tab, then scroll down to the entry that says `Default Styles`. Make a note of the name of the style. (In the case of `mapious:ore_counties`, the name of the style is called `polygon`.)
 
    ![figure](img/styles_publishingtab.png)
 
@@ -364,7 +364,7 @@ SLD code with no validation errors
 
 3. Click `Submit` to commit the style change.
 
-4. Now go back to the browser tab that contains the OpenLayers preview map. Refresh the page (Ctrl/Cmd-F5), and you should see the color change to blue.
+4. Now go back to the browser tab that contains the OpenLayers preview map. Refresh the page (`Ctrl/Cmd-F5`), and you should see the color change to blue.
 
 > **note:** GeoServer and your browser will sometimes cache images. If you don't see a change immediately, zoom or pan the map to display a new area.
 
