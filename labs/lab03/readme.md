@@ -65,7 +65,7 @@ In the directory `assets`, you will find a geojson file - `cell_towers.geojson`.
 
 ```js
 // 3.Add cell towers GeoJSON Data
-// Null variable that will hold rodent violation data
+// Null variable that will hold cell tower data
 var cellTowers = null;
 // Get GeoJSON and put on it on the map when it loads
 cellTowers= L.geoJson.ajax("assets/cell_towers.geojson");
@@ -255,7 +255,7 @@ While `fillColor` and `fillOpacity` properties are for the fill; `weight`, `opac
 The final step is to set the style option for the county layer. Below shows the code of adding the county polygons to the map, and also applying the style.
 
 ```js
-// Add Neighborhood Polygons
+// Add county polygons
 L.geoJson.ajax("assets/counties.geojson", {
     style: style
 }).addTo(map);
