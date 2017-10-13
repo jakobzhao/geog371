@@ -15,7 +15,7 @@ GeoServer can render geospatial data as images and return them for viewing in a 
 
 ## Preparation
 
-Before get started, we will synchronize some files to GeoServer. If your GeoServer is installed in your local computer, you can just simply put the data in a directory under your workspace, if the GeoServer is on a remote Server such as the compute engine in Google Cloud, we can, as briefly introduced in the previous lecture, upload the data through FTP or GitHub. Today, we would like to talk about how to synchronize data from GitHub to a GeoServer, no matter it is deployed locally or remotely.
+Before get started, we will synchronize some files to GeoServer. If your GeoServer is installed in your local computer, you can just simply put the data in a directory under your workspace, if the GeoServer is on a remote Server such as the compute engine in Google Cloud, we can upload the data through FTP or GitHub. Today, we would like to talk about how to synchronize data from GitHub to a GeoServer, no matter it is deployed locally or remotely.
 
 1\. Please make sure the machine which hosting GeoServer has installed a shell program `git`. Type `git` in command prompt or terminal to see whether `git` is installed or not. If not, you need follow an instruction at https://git-scm.com/book/en/v2/Getting-Started-Installing-Git to install `git`. Usually, a Linux Server, such as your Google Cloud Server, has installed `git` by default. 
 
@@ -27,41 +27,33 @@ If `git` is properly installed, type `git` in command prompt or terminal will sh
 
 ![](img/git-command.png)
 
-2\. The material for today's lecture locates at [https://github.com/jakobzhao/geog371-lec10](https://github.com/jakobzhao/geog371-lec10). Please click the `Clone or download` button.
-
-![](img/github-interface.png)
-
-
-
-![](img/github-assets.png)
-
-you will find the clone location for today's material. 
+2\. In the course material, the data for today's use is in the folder of this lecture.
 
 ```url
-https://github.com/jakobzhao/geog371-lec10.git
+https://github.com/jakobzhao/geog371.git
 ```
 
-3\. Access your Server via `SSH` if it is remotely deployed, or via Terminal or Command Prompt if it is deployed locally. If you are on a Linux Server, you can create and enter a workspace using the following codes:
+3\. Access your server via `SSH` if it is remotely deployed, or via Terminal or Command Prompt if it is deployed locally. If you are on a Linux Server, you can create and enter a workspace using the following codes:
 
 ```powershell
 cd ~
-mkdir workspace
-cd workspace
+mkdir Workspace
+cd Workspace
 ```
 
 4\. Navigate to your workspace by the command `cd`. In your working directory, please type the following command to synchronize the lecture material from GitHub.
 
 ```powershell
-cd ~/workspace
-sudo git clone https://github.com/jakobzhao/geog371-lec10.git
+cd ~/Workspace
+sudo git clone https://github.com/jakobzhao/geog371.git
 ```
 
 ![](img/git-clone.png)
 
-5\. After successfully synced the material, you will see them in a sub-directory named **geog371-lec10**, which contains the lecture material for today. 
+5\. After successfully synced the material, you will see them in a sub-directory named **geog371**, which contains the lecture material for today.
 
 ```powershell
-jakobzhao@geog371:~/workspace/geog371-lec10$ tree
+jakobzhao@geog371:~/workspace/geog371$ tree
 .
 ├── assets
 │   ├── cities.cpg
@@ -77,14 +69,13 @@ jakobzhao@geog371:~/workspace/geog371-lec10$ tree
 │   ├── ore_counties.qpj
 │   ├── ore_counties.shp
 │   ├── ore_counties.shx
-│   ├── qgis_county2.sld
 │   ├── qgis_county.sld
-│   ├── wk04_2_lec10.qgs
-│   └── wk04_2_lec10.qgs~
+│   ├── geoserver-style.qgs
+├───── img
 ├── LICENSE
-└── README.md
+└── readme.md
 
-1 directory, 19 files
+2 directory, 45 files
 ```
 
 > **note:** in order to browse the files under a directory. you will use the command `tree`. If you are in a windows or mac os system, you will have `tree` command by default. For some server system, such as the Google cloud platform we are using, it does not go with a `tree` command, you need to install it by the following command in the terminal: `sudo apt-get install tree`. Then, navigate to the subdirectory `geog371-lec10`, and type `tree`,  you will see the above file tree of the subdirectory.

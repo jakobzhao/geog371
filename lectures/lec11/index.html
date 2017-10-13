@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Base Map Design</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /*full screen the map*/
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.3/leaflet.css"/>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.css" rel='stylesheet'/>
+    <!-- Javascript Libraries -->
+    <script src="http://cdn.leafletjs.com/leaflet/v1.2.0/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.vectorgrid@1.2.0"></script>
+
+</head>
+
+<body>
+<div id="map"></div>
+<script>
+    var map = L.map('map').setView([44.565095, -123.278298], 15);
+    //    tutorial https://openmaptiles.org/docs/website/leaflet/
+    var openMapTilesUrl = "http://mapious.ceoas.oregonstate.edu/geoserver/gwc/service/tms/1.0.0/ct_oregon@EPSG%3A900913@pbf/{z}/{x}/{-y}.pbf";
+
+
+    var vectorStyles = {
+        celltowers: {	// Apply these options to the "transportation" layer...
+            color: '#3bb50a',
+            opacity: 0.4,
+            fill: true,
+            weight: 4,
+            fillColor: '#06cccc'
+        }
+
+
+        // And so on, until every layer in https://openmaptiles.org/schema/ has a style
+
+        // aeroway:
+        // boundary:
+        // building:
+        // housenumber:
+        // landcover:
+        // landuse:
+        // park:
+        // place:
+        // poi:
+        // transportation:
+        // transportation_name:
+        // water:
+        // water_name:
+        // waterway:
+    };
+
+    var openMapTilesLayer = L.vectorGrid.protobuf(openMapTilesUrl, {
+        vectorTileLayerStyles: vectorStyles,
+        attribution: 'Bo Zhao'
+    }).addTo(map);
+
+
+</script>
+</body>
+</html>
