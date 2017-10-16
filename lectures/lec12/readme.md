@@ -90,31 +90,31 @@ It is important to note that the source material from which the image is generat
 The following is a sample WMS request to a hosted GeoServer instance at [http://geoserver.mapio.us](http://geoserver.mapio.us):
 
 ```http
-http://mapio.us/geoserver/ceoas/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&STYLES&LAYERS=ceoas:ore_counties&SRS=EPSG:4326&WIDTH=768&HEIGHT=402&BBOX=-124.73876953125,41.90185546875,-116.30126953125,46.318359375
+http://mapious.ceoas.oregonstate.edu/geoserver/mapious/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=true&STYLES&LAYERS=mapious%3Aore_counties&SRS=EPSG%3A4326&WIDTH=768&HEIGHT=402&BBOX=-124.73876953125%2C41.90185546875%2C-116.30126953125%2C46.318359375
 ```
 
 Here is the same request with line breaks added for clarity:
 
 ```http
-http://mapio.us/geoserver/ceoas/wms?
-    SERVICE=WMS&
-    VERSION=1.1.1&
-    REQUEST=GetMap&
-    FORMAT=image/png&
-    TRANSPARENT=true&
-    STYLES&
-    LAYERS=ceoas:ore_counties&
-    SRS=EPSG:4326&
-    WIDTH=768&
-    HEIGHT=402&
-    BBOX=-124.73876953125,41.90185546875,-116.30126953125,46.318359375
+http://mapious.ceoas.oregonstate.edu/geoserver/mapious/wms?
+        SERVICE=WMS&
+        VERSION=1.1.1&
+        REQUEST=GetMap&
+        FORMAT=image%2Fpng&
+        TRANSPARENT=true&
+        STYLES&
+        LAYERS=mapious%3Aore_counties&
+        SRS=EPSG%3A4326&
+        WIDTH=768&
+        HEIGHT=402&
+        BBOX=-124.73876953125%2C41.90185546875%2C-116.30126953125%2C46.318359375
 ```
 
 While the full details of the WMS protocol are beyond the scope of this course, a quick scan of this request shows that the following information is being requested:
 
 > - Server details (a WMS 1.1.1 request)
 > - Request type (WMS GetMap)
-> - Layer name (ceoas:ore_counties)
+> - Layer name (mapious:ore_counties)
 > - Projection (EPSG:4326)
 > - Bounding box (in this case, latitude/longitude coordinates)
 > - Image properties (768x402 PNG)
@@ -132,13 +132,13 @@ A WMS request can ask for more than just a map image (the “GetMap” operation
 The following is a WMS GetCapabilities request given to the same WMS used above
 
 ```http
-http://mapio.us/geoserver/wms?service=WMS&version=1.3.0&request=GetCapabilities
+http://mapious.ceoas.oregonstate.edu/geoserver/mapious/wms?service=WMS&version=1.3.0&request=GetCapabilities
 ```
 
 And the same request with line breaks for clarity:
 
 ```http
-http://mapio.us/geoserver/wms?
+http://mapious.ceoas.oregonstate.edu/geoserver/mapious/wms?
     service=WMS&
     version=1.3.0&
     request=GetCapabilities
@@ -157,25 +157,26 @@ A web mapping server can also (when allowed) return the actual geographic data t
 The following is a sample WFS request to a GeoServer instance at [http://geoserver.mapio.us](http://geoserver.mapio.us), 
 
 ```http
-http://mapio.us/geoserver/ceoas/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ceoas:ore_counties&outputFormat=application/json
+http://mapious.ceoas.oregonstate.edu/geoserver/mapious/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mapious:ore_counties&maxFeatures=50&outputFormat=application%2Fjson
 ```
 
 The following is the same request with line breaks added for clarity:
 
 ```http
-http://mapio.us/geoserver/ceoas/ows?
-    service=WFS&
-    version=1.0.0&
-    request=GetFeature&
-    typeName=ceoas:ore_counties&
-    outputFormat=application/json
+http://mapious.ceoas.oregonstate.edu/geoserver/mapious/ows?
+      service=WFS&
+      version=1.0.0&
+      request=GetFeature&
+      typeName=mapious:ore_counties&
+      maxFeatures=50&
+      outputFormat=application%2Fjson
 ```
 
 While the details of the WFS protocol are beyond the scope of this course, a quick scan of this request shows that the following information is being requested:
 
 > - Server details (WFS 1.0.0 request)
 > - Request type (GetFeature)
-> - Layer name (ceoas:ore_counties)
+> - Layer name (mapious:ore_counties)
 > - output Format (geojson)
 
 The responding geojson contains the coordinates for each feature, along with the attributes associated with this feature. Scroll down to the bottom to see the feature attributes. Please save the response as a geojson file and open the file in http://geojson.io](http://geojson.io). Other than geojson, GeoServer offers other output formats as well, such as XML, JSON, CSV, and even a shapefile archive.
@@ -191,13 +192,13 @@ A WFS request can ask for much more than just feature data. An example of anothe
 The following is a sample WFS GetCapabilities request:
 
 ```http
-http://mapio.us/geoserver/wfs?service=WFS&version=1.1.0&request=GetCapabilities
+http://mapious.ceoas.oregonstate.edu/geoserver/mapious/ows?service=WFS&version=1.1.0&request=GetCapabilities
 ```
 
 And the same request, with line breaks added for clarity:
 
 ```http
-http://mapio.us/geoserver/wfs?
+http://mapious.ceoas.oregonstate.edu/geoserver/mapious/ows?
   service=WFS&
   version=1.1.0&
   request=GetCapabilities
