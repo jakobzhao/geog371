@@ -17,8 +17,6 @@ If you have other complicated troubles in making maps via MapBox, please check t
 
 Once you’ve finished adding data and styling your base map, the next step is to add it to a web page. To use your base map style in **Leaflet**, you will need the **`style URL`** for your map and an **`Access Token`** associated with your account.
 
-
-
 ### 2.1 Style URL
 
 
@@ -53,12 +51,19 @@ Mapbox uses **access tokens** to associate your apps and tool usage with your ac
 
 In order to show how to use a customized basemap in leaflet, please refer to the source codes of this lecture. Below are the major steps.
 
-1\. By clicking on the **Share, develop & use** item, you will be directed to a new page. In the **develop with this style** section, you can find the access token.
+1\. By navigating through `Menu` -> `Share, develop & use` item, you will be directed to a new page. In the **develop with this style** section, you can find the access token.
 
+![](img/mapbox-menu.png)
 
-2\. Download the zipped style package by pressing the download item. To use the style package, please unzip it to the **assets** subdirectory of your working folder. You will find a `style.json` file in the folder. You will need to include this json in your html file.
+2\. Download the zipped style package by pressing the `download` item.
 
-3\. To use a customized basemap, we should include the following stylesheets and libraries.
+![](img/mapbox-download.png)
+
+3\. To use the style package, please unzip the file to the `assets` subdirectory. In this subdirectory, you will see a `style.json` file , a `license.txt` file as well as a folder named after `icons`. Make sure the `assets` folder contains all these three itmes. Later. You will need to include the `style.json` to the script of your web map html file.
+
+![](img/files.png)
+
+4\. To use a customized basemap, we should include the following stylesheets and libraries.
 
 ```javascript
 <!-- Stylesheet -->
@@ -72,7 +77,7 @@ In order to show how to use a customized basemap in leaflet, please refer to the
 <script src="http://rawgit.com/mapbox/mapbox-gl-leaflet/master/leaflet-mapbox-gl.js"></script>
 ```
 
-4\. Add your MapBox base map.
+5\. Add your MapBox base map.
 
 ```javascript
 mapbox_token = 'pk.eyJ1Ijoiemhhb2JvIiwiYSI6ImNqMGdpM2RjNDAyMzQzMnJ1d3FuZmF0NnQifQ.yoQP0NDS5F8ePKjaS3EJgQ';
@@ -98,7 +103,7 @@ Please locate and switch to a variety of styles on the right scrollable panel.
 
 ![](img/osm_preview.png)
 
-**MapBox**
+**MapBox Design Gallery**
 
 ![](img/mapbox.png)
 
