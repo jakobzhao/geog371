@@ -23,7 +23,7 @@
 	</style>
 
 	<!-- Stylesheet -->
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.3/leaflet.css"/>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.2.0/leaflet.css"/>
 	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.css" rel='stylesheet'/>
 	<!-- Javascript Libraries -->
 	<script src="http://cdn.leafletjs.com/leaflet/v1.2.0/leaflet.js"></script>
@@ -31,7 +31,6 @@
 	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.js"></script>
 	<!-- leaflet mapbox js -->
 	<script src="http://rawgit.com/mapbox/mapbox-gl-leaflet/master/leaflet-mapbox-gl.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 
 </head>
 
@@ -46,12 +45,6 @@
 		detectRetina: true,
 		attribution: 'Created with a MapBox style'
 	}).addTo(map);
-
-
-
-	cellTowers= L.geoJson.ajax("assets/cell_towers.geojson");
-	// Add the cellTowers to the map.
-	cellTowers.addTo(map);
 </script>
 </body>
 </html>

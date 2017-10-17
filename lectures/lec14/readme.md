@@ -1,8 +1,8 @@
-# Map Server IV: Map Tiles
+# Map Server V: Map Tiles
 
 > Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >
-> Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
 
 **Learning Objectives**
 
