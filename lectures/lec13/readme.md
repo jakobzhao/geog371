@@ -90,7 +90,7 @@ To see the demo, please check [here](index.html).
 
 ## 3. On the shoulders of giants
 
-You can learn from other popular map design styles, Here are a list of base map you may feel useful. However, **Notably, learning from a map style is NOT exactly copying a map style. We expect to see your own contribution. **
+You can learn from other popular map design styles, Here are a list of base map you may feel useful. However, **Notably, learning from a map style is NOT exactly copying a map style. We expect to see your own contribution. If you design your map based on other styles, please also metion their contributions as well.**
 
 **OSM Previews**
 
@@ -114,7 +114,7 @@ Please locate and switch to a variety of styles on the right scrollable panel.
 
 To capture the color of a map, you can follow the following procedure. 
 
-- Create a screenshot of a map;
+- Create a screenshot of the web map;
 
 - Paste the screenshot to one slide in `Microsoft Powerpoint`;
 
@@ -128,6 +128,6 @@ To capture the color of a map, you can follow the following procedure.
 
 
 
-- based on a RGB to Hex color conversion tool at [http://www.rapidtables.com/convert/color/rgb-to-hex.htm](http://www.rapidtables.com/convert/color/rgb-to-hex.htm).
+- Get the color value from a RGB to Hex color conversion tool at [http://www.rapidtables.com/convert/color/rgb-to-hex.htm](http://www.rapidtables.com/convert/color/rgb-to-hex.htm).
 
 ![](img/RGB_to_Hex_color_converter.png)
