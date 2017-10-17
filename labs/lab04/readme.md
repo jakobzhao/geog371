@@ -7,9 +7,17 @@
 > **Assigned:** 10/19/2017 | **Due:** `11/02/2017 @11:59pm` | **Points Available** = 50
 
 
-数据下载.
+In this lab, you will create a web map service (wms) and web feature service. In the meantime, you will publish a base map using Mapbox.
 
-deliverable
+## 1. Create wms and wfs
+
+### 1.1 Data
+
+The dataset for this lab was collected from OpenStreetMap using a web data collector - [MapZen](https://mapzen.com/). This dataset can is in the `assets` folder of this lab material folder.
+
+### 1.2 Geoserver publishing
+
+please refer to the notes of the map server seires to make wms and wfs
 
 1. 生成 github repo
 
@@ -74,7 +82,8 @@ With the provided data and GeoServer account, you are asked to make a web map of
 
 
 - A url link to the WMS service of your Corvallis map, and screenshots of the map in different scales (make sure the link is accessible. If not,  you might not get the whole points of this item)  (**30 POINTS**)
-- Reflect on your design process - How did you determine the current web map style?  What specific topic motivate you to design the map? For example, you can design a map driven by a LGBT topic (I guess the geometric features on the map will be in a rainbow color ramp), or driven by the idea of Beaver Nation (Orange and Black?).  (**20 POINTS**) 
+
+- Reflect on your design process - How did you determine the current web map style?  What specific topic motivate you to design the map? For example, you can design a map driven by a LGBT topic (I guess the geometric features on the map will be in a rainbow color ramp), or driven by the idea of Beaver Nation (Orange and Black?).  (**20 POINTS**)
 
 Submit your PE report in Word or PDF format to **Canvas Dropbox**. On the assignment tab,  check the item of this PE, press the `Submit Assignment` button to submit your PE report. Please contact the instructor or TA if you have any difficulty.
 
