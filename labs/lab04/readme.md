@@ -135,3 +135,11 @@ This repository should contain the following items:
   - Please talk about what specific idea motivates you to design the two maps? For example, you can design a map driven by a LGBT topic (I guess the geometric features on the map will be in a rainbow color ramp), or driven by the idea of Beaver Nation (Orange and Black?), Christmas season or Saint Patrick's Day.  (**7 POINTS**)
 
 Once you finish this practical exercise, please upload the repository of your web map to GitHub, and **only submit the url of the repository to canvas**. Please contact the instructor or TA if you have any difficulty in submitting the url.
+
+## Share your map with us
+
+*Need inspiration?* Check out the other great designs in the Mapbox Studio [map design gallery](https://www.mapbox.com/gallery/).
+
+*Proud of your design?* Fill out our [contact form](https://www.mapbox.com/contact/), including a style URL and screenshot of your map or app and we’ll look into adding it to our gallery. We’d love to showcase some of your map designs and applications.
+
+![studio-editor](https://www.mapbox.com/help/img/screenshots/gallery.gif)
