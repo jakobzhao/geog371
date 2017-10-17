@@ -89,7 +89,7 @@ var gl = L.mapboxGL({
 }).addTo(map);
 ```
 
-To see the demo, please check [here](index.html).
+To see the demo, please check [here](http://jakobzhao.github.io/geog371/lectures/lec13/).
 
 ![](img/customized-style-brown.png)
 
@@ -130,8 +130,6 @@ To capture the color of a map, you can follow the following procedure.
 - In `Picture Border` dropdown list, you can get the RGB value of the color by clicking the `more color` item.
 
   ![](img/color.png)
-
-
 
 - Get the color value from a RGB to Hex color conversion tool at [http://www.rapidtables.com/convert/color/rgb-to-hex.htm](http://www.rapidtables.com/convert/color/rgb-to-hex.htm).
 
