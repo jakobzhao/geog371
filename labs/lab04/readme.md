@@ -7,6 +7,38 @@
 > **Assigned:** 10/19/2017 | **Due:** `11/02/2017 @11:59pm` | **Points Available** = 50
 
 
+数据下载.
+
+deliverable
+
+1. 生成 github repo
+
+3. 生成 wms, 在 readme 里面，告诉wms 的 ulr， 以及screenshot 点击layer preview.
+
+5. 制作1 个base map.
+
+4. refer to lecture 13,  在一个 html page里面分别调用 生成的1个 mapbox，叫做 index.html. screenshot 放在 readme.html
+
+2. 最终的结构应该是这样的
+
+```Powershell
+Mapbox
+│readme.md
+│map1.html
+│map2.html
+├─css
+│      style.css
+├─img
+└─js
+        main.js
+```
+
+
+4. Share map with us
+
+分别分享
+
+
 
 
 This lab will help you publish a base map of Corvallis using GeoServer. To do that, we provide a  dataset of Corvallis. This dataset was collected from OpenStreetMap using a web data collector - [MapZen](https://mapzen.com/). This dataset can be easily downloaded from GitHub to your local machine, in the meantime, this dataset has already been hosted on a remote map server for your use.  You will be asked to make a Corvallis map based this dataset using GeoServer. Below is a detailed instruction on publishing the web map.
