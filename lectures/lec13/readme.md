@@ -85,15 +85,17 @@ mapbox_token = 'pk.eyJ1Ijoiemhhb2JvIiwiYSI6ImNqMGdpM2RjNDAyMzQzMnJ1d3FuZmF0NnQif
 var gl = L.mapboxGL({
     accessToken: mapbox_token,
     style: 'assets/style.json',
-    attribution: 'Created By <a href="https://github.com/jakobzhao/">Bo Zhao</a>'
+    attribution: 'Created By <a href="https://github.com/jakobzhao/">Bo Zhao</a> based on the <a href="assets/license.txt">Mapbox basic style</a>'
 }).addTo(map);
 ```
 
-To see the demo, please check [here](http://jakobzhao.github.io/geog371/lectures/lec13/).
+To see the demo, please check [here](http://jakobzhao.github.io/geog371/lectures/lec13/). Please pay attention to the credit information.
 
 ![](img/customized-style-brown.png)
 
-## 3. On the shoulders of giants
+## 3. References:
+
+### 3.1 On the shoulders of giants
 
 You can learn from other popular map design styles, Here are a list of base map you may feel useful. However, **Notably, learning from a map style is NOT exactly copying a map style. We expect to see your own contribution. If you design your map based on other styles, please also metion their contributions as well.**
 
@@ -115,8 +117,6 @@ Please locate and switch to a variety of styles on the right scrollable panel.
 
 ![](img/google-my-maps.png)
 
-
-
 To capture the color of a map, you can follow the following procedure. 
 
 - Create a screenshot of the web map;
@@ -134,3 +134,32 @@ To capture the color of a map, you can follow the following procedure.
 - Get the color value from a RGB to Hex color conversion tool at [http://www.rapidtables.com/convert/color/rgb-to-hex.htm](http://www.rapidtables.com/convert/color/rgb-to-hex.htm).
 
 ![](img/RGB_to_Hex_color_converter.png)
+
+
+### 3.2 Web Cartography Quick Tutor
+
+- [labelling and text hierarchy](http://axismaps.github.io/thematic-cartography/articles/labeling.html)
+- [Color schemes](http://axismaps.github.io/thematic-cartography/articles/color_schemes.html)
+- [Color Use Guidelines for Mapping and Visualization](https://web.natur.cuni.cz/~langhamr/lectures/vtfg1/mapinfo_2/barvy/colors.html#overview)
+
+- [labelling and text hierarchy](http://axismaps.github.io/thematic-cartography/articles/labeling.html)
+
+**Some handy tools for generating a color palette:**
+
+- :star: Generating a color palettes using a drag-and-drop interface, it also supports generate color-blind colors, and you explore user-contributed color schemes [https://coolors.co/](https://coolors.co/)
+
+Coolors is a fantastic tool that pulls together quite a few useful features. It displays a full screen color palette within a drag-and-drop interface. From this screen you can edit each color, drag to change the order, and expand colors to show a selection of alternatives.
+
+The generator also allows you to lock the colors you like best and auto-generate options for other colors by hitting the space bar. You can upload an image to use for inspiration, explore palettes in the Coolors community, and export your palette in six different formats. Coolors is even available as an iOS app and Adobe add-on.
+
+- Generating a color palettes by keywords or place names [http://palettr.com/](http://palettr.com/)
+
+- Generating Warm, Cool, Pastel or Contrasting color palettes [http://colorpalettes.net/](http://colorpalettes.net/)
+
+- Cohesive color palettes [https://javier.xyz/cohesive-colors/](https://javier.xyz/cohesive-colors/)
+
+Cohesive Colors is another basic tool that offers something a little different. It creates only a simple color palette, but it also allows you to overlay the palette with a color of your choosing.
+You can either start with your own color set or choose a random one one from COLORlovers. Then select your overlay color and adjust the intensity. This tool provides you with a cohesive color scheme, but doesn’t allow you to fine-tune individual colors.
+
+
+
