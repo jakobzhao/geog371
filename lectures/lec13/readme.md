@@ -103,7 +103,7 @@ Please locate and switch to a variety of styles on the right scrollable panel.
 
 ![](img/osm_preview.png)
 
-**MapBox Design Gallery**
+[**MapBox Design Gallery**](https://www.mapbox.com/gallery/)
 
 ![](img/mapbox.png)
 
