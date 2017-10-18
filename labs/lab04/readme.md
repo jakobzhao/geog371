@@ -63,7 +63,7 @@ Fill out our [contact form](https://www.mapbox.com/contact/sales/), including a 
 
 ![](img/screenshot.png)
 
-The structure of the github repository should like something below. (**5 POINTS**)
+3\.7 The structure of the github repository should like something below. (**5 POINTS**)
 
 ```Powershell
 [Submission_Lab_04]
