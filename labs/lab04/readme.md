@@ -1,4 +1,4 @@
-# Lab 4: Web Map Service Publishing
+# Lab 4: Publish Web Map Services and Mapbox Basemap
 
 > Winter 2017 | Geography 371 | Geovisualization: Web Mapping
 >
