@@ -9,71 +9,79 @@
 
 In this lab, you will create a web map service (wms) and web feature service. In the meantime, you will publish a base map using Mapbox.
 
-## 1. Create wms and wfs
+## 1. Create wms and wfs using GeoServer
 
-### 1.1 Data
+1\.1 A shapefile named after `ore_counties` was stored in the `assets` folder. You will use this data set to make web map services on GeoServer. Synchronize the data to your working space.
 
-The dataset for this lab was collected from OpenStreetMap using a web data collector - [MapZen](https://mapzen.com/). This dataset can is in the `assets` folder of this lab material folder.
+1\.2 Use `ore_counties` shapefile to make a `layer` on GeoServer. If you met any questions, please refer to the lecture notes of the map server seires or GeoServer's documentation.
 
-### 1.2 Geoserver publishing
+1\.3 If you are using a GeoServer on a local computer or the ones in Digital Earth Lab, the url of GeoServer should be http://localhost:8080/geoserver by default. Also, the default username is `admin`, the password is `geoserver`.
 
-please refer to the notes of the map server seires to make wms and wfs
+1\.4 In the main page of GeoServer, click on the `Layer Preview` under the Data tab. An table of the layer will show up. In this table, please identify the layer you have created, and then click on the `Select one` dropdown menu. In this menu, you will need to generate two services.
 
-1. 生成 github repo
+![](img/wms-wfs.png)
 
-3. 生成 wms, 在 readme 里面，告诉wms 的 ulr， 以及screenshot 点击layer preview.
+- Once you click on the `PNG` under the WMS category, a new tab will be created, and please record this url and also save the map tile.
 
-5. 制作1 个base map.
+- Also, by click on the ``GeoJson` under the WFS category, you will navigate to a new tab with a raw geojson data. Please record the url and save the geojson data in the name of ore_counties.geojson.
 
-4. refer to lecture 13,  在一个 html page里面分别调用 生成的1个 mapbox，叫做 index.html. screenshot 放在 readme.html
+## 2\. Create a base map using Mapbox
 
-2. 最终的结构应该是这样的
+
+2\.1 You are expected to generate a base map using mapbox. **Please make sure you design a base map rather than a thematic map**. The base map is created for illustrating the contextual information of your study area. In the end, the base map will help you to stand out the thematic layers.
+
+2\.2 you are expected to design your map to embody a specifc theme. For example,
+
+- a base map design motivated by a keyword. (refer to [http://palettr.com/](http://palettr.com/));
+- a base map design inspired by a picture. (refer to [https://coolors.co/](https://coolors.co/));
+- a base map design for color blindness. (refer to [https://coolors.co/](https://coolors.co/));
+- a high contrast map (refer to [http://colorpalettes.net/](http://colorpalettes.net/)); and
+- a base map design embodying an idea, such as Christmas map, St Patrick Map, LGBT map, Beaver Nation Map, etc.
+
+2\.3 Once you made the map, please use a leaflet web page to call this map. The tutorial is in the lecture note on [Wednesday](../../lectures/lec13/). Eventually, you will have a github repo to manage all the files. The mapbox basemap will be shown on an `index.html`. (we will talk about the structure of the github repository in the deli)
+
+
+## 3\. Deliverable
+
+You will have two weeks to work on this lab. To submit, please follow the steps below.
+
+3\.1 create a github repository. This repository will store the files of the Geosever wms and wfs data, and mapbox base map web page.  **Note:** Regarding the name of this github repo, please use something related to your base map, rather than `lab04`, `assignment04`, and etc.
+
+3\.2 In the readme.md file, please paste the wms url and the screenshot of the responding png image.
+
+3\.3 In the readme.md, please also past the wfs url, and make an link to the downloaded `ore_counties.geojson` geojson data in your `assets` file.
+
+3\.4 In the readme.md, please add a link to show your mapbox basemap web page. Basically, By clicking on the link, a new web page tab will be opened up to show the base map. This web page should be the `index.html` of this github repository. In terms of the github repository file structure of this index.html and other relevant files, please refer to [lecture 13](../../lectures/lec13/).
+
+3\.5 In the readme.md, reflect on your design process - How did you determine the current web map style?  What specific topic motivate you to design the map? For example, you can design a map driven by a LGBT topic (I guess the geometric features on the map will be in a rainbow color ramp), or driven by the idea of Beaver Nation (Orange and Black?).  (**20 POINTS**)
+
+3\.6 Share your mapbox to mapbox design gallary. Check out the other great designs in the Mapbox Studio [map design gallery](https://www.mapbox.com/gallery/).
+
+![studio-editor](https://www.mapbox.com/help/img/screenshots/gallery.gif)
+
+Fill out our [contact form](https://www.mapbox.com/contact/sales/), including a style URL and screenshot of your map or app and Mapbox team will look into adding it to their gallery. Mapbox would like to show case of some interesting map design and applications.
+
+![](img/screenshot.png)
+
+The structure of the github repository should like something below.
 
 ```Powershell
-Mapbox
+[Submission_Lab_04]
 │readme.md
-│map1.html
-│map2.html
-├─css
-│      style.css
+│index.html
+├─assets
+│      icons
+│            xxx.svg
+│            xxx.svg
+│            xxx.svg
+│      style.json
+│      ore_counties.geojson
+│      license.txt
 ├─img
+│      screenshot.png
 └─js
         main.js
 ```
-
-
-4. Share map with us
-
-分别分享
-
-
-
-
-This lab will help you publish a base map of Corvallis using GeoServer. To do that, we provide a  dataset of Corvallis. This dataset was collected from OpenStreetMap using a web data collector - [MapZen](https://mapzen.com/). This dataset can be easily downloaded from GitHub to your local machine, in the meantime, this dataset has already been hosted on a remote map server for your use.  You will be asked to make a Corvallis map based this dataset using GeoServer. Below is a detailed instruction on publishing the web map.
-
-## 1 Data download
-
-To help you style the map layers, you can design your map via QGIS. To do that, you may download the data which was also stored in Github. (make sure you have `git` installed in your local PC.)
-
-Simply run the following shell command on your windows command prompt or Linux/Mac Terminal.
-
-```powershell
-$ git clone https://github.com/jakobzhao/corvallis_data.git
-```
-
-Or you may click the `Download ZIP` button on the github repository.
-
-[https://github.com/jakobzhao/corvallis_data](https://github.com/jakobzhao/corvallis_data).
-
-![](img/github_corvallis.png)
-
-Then, you can open the data set on QGIS by adding `new vector layers`.
-
-![](img/qgis_add_layers.png)
-
-All of the sudden, you will see all the data in the spatial layout. By default, all the data, coupled with the copy on [geoserver.mapio.us](geoserver.mapio.us), are in WGS 84 datum.
-
-![](img/qgis.png)
 
 
 ## 4. Deliverable
@@ -109,23 +117,4 @@ Mapbox
         main.js
 ```
 
-This repository should contain the following items:
-
-- Two html files, each of which shows a base map you have designed via MapBox. (**30 POINTS IN TOTAL, 15 FOR EACH**)
-- A readme.md contains:
-  - The titles of the basemaps;  (**3 POINTS**)
-  - A short descriptions of the basemaps;  (**5 POINTS**)
-  - Two rawgit.com url links, each of which directs you to a base map ; and  (**5 POINTS**)
-  - Please talk about what specific idea motivates you to design the two maps? For example, you can design a map driven by a LGBT topic (I guess the geometric features on the map will be in a rainbow color ramp), or driven by the idea of Beaver Nation (Orange and Black?), Christmas season or Saint Patrick's Day.  (**7 POINTS**)
-
-Once you finish this practical exercise, please upload the repository of your web map to GitHub, and **only submit the url of the repository to canvas**. Please contact the instructor or TA if you have any difficulty in submitting the url.
-
-
-## Share your map with us
-
-*Need inspiration?* Check out the other great designs in the Mapbox Studio [map design gallery](https://www.mapbox.com/gallery/).
-![studio-editor](https://www.mapbox.com/help/img/screenshots/gallery.gif)
-
-*Proud of your design?* Fill out our [contact form](https://www.mapbox.com/contact/sales/), including a style URL and screenshot of your map or app and we’ll look into adding it to our gallery. We’d love to showcase some of your map designs and applications.
-
-![](img/screenshot.png)
+Once you finish this practical exercise, please submit the url of the repository to canvas. Please contact the instructor or TA if you have any difficulty in submitting the url.
