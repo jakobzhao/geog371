@@ -61,7 +61,7 @@ You will have two weeks to work on this lab. To submit, please follow the steps 
 
 Fill out our [contact form](https://www.mapbox.com/contact/sales/), including a style URL and screenshot of your map or app and Mapbox team will look into adding it to their gallery. Mapbox would like to show case of some interesting map design and applications.
 
-![](img/screenshot.png)
+![](img/submit.png)
 
 3\.7 The structure of the github repository should like something below. (**5 POINTS**)
 
