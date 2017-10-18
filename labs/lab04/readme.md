@@ -45,17 +45,17 @@ In this lab, you will create a web map service (wms) and web feature service. In
 
 You will have two weeks to work on this lab. To submit, please follow the steps below.
 
-3\.1 create a github repository. This repository will store the files of the Geosever wms and wfs data, and mapbox base map web page.  **Note:** Regarding the name of this github repo, please use something related to your base map, rather than `lab04`, `assignment04`, and etc.
+3\.1 create a github repository. This repository will store the files of the Geosever wms and wfs data, and mapbox base map web page.  **Note:** Regarding the name of this github repo, please use something related to your base map, rather than `lab04`, `assignment04`, and etc.  (**3 POINTS**)
 
-3\.2 In the readme.md file, please paste the wms url and the screenshot of the responding png image.
+3\.2 In the readme.md file, please paste the wms url and the screenshot of the responding png image. (**4 POINTS**)
 
-3\.3 In the readme.md, please also past the wfs url, and make an link to the downloaded `ore_counties.geojson` geojson data in your `assets` file.
+3\.3 In the readme.md, please also past the wfs url, and make an link to the downloaded `ore_counties.geojson` geojson data in your `assets` file. (**4 POINTS**)
 
-3\.4 In the readme.md, please add a link to show your mapbox basemap web page. Basically, By clicking on the link, a new web page tab will be opened up to show the base map. This web page should be the `index.html` of this github repository. In terms of the github repository file structure of this index.html and other relevant files, please refer to [lecture 13](../../lectures/lec13/).
+3\.4 In the readme.md, please add a link to show your mapbox basemap web page. Basically, By clicking on the link, a new web page tab will be opened up to show the base map (you will need to turn the github page function on). This web page should be the `index.html` of this github repository. In terms of the github repository  structure, please refer to [lecture 13](../../lectures/lec13/). (**20 POINTS**)
 
-3\.5 In the readme.md, reflect on your design process - How did you determine the current web map style?  What specific topic motivate you to design the map? For example, you can design a map driven by a LGBT topic (I guess the geometric features on the map will be in a rainbow color ramp), or driven by the idea of Beaver Nation (Orange and Black?).  (**20 POINTS**)
+3\.5 In the readme.md, reflect on your design process - How did you determine the current web map style?  What specific topic motivate you to design the map? For example, you can design a map driven by a LGBT topic (I guess the geometric features on the map will be in a rainbow color ramp), or driven by the idea of Beaver Nation (Orange and Black?).  (**10 POINTS**)
 
-3\.6 Share your mapbox to mapbox design gallary. Check out the other great designs in the Mapbox Studio [map design gallery](https://www.mapbox.com/gallery/).
+3\.6 Share your mapbox to mapbox design gallary. Check out the other great designs in the Mapbox Studio [map design gallery](https://www.mapbox.com/gallery/). (**4 POINTS**)
 
 ![studio-editor](https://www.mapbox.com/help/img/screenshots/gallery.gif)
 
@@ -63,7 +63,7 @@ Fill out our [contact form](https://www.mapbox.com/contact/sales/), including a 
 
 ![](img/screenshot.png)
 
-The structure of the github repository should like something below.
+The structure of the github repository should like something below. (**5 POINTS**)
 
 ```Powershell
 [Submission_Lab_04]
@@ -79,18 +79,7 @@ The structure of the github repository should like something below.
 │      license.txt
 ├─img
 │      screenshot.png
-└─js
-        main.js
 ```
 
-
-## 4. Deliverable
-
-With the provided data and GeoServer account, you are asked to make a web map of Corvallis. You are required to design a map style, and systhenize all the layers as a **layer group** (refer to http://docs.geoserver.org/stable/en/user/data/webadmin/layergroups.html#data-webadmin-layergroups). In the future, this layer group can serve as a base map for your web map application.  
-
-
-- A url link to the WMS service of your Corvallis map, and screenshots of the map in different scales (make sure the link is accessible. If not,  you might not get the whole points of this item)  (**30 POINTS**)
-
-- Reflect on your design process - How did you determine the current web map style?  What specific topic motivate you to design the map? For example, you can design a map driven by a LGBT topic (I guess the geometric features on the map will be in a rainbow color ramp), or driven by the idea of Beaver Nation (Orange and Black?).  (**20 POINTS**)
 
 To submit this practical exercise, you will need to submit the url of the GitHub repositor to **Canvas Dropbox**. On the assignment tab,  check the item of this PE, press the `Submit Assignment` button to submit your PE report. Please contact the instructor or TA if you have any difficulty.
