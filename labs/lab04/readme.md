@@ -93,28 +93,4 @@ With the provided data and GeoServer account, you are asked to make a web map of
 
 - Reflect on your design process - How did you determine the current web map style?  What specific topic motivate you to design the map? For example, you can design a map driven by a LGBT topic (I guess the geometric features on the map will be in a rainbow color ramp), or driven by the idea of Beaver Nation (Orange and Black?).  (**20 POINTS**)
 
-Submit your PE report in Word or PDF format to **Canvas Dropbox**. On the assignment tab,  check the item of this PE, press the `Submit Assignment` button to submit your PE report. Please contact the instructor or TA if you have any difficulty.
-
-
-With the help of mapbox, you are expected to make at least two base maps. You can design these two base maps for your group project or design base maps for something of your interests.
-
-![](img/mapbox-featured-styles.png)
-
-While designing the base map, you are expected to practice what you have learned during the lectures, such as symbolization, color, layout, labelling, typography and etc. Also, **Make sure you design a base map rather than a thematic map**. The base map is created for illustrating the contextual information of a geovisualization as well as for standing out the thematic features.
-
-
-To submit this practical exercise, you will need to create a GitHub repository.  The file structure of your GitHub repository should look like:
-
-```Powershell
-Mapbox
-│readme.md
-│map1.html
-│map2.html
-├─css
-│      style.css
-├─img
-└─js
-        main.js
-```
-
-Once you finish this practical exercise, please submit the url of the repository to canvas. Please contact the instructor or TA if you have any difficulty in submitting the url.
+To submit this practical exercise, you will need to submit the url of the GitHub repositor to **Canvas Dropbox**. On the assignment tab,  check the item of this PE, press the `Submit Assignment` button to submit your PE report. Please contact the instructor or TA if you have any difficulty.
