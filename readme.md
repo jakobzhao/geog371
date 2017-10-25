@@ -26,7 +26,7 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
 
 [**Syllabus**](resources/syllabus.pdf)
 
-**Final Project**
+**Final Project:star:**
  - [Guideline](project/readme.md) (WK02)
  - [Proposal]() (WK03)
  - [Data Source Table](project/datasource.md) (WK04)
