@@ -1,10 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>Online Atlas Front Page Template</title>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.2.0/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- add icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        html {
+            /*full screen the map*/
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            padding: 20px;
+            margin: 20px;
+        }
+
+    </style>
+
+    <title>Web Mapping Template</title>
+    <!--add required stylesheets-->
+    <script src="http://cdn.leafletjs.com/leaflet/v1.2.0/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
+
 <body>
 
+<!-- Page Content -->
+<div class="container">
+    <!-- Page Header -->
+    <div class="row text-center">
+        <a href="#" target="_blank"><img src="http://via.placeholder.com/200x120" ></a>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <h2>Online Atlas Front Page</h2>
+            <a class="about" data-toggle="modal" data-target="#info-modal"><p style="text-align:center; margin-top:20px;">About</p></a>
+            <hr>
+            <h2>Chapters</h2>
+        </div>
+    </div>
+
+    <hr>
+    <!-- /.row -->
+
+    <div class="modal fade" id="info-modal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <p class="modal-title" style="font-size:30px;">About</p>
+                </div>
+                <div class="modal-body">
+                    <p> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla .</p>
+                    <p><b>Online Atlas</b> | Released Date: 02/20/2017 | Version: 2.1 | MIT License </p>
+                </div>
+                <div class="modal-footer">
+                    <p>Created by Gareth Baldrica-Franklin</p>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Row -->
+
+    <div class="row ">
+        <div class="col-xs-12 col-sm-4 portfolio-item">
+            <div class="col-sm-6 portfolio-item">
+                <a  href="map.html" target="_blank">
+                    <img class="img-responsive" src="http://via.placeholder.com/250x250" alt="">
+                </a>
+            </div>
+            <div class="col-sm-6 portfolio-item">
+                <h4>
+                    <a  href="map.html" target="_blank"> Thematic Map 1</a>
+                </h4>
+                <p  class="map-desc"  class="map-desc" >A Brief Desc 1</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 portfolio-item">
+            <div class="col-sm-6 portfolio-item">
+                <a  href="map.html" target="_blank">
+                    <img class="img-responsive" src="http://via.placeholder.com/250x250" alt="">
+                </a>
+            </div>
+            <div class="col-sm-6 portfolio-item">
+                <h4>
+                    <a  href="map.html" target="_blank"> Thematic Map 2</a>
+                </h4>
+                <p  class="map-desc"  class="map-desc" >A Brief Desc 2</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 portfolio-item">
+            <div class="col-sm-6 portfolio-item">
+                <a  href="map.html" target="_blank">
+                    <img class="img-responsive" src="http://via.placeholder.com/250x250" alt="">
+                </a>
+            </div>
+            <div class="col-sm-6 portfolio-item">
+                <h4>
+                    <a  href="map.html" target="_blank"> Thematic Map 3</a>
+                </h4>
+                <p  class="map-desc" >A Brief Desc 3</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row"><p></p></div>
+    <!-- /.row -->
+
+    <!-- Projects Row -->
+    <div class="row text-center">
+        <div class="col-xs-12 col-sm-4 portfolio-item">
+            <div class="col-sm-6 portfolio-item">
+                <a  href="map.html" target="_blank">
+                    <img class="img-responsive" src="http://via.placeholder.com/250x250" alt="">
+                </a>
+            </div>
+            <div class="col-sm-6 portfolio-item">
+                <h4>
+                    <a  href="map.html" target="_blank"> Thematic Map 4</a>
+                </h4>
+                <p  class="map-desc" >A Brief Desc 4</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 portfolio-item">
+            <div class="col-sm-6 portfolio-item">
+                <a  href="map.html" target="_blank">
+                    <img class="img-responsive" src="http://via.placeholder.com/250x250" alt="">
+                </a>
+            </div>
+            <div class="col-sm-6 portfolio-item">
+                <h4>
+                    <a  href="map.html" target="_blank"> Thematic Map 5</a>
+                </h4>
+                <p  class="map-desc" >A Brief Desc 5</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 portfolio-item">
+            <div class="col-sm-6 portfolio-item">
+                <a  href="map.html" target="_blank">
+                    <img class="img-responsive" src="http://via.placeholder.com/250x250" alt="">
+                </a>
+            </div>
+            <div class="col-sm-6 portfolio-item">
+                <h4>
+                    <a  href="map.html" target="_blank"> Thematic Map 6</a>
+                </h4>
+                <p  class="map-desc" >A Brief Desc 6</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row"><p></p></div>
+
+    <!-- Projects Row -->
+    <div class="row text-center">
+        <div class="col-xs-12 col-sm-4 portfolio-item">
+            <div class="col-sm-6 portfolio-item">
+                <a  href="map.html" target="_blank">
+                    <img class="img-responsive" src="http://via.placeholder.com/250x250" alt="">
+                </a>
+            </div>
+            <div class="col-sm-6 portfolio-item">
+                <h4>
+                    <a  href="map.html" target="_blank"> Thematic Map 7</a>
+                </h4>
+                <p  class="map-desc" >A Brief Desc 7</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 portfolio-item">
+            <div class="col-sm-6 portfolio-item">
+                <a  href="map.html" target="_blank">
+                    <img class="img-responsive" src="http://via.placeholder.com/250x250" alt="">
+                </a>
+            </div>
+            <div class="col-sm-6 portfolio-item">
+                <h4>
+                    <a  href="map.html" target="_blank"> Thematic Map 8</a>
+                </h4>
+                <p  class="map-desc" >A Brief Desc 8</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 portfolio-item">
+            <div class="col-sm-6 portfolio-item">
+                <a  href="map.html" target="_blank">
+                    <img class="img-responsive" src="http://via.placeholder.com/250x250" alt="">
+                </a>
+            </div>
+            <div class="col-sm-6 portfolio-item">
+                <h4>
+                    <a  href="map.html" target="_blank"> Thematic Map 9</a>
+                </h4>
+                <p  class="map-desc" >A Brief Desc 9</p>
+            </div>
+        </div>
+    </div>
+<!-- /.row -->
+
+<hr>
+
+
+<!-- Footer -->
+<footer class="container">
+
+    <div class="row text-center">
+        <p class="col-lg-12"> Gareth Baldrica-Franklin, Oregon State University, 2017 </p>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <a href="#" target="_blank"><img src="http://via.placeholder.com/120x80" ></a>
+            <a href="#" target="_blank"><img src="http://via.placeholder.com/120x80"  ></a>
+            <a href="#" target="_blank"><img src="http://via.placeholder.com/120x80"></a>
+        </div>
+    </div>
+    <!-- /.row -->
+</footer>
+
+</div>
+
 </body>
+
 </html>
