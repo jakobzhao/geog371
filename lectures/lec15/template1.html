@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.2.0/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- add icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        html {
+            /*full screen the map*/
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+
+    <title>Web Mapping Template</title>
+    <!--add required stylesheets-->
+    <script src="http://cdn.leafletjs.com/leaflet/v1.2.0/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<!--add a Bootstrap navbar-->
+<div class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md" role="navigation">
+    <div class="container">
+        <!--<div class="container-fluid">-->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!--add a navbar brand - text or image-->
+            <!--<a class="navbar-brand" href="#">GeoVisualization</a>-->
+            <a class="navbar-brand" href="#" title="web mapping template">
+                <!--convert the style value to a class and then add the class to the css file.-->
+                <img src="img/logo-long.png" style="width:80%; margin-top:-10px" class="d-inline-block align-top">
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!--a simple top bar link-->
+                <li>
+                    <a href="immigrants2.html">Immigrant Flow</a>
+                </li>
+                <!--a top bar link which opens the url in a new page-->
+                <li>
+                    <a href="slr.html">Sea Level Rise</a>
+                </li>
+                <!--a drop-down menu-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Share To... <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <!--use font awesome icons-->
+                        <li><a href="#"> <i class="fa fa-star" aria-hidden="true"></i> Facebook</a></li>
+                        <li><a href="#"> <i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+                        <li><a href="https://alturl.com/kni7r"> <i class="fa fa-link" aria-hidden="true"></i>
+                            ShortUrl</a></li>
+                    </ul>
+                </li>
+                <!--use icons in the top bar menu-->
+                <li>
+                    <a href="about.html"> <i class="fa fa-github fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<span>Source Codes</span></a>
+                </li>
+                <!--an about page which open the url in a new page-->
+                <li>
+                    <a href="about.html" target="_blank">About</a>
+                </li>
+                <!--an about page which triggers a new model/window.-->
+                <li>
+                    <a data-toggle="modal" data-target="#about-window">About Popup</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--map container-->
+<div id="map" class="map"></div>
+
+
+<!--the info page-->
+<div class="modal fade" id="about-window" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times; <i class="fa fa-facebook-square"
+                                                                                    aria-hidden="true"></i></button>
+                <h4 class="modal-title">About</h4>
+            </div>
+            <div class="modal-body">
+                <p> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla .</p>
+                <p><b>storymap.js</b> | Released Date: 02/20/2017 | Version: 2.1 | MIT License </p>
+                <p><b>Author: Bo Zhao</b> | College of Earth, Ocean, Atmospheric Science | Oregon State University </p>
+                <p>The context about Oregon cities was collected from Wikipedia.</p>
+                <p>This story map uses geospatial data from cartoDB, Open Street Maps and Oregon Explorer.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    var map = L.map("map", {zoomControl: false}).setView([40, -100], 5); // deactivate the zoomControl
+
+    // add a scale bar.
+    L.control.scale({position: 'bottomright', metric: false}).addTo(map);
+    // construct a base map in light color.
+    L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(map);
+
+    // add a population density layer
+    L.tileLayer.wms(
+        "http://sedac.ciesin.columbia.edu/geoserver/wms",
+        {layers: 'gpw-v3:gpw-v3-population-density_2000', opacity: 0.5}
+    ).addTo(map);
+
+    //add a sea level rise layer. The sea level rises 2 feet. the data is retrieved from https://coast.noaa.gov/slr/ 0 to 6ft
+    L.tileLayer('http://maps2.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_2ft/MapServer/tile/{z}/{y}/{x}').addTo(map);
+
+</script>
+
+</body>
+</html>
