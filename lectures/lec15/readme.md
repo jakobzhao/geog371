@@ -1,8 +1,8 @@
-# Layout
+# Map Design I: Template and Framework
 
-> Spring 2017 | Geography 472/572 | Geovisualization: Geovisual Analytics
+> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >
-> Instructor: Bo Zhao | TA: Kyle R. Hogrefe | Location: LINC 368 | Time: Thursday 9-9:50am
+> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
 
 **Learning Objectives**
 
