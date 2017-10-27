@@ -83,3 +83,13 @@ Fill out our [contact form](https://www.mapbox.com/contact/sales/), including a 
 
 
 To submit this practical exercise, you will need to submit the url of the GitHub repository to **Canvas Dropbox**. On the assignment tab,  check the item of this PE, press the `Submit Assignment` button to submit your PE report. Please contact the instructor or TA if you have any difficulty.
+
+
+## References:
+
+[1] Walton, Amy Lee 2017 [MapBox Design Guide](guide-to-map-design-part-1.pdf), Mapbox, retrieved at Oct 27, 2017.
+
+
+## Note：
+
+In terms of sharing you style to [MapBox](https://www.mapbox.com/gallery/), you can also Tweet it with #BuiltWithMapbox to submit it to the gallery.
