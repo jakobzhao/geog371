@@ -50,20 +50,20 @@ Traditionally, a font is loaded into your page only if you have it on your compu
 
 ```html
 <!--use a better font for this web map-->
-<link href='http://fonts.googleapis.com/css?family=Helvetica' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
 ```
 
 Next, to style all text in our document with the Open Sans font, modify the body tag in the CSS (the code between the style tags). Modify the body CSS properties to look like the following, adding a font-family property after margin.
 
 ```css
 body {
-    font-family: Helvetica, 'Open Sans', sans-serif;
+    font-family: Cairo, sans-serif;
 }
 ```
 
 Save and refresh your map. Open Sans will now be your preferred font!
 
-## 3. Control Object - Scrolling Down Arrow
+## 3. Control Object
 
 Inspired by the web map entitled ["California,s Getting Fracked"](http://www.facesoffracking.org/data-visualization/),  we found that a scrolling down arrow will help the audience reading the web map. Thinking about the working logics of the scrolling-down arrow, it should be an clickable arrow icon on one corner of the web map application. If hovering on the arrow, the color of arrow will be changed, and if clicking the arrow, the text panel should be scrolled down.
 
