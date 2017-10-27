@@ -116,10 +116,6 @@ Till now, a control object is properly added. You can test it by clicking on the
 
 A social media button will help you spread a web map to more audience. This lecture only walk you through how to share the web map to Facebook, the ways to share to other social media applications are supposed to be quite similar. 
 
-Before adding the link for sharing web map on Facebook, please read the tutorial on.
-
-[https://developers.facebook.com/docs/plugins/share-button](https://developers.facebook.com/docs/plugins/share-button).
-
 To find a Facebook icon, we will use [Font Awesome](http://fontawesome.io), which is a font library dedicated for web design use. We will include the library within the `head` tag.
 
 ```html
@@ -140,20 +136,9 @@ As shown, the class for the facebook icon is **"fa fa-facebook-square"**. So, we
 
 ```html
 <!--facebook icon-->
-<a class="fa fa-facebook-square social" href="https://facebook.com/sharer.php?u=http://www.mapio.us/lec17" target="_blank"></a>
+<a class="fa fa-facebook-square social" href="https://www.facebook.com/sharer/sharer.php?u=jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.html" target="_blank"></a>
 ```
-This tag indicates that if we click on it, a new web page will be created, this web page directs to `https://facebook.com/sharer.php?u=http://www.mapio.us/lec17`. Basically, the url `http://www.mapio.us/lec17` indicates where this web map application is deployed.
-
-This share function also needs several parameters, which are defined in the head tag.
-
-```html
-<!--meta data for sharing links on Facebook-->
-<meta property="og:title" content="The major cities in Oregon" />
-<meta property="og:url" content="www.mapio.us/lec17" />
-<meta property="og:description" content="This is an example of map story." />
-<meta property="og:image" content="img/social.png" />
-```
-`og:title` indicates the title of the shared page, `og:url` is the url of the web map, `og:decription` is a paragraph of description, and `og:image` is the path to the screenshot of the web map. This image is stored in the server.
+This tag indicates that if we click on it, a new web page will be created, this web page directs to `https://www.facebook.com/sharer/sharer.php?u=jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.html`. Basically, the url `http://jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.htm` indicates where this web map application is deployed.
 
 In order to put it on the right place and display properly, we define its style in `css\style-new.css`.
 
@@ -180,6 +165,9 @@ If everything is properly configured, you will see a button on the top left of t
 Once you click on the facebook button, you will creat a new tab as showing below.
 
 ![](img/share-on-facebook-page.png)
+
+
+>**Note:** If you want to generate urls for other social media platform, please go to [http://www.sharelinkgenerator.com/](http://www.sharelinkgenerator.com/). This web site provides a handy tool for generate urls for Facebook, Twitter, LinkedIn, etc. A more detailed tutorial on generating url for sharing on Facebook can be found at [https://developers.facebook.com/docs/plugins/share-button](https://developers.facebook.com/docs/plugins/share-button).
 
 ## 5. Add an About Page
 
@@ -247,7 +235,7 @@ The `.modal-footer` class is used to define the style for the footer of the mo
 
 ![](img/final-page.png)
 
-To browse this application, you can visit [http://www.mapio.us/lec17/](http://www.mapio.us/lec17/). The code has been already uploaded to [canvas.oregonstate.edu](canvas.oregonstate.edu). I recommend you practice these web design techniques after class.
+To browse this application, you can visit [jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.html](jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.html).
 
 ## References:
 
