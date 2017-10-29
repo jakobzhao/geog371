@@ -20,8 +20,11 @@ The broader impacts lie with its potential to unlock unprecedented possibilities
 **Major Map Story Websites**
 
 1. https://storymaps.arcgis.com/en/app-list/
+
 2. https://storymap.knightlab.com/
+
 3. https://cartodb.github.io/odyssey.js/
+
 4. http://atlefren.github.io/storymap/
 
 ## 1. Storytelling Structure
