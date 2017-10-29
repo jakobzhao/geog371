@@ -1,4 +1,4 @@
-# Thematic Web Maps III: Map Story Telling
+# Thematic Web Maps III: Digital storytelling with web maps
 
 > Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >
@@ -60,73 +60,12 @@ In this phase the protagonist and antagonist have solved their problems and eith
 
 ## 2. Making a web based story map from scratch
 
-Storymap is a jQuery-plugin to create a map that follows your text. Annotate each paragraph and place a map alongside it. Then you can zoom/pan/add marker etc to the map as the reader reads through the text. In this section, we would like to show a demo of a story map about oregon major cities. The demo can be found at [http://mapio.us/wk06_2_lec15/](http://mapio.us/wk06_2_lec15/).
-
-![](img/demo.png)
-
-> This map is inspired by http://atlefren.github.io/storymap/
-
-
-**Requirements**: Storymap expects some (rather common) js libs to be available:
-
-- jQuery (as it is a jQuery plugin)
-- Leaflet (because we need a map)
-
-In addition, the markup is based on Bootstrap 3.
-
-**Codes**
-
-Setup a html page like the one in index.html, include dependencies and do a
-
-```js
-el.storymap({scenes: dict_with_data});
-```
-
-on the element you wish to add a storymap to. By default, the plugin looks for elements that has a "data-place" attribute, sets the breakpoint 33% from the top of the page. This can be overridden by setting some options, like this:
-
-```js
-el.storymap({
-    scenes: dict_with_data,
-    selector: '[data-place]', //jquery for selectors to trigger an event
-    breakpointPos: '33.333%', //position of the breakpoint
-    createMap: function () { //function that creates a map
-        // create a map in the "map" div, set the view to a given place and zoom
-        var map = L.map('map').setView([65, 18], 5);
-        // add an OpenStreetMap tile layer
-        L.tileLayer(
-            'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-            {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}
-        ).addTo(map);
-        return map;
-    }
-});
-```
-
-Enrich the story line.
-
-```js
-var layers = {
-    'bing' : L.tileLayer.bing('AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L'),
-    'counties': L.geoJson(oregonData)
-};
-
-var scenes = {
-    overview: {lat: 44.2514788, lon: -120.3869201, zoom: 6},
-    portland: {lat: 45.5186089, lon: -122.6270297, zoom: 11},
-    corvallis: {lat: 44.5701158, lon: -123.2749388, zoom: 14, layer:layers['bing']},
-    eugene: {lat: 44.0549563, lon: -123.0758048, zoom: 13,  },
-    salem: {lat: 44.9419055, lon: -123.0356407, zoom: 13},
-    bend: {lat: 44.0519385, lon: -121.3042125, zoom: 14, layer:layers['bing']},
-    oregon: {lat: 44.2514788, lon: -120.3869201, zoom: 6, layer:layers['counties']}
-};
-
-$('.main').storymap({
-    scenes: scenes
-});
-```
+Please turn to [https://github.com/jakobzhao/storymap](https://github.com/jakobzhao/storymap). We will go over a tutorial on how to make a storymap based on this library.
 
 ## Reference
 
 1\. [https://en.wikipedia.org/wiki/Plot_(narrative)](https://en.wikipedia.org/wiki/Plot_(narrative))
+
+2\. [https://github.com/jakobzhao/storymap](https://github.com/jakobzhao/storymap)
 
 2\. [http://atlefren.github.io/storymap/](http://atlefren.github.io/storymap/)
