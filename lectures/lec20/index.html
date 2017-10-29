@@ -1,20 +1,63 @@
-<!DOCTYPE html>
-<html>
-<title>Thematic Web Maps I: Time Series</title>
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
-    <link rel="stylesheet" href="css/leaflet.timedimension.control.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-    <script type="text/javascript" src="js/iso8601.min.js"></script>
-    <script type="text/javascript" src="js/leaflet.timedimension.min.js"></script>
+    <title>Real-time Twitter Map</title>
+    <!--stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--javascript libraries-->
+    <script src="../socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+    <!--activate leaflet-heat to make heatmap-->
+    <!--<script src="js/leaflet-heat.js"></script>-->
+
+    <!--activate jquery and bootstrap to use the glyphicons-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-<div class="container">
-    <p> Sea Surface Temperature from NOAA Operational Climate Data Records</p>
-    <div id="map" ></div>
-</div>
-<script type="text/javascript" src="js/main.js"></script>
+<div id="map"></div>
+<script type="text/javascript">
+
+    // construct a leaflet map object
+    var map = L.map("map").setView([0, 0], 2);
+
+    // construct the base map.
+    L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png').addTo(map);
+
+    // make an empty heatmap layer
+    // var heatmap = L.heatLayer([], {radius: 10}).addTo(map);
+
+    // an data string object defined by socket.io.js
+    if(io !== undefined) {
+
+        // data streaming source connector
+        var socket = io.connect('/');
+
+        // listen to the "twstreaming" channel to receive tweets
+
+        socket.on('twstreaming', function (data) {
+
+            //add a dot in the glow effect
+            var marker = L.marker([data.lng, data.lat],  {icon: L.divIcon({className: 'glyphicon glyphicon-one-fine-smaller-dot glow-effect'})} ).addTo(map);
+
+            //add a dot in the heatmap layer
+            // heatmap.addLatLng([data.lng,data.lat])
+        });
+
+        // listen to the connected event to make sure the data streaming source is connected
+        socket.on("connected", function(r) {
+
+            // if connected, inform the server that the client is ready to receive tweets.
+            socket.emit("start tweets");
+        });
+    }
+
+</script>
 </body>
 </html>

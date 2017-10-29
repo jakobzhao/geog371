@@ -1,0 +1,13 @@
+{
+  "name": "twstreaming",
+  "private": true,
+  "author": "Bo Zhao",
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "*",
+    "twitter": "*",
+    "socket.io": "*"
+  }
+}
