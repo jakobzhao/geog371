@@ -1,4 +1,4 @@
-# Real-Time Mapping: TweetMap
+# # Thematic Web Maps II: Real-Time Mapping: TweetMap
 
 > Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >
