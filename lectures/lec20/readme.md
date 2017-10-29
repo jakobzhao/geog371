@@ -15,6 +15,8 @@ In this lecture, we will show how to stream real-time twitter data to leaflet ma
 
 ![](img/real-time-map.png)
 
+[tweetmap-osu.herokuapp.com](http://tweetmap-osu.herokuapp.com)
+
 ## 1. Server-side Javascript
 
 [Node.js](https://nodejs.org/en/about/) is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side. Historically, JavaScript was used primarily for client-side scripting, in which scripts written in JavaScript are embedded in a webpage's HTML, to be run client-side by a JavaScript engine in the user's web browser. Node.js enables JavaScript to be used for server-side scripting, and runs scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Consequently, Node.js has become one of the foundational elements of the **"JavaScript everywhere"** paradigm, allowing web application development to unify around a single programming language, rather than rely on a different language for writing server side scripts.
