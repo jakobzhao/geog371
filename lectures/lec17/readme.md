@@ -1,4 +1,4 @@
-# Thematic Web Maps III: Digital storytelling with web maps
+# Storytelling with Web Map I
 
 > Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >
