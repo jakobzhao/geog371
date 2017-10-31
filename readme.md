@@ -32,6 +32,14 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
  - [Data Source Table](project/datasource.md) (WK04)
  - [Interface Sketch](project/sketch.md) (WK05)
 
+### Tutorials
+
+- [Favicon]()
+- [Videos]()
+- [Images]()
+- [Iconagrpahy]()
+- [Web Fonts]()
+
 ### Texts
 
 No required textbook, but required papers and online materials will be available on the course repository on GitHub.

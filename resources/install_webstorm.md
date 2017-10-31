@@ -1,4 +1,4 @@
-# Install WebStorm on your personal pc/mac
+# Install WebStorm
 
 In Digital Lab @ Wilkinson 210, every computer has installed WebStorm.  To faciliate your use on your personal pc/mac, JetBrain actually allows students and teachers install a free edition of WebStorm on their personal PC or Mac. Besides, if you are working on an open source project, you can also apply for a free edition of WebStorm. (Think about someday you become an open source guru, or start up your own business on Web Mapping, you might want to have a powerful yet free/opensource IDE.) 
 

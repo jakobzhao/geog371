@@ -1,4 +1,4 @@
-# A tutorial on creating a web server with SimpleHTTPServer
+# Set up a web server with SimpleHTTPServer
 
 SimpleHTTPServer is a python module which allows you to instantly create a web server or serve your files in a snap. Main advantage of python’s SimpleHTTPServer is you don’t need to install anything since you have python interpreter installed. You don’t have to worry about python interpreter because almost all Linux distributions, python interpreter come handy by default.
 
