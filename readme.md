@@ -35,11 +35,11 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
 ### Tutorials
 
 - [Favicon](lectures/lec16/readme.md)
-- [Videos](resource/video.md)
-- [Images](resource/image.md)
-- [Iconagrpahy](resource/icon.md)
+- [Videos](resources/video.md)
+- [Images](resources/image.md)
+- [Iconagrpahy](resources/icon.md)
 - [Color](https://www.w3schools.com/colors/default.asp)
-- [Web Fonts](resource/fonts.md)
+- [Web Fonts](resources/fonts.md)
 
 ### Texts
 
