@@ -2,7 +2,10 @@
 
 You can integrate a video clip into your web mapping application. To do that, you will need to download a video from Youtube or other video resources, or, you can simply shoot one.
 
-There are multiple tools available for downloading youtube videos, such as [ClipConverter.cc](http://www.clipconverter.cc/). By copying and pasting the url of the youtube video, you can directly download the video. Please download the video in MP4 format, because this format is supported by most web browsers.
+There are multiple tools available for downloading youtube videos, such as [ClipConverter.cc](http://www.clipconverter.cc/). By copying and pasting the url of the youtube video, you can directly download the video.
+
+- Please download the video in MP4 format, because this format is supported by most web browsers.
+- Also please make sure the dimensions of the map as large as possible.On Youtube, most of the high resolution video clip is around 1920*1080.
 
 ## post-process video clip
 
