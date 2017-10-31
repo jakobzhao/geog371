@@ -29,7 +29,7 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
 **Course Project:star:**
  - [Guideline](project/readme.md) (WK02)
  - [Proposal]() (WK03)
- - [Data Source Table](project/datasource.md) (WK04)
+ - [Data Source](project/datasource.md) (WK04)
  - [Interface Sketch](project/sketch.md) (WK05)
 
 ### Tutorials
