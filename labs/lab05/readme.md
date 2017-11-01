@@ -10,12 +10,16 @@ In this lab, you are asked to make a storymap using the library `storymap.js` an
 
 Your storymap will at least have the following features:
 
-- At least five scenes. The content of the scenes can be obtained from Internet, historical archives, or even writing up by yourself. If you would like to use an external source, please do credit it in the `about page`; (**15 POINTS**)
+- At least five scenes. The content of the scenes can be obtained from Internet, historical archives, or even writing up by yourself. If you would like to use an external sources, please do metion others' contribution in the `about page`; (**15 POINTS**)
 
-- At least two types of thematic layers (to name a few, tileLayer, geojson/WFS Layer, OSM Layer, WMS Layer and etc.). These thematic layers can be made by yourself or included from other map providers; (**15 POINTS**)
+- At least two types of thematic layers (to name a few, tileLayer, geojson/WFS Layer, OSM Layer, WMS Layer and etc.). These thematic layers can be made by yourself or included from other web map providers; (**15 POINTS**)
+
 - An about page; and (**5 POINTS**)
+
 - A favicon;
+
 - A video or image on the front or end page;
+
 - A social media button to share the storymap to Facebook. (**5 POINTS**)
 
 
