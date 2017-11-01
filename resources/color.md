@@ -11,3 +11,6 @@ http://www.personal.psu.edu/cab38/ColorSch/SchHTMLs/CBColorSeqSeq.html
 http://www.personal.psu.edu/cab38/ColorSch/Schemes.html
 
 http://tolomaps.tumblr.com/post/131671267233/creating-a-bivariate-choropleth-color-scheme
+
+
+glow effects: http://www.joshuastevens.net/visualization/squatch-watch-92-years-of-bigfoot-sightings-in-us-and-canada/
