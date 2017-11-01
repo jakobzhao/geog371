@@ -79,12 +79,12 @@
     // determine the number of classes and their respective break values.
     var grades = [0, 10, 20, 50, 100, 200, 500, 1000];
 
-    // determine the color ramp. The number of colors is determined by the number of classes.
+    // determine the color.md ramp. The number of colors is determined by the number of classes.
     // try different interpolation method lch, lab, hsl
     //var colors = chroma.scale(['yellow', 'navy']).mode('hsl').colors(grades.length);
     var colors = chroma.scale('YlOrRd').colors(grades.length);
 
-    // get the color based on the class which the input value falls in.
+    // get the color.md based on the class which the input value falls in.
     function getColor(d) {
         for (var i = 0; i < grades.length - 1; i++) {
             if ( d > grades[i] && d < grades[i+1] ) return colors[i];

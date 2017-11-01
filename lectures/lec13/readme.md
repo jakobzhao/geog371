@@ -127,7 +127,7 @@ To capture the color of a map, you can follow the following procedure.
 
   ![](img/ppt.png)
 
-- In `Picture Border` dropdown list, you can get the RGB value of the color by clicking the `more color` item.
+- In `Picture Border` dropdown list, you can get the RGB value of the color by clicking the `more color.md` item.
 
   ![](img/color.png)
 

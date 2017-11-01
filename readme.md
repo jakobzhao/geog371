@@ -40,6 +40,7 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
 - [Iconagrpahy](resources/icon.md)
 - [Color](https://www.w3schools.com/colors/default.asp)
 - [Web Fonts](resources/fonts.md)
+- [Colors](resources/color.md)
 
 ### Texts
 

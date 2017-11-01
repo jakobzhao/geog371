@@ -55,12 +55,12 @@ $(document).ready(function() {
 
 $("code").on({
     mouseenter: function(){
-        $(this).css("background-color", "lightgray");
+        $(this).css("background-color.md", "lightgray");
     },
     mouseleave: function(){
-        $(this).css("background-color", "lightblue");
+        $(this).css("background-color.md", "lightblue");
     },
     click: function(){
-        $(this).css("background-color", "yellow");
+        $(this).css("background-color.md", "yellow");
     }
 });

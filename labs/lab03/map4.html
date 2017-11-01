@@ -50,7 +50,7 @@
     }).addTo(mymap);
 
 
-    // Set function for color ramp
+    // Set function for color.md ramp
     colors = chroma.scale('OrRd').mode('hsl').colors(5); //colors = chroma.scale('OrRd').colors(5);
 
     function setColor(density) {
@@ -64,7 +64,7 @@
     }
 
 
-    // Set style function that sets fill color property equal to cell tower density
+    // Set style function that sets fill color.md property equal to cell tower density
     function style(feature) {
         return {
             fillColor: setColor(feature.properties.CT_CNT),

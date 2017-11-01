@@ -16,7 +16,7 @@ L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 var colors = chroma.scale('Accent').mode('lch').colors(9);
 
 for (i = 0; i < 9; i++) {
-    $('head').append($("<style> .marker-color-" + (i + 1).toString() + " { color: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
+    $('head').append($("<style> .marker-color.md-" + (i + 1).toString() + " { color.md: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
 }
 
 
@@ -36,12 +36,12 @@ L.geoJson.ajax("assets/cell_towers.geojson", {
         else if (feature.properties.company == "Medford Cellular")  { id = 6; }
         else if (feature.properties.company == "Oregon RSA")  { id = 7; }
         else { id = 8;} // "Salem Cellular"
-        return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-signal marker-color-' + (id + 1).toString() })});
+        return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-signal marker-color.md-' + (id + 1).toString() })});
     }
 }).addTo(mymap);
 
 //https://github.com/gka/chroma.js/blob/master/src/colors/colorbrewer.coffee
-// Set function for color ramp
+// Set function for color.md ramp
 colors = chroma.scale('OrRd').mode('hsl').colors(5); //colors = chroma.scale('OrRd').colors(5);
 function setColor(density) {
     var id = 0;
@@ -53,7 +53,7 @@ function setColor(density) {
     return colors[id];
 }
 
-// Set style function that sets fill color property equal to cell tower density
+// Set style function that sets fill color.md property equal to cell tower density
 function style(feature) {
     return {
         fillColor: setColor(feature.properties.CT_CNT),
@@ -86,15 +86,15 @@ legend.onAdd = function () {
     div.innerHTML += '<i style="background: ' + colors[1] + '; opacity: 0.5"></i><p> 6-10</p>';
     div.innerHTML += '<i style="background: ' + colors[0] + '; opacity: 0.5"></i><p> 0- 5</p>';
     div.innerHTML += '<hr><b>Company<b><br />';
-    div.innerHTML += '<i class="fa fa-signal marker-color-1"></i><p> New Cingular</p>';
-    div.innerHTML += '<i class="fa fa-signal marker-color-2"></i><p> Cello</p>';
-    div.innerHTML += '<i class="fa fa-signal marker-color-3"></i><p> RCC Minnesota</p>';
-    div.innerHTML += '<i class="fa fa-signal marker-color-4"></i><p> Verizon</p>';
-    div.innerHTML += '<i class="fa fa-signal marker-color-5"></i><p> US Cellular</p>';
-    div.innerHTML += '<i class="fa fa-signal marker-color-6"></i><p> Hood River Cellular</p>';
-    div.innerHTML += '<i class="fa fa-signal marker-color-7"></i><p> Medford Cellular</p>';
-    div.innerHTML += '<i class="fa fa-signal marker-color-8"></i><p> Oregon RSA</p>';
-    div.innerHTML += '<i class="fa fa-signal marker-color-9"></i><p> Salem Cellular</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color.md-1"></i><p> New Cingular</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color.md-2"></i><p> Cello</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color.md-3"></i><p> RCC Minnesota</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color.md-4"></i><p> Verizon</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color.md-5"></i><p> US Cellular</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color.md-6"></i><p> Hood River Cellular</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color.md-7"></i><p> Medford Cellular</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color.md-8"></i><p> Oregon RSA</p>';
+    div.innerHTML += '<i class="fa fa-signal marker-color.md-9"></i><p> Salem Cellular</p>';
     // Return the Legend div containing the HTML content
     return div;
 };
