@@ -1,8 +1,8 @@
-#Icongraphy
+# Icongraphy
 
 Here are three main icon collectioins for web development, including Google material design, font awesome, and Bootstrap Glyphicon.
 
-##Google Material Design
+## Google Material Design
 
 Website: [https://material.io/icons/](https://material.io/icons/)
 
@@ -23,7 +23,7 @@ A Usage Guide: [http://zavoloklom.github.io/material-design-iconic-font/](http:/
 <i class="material-icons">face</i>
 ```
 
-##Bootstrap Glyphicon
+## Bootstrap Glyphicon
 
 website: https://getbootstrap.com/docs/3.3/components/
 
@@ -46,7 +46,7 @@ To call a Glyphicon, you will need to include the Bootstrap library and css in t
 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 ```
 
-##Font Awesome
+## Font Awesome
 
 **Usage**
 
