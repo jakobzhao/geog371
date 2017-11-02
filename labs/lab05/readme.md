@@ -12,19 +12,21 @@ In this lab, you are asked to make a storymap using the library `storymap.js`. T
 
 - At least 5 scenes. The content of the scenes can be obtained from Internet, historical archives, or even writing up by yourself. If you would like to use an external sources, please do mention their contribution in your credits information; (**10 POINTS**)
 
-- At least two types of layers (e.g., tileLayer or geojson layer). These layers can be made by yourself or from other web map providers; (**15 POINTS**)
+- At least two types of layers (e.g., tileLayer or geojson layer). These layers can be made by yourself or from other web map providers; (**10 POINTS**)
 
-- Story map controls (**5 POINTS**)
+> **Note:** Challenging yourself! Applying [a bivariate color ramp for your map](http://geoviz.ceoas.oregonstate.edu/storymap/color.html)
 
-    - A favicon;
+- Story map controls.
 
-    - A customized fonts for the texts of the storymap;
+    - A favicon; (**5 POINTS**)
 
-    - A video or image on the front or end page;
+    - A customized fonts for the texts of the storymap; (**5 POINTS**)
+
+    - A video or image on the front or end page; (**5 POINTS**)
 
     - A social media button to share the storymap to Facebook or Twitter. (**5 POINTS**)
 
-The structure of your github repository should like something below. (**5 POINTS**)
+The structure of your github repository should like something below.
 
 ```Powershell
 [Submission_Lab_05]
@@ -36,6 +38,7 @@ The structure of your github repository should like something below. (**5 POINTS
 ├─img
 
 ```
+
 
 
 ## 3. Deliverable
