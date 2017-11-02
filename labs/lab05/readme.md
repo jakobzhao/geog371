@@ -42,7 +42,6 @@ The structure of your github repository should like something below.
 ├─img
 ```
 
-
 ## 3. Deliverable
 
 Once you complete this lab assignment, please make sure both the github repository and the web site work appropriately. Then, you will need to submit the url of the GitHub repository to **Canvas Dropbox**. (On the assignment tab,  press the `Submit Assignment` button to submit. Please contact the instructor or TA if you have any difficulty.)
