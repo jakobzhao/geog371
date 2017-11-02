@@ -6,23 +6,38 @@
 >
 > **Assigned:** 11/02/2017 | **Due:** `11/16/2017 @11:59pm` | **Points Available** = 50
 
-In this lab, you are asked to make a storymap using the library `storymap.js` and then share it to GitHub. We have already gone over the usage of this library at [https://github.com/jakobzhao/storymap](https://github.com/jakobzhao/storymap).
+In this lab, you are asked to make a storymap using the library `storymap.js`. This storymap.js library is hosted at [https://github.com/jakobzhao/storymap](https://github.com/jakobzhao/storymap). Your storymap will at least have the following features:
 
-Your storymap will at least have the following features:
+- In the readme file, please describe the storyline of your story map. You may refer to the lecture notes on three-action (step, confrantation, and resolution) or five-action storytelling structures. (**10 POINTS**)
 
-- At least five scenes. The content of the scenes can be obtained from Internet, historical archives, or even writing up by yourself. If you would like to use an external sources, please do metion others' contribution in the `about page`; (**15 POINTS**)
+- At least 5 scenes. The content of the scenes can be obtained from Internet, historical archives, or even writing up by yourself. If you would like to use an external sources, please do mention their contribution in your credits information; (**10 POINTS**)
 
-- At least two types of thematic layers (to name a few, tileLayer, geojson/WFS Layer, OSM Layer, WMS Layer and etc.). These thematic layers can be made by yourself or included from other web map providers; (**15 POINTS**)
+- At least two types of layers (e.g., tileLayer or geojson layer). These layers can be made by yourself or from other web map providers; (**15 POINTS**)
 
-- An about page; and (**5 POINTS**)
+- Story map controls (**5 POINTS**)
 
-- A favicon;
+    - A favicon;
 
-- A video or image on the front or end page;
+    - A customized fonts for the texts of the storymap;
 
-- A social media button to share the storymap to Facebook. (**5 POINTS**)
+    - A video or image on the front or end page;
+
+    - A social media button to share the storymap to Facebook or Twitter. (**5 POINTS**)
+
+The structure of your github repository should like something below. (**5 POINTS**)
+
+```Powershell
+[Submission_Lab_05]
+│   readme.md
+│   index.html
+├─assets
+├─js
+├─css
+├─img
+
+```
 
 
 ## 3. Deliverable
 
-Submit the url link of your storymap repository to **Canvas Dropbox**. On the assignment tab,  check the item of this PE, press the `Submit Assignment` button to submit your PE report. Please contact the instructor or TA if you have any difficulty.
+Once you complete this lab assignment, please make sure both the github repository and the web site work appropriately. Then, you will need to submit the url of the GitHub repository to **Canvas Dropbox**. (On the assignment tab,  press the `Submit Assignment` button to submit. Please contact the instructor or TA if you have any difficulty.)

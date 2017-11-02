@@ -82,7 +82,7 @@ Fill out our [contact form](https://www.mapbox.com/contact/sales/), including a 
 ```
 
 
-To submit this practical exercise, you will need to submit the url of the GitHub repository to **Canvas Dropbox**. On the assignment tab,  check the item of this PE, press the `Submit Assignment` button to submit your PE report. Please contact the instructor or TA if you have any difficulty.
+Once you complete this lab assignment, please make sure both the github repository and the web site work appropriately. Then, you will need to submit the url of the GitHub repository to **Canvas Dropbox**. (On the assignment tab,  press the `Submit Assignment` button to submit. Please contact the instructor or TA if you have any difficulty.)
 
 
 ## References:
