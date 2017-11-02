@@ -40,7 +40,6 @@ The structure of your github repository should like something below.
 ├─js
 ├─css
 ├─img
-
 ```
 
 
