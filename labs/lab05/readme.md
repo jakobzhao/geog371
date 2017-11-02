@@ -24,7 +24,11 @@ In this lab, you are asked to make a storymap using the library `storymap.js`. T
 
     - A video or image on the front or end page; (**5 POINTS**)
 
-    - A social media button to share the storymap to Facebook or Twitter. (**5 POINTS**)
+    - A social media button to share the storymap to Facebook or Twitter; (**5 POINTS**)
+
+    - credit information or acknowledgement;
+
+    - A github button to point to your github repository.
 
 The structure of your github repository should like something below.
 
