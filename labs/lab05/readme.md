@@ -16,7 +16,7 @@ In this lab, you are asked to make a storymap using the library `storymap.js`. T
 
 > **Note:** Challenging yourself! Applying [a bivariate color ramp for your map](http://geoviz.ceoas.oregonstate.edu/storymap/color.html)
 
-- Story map controls.
+- The storymap should at least include the following controls.
 
     - A favicon; (**5 POINTS**)
 
