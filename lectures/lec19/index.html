@@ -2,44 +2,102 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Color</title>
+    <title>Bivariate Color Pallete Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <style>
-
+        table {
+            text-align:center;
+            margin-left:auto;
+            margin-right:auto;
+        }
         th {
-            width: 230px;
-            height: 230px;
+            width: 100px;
+            height: 100px;
             float: left;
+            font-size: 12px;
+            font-family: Roboto;
+            color: white;
+            text-shadow: 0 0 2px rgb(0, 0, 0);
+        }
+        #title {
+            font-size: 20px;
+            text-align: center;
+            font-family: Roboto;
+            color: #4b4b4b;
+            text-shadow: 0 0 1px rgb(197, 197, 197);
         }
 
-
+        #footer {
+            font-size: 14px;
+            text-align: center;
+            font-family: Roboto;
+            color: #4b4b4b;
+            text-shadow: 0 0 1px rgb(197, 197, 197);
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
 </head>
 <body>
-<table>
-    <tr>
-        <th class="patch-1"></th>
-        <th class="patch-2"></th>
-        <th class="patch-3"></th>
-    </tr>
-    <tr>
-        <th class="patch-4"></th>
-        <th class="patch-5"></th>
-        <th class="patch-6"></th>
-    </tr>
-    <tr>
-        <th class="patch-7"></th>
-        <th class="patch-8"></th>
-        <th class="patch-9"></th>
-    </tr>
-</table>
+
+<p id="title"> A Bivariate Color Pallet Generator</p>
+
+<table></table>
+<p id="footer">&copy; Bo Zhao, Oregon State University</p>
 <script>
 
-    var colors = chroma.scale(['blue','red']).mode('lch').colors(9);
+    var colors = [];
+    var ch_orig = "#ff7363";
+    var cv_orig = "#788bff";
+    var c_end = "#fff8ed";
+    var ch_num =4;
+    var cv_num = 4;
+    var input = 1;
+    var ch = [];
+    var cv = [];
+    var tr = null;
 
-    for (i = 0; i < 9; i++) {
-        $('head').append($("<style> .patch-" + (i + 1).toString() + " { background: " + colors[i] + "} </style>"));
+
+    var coef = function (input, sequence) {
+         //return input * Math.sqrt(sequence);
+        return input * Math.pow(sequence,0.80)
+        //return input * sequence;
+        //return input * sequence*sequence;
+    };
+
+
+    for (var i = 0; i < ch_num; i++) {
+        //alpha, darken, brighten, saturate, desaturate
+        ch[i] = chroma(ch_orig).brighten(coef(input, i));
+    }
+
+
+    for (i = 0; i < cv_num; i++) {
+        //alpha, darken, brighten, saturate, desaturate
+        cv[i] = chroma(cv_orig).brighten(coef(input, i));
+    }
+
+
+    ch = chroma.scale([ch_orig, c_end]).mode('hsv').correctLightness().colors(ch_num);
+    cv = chroma.scale([cv_orig, c_end ]).mode('hsv').correctLightness().colors(cv_num);
+
+    for (i = 0; i < ch_num; i++) {
+        tr = $("<tr></tr>");
+        for (var j = 0; j < cv_num; j++) {
+            // multiply, darken, lighten, screen overlay, burn, dogde
+            //colors[i * cv_num + j] = chroma.blend(ch[i], cv[j], 'multiply');
+            colors[i * cv_num + j] = chroma.blend(ch[i], cv[j], 'multiply');
+            //colors[ i * cv_num + j] = chroma.average([ch[i],cv[j]]);
+            // colors[ i * cv_num + j] = chroma.mix(ch[i],cv[j]);
+            tr.append("<th class='patch-" + (i * cv_num + j).toString() + "'>" + colors[i * cv_num + j] + "</th>")
+        }
+        $("table").append(tr);
+
+    }
+
+
+    for (i = 0; i < ch_num * cv_num; i++) {
+        $('head').append($("<style> .patch-" + (i ).toString() + " { background: " + colors[i] + "} </style>"));
     }
 
 </script>
