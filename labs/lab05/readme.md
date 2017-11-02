@@ -20,7 +20,7 @@ In this lab, you are asked to make a storymap using the library `storymap.js`. T
 
     - A favicon; (**5 POINTS**)
 
-    - A customized fonts for the texts of the storymap; (**5 POINTS**)
+    - customized fonts for the texts of the storymap; (**5 POINTS**)
 
     - A video or image on the front or end page; (**5 POINTS**)
 
