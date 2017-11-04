@@ -5,15 +5,15 @@
     <title>Real-time Twitter Map</title>
     <!--stylesheets-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
     <link rel="stylesheet" href="css/main.css">
 
     <!--javascript libraries-->
-    <script src="../socket.io/socket.io.js"></script>
-    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
 
     <!--activate leaflet-heat to make heatmap-->
-    <!--<script src="js/leaflet-heat.js"></script>-->
+    <script src="js/leaflet-heat.js"></script>
 
     <!--activate jquery and bootstrap to use the glyphicons-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -31,7 +31,7 @@
     L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png').addTo(map);
 
     // make an empty heatmap layer
-    // var heatmap = L.heatLayer([], {radius: 10}).addTo(map);
+     var heatmap = L.heatLayer([], {radius: 10}).addTo(map);
 
     // an data string object defined by socket.io.js
     if(io !== undefined) {
@@ -47,7 +47,7 @@
             var marker = L.marker([data.lng, data.lat],  {icon: L.divIcon({className: 'glyphicon glyphicon-one-fine-smaller-dot glow-effect'})} ).addTo(map);
 
             //add a dot in the heatmap layer
-            // heatmap.addLatLng([data.lng,data.lat])
+             heatmap.addLatLng([data.lng,data.lat])
         });
 
         // listen to the connected event to make sure the data streaming source is connected

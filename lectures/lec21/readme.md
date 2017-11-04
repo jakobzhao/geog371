@@ -135,7 +135,7 @@ If it is desired to display the input dataset in its orginal form, or transforme
 Once applying this SLD file to the cell tower shapefile, we can access the heatmap from the url below:
 
 ```http
-http://www.mapio.us/geoserver/ceoas/wms?service=WMS&version=1.1.0&request=GetMap&layers=ceoas:celltowers&styles=&bbox=-124.5064,42.0056,-116.9653,46.1664&width=768&height=423&srs=EPSG:4326&format=application/openlayers
+http://mapious.ceoas.oregonstate.edu/geoserver/mapious/wms?service=WMS&version=1.1.0&request=GetMap&layers=mapious:heatmap_celltowers&styles=&bbox=-124.5064,42.0056,-116.9653,46.1664&width=768&height=423&srs=EPSG:4326&format=application/openlayers
 ```
 
 ![](img/heatmap-geoserver.png)

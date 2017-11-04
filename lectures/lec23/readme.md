@@ -111,7 +111,7 @@ You could also setup up a web server with `Node.js`. It takes 3 steps.
 
 1. Install Node.js from their [website](http://nodejs.org/), you can use the default install settings.
 2. Open a command shell in the Cesium root directory and download/install the required modules by executing `npm install`. This will create a ‘node_modules’ directory in the root directory.
-3. Finally, start your web server by executing `node server.js` in the root directory.
+3. Finally, start your web server by executing `node app.js` in the root directory.
 
 ### 2.3 Hello world!
 

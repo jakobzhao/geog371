@@ -1,4 +1,4 @@
-# # Thematic Web Maps II: Real-Time Mapping: TweetMap
+# Thematic Web Maps II: Real-Time Mapping: TweetMap
 
 > Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >
@@ -8,7 +8,7 @@
 
 - Get to know the Server-side Javascript;
 - Understand some basic packages for Server-side Javascript; and
-- Making a real-time twitter map using NodeJs.
+- Making a real-time twitter map using Node.js.
 
 In this lecture, we will show how to stream real-time twitter data to leaflet map using NodeJS. Before coding, we will firstly cover some basic concepts, such as Server-side Javascript, nodejs, npm, express.js, socket.io and twitter. After that, I will take you walk through how to make a real-time twitter map like below.
 
@@ -116,7 +116,7 @@ This section is greatly inspired by [Stewart Harper](https://plus.google.com/114
 
 ### 2.1 Server-side
 
-Two files power the server side: `package.json` and `server.js`.
+Two files power the server side: `package.json` and `app.js`.
 
 `Package.json` holds a variety of metadata related to the project and lists dependencies.
 
@@ -151,3 +151,4 @@ Read and download the source codes of this real-time twitter map from this lectu
 ## 3. Sum-up
 
 How do we take this further? It would be great to dig deeper into the incoming data and rather than just visualizing the data explore trends and gain intelligence. I also wonder what happens if we want to mashup different data sources and read data from other web services or lower-level protocols, such as TCP/IP or WebSockets.
+
