@@ -60,17 +60,17 @@
                                 '#ffffb2' ;
     }
 
-    var dataSource = Cesium.GeoJsonDataSource.load('assets/nyc_noise.geojson').then(
+    var dataSource = Cesium.GeoJsonDataSource.load('assets/airports.geojson').then(
         function(dataSource) {
 
             var p = dataSource.entities.values;
 
-            for (var i = 0; i < p.length; i++) {
-
-                p[i].polygon.material = Cesium.Color.fromCssColorString(setColor(p[i].properties.cnt));
-                p[i].polygon.extrudedHeight = p[i].properties.cnt * p[i].properties.cnt * 0.004 ;
-                p[i].polygon.outline = false;
-            }
+//            for (var i = 0; i < p.length; i++) {
+//
+//                p[i].polygon.material = Cesium.Color.fromCssColorString(setColor(p[i].properties.cnt));
+//                p[i].polygon.extrudedHeight = p[i].properties.cnt * p[i].properties.cnt * 0.004 ;
+//                p[i].polygon.outline = false;
+//            }
 
             viewer.dataSources.add(dataSource);
             viewer.zoomTo(dataSource);

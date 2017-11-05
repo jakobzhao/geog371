@@ -23,13 +23,14 @@
     // base map services from cartodb: http://bl.ocks.org/Xatpy/raw/854297419bd7eb3421d0/
     //https://cartocdn_{s}.global.ssl.fastly.net/base-midnight/{z}/{x}/{y}.png
     Cesium.BingMapsApi.defaultKey = "AgUQJFnmoxa47CoxZf-zslnbrBqBzATAxYAiQnd__-q8eGgLZu1ygR8_p2jI3Y9u";
+
     var viewer = new Cesium.Viewer('cesiumContainer', {
-       imageryProvider: Cesium.MapboxImageryProvider({
-        mapId: 'digitalglobe.92ee07af',
-        accessToken: 'pk.eyJ1IjoiZGlnaXRhbGdsb2JlIiwiYSI6ImNqNTVpYW1jbDBlNHYycXVnbTJrNTUwazUifQ.DF85c-omTlwEApu2NJKf7w',
-        credit: 'DigitalGlobe Maps API'
+       imageryProvider :Cesium.createOpenStreetMapImageryProvider({
+        url : 'http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
+        fileExtension: 'png',
+        credit: 'Map tiles by CartoDB.'
     }),
-                terrainProvider: new Cesium.CesiumTerrainProvider({
+        terrainProvider: new Cesium.CesiumTerrainProvider({
             url: '//assets.agi.com/stk-terrain/world'
         }),
         baseLayerPicker : false,
@@ -38,41 +39,16 @@
         timeline : false
     });
 
-
-//    var viewer = new Cesium.Viewer('cesiumContainer', {
-//       imageryProvider :Cesium.createOpenStreetMapImageryProvider({
-//        url : 'http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
-//        fileExtension: 'png',
-//        credit: 'Map tiles by CartoDB.'
-//    }),
-//        terrainProvider: new Cesium.CesiumTerrainProvider({
-//            url: '//assets.agi.com/stk-terrain/world'
-//        }),
-//        baseLayerPicker : false,
-//        geocoder: false,
-//        animation : false,
-//        timeline : false
-//    });
-
    var layers = viewer.scene.imageryLayers;
-//
+
+
 //    var esri = new Cesium.ArcGisMapServerImageryProvider({
 //        url : 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer'
 //    });
-
-
-//   var dg = new Cesium.MapboxImageryProvider({
-//                mapId: 'digitalglobe.92ee07af',
-////Get your DigitalGlobe Maps API Access Token here: http://developer.digitalglobe.com/maps-api
-//                accessToken: 'pk.eyJ1IjoiZGlnaXRhbGdsb2JlIiwiYSI6ImNqNTVpYW1jbDBlNHYycXVnbTJrNTUwazUifQ.DF85c-omTlwEApu2NJKf7w',
-//                credit: 'DigitalGlobe Maps API'
-//            });
-
-//    layers.addImageryProvider(dg);
-
-
 //
 //    layers.addImageryProvider(esri);
+
+
     logo = new Cesium.SingleTileImageryProvider({
         url : 'img/logo-bg.jpg',
         rectangle : Cesium.Rectangle.fromDegrees(-75.0, 23.0, -67.0, 29.75)
