@@ -422,7 +422,7 @@ Regarding the grading criteria, this web map of airports needs include:
 
 - you will need to synchronize this project to a github repository. And make sure the web map is accessible from a url link, which should be similar to `http://[your_github_username].github.io/[your_repository_name]/index.html`. (You may want to check out previous lecture or lab handouts on project management and hosting via github); **(6 points)**
 
-- please make sure the internal structure of the files in your project repository is well organized. For example, it may be similiar to the file structure below. **(4 points)**
+- please make sure the internal structure of the files in your project repository is well organized. For example, it may be similar to the file structure below. **(4 points)**
 
 ```powershell
 [your_repository_name]
