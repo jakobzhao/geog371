@@ -4,6 +4,9 @@
 >
 > Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
 
+
+<iframe src="https://tweetmap-osu.herokuapp.com" width="800px" height="600px" > </iframe>
+
 **Learning Objectives**
 
 - Get to know the Server-side Javascript;
@@ -13,8 +16,6 @@
 In this lecture, we will show how to stream real-time twitter data to leaflet map using NodeJS. Before coding, we will firstly cover some basic concepts, such as Server-side Javascript, nodejs, npm, express.js, socket.io and twitter. After that, I will take you walk through how to make a real-time twitter map like below.
 
 ![](img/real-time-map.png)
-
-<iframe src="https://tweetmap-osu.herokuapp.com" width="800px" height="600px" > </iframe>
 
 [tweetmap-osu.herokuapp.com](http://tweetmap-osu.herokuapp.com)
 
