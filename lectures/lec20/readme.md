@@ -4,15 +4,7 @@
 >
 > Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
 
-{::nomarkdown}
-
-<iframe src="https://tweetmap-osu.herokuapp.com" width="800px" height="600px" > </iframe>
-
-{:/}
-
-<iframe src="https://tweetmap-osu.herokuapp.com" width="800px" height="600px" > </iframe>
-
-[[download_button]]
+[[project_screenshots]]
 
 
 
