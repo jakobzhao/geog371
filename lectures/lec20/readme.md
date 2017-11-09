@@ -4,10 +4,6 @@
 >
 > Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
 
-[[project_screenshots]]
-
-
-
 **Learning Objectives**
 
 - Get to know the Server-side Javascript;
