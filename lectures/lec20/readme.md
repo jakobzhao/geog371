@@ -14,6 +14,9 @@ In this lecture, we will show how to stream real-time twitter data to leaflet ma
 
 ![](img/real-time-map.png)
 
+
+<iframe src="https://tweetmap-osu.herokuapp.com"></iframe>
+
 [tweetmap-osu.herokuapp.com](http://tweetmap-osu.herokuapp.com)
 
 ## 1. Server-side Javascript
