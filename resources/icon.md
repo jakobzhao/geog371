@@ -65,3 +65,17 @@ website: http://fontawesome.io/
 ```
 
 If you are interested in more about icons, please read [https://www.w3schools.com/icons/default.asp](https://www.w3schools.com/icons/default.asp).
+
+## Map Icon
+
+website: http://map-icons.com/
+
+Map Icons extends the Google Maps Marker Object to enable either an image or SVG marker to be used with the icon placed on top as a label.
+
+Include the fonts in the dist/font directory as well as the dist/css/map-icons.css stylesheet to use icons in markup as an icon font.
+
+To use the icons with Google Maps include dist/js/map-icons.js
+
+Icon class names are to be used with the map-icon class prefix.
+
+<span class="map-icon map-icon-point-of-interest"></span>
