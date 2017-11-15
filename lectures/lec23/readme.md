@@ -287,20 +287,6 @@ We usually construct an imagery provider just to create a layer, then we manipul
 
 An *imagery layer collection*, like `layers` in the above examples, determines the order in which layers are drawn. Layers are drawn bottom-to-top based on the order they are added. Imagery layer collections are manipulated like any other collection in Cesium using functions like `add`, `remove`, and `get`. In addition, layers can be reordered using `raise`, `raiseToTop`, `lower`, and `lowerToBottom`. See [ImageryLayerCollection](http://cesiumjs.org/Cesium/Build/Documentation/ImageryLayerCollection.html).
 
-**Cross-origin resource sharing**
-
-As a security measure, today’s web browsers take pains to prevent Javascript code from reading the pixels of an image that comes from a different site. In particular, [WebGL](http://www.khronos.org/webgl/) applications like Cesium are [forbidden from using images as textures](http://www.khronos.org/webgl/security/#Cross-Origin_Media) if those images - imagery tiles in our case - come from a different host name or port and the server does not explicitly allow the images to be used in this way. The server indicates that the images do not contain confidential information, and it is therefore safe for other sites to read their pixels, by including [Cross-Origin Resource Sharing](http://enable-cors.org/) (CORS) headers in the HTTP response.
-
-Unfortunately, not all imagery services support CORS. For those that don’t, a proxy server at the same origin as the website hosting Cesium must be used. When using such a proxy, tiles appear to the web browser and the Cesium client as if they came from the same origin as the Cesium-based website. To use a proxy with an imagery provider, use the `proxy` property when constructing the imagery provider. Cesium includes a [simple proxy](https://github.com/AnalyticalGraphicsInc/cesium/blob/1.26/server.js#L87-L128) written in Node.js for development purposes.
-
-```javascript
-layers.addImageryProvider(new Cesium.ArcGisMapServerImageryProvider({
-    url : 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer',
-    proxy : new Cesium.DefaultProxy('/proxy/')
-}));
-```
-
-
 
 ## References:
 
