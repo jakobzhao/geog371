@@ -84,63 +84,45 @@ Cesium is built on several new HTML5 technologies, the most important of which i
 
 3. If you’re still having problems, try visiting [http://get.webgl.org/](http://get.webgl.org/), which offers additional trouble-shooting advice. You can also ask for help on the [Cesium forum](http://cesiumjs.org/forum.html).
 
-### 2.2 Downloading a Cesium release
+### 2.2 Hello world! Example.
 
-Download the latest version of Cesium.js from [http://cesiumjs.org/releases/Cesium-1.30.zip](http://cesiumjs.org/releases/Cesium-1.30.zip). Each Cesium release contains:
-
-- The HTML reference documentation, located in the Build/Documentation directory.
-- Cesium.js and all required dependencies, located in the Build/Cesium directory.
-- Asynchronous Module Definition (AMD) modules, located in Source.
-- HelloWorld.html, the simplest possible Cesium application, loaded in Apps/HelloWorld.html.
-- Cesium Viewer, a simple reference application, at Apps/CesiumViewer.
-- Cesium Sandcastle, a live code editor and example gallery, at Apps/Sandcastle.
-- A Node.js-based development server for getting up and running quickly.
-
-Once downloaded, extract the zip file into a new directory of your choice, I’ll refer to this throughout the tutorial as the Cesium root directory. The contents should look something like the below.
-
-
-![](img/CesiumContents.png)
-
-It may be tempting to double-click on index.html, but we’ll only be greeted with disappointment. In order for the application to actually work, it needs to run within a web server. To host the files as a web environment, you can import the directory in WebStorm or open the python SimpleHTTPServer. Cesium has no server requirements; it is completely client side. This means any web server that can host static content can also host Cesium.
-
-```powershell
-$python -m SimpleHTTPServer
-```
-
-You could also setup up a web server with `Node.js`. It takes 3 steps.
-
-1. Install Node.js from their [website](http://nodejs.org/), you can use the default install settings.
-2. Open a command shell in the Cesium root directory and download/install the required modules by executing `npm install`. This will create a ‘node_modules’ directory in the root directory.
-3. Finally, start your web server by executing `node app.js` in the root directory.
-
-### 2.3 Hello world!
-
-Now that we have a web server up and running, we can launch a browser and navigate to [](http://localhost:8000/Apps/HelloWorld.html). This is the same Hello World application we used to test WebGL at the beginning of the tutorial, but now it’s running on your own system instead of the Cesium website. If we open up `HelloWorld.html` in an editor, we’ll find the following simple application.
+If you open up `test.html` in an editor, you’ll find the following simple application.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Use correct character set. -->
-  <meta charset="utf-8">
-  <!-- Tell IE to use the latest, best version. -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <title>Hello World!</title>
-  <script src="../Build/Cesium/Cesium.js"></script>
-  <style>
-      @import url(../Build/Cesium/Widgets/widgets.css);
-      html, body, #cesiumContainer {
-          width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
-      }
-  </style>
+    <!-- Use correct character set. -->
+    <meta charset="utf-8">
+    <!-- Tell IE to use the latest, best version. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css">
+    <script src="https://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js"></script>
+    <style>
+        html, body, #cesiumContainer {
+            width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-  <div id="cesiumContainer"></div>
-  <script>
-    var viewer = new Cesium.Viewer('cesiumContainer');
-  </script>
+<div id="cesiumContainer"></div>
+<script>
+
+    Cesium.BingMapsApi.defaultKey = "AgUQJFnmoxa47CoxZf-zslnbrBqBzATAxYAiQnd__-q8eGgLZu1ygR8_p2jI3Y9u";
+
+    var viewer = new Cesium.Viewer('cesiumContainer', {
+        baseLayerPicker : false,
+        geocoder: false,
+        animation : false,
+        timeline : false
+    });
+
+    var layers = viewer.scene.imageryLayers;
+
+</script>
 </body>
 </html>
 ```
@@ -150,13 +132,13 @@ These are the four lines needed to add Cesium to an application:
 The first step is to include Cesium.js in a script tag. This defines the Cesium object, which contains everything we need.
 
 ```html
- <script src="../Build/Cesium/Cesium.js"></script>
+ <script src="https://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js"></script>
 ```
 
 In order to use the Cesium Viewer widget, we need to include its CSS.
 
 ```css
- @import url(../Build/Cesium/Widgets/widgets.css);
+<link rel="stylesheet" href="https://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css">
 ```
 
 In the HTML body, we create a div for the viewer to live.
