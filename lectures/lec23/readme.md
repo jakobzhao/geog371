@@ -86,7 +86,7 @@ Cesium is built on several new HTML5 technologies, the most important of which i
 
 ### 2.2 Hello world! Example.
 
-If you open up `test.html` in an editor, you’ll find the following simple application.
+If you open up `helloworld.html` in an editor, you’ll find the following simple application.
 
 ```html
 <!DOCTYPE html>
@@ -111,20 +111,12 @@ If you open up `test.html` in an editor, you’ll find the following simple ap
 <div id="cesiumContainer"></div>
 <script>
 
-    Cesium.BingMapsApi.defaultKey = "AgUQJFnmoxa47CoxZf-zslnbrBqBzATAxYAiQnd__-q8eGgLZu1ygR8_p2jI3Y9u";
-
-    var viewer = new Cesium.Viewer('cesiumContainer', {
-        baseLayerPicker : false,
-        geocoder: false,
-        animation : false,
-        timeline : false
-    });
-
-    var layers = viewer.scene.imageryLayers;
-
+    //Cesium.BingMapsApi.defaultKey = "AgUQJFnmoxa47CoxZf-zslnbrBqBzATAxYAiQnd__-q8eGgLZu1ygR8_p2jI3Y9u";
+    var viewer = new Cesium.Viewer('cesiumContainer');
 </script>
 </body>
 </html>
+
 ```
 
 These are the four lines needed to add Cesium to an application:
@@ -163,83 +155,8 @@ Let’s ignore the details for the moment and just jump in by writing code to ad
 var viewer = new Cesium.Viewer('cesiumContainer', {
     imageryProvider : new Cesium.ArcGisMapServerImageryProvider({
         url : 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer'
-    }),
-    baseLayerPicker : false
+    })
 });
-```
-
-After modifying the example, visit it at [http://localhost:8000/index.html](http://localhost:8000/index.html), please make sure you have the root directory of this lecture hosted by python SimpleHTTPServer.
-
-![](img/esri.png)
-
-We can zoom in and out, and the layer streams in as needed.
-
-Next, add another layer: [NASA Black Marble imagery](http://earthobservatory.nasa.gov/Features/NightLights/) available using [Tile Map Service](http://cesiumjs.org/Cesium/Build/Documentation/TileMapServiceImageryProvider.html) (TMS):
-
-```javascript
-var layers = viewer.scene.imageryLayers;
-var blackMarble = layers.addImageryProvider(new Cesium.TileMapServiceImageryProvider({
-    url : '//cesiumjs.org/tilesets/imagery/blackmarble',
-    maximumLevel : 8,
-    credit : 'Black Marble imagery courtesy NASA Earth Observatory'
-}));
-```
-
-![](img/blackMarble.png)
-
-Since it was added last and covers the full extent of the globe, the Black Marble layer covers up the Esri layer. We could move Black Marble to the bottom with layers.lower(blackMarble);, but instead let’s blend it with the Esri layer so we have a better sense of how the two layers relate:
-
-```javascript
-blackMarble.alpha = 0.5; // 0.0 is transparent.  1.0 is opaque.
-```
-
-![](img/blackMarbleAlpha.png)
-
-Next, increase the brightness of the lights:
-
-![](img/blackMarbleBrightness.png)
-
-```javascript
-blackMarble.brightness = 2.0; // > 1.0 increases brightness.  < 1.0 decreases.
-```
-
-To finish, add a third layer that draws a single image over a particular extent.
-
-
-![](img/singleTile.png)
-
-```javascript
-layers.addImageryProvider(new Cesium.SingleTileImageryProvider({
-  url : 'img/logo-bg.jpg',
-  rectangle : Cesium.Rectangle.fromDegrees(-75.0, 23.0, -67.0, 29.75)
-}));
-```
-
-The complete code is:
-
-```javascript
-var viewer = new Cesium.Viewer('cesiumContainer', {
-    imageryProvider : new Cesium.ArcGisMapServerImageryProvider({
-        url : 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer'
-    }),
-    baseLayerPicker : false
-});
-
-var layers = viewer.scene.imageryLayers;
-var blackMarble = layers.addImageryProvider(new Cesium.TileMapServiceImageryProvider({
-    url : 'http://cesiumjs.org/tilesets/imagery/blackmarble',
-    maximumLevel : 8,
-    credit : 'Black Marble imagery courtesy NASA Earth Observatory'
-}));
-
-blackMarble.alpha = 0.5; // 0.0 is transparent.  1.0 is opaque.
-
-blackMarble.brightness = 2.0; // > 1.0 increases brightness.  < 1.0 decreases.
-
-layers.addImageryProvider(new Cesium.SingleTileImageryProvider({
-  url : 'img/logo-bg.jpg',
-  rectangle : Cesium.Rectangle.fromDegrees(-75.0, 23.0, -67.0, 29.75)
-}));
 ```
 
 ### 2.5 Imagery providers

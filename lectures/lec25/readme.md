@@ -1,4 +1,4 @@
-# 3D Web Mapping IV: Thematic Map using a Virtual Globe
+# 3D Web Mapping III: Thematic Map using a Virtual Globe
 
 > Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >

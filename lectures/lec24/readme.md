@@ -1,4 +1,4 @@
-# 3D Web Mapping III: Building a Virtual Environment
+# 3D Web Mapping II: Building a Virtual Environment
 
 > Fall 2017 | Geography 371 | Geovisualization: Web Mapping
 >
