@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Map</title>
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <style>
+
+        html {
+            /*full screen the map*/
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        .arrow-label {
+            color: #ffffff;
+            text-shadow: 0 0 2px black;
+        }
+
+    </style>
+    <!-- Add the Leaflet JavaScript library -->
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-swoopy@2.0.0/build/Leaflet.SwoopyArrow.js"></script>
+</head>
+<body>
+<!-- Our web map and content will go here -->
+<div id="map"></div>
+
+<script>
+    // Create variable to hold map element, give initial settings to map
+    var map = L.map('map', {
+        center: [53.52, 13.4],
+        zoom: 9
+    });
+
+    // Add OpenStreetMap tile layer to map element
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    // help: https://wbkd.github.io/leaflet-swoopy/
+    var swoopy = L.swoopyArrow([53.52, 13.4], [53.525, 14.41], {
+        text: 'hello!',
+        weight: 3,
+        opacity: 0.5,
+        fontSize: 20,
+        color: "#bb0017",
+        iconAnchor: [0, 0],
+        textClassName: "arrow-label"
+    }).addTo(map);
+
+
+</script>
+</body>
+</html>
