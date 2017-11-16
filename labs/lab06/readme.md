@@ -40,7 +40,7 @@ noise_complaints
 
 ## 2\. HTML template
 
-Above all, we will create an html page and include the necessary libraries. As shown, within the `body` div, we place two div elements - one for anchoring the virtual globe container and one for anchoring the legend. In addition, the style sheet locates at `css/style.css`. In order to make the application more light-weight, we use external links to include cesium libraries from [http://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js](http://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js) and [http://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css](http://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css).
+Above all, we will create an html page and include the necessary libraries. As shown, within the `body` div, we place two div elements - one for anchoring the virtual globe container and one for anchoring the legend. In addition, the style sheet locates at `css/style.css`. In order to make the application more light-weight, we use external links to include cesium libraries from [http://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js](http://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js) and [http://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css](http://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css). In order to create a color scheme dynamically, we use chroma.js.
 
 ```html
 <!DOCTYPE html>
@@ -153,18 +153,12 @@ Also, we will update the color of entities using a sequential color ramp. To do 
 
 ![](img/qgis.png)
 
-Then, categorize the data based on the `cnt` attributes – I personally prefer the `natural break` method, which gives a balanced visual experience. (Right-Click the **nyc_noise layer** on the Layer Panel, on the popped up panel, choose Properties, switch to the Style tab, and fill the blanks according to the following screenshot).
-
-![](img/qgis-style.png)
-
 After classifying the entities, we will pick a color ramp. We’ll use a yellow to red sequential color ramp to visualize the data. This color ramp provides a useful visualization of how the noise volume increases
 from low to high. 
 
-Then, we can obtain the hexadecimal color value by clicking on the color patch. As shown, the light yellow color value is `#ffffb2`. Following the same steps, get the colors for all the patches.
-
 ![](img/color-value.png)
 
-> **Note:** In addition to QGIS, we can also choose a color ramp from [colorbrewer2.org](file:///C:/Users/Andy/Downloads/colorbrewer2.org).
+> **Note:** In addition to QGIS, we can also choose a color ramp from [colorbrewer2.org](colorbrewer2.org).
 
 Cesium has a complicated [color system](http://cesiumjs.org/releases/b30/Build/Documentation/Color.html), to be simple, we use the hexadecimal color which was mainly used in CSS. Here is the API for processing a hexadecimal color.
 
@@ -177,7 +171,7 @@ Cesium has a complicated [color system](http://cesiumjs.org/releases/b30/Build/D
 
 > **Returns:** The color object, or undefined if the string was not a valid CSS color.
 
-Now, we make a function to determine the color based on the input number of noise complaints.
+Now, we make a function to determine the color based on the input number of noise complaints. Chroma.js is used to create the color array.
 
 ```javascript
 // determine the number of classes and their respective break values.
