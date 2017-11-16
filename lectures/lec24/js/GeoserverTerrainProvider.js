@@ -175,7 +175,7 @@
                 resultat = OGCHelper.WMSParser.generate(description);
         }
         return resultat;
-    };
+    }
 
     OGCHelper.WMSParser.generate = function(description) {
         var resultat;
@@ -560,7 +560,7 @@
                     retour = tileSets[level].url;
                 }
                 return retour;
-            };
+            }
             var boundingBoxNode = xml.querySelector("BoundingBox");
             var miny = parseFloat(boundingBoxNode.getAttribute("miny"));
             var maxy = parseFloat(boundingBoxNode.getAttribute("maxy"));
@@ -571,7 +571,7 @@
                 var rect = resultat.tilingScheme.tileXYToNativeRectangle(x, y, level);
                 var scratchRectangle = intersectionRectangle(limites, rect);
                 return Cesium.defined(scratchRectangle) && level < maxLevel && level < tileSets.length;
-            };
+            }
             resultat.ready = true;
         }
         return resultat;
@@ -699,7 +699,7 @@
             //format
             var nodeFormats = [].slice.call(layerNode.querySelectorAll("Format"));
             for (var l = 0; l < OGCHelper.FormatImage.length &&
-                !Cesium.defined(formatImage); l++) {
+            !Cesium.defined(formatImage); l++) {
                 var validFormats = nodeFormats.filter(function(elt) {
                     return elt.textContent === OGCHelper.FormatImage[l].format;
                 });
@@ -1028,7 +1028,7 @@
                                 offset: resultat.offset
                             };
                             var hasChildren = terrainChildrenMask(x, y, level, provider);
-                            var promise = Cesium.throttleRequestByServer(urlArray, Cesium.loadImage);
+                            var promise = Cesium.loadImage(urlArray);
                             if (Cesium.defined(promise)) {
                                 retour = Cesium.when(promise, function(image) {
                                     return GeoserverTerrainProvider.imageToHeightmapTerrainData(image, limitations, {
@@ -1066,7 +1066,7 @@
                             };
                             var hasChildren = terrainChildrenMask(x, y, level, provider);
 
-                            var promise = Cesium.throttleRequestByServer(urlArray, Cesium.loadArrayBuffer);
+                            var promise = Cesium.loadArrayBuffer(urlArray);
                             if (Cesium.defined(promise)) {
                                 retour = Cesium.when(promise,
                                     function(arrayBuffer) {
@@ -1112,7 +1112,7 @@
                         retour = resultat.getHeightmapTerrainDataImage(x, y, level);
                     }
                     return retour;
-                };
+                }
 
                 Cesium.defineProperties(provider, {
                     tilingScheme: {
