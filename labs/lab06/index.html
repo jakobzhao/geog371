@@ -52,8 +52,8 @@
 
     // determine the color.md ramp. The number of colors is determined by the number of classes.
     // try different interpolation method lch, lab, hsl
-    var colors = chroma.scale(['yellow', 'navy']).mode('hsl').colors(grades.length);
-    //var colors = chroma.scale('YlOrRd').colors(grades.length);
+    //var colors = chroma.scale(['yellow', 'navy']).mode('hsl').colors(grades.length);
+    var colors = chroma.scale('YlOrRd').colors(grades.length);
 
     // create the legend
     var labels = [];
