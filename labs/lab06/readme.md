@@ -48,12 +48,16 @@ Above all, we will create an html page and include the necessary libraries. As s
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="http://cesiumjs.org/releases/1.31/Build/Cesium/Widgets/widgets.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-  	<script src="http://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js"></script>
-  	<title> Cell Towers in Oregon by County </title>
+    <script src="https://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
+    <title> Noise Complaints in New York City (Jan. to Mar. 2017)</title>
 </head>
+<body>
 <div id="cesiumContainer"></div>
 <div class="legend"></div>
 </body>
@@ -176,13 +180,24 @@ Cesium has a complicated [color system](http://cesiumjs.org/releases/b30/Build/D
 Now, we make a function to determine the color based on the input number of noise complaints.
 
 ```javascript
-// Set function for color ramp
-function setColor(density){
-  return density > 1200 ? '#bd0026' :
-  density > 650 ?  '#f03b20' :
-  density > 400 ?  '#fd8d3c' :
-  density > 260 ?  '#fecc5c' :
-  '#ffffb2' ;
+// determine the number of classes and their respective break values.
+var grades = [150, 260, 400, 650, 1200];
+
+// determine the color.md ramp. The number of colors is determined by the number of classes.
+// try different interpolation method lch, lab, hsl
+var colors = chroma.scale(['yellow', 'navy']).mode('hsl').colors(grades.length);
+//var colors = chroma.scale('YlOrRd').colors(grades.length);
+
+// create the legend
+var labels = [];
+
+
+// set the color.md based on the class which the input value falls in.
+function setColor(d) {
+    for (var j = 0; j < grades.length - 1; j++) {
+        if ( d >= grades[j] && d < grades[j+1] ) return colors[j];
+    }
+    if (d >= grades[grades.length - 1]) return colors[grades.length -1];
 }
 ```
 
@@ -198,12 +213,12 @@ Now, a 3D thematic map is made! In order to help users to read this map, we will
 practiced in PE 3. In general, we will put the content in a `div` and then capture the div using the class name, and style it by css stylesheet. Here, the class of the legend div is `legend`, as shown below.
 
 ```html
-<p><b> # Noise Complaints (Jan. to Mar. 2017) </b></p><br/>
-<i style="background: #bd0026"></i> <p> 1200+ </p>
-<i style="background: #f03b20"></i> <p> 651 to 1200 </p>
-<i style="background: #fd8d3c"></i> <p> 401 to 650 </p>
-<i style="background: #fecc5c"></i> <p> 261 to 400 </p>
-<i style="background: #ffffb2"></i> <p> 150 to 260 </p><br/>
+<div class="legend">
+    <h4> Noise Complaints in New York City </h4>
+    <p><b> # Noise Complaints (Jan. to Mar. 2017) </b></p><br/>
+    <div id="patches"></div><br/>
+    ...
+</div>
 ```
 
 And the stylesheet is.
@@ -244,6 +259,15 @@ h4 {
 }
 ```
 
+And use Jquery to insert legend patches to the legend panel.
+```javascript
+for (var i = 0; i < grades.length - 1; i++) {
+    labels.push('<i style="background:' + colors[i] + '"></i> <p>' + grades[i] + ' - ' + (grades[i + 1] + 1).toString() + '</p>');
+}
+labels.push('<i style="background:' + colors[grades.length - 1] + '"></i> <p>' + (grades[grades.length - 1] +1 ).toString() + ' +' + '</p>');
+$("#patches").html(labels.join(''));
+```
+
 Someone may find the default cesium.js credit banner is kind of distracting. We can actually turn it off using the following code:
 
 ![](img/original_credits.png)
@@ -258,14 +282,10 @@ In addition to the legend, you can add on more descriptive information about thi
 <div class="legend">
     <h4> Noise Complaints in New York City </h4>
     <p><b> # Noise Complaints (Jan. to Mar. 2017) </b></p><br/>
-    <i style="background: #bd0026"></i> <p> 1200+ </p>
-    <i style="background: #f03b20"></i> <p> 651 to 1200 </p>
-    <i style="background: #fd8d3c"></i> <p> 401 to 650 </p>
-    <i style="background: #fecc5c"></i> <p> 261 to 400 </p>
-    <i style="background: #ffffb2"></i> <p> 150 to 260 </p><br/>
+    <div id="patches"></div><br/>
     <p> This 3D thematic map shows the number of noise complaints in New York City according to all the 3-1-1 Service requests from January to March, 2017. The data was directly downloaded from <a href="https://data.cityofnewyork.us/Social-Services/Noise-complaints-since-20151101-w-Unspecified-CB/vjav-8yz5">NYC OpenData</a>. In the United States, 3-1-1 is a special telephone number that provides access to non-emergency municipal services.</p><br/>
     <p> Virtual globe Lib: cesium.js | BaseMap: Mapbox | Noise Reports: NYC OpenData </p>
-    <p> Author: <a href="http://ceoas.oregonstate.edu/profile/zhao/">Bo Zhao </a>| GEOG 371: Web Mapping | Oregon State University</p>
+    <p> Author: <a href="http://ceoas.oregonstate.edu/profile/zhao/">Bo Zhao </a>|  Oregon State University</p>
 </div>
 ```
 
