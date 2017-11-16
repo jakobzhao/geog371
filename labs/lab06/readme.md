@@ -4,13 +4,11 @@
 >
 > Instructor: Bo Zhao  Location: 210 Wilkinson | Time: Thursday 1000 to 1150
 >
-> Assigned: 03/09/2017 | Due: `03/16/2017 @11:59pm` | Points Available = 50
+> Assigned: 03/09/2017 | Due: `11/21/2017 @11:59pm` | Points Available = 50
 
-During the last week, we have learned how to use a virtual globe to make a 3D thematic map. To do that, some of the most frequently used virtual globe libraries are [three.js](https://threejs.org/) and [cesium.js](http://cesiumjs.org/). While three.js is more
-compatible with other 3D web applications, cesium.js is dedicated to make virtual globes. As introduced in the lectures, [TerriaJS](http://terria.io/) is an robust open-source geospatial platform built on cesium.js. It provides us
-with handy tools for navigating, editing and managing geospatial data. If you are interested in using cesium.js for an integrated web mapping application, I would highly recommend writing the codes of [TerriaJS](http://terria.io/) at GitHub. In this practical exercise, you are asked to make a 3D thematic map using cesium.js. The major learning goal is not to have you grasp the state-of-art skills in 3D mapping. Instead, this exercise prepares you with fundamental skills of making a 3D thematic map, and provides you an opportunity to reflect on the differences between 2D and 3D web mapping. Okay, let us get down the real deal.
+During the last week, we have learned how to use a virtual globe to make a 3D thematic map. To do that, some of the most frequently used virtual globe libraries are [three.js](https://threejs.org/) and [cesium.js](http://cesiumjs.org/). While three.js is more compatible with other 3D web applications, cesium.js is dedicated to make virtual globes. As introduced in the lectures, [TerriaJS](http://terria.io/) is an robust open-source geospatial platform built on cesium.js. It provides us with handy tools for navigating, editing and managing geospatial data. If you are interested in using cesium.js for an integrated web mapping application, I would highly recommend writing the codes of [TerriaJS](http://terria.io/) at GitHub. In this lab, you are asked to make a 3D thematic map using cesium.js. The major learning goal is not to have you grasp the state-of-art skills in 3D mapping. Instead, this lab prepares you with fundamental skills of making a 3D thematic map, and provides you an opportunity to reflect on the differences between 2D and 3D web mapping. Okay, let us get started.
 
-In New York City, the local government maintains an open data portal to share a lot of datasets about the city management and administration. Among all the datasets, the 3-1-1 Calls on noise complaints are openly accessible. Since each complaint record comes with locational information, it is possible to visualize them collectively on a web map. In this practical exercise, we will make a 3D bar map to visualize the concentrations of noise complaints in the city. The final web map, as shown below, can be viewed at [http://rawgit.com/jakobzhao/noise_complaints/master/index.html](http://rawgit.com/jakobzhao/noise_complaints/master/index.html).
+In New York City, the local government maintains an open data portal to share a lot of datasets about the city management and administration. Among all the datasets, the 3-1-1 Calls on noise complaints are openly accessible. Since each complaint record comes with locational information, it is possible to visualize them collectively on a web map. In this practical exercise, we will make a 3D bar map to visualize the concentrations of noise complaints in the city. The final web map, as shown below, can be viewed at [http://geoviz.ceoas.oregonstate.edu/geog371/labs/lab06/index.html](http://geoviz.ceoas.oregonstate.edu/geog371/labs/lab06/index.html).
 
 ![](img/finalmap.png)
 
@@ -22,34 +20,27 @@ In the map, each bar indicates a number of noise complaint cases from the region
 
 ## 1\. Preparation
 
-Throughout the term, you have frequently used GitHub as a vehicle to sync geospatial data, work in teams, update a web site, and publish web mappings. In this exercise, we will download a GitHub repository to your local working space. 
 
 ![](img/repository.png)
 
-The repository is located at [https://github.com/jakobzhao/noise_complaints](https://github.com/jakobzhao/noise_complaints), just click "Clone or download" button to download the package, and then extract all the files to the working directory on your local computer. The file structure of this repository looks like the file tree below:
+The source code is located at [labs/lab06](readme.md). The file structure of this repository looks like the file tree below:
 
 ```powershell
 noise_complaints
-├─assets
-├  ├─── nyc_noise.geojson
-├─css
-├  ├─── style.css
-├─img
-├  ├─── ...
-├─index.html
-├─readme.md
-├─LICENSE
-```
-
-After downloading the files to an appropriate place, you will need to setup a web server. To do that, you can use the **Webstorm** or a python server by executing the following codes under the working directory:
-
-```powershell
-$python -m SimpleHTTPServer
+    labs/lab06/
+    ├─assets
+    ├  ├─── nyc_noise.geojson
+    ├─css
+    ├  ├─── style.css
+    ├─img
+    ├  ├─── ...
+    ├─index.html
+    ├─readme.md
 ```
 
 ## 2\. HTML template
 
-Above all, we will create an html page and include the necessary libraries. As shown, within the `body` div, we place two div elements - one for anchoring the virtual globe container and one for anchoring the legend. In addition, the style sheet locates at `css/style.css`. In order to make the application more light-weight, we use external links to include cesium libraries from [http://cesiumjs.org/releases/1.31/Build/Cesium/Cesium.js](http://cesiumjs.org/releases/1.31/Build/Cesium/Cesium.js) and [http://cesiumjs.org/releases/1.31/Build/Cesium/Widgets/widgets.css](http://cesiumjs.org/releases/1.31/Build/Cesium/Widgets/widgets.css).
+Above all, we will create an html page and include the necessary libraries. As shown, within the `body` div, we place two div elements - one for anchoring the virtual globe container and one for anchoring the legend. In addition, the style sheet locates at `css/style.css`. In order to make the application more light-weight, we use external links to include cesium libraries from [http://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js](http://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js) and [http://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css](http://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css).
 
 ```html
 <!DOCTYPE html>
@@ -60,7 +51,7 @@ Above all, we will create an html page and include the necessary libraries. As s
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="http://cesiumjs.org/releases/1.31/Build/Cesium/Widgets/widgets.css">
     <link rel="stylesheet" href="css/style.css">
-  	<script src="http://cesiumjs.org/releases/1.31/Build/Cesium/Cesium.js"></script>
+  	<script src="http://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js"></script>
   	<title> Cell Towers in Oregon by County </title>
 </head>
 <div id="cesiumContainer"></div>
@@ -228,7 +219,6 @@ And the stylesheet is.
     color: #a0a0a0;
     font-family: 'Open Sans', sans-serif;
     padding: 6px 8px;
-    background: #000000;
     background: rgba(38, 38, 38, 0.5);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
@@ -287,19 +277,30 @@ If everything works smoothly, you will see a 3D web map like this. Well done!
 
 ## 5\. Deliverable
 
-Regarding the deliverables of this PE, you will need to:
-
-- Switch to another basemap instead of the current mapbox dark basemap. (**10 POINTS**)
+For deliverable, you will need to create a 3d thematic map similiar to the one I show above. You will need to
+- Create a repository on github to host this 3d thematic map application.
+- Use another basemap instead of the current mapbox dark basemap. (**10 POINTS**)
 - Change the color ramp of the entities. (**15 POINTS**)
 - An updated version of the credits. ***Remember, only credit your portion of the work.*** (**10 POINTS**)
-- From an application perspective, what scenario do you think is more appropriate to use a 2D web map (e.g., leaflet), and what scenario is more appropriate to use a 3D virtual globe (e.g., cesium)? Please answer this question with some specific cases. For example, you can find some web mapping applications, and compare why they selected a 2D or 3D layout.  (**15 POINTS**)
+- In the `readme.md` file, please answer the following question with real cases. - From an application perspective, what scenario do you think is more appropriate to use a 2D web map (e.g., leaflet), and is more appropriate to use a 3D virtual globe? For example, you can find some web mapping applications, and compare why they selected a 2D or 3D layout.  (**15 POINTS**)
 
-Please package up the working directory of codes and the answer in a word document. The package should be in a zip file. On the assignment tab of **Canvas Dropbox**, check the item of this PE, press the `Submit Assignment` button to submit your PE report. Please contact the instructor or TA if you have any difficulty.
+The structure of your github repository should like something below.
+
+```Powershell
+[Submission_Lab_05]
+│   readme.md
+│   index.html
+├─assets
+├─js
+├─css
+├─img
+```
+
+
+Once you complete this lab assignment, please make sure both the github repository and the web site work appropriately. Then, you will need to submit the url of the GitHub repository to **Canvas Dropbox**. (On the assignment tab,  press the `Submit Assignment` button to submit. Please contact the instructor or TA if you have any difficulty.)
 
 ## References
 
 [1]. https://data.cityofnewyork.us/Social-Services/Noise-SRs-since-20151101/fqi4-uxkk
 
 [2]. http://cesiumjs.org/releases/b30/Build/Documentation/Color.html
-
-[3]. http://rawgit.com/jakobzhao/noise_complaints/master/index.html
