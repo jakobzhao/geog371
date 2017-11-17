@@ -114,14 +114,20 @@ As a result, we have published the dem data as a web map service.
 To apply the elevation to cesium, we can use the following code (the code can be found in the folder of this lecture).
 
  ```javascript
+    Cesium.BingMapsApi.defaultKey = "AgUQJFnmoxa47CoxZf-zslnbrBqBzATAxYAiQnd__-q8eGgLZu1ygR8_p2jI3Y9u";
+    // create a terrain provider based on geoserver service
     var terrainProvider = new Cesium.GeoserverTerrainProvider({
-        url : "http://mapio.us/geoserver/ceoas/wms",
+        url : "http://mapious.ceoas.oregonstate.edu/geoserver/mapious/wms",
         layerName: "srtm_12_04",
         styleName:"srtm",
         waterMask:true
     });
 
+    //turn off the unused tools.
     var viewer = new Cesium.Viewer('cesiumContainer', {
+//        terrainProvider: new Cesium.CesiumTerrainProvider({
+//            url: '//assets.agi.com/stk-terrain/world'
+//        }),
         baseLayerPicker: false,
         fullscreenButton: false,
         homeButton: false,
@@ -132,9 +138,20 @@ To apply the elevation to cesium, we can use the following code (the code can be
         navigationHelpButton: false,
         vrButton: true,
         geocoder: false,
-        animation: false,
-        terrainProvider : terrainProvider
+        animation: false
     });
+
+    viewer.scene.globe = new Cesium.Globe(Cesium.Ellipsoid.WGS84);
+    // The globe must enable lighting to make use of the terrain's vertex normals
+    viewer.scene.globe.enableLighting = true;
+    var layers = viewer.scene.imageryLayers;
+    var esri = new Cesium.ArcGisMapServerImageryProvider({
+        url : 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer'
+    });
+
+    layers.addImageryProvider(esri);
+    viewer.terrainProvider = terrainProvider;
+
  ```
 
 As the result, we will see the terrain around Mt Jefferson like below:

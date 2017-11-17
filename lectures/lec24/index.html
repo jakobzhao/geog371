@@ -11,7 +11,7 @@
     <!--<link rel="stylesheet" href="css/style.css">-->
     <link rel="stylesheet" href="https://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css">
     <script src="https://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js"></script>
-    <script src="js/GeoserverTerrainProvider.js"></script>
+    <script src="js/GeoserverTerrainProvider.js"  type="text/javascript"></script>
     <style>
         html, body, #cesiumContainer {
             width: 100%; height: 100%; margin: 0; padding: 0
@@ -23,16 +23,20 @@
 <div id="cesiumContainer"></div>
 <script>
 
+    Cesium.BingMapsApi.defaultKey = "AgUQJFnmoxa47CoxZf-zslnbrBqBzATAxYAiQnd__-q8eGgLZu1ygR8_p2jI3Y9u";
     // create a terrain provider based on geoserver service
     var terrainProvider = new Cesium.GeoserverTerrainProvider({
         url : "http://mapious.ceoas.oregonstate.edu/geoserver/mapious/wms",
-        layerName: "mapious:srtm_12_04",
+        layerName: "srtm_12_04",
         styleName:"srtm",
         waterMask:true
     });
 
     //turn off the unused tools.
     var viewer = new Cesium.Viewer('cesiumContainer', {
+//        terrainProvider: new Cesium.CesiumTerrainProvider({
+//            url: '//assets.agi.com/stk-terrain/world'
+//        }),
         baseLayerPicker: false,
         fullscreenButton: false,
         homeButton: false,
@@ -43,12 +47,20 @@
         navigationHelpButton: false,
         vrButton: true,
         geocoder: false,
-        animation: false,
-        terrainProvider : terrainProvider
+        animation: false
     });
 
-    //// The globe must enable lighting to make use of the terrain's vertex normals
+    viewer.scene.globe = new Cesium.Globe(Cesium.Ellipsoid.WGS84);
+    // The globe must enable lighting to make use of the terrain's vertex normals
     viewer.scene.globe.enableLighting = true;
+    var layers = viewer.scene.imageryLayers;
+    var esri = new Cesium.ArcGisMapServerImageryProvider({
+        url : 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer'
+    });
+
+    layers.addImageryProvider(esri);
+    viewer.terrainProvider = terrainProvider;
+
 
 </script>
 </body>
