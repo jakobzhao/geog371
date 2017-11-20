@@ -113,7 +113,7 @@ viewer.zoomTo(viewer.entities);
 In this section, we will make a thematic map to show the number of cell towers in Oregon by county. A county will be visualized by an extruded polygon. The height of an extruded polygon correlates the number of cell towers lying within. The raw cell tower distribution data is in geojson format, and we have used this data set for Practical Exercise 3.  To make such a map, we will (a) use mapbox dark as the base map, (b) add on the geojson data, (c) style and symbolize the map, and (d) add on a  panel of description. The structure of the files in this lecture is:
 
 ```powershell
-wk09_1_lec23
+lectures/lec25
 ├─assets
 │ ├── counties.geojson
 ├─css
