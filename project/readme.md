@@ -43,7 +43,7 @@ Academics often attend conferences where they share their discoveries and browse
 
 4. Submit the url link to the final project submission tab on Canvas **by 5:00pm on December 3rd.**
 
-5. **On December 1st, time - TBD**, we will hold a final project presentation meeting at 361 strand hall.
+5. **On December 1st, time - noon to 2:00pm **, we will hold a final project presentation meeting at 361 strand hall.
 
 6. You will need to submit **peer review notes** for each project right after the presentation meeting.
 
