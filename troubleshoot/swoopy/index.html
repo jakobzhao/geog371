@@ -26,9 +26,14 @@
             text-shadow: 0 0 2px black;
         }
 
+        path {
+            stroke-linecap: butt !important;
+        }
     </style>
     <!-- Add the Leaflet JavaScript library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+
     <!--<script src="https://unpkg.com/leaflet-swoopy@2.0.0/build/Leaflet.SwoopyArrow.js"></script>-->
     <script src="Leaflet.SwoopyArrow-customized.js"></script>
 </head>
@@ -58,7 +63,7 @@
     // help: https://wbkd.github.io/leaflet-swoopy/
     var swoopy = L.swoopyArrow([53.52, 13.4], [53.525, 14.41], {
         text: 'hello!',
-        weight: 20,
+        weight: 15,
         opacity: 0.5,
         fontSize: 20,
         color: "#bb0017",
