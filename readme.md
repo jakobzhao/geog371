@@ -8,7 +8,9 @@
 >
 >Current developments in Internet mapping and advanced cartographic skills applied to web-based maps. Techniques of Internet mapping and principles of web-based cartography, including multimedia, animation, 3D visualization, and user interface design. **PREREQS:** GEOG 201 or GEO 301.
 
-
+<p style='color:red'>This is some red text.</p>
+<font color="red">This is some text!</font>
+These are <b style='color:red'>red words</b>.
 - ![#f03c15]() `321321`
 - ![312321 #c5f015](https://placehold.it/15/c5f015/000000?text=+) `#c5f015`
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#1589F0`
