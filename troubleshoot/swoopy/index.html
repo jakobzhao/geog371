@@ -26,10 +26,16 @@
             text-shadow: 0 0 2px black;
         }
 
+        path {
+            stroke-linecap: butt !important;
+        }
     </style>
     <!-- Add the Leaflet JavaScript library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-swoopy@2.0.0/build/Leaflet.SwoopyArrow.js"></script>
+
+    <!--<script src="https://unpkg.com/leaflet-swoopy@2.0.0/build/Leaflet.SwoopyArrow.js"></script>-->
+    <script src="Leaflet.SwoopyArrow-customized.js"></script>
 </head>
 <body>
 <!-- Our web map and content will go here -->
@@ -41,6 +47,13 @@
         center: [53.52, 13.4],
         zoom: 9
     });
+//
+//
+//    <defs>
+//    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+//        <path d="M0,0 L0,6 L9,3 z" fill="#f00" />
+//        </marker>
+//        </defs>
 
     // Add OpenStreetMap tile layer to map element
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -50,13 +63,17 @@
     // help: https://wbkd.github.io/leaflet-swoopy/
     var swoopy = L.swoopyArrow([53.52, 13.4], [53.525, 14.41], {
         text: 'hello!',
-        weight: 3,
+        weight: 15,
         opacity: 0.5,
         fontSize: 20,
         color: "#bb0017",
         iconAnchor: [0, 0],
         textClassName: "arrow-label"
     }).addTo(map);
+
+
+    $("svg").append("<defs>");
+    $("svg defs").append('<marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#f00" /></marker>');
 
 
 </script>
