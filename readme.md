@@ -21,8 +21,8 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
 | Wk 06 | [Storytelling with Web Map I](lectures/lec17) | Storytelling with Web Map II, cont'd with the last lecture |             [Lab 5: Story Map](labs/lab05/readme.md)             | [Map Design III: User Friendly Design Principles](lectures/lec19) |     [Web Map Design Principles](readings/wk06.md)      |
 | Wk 07 |      [Real-Time Mapping: TweetMap](lectures/lec20)       |        [HeatMap](lectures/lec21)        |              Lab 5: Cont'd               |              *Veterans Day*              |         [Server Side JavaScript](readings/wk07.md)                                   |
 | Wk 08 | [Map Design IV: Map Critiques](lectures/lec22) | [3D Web Mapping I: Basics](lectures/lec23) | [Lab 6:  Thematic Map on a Virtual Globe](labs/lab06) | [3D Web Mapping II: Build a Virtual Environment](lectures/lec24) |                                          |
-| Wk 09 | [3D Web Mapping III: Thematic Map on a Virtual Globe](lectures/lec25) | Final Project Discussion and Preparation |              Lab 6: Cont'd               |           *Thanksgiving Break*           |                                          |
-| Wk 10 | [Emerging Topics on Web Mapping](lectures/lec26) | Final Project Discussion and Preparation | Final Project Discussion and Preparation |        Final Project Presentation       | [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md) |
+| Wk 09 | [3D Web Mapping III: Thematic Map on a Virtual Globe](lectures/lec25) | Final Project Discussion and Preparation |              *Thanksgiving Break*             |           *Thanksgiving Break*           |                                          |
+| Wk 10 | [Emerging Topics on Web Mapping](lectures/lec26) | Final Project Discussion and Preparation | Final Project Discussion and Preparation |        <p style="color: red; font-weight:bold">Final Project Presentation</p><p style="color: red;">Strand Ag Hall (GAZE) Dec 1st Noon to 13:50pm </p>       | [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md) |
 
 [**Syllabus**](resources/syllabus.pdf)
 
@@ -31,7 +31,9 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
  - [Proposal]() (WK03)
  - [Data Source](project/datasource.md) (WK04)
  - [Interface Sketch](project/sketch.md) (WK05)
- - [Map Critique](lectures/lec22) (WK09)
+ - [Map Critique](lectures/lec22) (WK08)
+ - [Peer Review]() (WK10)
+ - [Final Presentation]() (WK10)
 
 ### Tutorials
 
