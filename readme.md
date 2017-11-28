@@ -8,13 +8,6 @@
 >
 >Current developments in Internet mapping and advanced cartographic skills applied to web-based maps. Techniques of Internet mapping and principles of web-based cartography, including multimedia, animation, 3D visualization, and user interface design. **PREREQS:** GEOG 201 or GEO 301.
 
-<p style='color:red'>This is some red text.</p>
-<font color="red">This is some text!</font>
-These are <b style='color:red'>red words</b>.
-- ![#f03c15]() `321321`
-- ![312321 #c5f015](https://placehold.it/15/c5f015/000000?text=+) `#c5f015`
-- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#1589F0`
-
 Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces current developments in web mapping and advanced cartographic skills applied to interactive map design. By using open sourced libraries (Leaflet, Cesium, storymap.js, Bootstrap, jQuery), free or open source software (QGIS, Webstorm), project management services (GitHub), and web mapping services (GeoServer, MapBox), students can learn both the principles of web-based cartography and the practical skills for web mapping, and develop the capabilities of map aesthetics and critique. The lectures focus on the theories and principles behind web mapping, including system architecture, responsive design, user graphic design, map design and geo-narrative. The lab exercises focus on practical skills for web programming, 2d and 3d web mapping, web mapping services, and digital storytelling. The mid-term focuses on basic concepts and web programming techniques. There is no final exam, but each student is expected to design a web map and deploy it to an openly accessible server. Feel free to contact Dr. Bo Zhao for more information. :raising_hand:
 
 | Week  |               Lecture (M)                |               Lecture (W)                |                 Lab (Th)                 |               Lecture (F)                |                 Reading                  |
@@ -29,7 +22,7 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
 | Wk 07 |      [Real-Time Mapping: TweetMap](lectures/lec20)       |        [HeatMap](lectures/lec21)        |              Lab 5: Cont'd               |              *Veterans Day*              |         [Server Side JavaScript](readings/wk07.md)                                   |
 | Wk 08 | [Map Design IV: Map Critiques](lectures/lec22) | [3D Web Mapping I: Basics](lectures/lec23) | [Lab 6:  Thematic Map on a Virtual Globe](labs/lab06) | [3D Web Mapping II: Build a Virtual Environment](lectures/lec24) |                                          |
 | Wk 09 | [3D Web Mapping III: Thematic Map on a Virtual Globe](lectures/lec25) | Final Project Discussion and Preparation |              *Thanksgiving Break*             |           *Thanksgiving Break*           |                                          |
-| Wk 10 | [Emerging Topics on Web Mapping](lectures/lec26) | Final Project Discussion and Preparation | Final Project Discussion and Preparation |        <span style="font-color: #f03c15; font-weight:bold">Final Project Presentation</span><p style="color: red;">Strand Ag Hall (GAZE) Dec 1st Noon to 13:50pm </p>       | [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md) |
+| Wk 10 | [Emerging Topics on Web Mapping](lectures/lec26) | Final Project Discussion and Preparation | Final Project Discussion and Preparation |   Final Project Presentation | *Strand Ag Hall (GAZE) Dec 1st Noon to 13:50pm*       | [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md) |
 
 [**Syllabus**](resources/syllabus.pdf)
 
