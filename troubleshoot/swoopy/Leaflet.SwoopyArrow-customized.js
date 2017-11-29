@@ -14,6 +14,7 @@ L$1 = L$1 && L$1.hasOwnProperty('default') ? L$1['default'] : L$1;
  * note that SVG (x, y) corresponds to (long, lat)
  */
 
+ // customized by Bo Zhao (jakobzhao@gmail.com), modify the arrow
 L.Curve = L.Path.extend({
 	options: {
 	},
@@ -21,7 +22,7 @@ L.Curve = L.Path.extend({
 	initialize: function(path, options){
 		L.setOptions(this, options);
 		this._initialUpdate = true;
-		this._setPath(path);
+        this._setPath(path);
 	},
 	
 	getPath: function(){
@@ -1746,6 +1747,7 @@ L$1.SwoopyArrow = L$1.Layer.extend({
     // path.setAttribute('fill', this._arrowFilled ? this._color : 'none');
     path.setAttribute('stroke', "none");
     path.setAttribute('d', 'M 1 1 7 4 1 7 Z');
+
     // path.setAttribute('points', '10,90 50,80 90,20');
 
     marker.appendChild(path);
@@ -1767,6 +1769,7 @@ L$1.SwoopyArrow = L$1.Layer.extend({
 
     pathOne._path.setAttribute('id', 'swoopyarrow__path' + this._currentId);
     pathOne._path.setAttribute('marker-end', 'url(#swoopyarrow__arrowhead' + this._currentId + ')');
+    pathOne._path.setAttribute('stroke-linecap', 'butt');
 
     return pathOne;
   },
