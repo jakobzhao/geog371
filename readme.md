@@ -67,6 +67,11 @@ Html, CSS, Javascript, Markdown and GeoJson
 
 ### Previous Years
 
+#### [2017 Fall](http://geoviz.ceoas.oregonstate.edu/geog371.html#portfolio)
+
+![](resources/img/2017_fall.jpg)
+
+
 #### [2017 Winter](http://geoviz.ceoas.oregonstate.edu/project_gallery/)
 
 ![](resources/img/2017_winter.jpg)
