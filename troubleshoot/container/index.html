@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
     <style type="text/css">
         body{margin-top: 200px}
+
         #map-circle {
             width: 300px;
             height: 300px;
             border-radius: 150px;
             z-index: 10  /* z-index is greater than the map panel */
         }
+
+
         #map-hexagon {
 
             width: 346px;
@@ -36,10 +39,10 @@
 
 <script type="text/javascript">
 
-    var map1 = L.map('map-circle').setView([51.505, -0.09], 13);
+    var map1 = L.map('map-circle', { zoomControl:false }).setView([51.505, -0.09], 13);
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map1);
 
-    var map2 = L.map('map-hexagon').setView([51.505, -0.09], 13);
+    var map2 = L.map('map-hexagon', { zoomControl:false }).setView([51.505, -0.09], 13);
     // L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png').addTo(map2);
    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map2);
 
