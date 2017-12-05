@@ -12,10 +12,28 @@
     <script src="https://d3js.org/topojson.v1.min.js"></script>
     <script type="text/javascript" src="js/proj4js-compressed.js"></script>
     <script type="text/javascript" src="js/proj4leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
 <div id="map"></div>
 <script type="text/javascript">
+
+
+    L.TopoJSON = L.GeoJSON.extend({
+        addData: function(jsonData) {
+            if (jsonData.type === "Topology") {
+                for (key in jsonData.objects) {
+                    geojson = topojson.feature(jsonData, jsonData.objects[key]);
+                    L.GeoJSON.prototype.addData.call(this, geojson);
+                }
+            }
+            else {
+                L.GeoJSON.prototype.addData.call(this, jsonData);
+            }
+        }
+    });
+    // Copyright (c) 2013 Ryan Clark
+
 
     // crs: EPSG:2991
     // http://www.spatialreference.org/ref/epsg/2991/
@@ -23,24 +41,36 @@
     crs = new  L.Proj.CRS('EPSG:2991',
         '+proj=lcc +lat_1=43 +lat_2=45.5 +lat_0=41.75 +lon_0=-120.5 +x_0=400000 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs',
         {
-            resolutions: [8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1] // example zoom level resolutions
+            resolutions: [16384, 8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1] // example zoom level resolutions
         }
     );
 
+    var topoLayer = new L.TopoJSON();
     var map = L.map('map', {
         crs: crs
-    }).setView([43.83,-120.67],3);
+    }).setView([43.83,-120.67], 5);
 
 
-    var counties = L.geoJson.ajax("assets/counties.topojson", {
-        style: {
-            color: '#4b4b4b',
-            weight: 0.5,
-            opacity: 1,
-            fillColor: '#fff996',
-            dashArray: "0 5 0",
-            fillOpacity: 1
-        }}).addTo(map);
+    L.geoJson.ajax("assets/counties.topojson", {
+        middleware:function(data){
+
+            function handleLayer(layer){
+                layer.setStyle({
+                    fillColor : "red",
+                    fillOpacity: .5,
+                    color:'red',
+                    weight:1,
+                    opacity:.5
+                });
+                // remove the sliver or gap between two adjacent polylines/polygons
+                layer.options.smoothFactor = 0;
+            }
+
+            topoLayer.addData(data);
+            topoLayer.eachLayer(handleLayer);
+            topoLayer.addTo(map);
+        }
+    });
 
 </script>
 </body>

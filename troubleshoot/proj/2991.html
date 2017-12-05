@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Projections: NAD83/ Oregon Lambert</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+    <style type="text/css">
+        html, body, #map { width: 100%; height: 100%; margin: 0; background: #fff; }
+    </style>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script type="text/javascript" src="js/proj4js-compressed.js"></script>
+    <script type="text/javascript" src="js/proj4leaflet.js"></script>
+
+    <!--<script type="text/javascript" src=" https://raw.githubusercontent.com/kartena/Proj4Leaflet/master/src/proj4leaflet.js"></script>-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+<div id="map"></div>
+<script type="text/javascript">
+
+        ////
+    //
+    // // customize some GridLayer methods
+    // L.TileLayerCustomCrs = L.TileLayer.extend({
+    //
+    //     _updateLevels: function() {
+    //
+    //         var zoom = this._tileZoom,
+    //             maxZoom = this.options.maxZoom;
+    //
+    //         if (zoom === undefined) {
+    //             return undefined;
+    //         }
+    //
+    //         for (var z in this._levels) {
+    //             if (this._levels[z].el.children.length || z === zoom) {
+    //                 this._levels[z].el.style.zIndex = maxZoom - Math.abs(zoom - z);
+    //             } else {
+    //                 L.DomUtil.remove(this._levels[z].el);
+    //                 this._removeTilesAtZoom(z);
+    //                 delete this._levels[z];
+    //             }
+    //         }
+    //
+    //         var level = this._levels[zoom],
+    //             map = this._map;
+    //
+    //         if (!level) {
+    //             level = this._levels[zoom] = {};
+    //
+    //             level.el = L.DomUtil.create('div', 'leaflet-tile-container leaflet-zoom-animated', this._container);
+    //             level.el.style.zIndex = maxZoom;
+    //
+    //             level.origin = map.project(map.unproject(map.getPixelOrigin()), zoom).round();
+    //
+    //             // custom
+    //             // calculate crs level for custom crs
+    //             //
+    //             level.__customCrsLevel = {};
+    //
+    //             var a = map._getNewPixelOrigin(
+    //                 map.getCenter(),
+    //                 undefined,
+    //                 this.options.crs
+    //             );
+    //
+    //             var b = map.unproject(
+    //                 a,
+    //                 undefined,
+    //                 this.options.crs
+    //             );
+    //
+    //             level.__customCrsLevel.origin = map.project(
+    //                 b,
+    //                 zoom,
+    //                 this.options.crs
+    //             ).round();
+    //
+    //             // end of custom
+    //
+    //             level.zoom = zoom;
+    //
+    //             this._setZoomTransform(level, map.getCenter(), map.getZoom());
+    //
+    //             // force the browser to consider the newly added element for transition
+    //             L.Util.falseFn(level.el.offsetWidth);
+    //         }
+    //
+    //         this._level = level;
+    //
+    //         // custom
+    //         this.__customCrsLevel = level.__customCrsLevel;
+    //         // end of custom
+    //
+    //         return level;
+    //     },
+    //
+    //
+    //     _getTiledPixelBounds: function(center) {
+    //
+    //         var map = this._map;
+    //
+    //         var crs = (this._hasDifferentCrs) ? this.options.crs : null;
+    //
+    //         // custom (add this.options.crs in project method call)
+    //         var pixelCenter = map.project(center, this._tileZoom, crs).floor();
+    //         // end of custom
+    //
+    //         var halfSize = map.getSize().divideBy(2);
+    //
+    //         return new L.Bounds(pixelCenter.subtract(halfSize), pixelCenter.add(halfSize));
+    //     },
+    //
+    //     _getTilePos: function(coords) {
+    //
+    //         // custom
+    //         if (this._hasDifferentCrs()) {
+    //             return coords.scaleBy(this.getTileSize()).subtract(this.__customCrsLevel.origin);
+    //         } else {
+    //             return coords.scaleBy(this.getTileSize()).subtract(this._level.origin);
+    //         }
+    //         // end of custom
+    //     },
+    //
+    //
+    //     _hasDifferentCrs() {
+    //         return this.options.crs && this._map.options.crs != this.options.crs;
+    //     }
+    //
+    // });
+    //
+
+
+    ////
+
+    // crs: EPSG:2991
+    // http://www.spatialreference.org/ref/epsg/2991/
+
+    crs = new  L.Proj.CRS('EPSG:2991',
+        '+proj=lcc +lat_1=43 +lat_2=45.5 +lat_0=41.75 +lon_0=-120.5 +x_0=400000 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs',
+        {
+            resolutions: [128, 64, 32, 16, 8, 4, 2, 1, 0.5, 0.25], // example zoom level resolutions
+        }
+    );
+
+
+    var map = L.map('map', {
+        crs: crs
+    });
+
+    //
+    // L.geoJson.ajax("assets/counties.topojson", {
+    //     middleware:function(data){
+    //
+    //         function handleLayer(layer){
+    //             layer.setStyle({
+    //                 fillColor : "red",
+    //                 fillOpacity: .5,
+    //                 color:'red',
+    //                 weight:1,
+    //                 opacity:.5
+    //             });
+    //             // remove the sliver or gap between two adjacent polylines/polygons
+    //             layer.options.smoothFactor = 0;
+    //         }
+    //
+    //         topoLayer.addData(data);
+    //         topoLayer.eachLayer(handleLayer);
+    //         topoLayer.addTo(map);
+    //     }
+    // });
+
+    //http://jdduarte.com/stories/2013/06/06/leaflet-js-with-custom-projection/
+    //http://jsfiddle.net/S8FL2/
+  // //  var mytile = new L.Proj.TileLayer.TMS('nlcd/{z}/{x}/{y}.png', crs,{tms: false});
+  //
+  //       'nlcd/{z}/{x}/{y}.png', {
+  //           crs: crs
+  //       }
+  //   var mytile2 = new L.TileLayerCustomCrs(
+  //
+  //   );
+
+    // var tile = new L.TileLayer('nlcd/{z}/{x}/{y}.png', {
+    //     maxZoom: crs.options.resolutions.length,
+    //     minZoom: 0,
+    //     continuousWorld: true,
+    //     // crs: crs,
+    //     tms: true
+    // }).addTo(map);
+
+
+        map.addLayer(new L.TileLayer('nlcd/{z}/{x}/{y}.png', crs, {
+            maxZoom: crs.options.resolutions.length,
+            minZoom: 0,
+            continuousWorld: true
+        }));
+
+
+    map.fitWorld();
+    // map.addLayer(mytile2);
+
+
+
+</script>
+</body>
+</html>
