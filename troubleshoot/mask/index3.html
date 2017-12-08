@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--  Include jquery - required for XHR requests -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!--  Include leaflet javascript and css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <!-- turfjs for polygons holes -->
+    <!--<script src="https://npmcdn.com/@turf/turf@4.5.2/turf.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
+    <!--<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+    <!--  Include r360.js -->
+    <script src="js/geojson-utils.js"></script>
+
+
+    <style>
+        html, body { width: 100%; height: 100%; margin: 0; }
+        #map { width: 100%; height: 100%; }
+    </style>
+</head>
+
+<body>
+<!--  where the map will live  -->
+<div id="map"></div>
+
+<script>
+
+    var map = L.map('map').setView([-21,127], 5);
+    var polygon = turf.polygon([[[112, -21], [116, -36], [146, -39], [153, -24], [133, -10], [112, -21]]]);
+    var mask = turf.polygon([[[-360, -90], [360, -90], [360, 90], [-360, 90], [-360, -90]]]);
+
+    var masked = turf.mask(polygon, mask);
+
+    L.tileLayer('https://{s}.tiles.mapbox.com/v3/ebrelsford.ho06j5h0/{z}/{x}/{y}.png').addTo(map);
+
+
+    L.geoJson(masked,{
+        style: {
+            fillColor: "white",
+            fillOpacity: 1,
+            color: "white",
+            Opacity: 1
+        }
+    }).addTo(map);
+</script>
+</body>
+</html>
