@@ -75,4 +75,4 @@ Please turn to [https://github.com/jakobzhao/storymap](https://github.com/jakobz
 
 2\. [https://github.com/jakobzhao/storymap](https://github.com/jakobzhao/storymap)
 
-2\. [http://atlefren.github.io/storymap/](http://atlefren.github.io/storymap/)
+3\. [http://atlefren.github.io/storymap/](http://atlefren.github.io/storymap/)
