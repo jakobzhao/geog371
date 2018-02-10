@@ -47,7 +47,7 @@ io.sockets.on('connection', function (socket) {
                             socket.broadcast.emit("twstreaming", pntfeature);
 
                             // emits the geojson data through the web socket channel.
-                            socket.emit('twstreaming', pntfeature);
+                            socket.broadcast.emit('twstreaming', pntfeature);
                         }
                         else if (data.place) {
                             if (data.place.bounding_box === 'Polygon') {
@@ -66,7 +66,7 @@ io.sockets.on('connection', function (socket) {
 
                                 // Build json object and broadcast it
                                 var pntfeature = {"lat": centerLat, "lng": centerLng};
-                                socket.broadcast.emit("twitter-stream", pntfeature);
+                                socket.broadcast.emit("twstreaming", pntfeature);
                             }
                         }
                     }
