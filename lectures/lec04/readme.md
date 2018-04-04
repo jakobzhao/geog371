@@ -20,7 +20,7 @@ It can take several different physical machines to create, serve, and use a web 
 >  - A line extends from the bottom of this cloud into a wide oval diagram with the label: Internal network. 
 >  - The line leads to the drawing of a Web server and then, below the Web server, to a Geospatial server. 
 >  - The line then branches to drawings of a file server (left) and a database server (right). 
->  - To the left (within the Internal network oval) is another computer drawing with the label: Administrators and internal client applications. Desktop workstations that are used by administrators and internal client applications. These machines will also be used to prepare data, author maps, and sometimes administer the other machines.
+>  - To the left (within the Internal network rectangler) is another computer drawing with the label: Administrators and internal client applications. Desktop workstations that are used by administrators and internal client applications. These machines will also be used to prepare data, author maps, and sometimes administer the other machines.
 
 In some cases, your web map may be designed solely for the use of people within your organization and may never see the open web. In this scenario, client applications may also reside on these desktop workstation machines.
 
