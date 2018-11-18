@@ -54,12 +54,12 @@ No required textbook, but required papers and online materials will be available
 
 ### Programming Languages
 
-Html, CSS, Javascript, Markdown and GeoJson
+[Html](), [CSS](), [Javascript](), and [Markdown]()
 
 ### Desktop Software
 
-[Chrome](https://www.google.com/chrome/browser/desktop/index.html), [Webstorm](https://www.jetbrains.com/webstorm/buy/#edition=discounts), [Typora](https://typora.io), [QGIS](http://www.qgis.org/en/site/), and [GeoServer](http://geoserver.org/)
-​
+[Chrome](https://www.google.com/chrome/browser/desktop/index.html), [Atom](https://atom.io/) [Webstorm](https://www.jetbrains.com/webstorm/buy/#edition=discounts), [QGIS](http://www.qgis.org/en/site/), and [GeoServer](http://geoserver.org/)
+
 ### Web Services
 
 [GitHub](https://github.com/), [jsfiddle](https://jsfiddle.net/), [Mapbox](https://www.mapbox.com/), [W3Schools](https://www.w3schools.com/), and [geojson.io](http://geojson.io)
@@ -73,7 +73,6 @@ Html, CSS, Javascript, Markdown and GeoJson
 #### [2017 Fall](http://geoviz.ceoas.oregonstate.edu/geog371.html#portfolio)
 
 ![](resources/img/2017_fall.jpg)
-
 
 #### [2017 Winter](http://geoviz.ceoas.oregonstate.edu/project_gallery/)
 
