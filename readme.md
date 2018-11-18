@@ -4,11 +4,12 @@
 >
 >**Lecture:** MWF 1200 - 1250 @WLKN 235 | **Lab:** Th 1000 to 1150 @WLKN 210
 >
->**Catalog course description: GEOVISUALIZATION: WEB MAPPING (4).**
+>**Catalog course description: WEB MAPPING (4).**
 >
 >Concepts and techniques of web programming, digital storytelling, online project management, and web-based cartographic principles for developing, evaluating, and using web maps.  Lec/lab. **PREREQS:** GEOG 201
 
-Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces current developments in web mapping and advanced cartographic skills applied to interactive map design. By using open sourced libraries (Leaflet, Cesium, storymap.js, Bootstrap, jQuery), free or open source software (QGIS, Webstorm), project management services (GitHub), and web mapping services (GeoServer, MapBox), students can learn both the principles of web-based cartography and the practical skills for web mapping, and develop the capabilities of map aesthetics and critique. The lectures focus on the theories and principles behind web mapping, including system architecture, responsive design, user graphic design, map design and geo-narrative. The lab exercises focus on practical skills for web programming, 2d and 3d web mapping, web mapping services, and digital storytelling. The mid-term focuses on basic concepts and web programming techniques. There is no final exam, but each student is expected to design a web map and deploy it to an openly accessible server. Feel free to contact Dr. Bo Zhao for more information. :raising_hand:
+Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces Concepts and techniques of web programming, digital storytelling, online project management, and web-based cartographic principles for developing, evaluating, and using web maps. To promote the equal accessibility to web mapping technology, we ensure all the web mapping applications from course materials can be opened, debugged or further developed in either Windows or Mac OSX operating systems, and all the relevant software or services are either open source or free. This course is comprised of two major components, including lectures and lab exercises. The lectures focus on the theories and principles behind web mapping, including system architecture, responsive user graphic design, map design and geo-narrative. The lab exercises focus on practical skills for web programming, 2d and 3d web mapping, web mapping services, and digital storytelling. In addition, there will be random quizzes focusing on prior lecture materials, a mid-term focusing on basic concepts and web programming techniques. Although there is no final exam, but each student is expected to design a web map and deploy it to an openly accessible server (e.g., GitHub). From this course, students can learn both the principles of web-based cartography and the practical skills for web mapping, and develop the capabilities of map aesthetics and critique. If you have any question about this course, feel free to contact [Dr. Bo Zhao](mail://zhao2@oregonstate.edu) for more information. :raising_hand:
+
 
 | Week  |               Lecture (M)                |               Lecture (W)                |                 Lab (Th)                 |               Lecture (F)                |                 Reading                  |
 | :---: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
@@ -19,7 +20,7 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
 | Wk 04 | [Map Server III: Web Map Services](lectures/lec12) |  [Map Server IV: Base Map Design using Mapbox](lectures/lec13)   |          [Lab 4: Web Map Services and Basemap](labs/lab04/)          | Midterm Exam  | [Bing Map Tile, WFS and WMS](readings/wk04.md) |
 | Wk 05 |          [Map Server V: Map Tiles](lectures/lec14)                   | [Map Design I: Web Template and Framework](lectures/lec15) |              Lab 4: Cont'd               | [Map Design II: Bootstrap](lectures/lec16) | [Bootstrap docs](readings/wk05.md) |
 | Wk 06 | [Storytelling with Web Map I](lectures/lec17) | Storytelling with Web Map II, cont'd with the last lecture |             [Lab 5: Story Map](labs/lab05/readme.md)             | [Map Design III: User Friendly Design Principles](lectures/lec19) |     [Web Map Design Principles](readings/wk06.md)      |
-| Wk 07 |      [Real-Time Mapping: TweetMap](lectures/lec20)       |        [HeatMap](lectures/lec21)        |              Lab 5: Cont'd               |              *Veterans Day*              |         [Server Side JavaScript](readings/wk07.md)                                   |
+| Wk 07 | [Real-Time Mapping: TweetMap](lectures/lec20)       |        [HeatMap](lectures/lec21)        |              Lab 5: Cont'd               |              *Veterans Day*              |         [Server Side JavaScript](readings/wk07.md)                                   |
 | Wk 08 | [Map Design IV: Map Critiques](lectures/lec22) | [3D Web Mapping I: Basics](lectures/lec23) | [Lab 6:  Thematic Map on a Virtual Globe](labs/lab06) | [3D Web Mapping II: Build a Virtual Environment](lectures/lec24) |                                          |
 | Wk 09 | [3D Web Mapping III: Thematic Map on a Virtual Globe](lectures/lec25) | Final Project Discussion and Preparation |              *Thanksgiving Break*             |           *Thanksgiving Break*           |                                          |
 | Wk 10 | [Emerging Topics on Web Mapping](lectures/lec26) | Final Project Discussion and Preparation | Final Project Discussion and Preparation |   Final Project Presentation - *Strand Ag Hall (GAZE) Dec 1st Noon to 13:50pm*       | [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md) |
@@ -27,6 +28,7 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces curren
 [**Syllabus**](resources/syllabus.pdf)
 
 **Course Project:star:**
+
  - [Guideline](project/readme.md) (WK02)
  - [Proposal]() (WK03)
  - [Data Source](project/datasource.md) (WK04)
