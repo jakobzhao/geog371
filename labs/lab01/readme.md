@@ -323,13 +323,12 @@ Before submitting this lab, please make sure both the **GitHub repository** and 
 
 4\. To hone your skills in generating Markdown files, the resume could be built upon the template that was shown in `Section 3.2`, but we still encourage you customize your resume. In terms of the format, your online resume should contain:
 
-* different levels of headers (4 POINTS);
-* block quotes (4 POINTS);
-* url links (4 POINTS);
-* one or several images (10 POINTS);
-* A list (4 POINTS);
-* A table (4 POINTS); and
-* One or several emoji icons (4 POINTS).
+* Different levels of headers (4 POINTS);
+* A block quote (5 POINTS);
+* Several url links (5 POINTS);
+* One or several images (10 POINTS);
+* A list (5 POINTS);
+* A table (5 POINTS); and
 
 > **Note:** Lab assignments are required to be submitted electronically to Canvas unless stated otherwise. Efforts will be made to have them graded and returned within one week after they are submitted.Lab assignments are expected to be completed by the due date. ***A late penalty of at least 10 percentage units will be taken off each day after the due date.***
 
