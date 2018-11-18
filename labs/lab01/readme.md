@@ -113,10 +113,16 @@ C:\Workspace\geog371>dir
 
 In the root directory, there are folders like labs, lectures and readings, and files like readme.md and LICENSE.
 
-7\. Next, we open the `readme.md` file using `Atom`. To do that, make sure you have installed `Atom` and also an `Atom` packge named `markdown-preview-enhanced`. Once `Atom` is opened, open the `geog371` repo from your workspace and navigate to the `readme.md` in the project tree panel. Then, double-click this file, both the source code and the compiled page of `readme.md` will be shown in two new panes.
+7\. Next, we open the `readme.md` file using `Atom`. To do that, make sure you have installed `Atom` and also an `Atom` packge named `markdown-preview-enhanced`.
 
+Once `Atom` is opened, press `crtl+shift+a` to open the open prjoect dialog window, naviagte to `geog371` folder from your workspace and press `select folder`. Then the `geog371` repo will be opened, and a file tree will be shown in the project list panel on the left of the atom editor.
 
-![](img/typora_syllabus.jpg)
+![](img/atom-open-project.png)
+
+In the project list panel, navigate to the `readme.md` in the project tree panel. Then, double-click this file, both the source code and the compiled page of `readme.md` will be shown in two new panels to the right of the project list panel.
+
+![](img/atom-open-readme.png)
+
 
 8\. Once the course material is hosted on GitHub, it can be easily shared with a larger community. To synchronize the course material on remote GitHub repository to your local computer, you need to implement two sequential command lines `git checkout --force` and `git pull` in the root directory of the repository. Once the two commands are executed. An update notice will be shown as below.
 
@@ -281,15 +287,15 @@ We can also use `Atom` to upload files to GitHub repository or more generally, c
 
 2\. In the root directory of the downloaded repository, please copy the edited `resume.md` to the root.
 
-3\. Open the program `Atom`. By default, the welcome window will pop up. In this welcome window, click `Open` button on the bottom right. Then, another new window `Open File or Project` will pop up. Select the downloaded repository. The name should be in the format of `[account_username].github.io`.
+3\. Open the program `Atom`. Press `crtl+shift+a` to open the "open project" dialog panel. In the panel, navigate to the repo.  The name should be in the format of `[account_username].github.io`. click the `select folder` button on the bottom of the panel to open the repo to the main interface of atom.
 
-![](img/open_webstorm_project.jpg)
+![](img/atom-open-project-2.png)
 
-4\. Once you open this repository, you can edit the `resume.md` in Webstorm.
+4\. Once you open this repository, you can edit the `resume.md` in Atom.
 
-5\. To update any edit changes, on the top menu, Click `VCS` on the top menu, and then `commit...` on the dropdown menu.
+5\. To update any edit changes, to the bottom right of the main interface, Click `files`, a new `git` panel will be added up the right of the main interface. click `Stage All`. on the top and leave some update inforamtion in the `commit message` textbox. When, the `Commit to master` button becomes valid, press it.
 
-![](img/commit.jpg)
+
 
 6\. On the popped-up `Commit Changes` window, make sure you check the `Unversioned Files` box if there is, also, you need to leave some message in the `Commit Message` textbox and input the name of the author who made this change.
 
