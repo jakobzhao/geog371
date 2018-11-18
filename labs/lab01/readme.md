@@ -40,7 +40,7 @@ For this lab, you will use chrome, git and atom. Also these software products ha
 
 If **Git** is successfully installed, type `git` in command prompt (if you are a Windows user) or terminal (if you are a Mac or Linux user), the following screen will be shown up.
 
-![](img/git-command.jpg)
+![](img/git.gif)
 
 Using `git`, you can synchronize the course materials and also publish your own GitHub repository.  We will talk about that later in this lab.
 
