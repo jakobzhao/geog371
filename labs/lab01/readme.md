@@ -29,6 +29,15 @@ For this lab, you will use chrome, git and atom. Also these software products ha
 > **Note: What is an integrated development environment (IDE)?**
 > IDE is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools, and a debugger. Most modern IDEs have intelligent code completion. The boundary between an integrated development environment and other parts of the broader software development environment is not well-defined. Sometimes a version control system, or various tools to simplify the construction of a graphical user interface (GUI), are integrated. Many modern IDEs also have a class browser, an object browser, and a class hierarchy diagram, for use in object-oriented software development.
 
+> **Note:** Atom is a customizable IDE, so to fully prepare it for web programming, you will need to install additional packages. To do that, press `crtl+shift+p` to open the search dialog, and then input "install packages And Themes" to navigate to the package install interface. In this interface, please search and install the following recommended packages:
+>
+> - markdown-preview-enhanced
+> - teletype
+> - atom-live-server
+> - file-icons
+> - language-markdown
+> - pdf-view
+
 If **Git** is successfully installed, type `git` in command prompt (if you are a Windows user) or terminal (if you are a Mac or Linux user), the following screen will be shown up.
 
 ![](img/git-command.jpg)
@@ -295,9 +304,11 @@ We can also use `Atom` to upload files to GitHub repository or more generally, c
 
 5\. To update any edit changes, to the bottom right of the main interface, Click `files`, a new `git` panel will be added up the right of the main interface. click `Stage All`. on the top and leave some update inforamtion in the `commit message` textbox. When, the `Commit to master` button becomes valid, press it.
 
+![](img/atom-git-panel.png)
 
-7\. Before you commit, hover your mouse on the `Commit` button, then a dropdown menu will show up, **Choose `Commit and Push...`**. Then on the newly popped up window, click `push` to finish.
+6\. Once the update is committed, the `fetch` notice on the bottom right will change to `push`. Then, press the `push` notice to push the commit to the remote repository on github.
 
+![](img/atom-git-push.png)
 
 > **Note:** As you might already aware of, the first two steps are as same as those in the approache 2 (3.3.2). The difference is, approach 2 works on a terminal/command prompt environment (a command-lline user interface), while approach 3 works in Atom (a graphic user interface).
 >
