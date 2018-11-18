@@ -62,12 +62,15 @@ C:\Users\[your_username]>cd C:\Workspace
 C:\Workspace>
 ```
 
-> **Note:** If you are working on any computer in the Digital Earth Lab, the folder "Workspace" under the root of C drive. Also, you might not have the privilege to make such a folder. So to work on any computer in the Digital Earth Lab, you can navigate to the Desktop folder. See the command lines below.
+> **Note:** If you are working on any computer in the Digital Earth Lab, you would not have the privilege to create a "Workspace" folder under the root of C drive. So you can create one under the root of your personal user folder. To navigate to the root of your personal user folder,  See the command lines below.
 
 ```powershell
-C:\Users\[your_username]>cd Desktop
-C:\Users\[your_username]\Desktop>
+C:\Users\[your_username]>cd \
+C:\>cd Users\[your_username]
+C:\Users\[your_username]>
 ```
+
+> [your_username] indicates your username, for example, if my username is jakob, the path is suppose to be `C:\Users\jakob>`
 
 5\. Having the **git url**, we will need to use the command `git clone` to clone the GitHub repository to your local computer.
 
@@ -110,7 +113,8 @@ C:\Workspace\geog371>dir
 
 In the root directory, there are folders like labs, lectures and readings, and files like readme.md and LICENSE.
 
-7\. Next, we open the `readme.md` file using `Atom`.  If the previous steps work successfully, we can read the similar content as shown below.
+7\. Next, we open the `readme.md` file using `Atom`. To do that, make sure you have installed `Atom` and also an `Atom` packge named `markdown-preview-enhanced`. Once `Atom` is opened, open the `geog371` repo from your workspace and navigate to the `readme.md` in the project tree panel. Then, double-click this file, both the source code and the compiled page of `readme.md` will be shown in two new panes.
+
 
 ![](img/typora_syllabus.jpg)
 
@@ -164,7 +168,7 @@ In this section, we will introduce a series of operations related to project man
 
 1\. On your local computer, create a text file, and name it `resume.md`.
 
-2\. Open this file `resume.md` with `Typora`. In the Typora's editor, you can work on your resume. If you are not familiar with Markdown, please refer to a tutorial at [here](https://guides.github.com/features/mastering-markdown/). Or you can start with copying and pasting the template below. Notably, this template is only for your reference. You probably do not want to share too much about your personal information such as phone number, address and etc.
+2\. Open this file `resume.md` with `Atom`. Then, you can work on your resume. If you are not familiar with Markdown, please refer to a tutorial at [here](https://guides.github.com/features/mastering-markdown/). Or you can start with copying and pasting the template below. Notably, this template is only for your reference. You probably do not want to share too much about your personal information such as phone number, address and etc.
 
 ```markdown
 # Your Name
@@ -229,7 +233,7 @@ Summary of your role
 ```
 >**Note:** This resume template is from [http://www.jasonfilley.com/resumeinmarkdown.html](http://www.jasonfilley.com/resumeinmarkdown.html).
 
-3\. In fact, you can use any text editor to generate Markdown files. If you do not have `Typora` at hand, you can use `Webstorm` as well. To enable `Webstorm` to recognize the markdown syntax, you will need to install a plugin named `Markdown Navigator`. To do that, open `Webstorm`, on the top menu, navigate through `File->Settings...`. In the popped up window, click `Plugins` tab, and then click the `Browse Repositories` on the bottom left of the window. In the newly popped-up window, search "markdown navigator" in the search box, as a result, the plugin "Markdown Navigator" will be found out. Then, you will need to install this plugin by pressing the green button `install`. Once installed, you might want to restart `WebStorm` to activate this change. Please let the instructor know if you meet any difficulty in installing this plugin.
+3\. In fact, you can use any text editor to generate Markdown files. If you do not have `Atom` at hand, you can use `Notepad` as well. Please let the instructor know if you meet any difficulty in installing this plugin.
 
 ### 3.3 Upload files to GitHub
 
@@ -269,18 +273,17 @@ Password for 'https://jakobzhao@github.com':
 
 In a nutshell, to push a change from your local computer to GitHub, you will need to (1) `git clone` a repository from GitHub, (2) `git add` the untracked file to the repository, (3) `git commit` that you have made a change, and at last, (4) `git push` your changes to the GitHub repository.
 
-#### 3.3.3 WebStorm Commit
+#### 3.3.3 Atom Commit and push
 
-We can also use Webstorm to upload files to GitHub repository or more generally, commit changes. Compared with the first two solutions, I recommend you use Webstorm if you prefer graphic user interfaces.
+We can also use `Atom` to upload files to GitHub repository or more generally, commit changes. Compared with the first two solutions, I recommend you use Atom if you prefer graphic user interfaces.
 
-1\. Download the repository  `https://github.com/[account_username]/[account_username].github.io`  following the instruction in Section 2 ***"Download the course material”***.
+1\. Download the repository  `https://github.com/[account_username]/[account_username].github.io`  following the instruction in Section 2 ***"Download the course material"***.
 
 2\. In the root directory of the downloaded repository, please copy the edited `resume.md` to the root.
 
-3\. Open the program `Webstorm`. By default, the welcome window will pop up. In this welcome window, click `Open` button on the bottom right. Then, another new window `Open File or Project` will pop up. Select the downloaded repository. The name should be in the format of `[account_username].github.io`.
+3\. Open the program `Atom`. By default, the welcome window will pop up. In this welcome window, click `Open` button on the bottom right. Then, another new window `Open File or Project` will pop up. Select the downloaded repository. The name should be in the format of `[account_username].github.io`.
 
 ![](img/open_webstorm_project.jpg)
-
 
 4\. Once you open this repository, you can edit the `resume.md` in Webstorm.
 
@@ -295,11 +298,11 @@ We can also use Webstorm to upload files to GitHub repository or more generally,
 7\. Before you commit, hover your mouse on the `Commit` button, then a dropdown menu will show up, **Choose `Commit and Push...`**. Then on the newly popped up window, click `push` to finish.
 
 
-> **Note**: As you might already aware of, the first two steps are as same as those in the solution 2. The difference is, solution 2 works on a terminal/command prompt environment (a command-lline user interface), while solution 3 works in Webstorm (a graphic user interface).
+> **Note:** As you might already aware of, the first two steps are as same as those in the approache 2 (3.3.2). The difference is, approach 2 works on a terminal/command prompt environment (a command-lline user interface), while approach 3 works in Atom (a graphic user interface).
 >
-> Using either of the three solutions, you can upload your resume or any other files to GitHub. Then, log on to this repository on GitHub to see whether the uploaded content is applied.
->
-> Now you have already known how to commit a change. In practice, you will use this operation very frequently. Other than committing changes, you may also need to synchronize your latest version of your GitHub repository. Please think about how can we do that on Webstorm.
+> Using either of the three approaches (3.3.1 to 3.3.3), you can upload your resume or any other files to GitHub. Then, log on to this repository on GitHub to see whether the uploaded content is applied.
+
+Now you have already known how to commit a change. In practice, you will use this operation very frequently. Other than committing changes, you may also need to synchronize, both fetch and push, the latest version of your GitHub repository.
 
 ### 3.4 Publish your repository
 
