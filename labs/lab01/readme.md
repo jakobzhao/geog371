@@ -24,7 +24,7 @@ For this lab, you will use Webstorm, typora and git. Also these software product
 
 - **Typora:** An editor for composing Markdown files ([Click here to download Typora](https://typora.io/)). Typora is dedicated to process markdown files. It can browse, edit, and even convert markdown files to pdf or word documents; and
 
-- **Git:** A version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people ([Click here to download, choose the right platform, and then install](https://git-scm.com/downloads)). 
+- **Git:** A version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people ([Click here to download, choose the right platform, and then install](https://git-scm.com/downloads)).
 
 If **Git** is successfully installed, type `git` in command prompt (if you are a Windows user) or terminal (if you are a Mac or Linux user), the following screen will be shown up.
 
@@ -46,9 +46,9 @@ Using `git`, you can synchronize the course materials and also publish your own 
 
 In this course, all the material is stored on GitHub. We will go through the steps on how to download the material as below.
 
-1\. On GitHub, each project is stored as a project repository. The repository for this course is located at [https://github.com/jakobzhao/geog371](https://github.com/jakobzhao/geog371). Please navigate to this url on a browser such as `Chrome`. As indicated by the course website url, this repository is created by me; my GitHub account name is `jakobzhao`, while the repository name is `geog371`. 
+1\. On GitHub, each project is stored as a project repository. The repository for this course is located at [https://github.com/jakobzhao/geog371](https://github.com/jakobzhao/geog371). Please navigate to this url on a browser such as `Chrome`. As indicated by the course website url, this repository is created by me; my GitHub account name is `jakobzhao`, while the repository name is `geog371`.
 
-2\. On the front page of this repository, please click the green button named after `Clone or download` . To download the course material, you can click the `Download ZIP` button, as a result, a compressed file of the course material will be downloaded. 
+2\. On the front page of this repository, please click the green button named after `Clone or download` . To download the course material, you can click the `Download ZIP` button, as a result, a compressed file of the course material will be downloaded.
 
 3\. However, **we recommend you to clone this project repository**. You can get the **git url** of this repository on the same information window. The git url is [https://github.com/jakobzhao/geog371.git](https://github.com/jakobzhao/geog371.git).
 
@@ -105,7 +105,7 @@ C:\Workspace\geog371>dir
                8 Dir(s)  903,569,551,360 bytes free
 ```
 
-In the root directory, there are folders like labs, lectures and readings, and files like readme.md and LICENSE. 
+In the root directory, there are folders like labs, lectures and readings, and files like readme.md and LICENSE.
 
 7\. Next, we open the `readme.md` file using `Typora`.  If the previous steps work successfully, we can read the similar content as shown below.
 
@@ -129,16 +129,16 @@ Fast-forward
  readme.md | 3 ++-
 ```
 
-Now, the course material on your local computer is updated. 
+Now, the course material on your local computer is updated.
 
-> **Note:** To ensure you are reading the latest version of the lecture or lab handouts, you need to regularly synchronize the course material, especially before class. 
+> **Note:** To ensure you are reading the latest version of the lecture or lab handouts, you need to regularly synchronize the course material, especially before class.
 >
-> If you implement the above two commands in a Mac or Linux system, you might need to add `sudo` before `git`to a lack-of-privilege issue. For example, `sudo git clone`, `sudo git checkout --force`. In general, the command `sudo` will assign the superuser privilege to the command line. 
+> If you implement the above two commands in a Mac or Linux system, you might need to add `sudo` before `git`to a lack-of-privilege issue. For example, `sudo git clone`, `sudo git checkout --force`. In general, the command `sudo` will assign the superuser privilege to the command line.
 
 9\. Before we jump to the next section, please:
 
 - Star the repository by pressing the `star` button on the top right, and;
-- Navigate to Dr. Zhao's front page at [https://github.com/jakobzhao](https://github.com/jakobzhao), and click the `Follow` button to be a follower. 
+- Navigate to Dr. Zhao's front page at [https://github.com/jakobzhao](https://github.com/jakobzhao), and click the `Follow` button to be a follower.
 
 ## 3\. Project management
 
@@ -146,11 +146,11 @@ In this section, we will introduce a series of operations related to project man
 
 ### 3.1 Create a repository for your project
 
-1\. Navigate to [https://github.com/new](https://github.com/new), and input your repository name in the blank text box for `Repository name`. Here, please name your repository in the format of **[account_username].github.io**. So, if your account_username is `jakobzhao`, this repository name will be **jakobzhao.github.io**. 
+1\. Navigate to [https://github.com/new](https://github.com/new), and input your repository name in the blank text box for `Repository name`. Here, please name your repository in the format of **[account_username].github.io**. So, if your account_username is `jakobzhao`, this repository name will be **jakobzhao.github.io**.
 
 ![""](img/create-new-repository-2.jpg)
 
-2\. Besides, make sure you **CHECK** the box `Initialize this repository with a README`. You can leave other options by default. 
+2\. Besides, make sure you **CHECK** the box `Initialize this repository with a README`. You can leave other options by default.
 
 ![](img/create-new-repository-3.jpg)
 
@@ -235,7 +235,7 @@ Once you have drafted out your resume in the `resume.md` file. You will upload t
 
 1\. Open a web browser such as `Chrome`, navigate to the front page of the repository you have just created.
 
-2\. Next, use your mouse to drag the `resume.md` file to the front page. Once you see a notice saying **Drop to upload your files**, you can then release your mouse. A new interface will appear as below. 
+2\. Next, use your mouse to drag the `resume.md` file to the front page. Once you see a notice saying **Drop to upload your files**, you can then release your mouse. A new interface will appear as below.
 
 > **Note:** Certainly, you can drag and drop multiple files and/or folders. In this lab, we just upload one single file.
 
@@ -301,7 +301,7 @@ We can also use Webstorm to upload files to GitHub repository or more generally,
 
 Once the `resume.md` is uploaded to the root of the GitHub Repository, you can see this file listed in the root. Moreover, GitHub provide a new function named **GitHub Page** that converts a markdown file as a web page. Because your resume is located at the root of the repository, you can directly access your resume by visiting `http://[account_username].github.io/resume` if you implement the following steps.
 
-1\. please click the `Settings`tab on the top bar of the repository front page. 
+1\. please click the `Settings`tab on the top bar of the repository front page.
 
 2\. On the `GitHub Pages` Section, please click the  `Source`  dropdown list and choose `master branch`.  Next, press the `Save` button.
 
