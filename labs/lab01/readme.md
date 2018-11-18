@@ -6,7 +6,7 @@
 >
 > **Assigned:** 09/21/2017 | **Due:** `09/28/2017 @11:59pm` | **Points Available** = 50
 
-Welcome to the lab session of **GEOG 371: Web Mapping**! In this lab, we will briefly introduce the Digital Earth Lab at Wilkinson 210, download the course material and more importantly, help you get familiar with the major operations on project management for web mapping. In practice, you will start with installing the required software (on your own computer or laptop), registering a GitHub account, and learn how to use several software products, such as Webstorm, Typora, and Git. To test your learning outcomes, you will be asked to generate a  GitHub repository to publish your resume on the web. Okay, let us get started!
+Welcome to the lab session of **GEOG 371: Web Mapping**! In this lab, we will briefly introduce the Digital Earth Lab at Wilkinson 210, download the course material and more importantly, help you get familiar with the major operations on project management for web mapping. In practice, you will use the lab computer, if you use a personal laptop, you will install the required software, and then register a GitHub account, and learn how to use git, atom and github. To test your learning outcomes, you will be asked to create a GitHub repository to publish your resume on the web. Okay, let us get started!
 
 # 1. Preparations
 
@@ -16,15 +16,18 @@ Digital Earth Lab is a teaching facility primarily for GIS, remote sensing, cart
 
 The lab generally opens 8am-5pm , a detailed schedule can be found at [http://dusk.geo.orst.edu/de/de_teach.html](http://dusk.geo.orst.edu/de/de_teach.html). The manager of the facility is Cory Langhoff. If you need afterhours access, contact Cory by email [langhofc@oregonstate.edu](mailto:langhofc@oregonstate.edu), or dial 7-2532 to make arrangements.
 
-## 1.2 Software Setup
+## 1.2 Environment Setup
 
-For this lab, you will use Webstorm, typora and git. Also these software products have already been installed in the computers in the Digital Earth Lab, except Typora (but you can always use text editor alternatives, such as Webstorm, Notepad, Brackets, and etc.). But I highly recommend you to install all these three.
+For this lab, you will use chrome, git and atom. Also these software products have already been installed in the lab computers. But I highly recommend you to install all these three.
 
-- **Webstorm:** A professional web mapping programming development environment ([Click here for the installation instruction](https://www.jetbrains.com/webstorm/buy/#edition=discounts)). and make sure you install the edition **for students and teachers**). Check a tutorial on installing Webstorm at [here](install_webstorm.md);
+- **Atom:** A professional web mapping programming development environment ([Click here to download](https://atom.io/)). Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for Git Control, developed by GitHub. Atom is a desktop application built using web technologies. Most of the extending packages have free software licenses and are community-built and maintained. It can also be used as an integrated development environment (IDE). Its developers call it a "hackable text editor for the 21st Century".;
 
-- **Typora:** An editor for composing Markdown files ([Click here to download Typora](https://typora.io/)). Typora is dedicated to process markdown files. It can browse, edit, and even convert markdown files to pdf or word documents; and
+- **Chrome:** is a freeware web browser developed by Google. It was first released on September 2, 2008 for Microsoft Windows, and was later ported to Linux, macOS, iOS and Android. Google Chrome is also the main component of Chrome OS, where it serves as a platform for running web apps;and
 
-- **Git:** A version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people ([Click here to download, choose the right platform, and then install](https://git-scm.com/downloads)).
+- **Git:** A version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people ([Click here to download](https://git-scm.com/downloads)). It is primarily used for source-code management in software development, but it can be used to keep track of changes in any set of files.  Git was created by **Linus Torvalds** in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development. Its current maintainer since 2005 is Junio Hamano.
+
+> **Note: What is an integrated development environment (IDE)?**
+> IDE is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools, and a debugger. Most modern IDEs have intelligent code completion. The boundary between an integrated development environment and other parts of the broader software development environment is not well-defined. Sometimes a version control system, or various tools to simplify the construction of a graphical user interface (GUI), are integrated. Many modern IDEs also have a class browser, an object browser, and a class hierarchy diagram, for use in object-oriented software development.
 
 If **Git** is successfully installed, type `git` in command prompt (if you are a Windows user) or terminal (if you are a Mac or Linux user), the following screen will be shown up.
 
@@ -34,17 +37,17 @@ Using `git`, you can synchronize the course materials and also publish your own 
 
 ### 1.3 Register a GitHub account
 
-1\. You will apply for a GitHub account for managing and synchronizing your web mapping project. If you do not have a GitHub account yet, please sign up at [https://www.github.com](https://www.github.com)
+You will apply for a GitHub account for managing and synchronizing your web mapping project. If you do not have a GitHub account yet, please sign up at [https://www.github.com](https://www.github.com). Notably, you will need to choose a username. This username will be used as a part of the domain name of your home github ['username'.github.io](). So, make sure this username is succinct, simple and English-character only. Apparently, an easily-recognized domain name is more popular.
 
-> **Do you know the differences between Git and GitHub?**
+> **Note: Do you know the differences between Git and GitHub?**
 >
-> **Git** is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for software development, but it can be used to keep track of changes in any files. Git was created by **Linus Torvalds** in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development.
+> **Git** is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for software development, but it can be used to keep track of changes in any files. Git was created by **Linus Torvalds** in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development.
 >
 >  **GitHub** is a web-based Git or version control repository and Internet hosting service. GitHub offers both plans for private and free repositories on the same account which are commonly used to host open-source software projects. As of April 2016, GitHub reports having more than 14 million users and more than 35 million repositories, making it the largest host of source code in the world.
 
 ## 2\. Download the course material
 
-In this course, all the material is stored on GitHub. We will go through the steps on how to download the material as below.
+In this course, I decide to store all material on GitHub instead of Canvas system. By doing so, my goal is not to create extra trouble or sharp the learn curve. Instead, hosting on github will help you save a lot of time in downloading or migrating course materials, testing lab or lecture applications. Also, more practically, a lot of companies in the geospatial industries have already used github for their project managment, such as [ESRI](https://github.com/Esri), [CartoBD](https://github.com/CartoDB), [MapBox](https://github.com/mapbox), and etc. To prepare you with the capabilities of using github, you will be familiar with an industry-level project management approach. In this lab, let us go through the procedure of downlaoding the course material as below.
 
 1\. On GitHub, each project is stored as a project repository. The repository for this course is located at [https://github.com/jakobzhao/geog371](https://github.com/jakobzhao/geog371). Please navigate to this url on a browser such as `Chrome`. As indicated by the course website url, this repository is created by me; my GitHub account name is `jakobzhao`, while the repository name is `geog371`.
 
@@ -107,11 +110,11 @@ C:\Workspace\geog371>dir
 
 In the root directory, there are folders like labs, lectures and readings, and files like readme.md and LICENSE.
 
-7\. Next, we open the `readme.md` file using `Typora`.  If the previous steps work successfully, we can read the similar content as shown below.
+7\. Next, we open the `readme.md` file using `Atom`.  If the previous steps work successfully, we can read the similar content as shown below.
 
 ![](img/typora_syllabus.jpg)
 
-8\. Once the course material is hosted on GitHub, it can be easily shared with a larger community and update. To synchronize the course material on remote GitHub repository to your local computer, you need to implement two sequential command lines `git checkout --force` and `git pull` in the root directory of the repository. Once the two commands are executed. An update notice will be shown as below.
+8\. Once the course material is hosted on GitHub, it can be easily shared with a larger community. To synchronize the course material on remote GitHub repository to your local computer, you need to implement two sequential command lines `git checkout --force` and `git pull` in the root directory of the repository. Once the two commands are executed. An update notice will be shown as below.
 
 ```powershell
 C:\Workspace\geog371>git checkout --force
@@ -131,13 +134,14 @@ Fast-forward
 
 Now, the course material on your local computer is updated.
 
-> **Note:** To ensure you are reading the latest version of the lecture or lab handouts, you need to regularly synchronize the course material, especially before class.
+> **Note:** To ensure you are reading the latest version of the lecture or lab handouts, you need to regularly synchronize the course material, especially before the beginin of each class.
 >
-> If you implement the above two commands in a Mac or Linux system, you might need to add `sudo` before `git`to a lack-of-privilege issue. For example, `sudo git clone`, `sudo git checkout --force`. In general, the command `sudo` will assign the superuser privilege to the command line.
+> If you implement the above two commands in a Mac or Linux system, you might need to add `sudo` before `git` to solve the lack-of-privilege issue. For example, `sudo git clone`, `sudo git checkout --force`. In general, the command `sudo` will assign the superuser privilege to the command line.
 
 9\. Before we jump to the next section, please:
 
 - Star the repository by pressing the `star` button on the top right, and;
+
 - Navigate to Dr. Zhao's front page at [https://github.com/jakobzhao](https://github.com/jakobzhao), and click the `Follow` button to be a follower.
 
 ## 3\. Project management
@@ -303,7 +307,7 @@ Once the `resume.md` is uploaded to the root of the GitHub Repository, you can s
 
 1\. please click the `Settings`tab on the top bar of the repository front page.
 
-2\. On the `GitHub Pages` Section, please click the  `Source`  dropdown list and choose `master branch`.  Next, press the `Save` button.
+2\. On the `GitHub Pages` Section, make sure `master branch` is chosen in the `Source`  dropdown list.  Next, press the `Save` button.
 
 3\. It usually takes several seconds to 1~2 minutes to apply this setting. If this setting is activated, you can read your resume from `http://[account_username].github.io/resume`.
 
