@@ -1,4 +1,4 @@
-# GEOG 371: Web Mapping
+# Web Mapping
 >
 >**Instructor:** Bo Zhao, zhao2@oregonstate.edu | **Office Hours:** W 1400-1500 or by appt. @STRAND 347
 >
