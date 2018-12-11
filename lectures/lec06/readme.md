@@ -6,9 +6,9 @@
 
 **Learning Objectives**
 
-- Review the data tier in a web mapping architecture; 
+- Review the data tier in a web mapping architecture;
 - Understand the differences between file server and database server;
-- Get to know the major geospatial data formats for web mapping, shapefile, kml, geojson and topojson; 
+- Get to know the major geospatial data formats for web mapping, shapefile, kml, geojson and topojson;
 - Able to read, edit, display, convert GeoJson files.
 
 ## 1. The data tier of your web mapping architecture
@@ -99,7 +99,7 @@ KML stands for Keyhole Markup Language, and was developed by Keyhole, Inc., befo
 
 KML is a form of XML, wherein data is maintained in a series of structured tags. KML is unique and versatile in that it can contain styling information and it can hold either vector or raster formats ("overlays", in KML-speak). The rasters themselves are not written in the KML, but are included with it in a zipped file called a KMZ. Large vector datasets are also commonly compressed into KMZs.
 
-The key XML tag behind KML is the **placemark**. This defines a geographic feature, sometimes with symbol feature, and extra information. 
+The key XML tag behind KML is the **placemark**. This defines a geographic feature, sometimes with symbol feature, and extra information.
 
 
 ```xml
@@ -161,7 +161,7 @@ you can use `.json` or `.geojson` as the extension of a GeoJson file, but you mi
 
 GeoJSON is a widely-used data format for displaying vectors in web maps. It is based on JavaScript object notation, a simple and minimalist format for expressing data structures using syntax from JavaScript. In GeoJSON, a vector feature and its attributes are represented as a JavaScript object, allowing for easy parsing of the geometry and fields.
 
-GeoJSON is less bulky than XML-based structures such as KML; however, GeoJSON does not always contain styling information like KML does. GeoJSON's simplicity and loading speed have made it popular, perhaps even trendy, among developers in the open source world. 
+GeoJSON is less bulky than XML-based structures such as KML; however, GeoJSON does not always contain styling information like KML does. GeoJSON's simplicity and loading speed have made it popular, perhaps even trendy, among developers in the open source world.
 
 Here's what a piece of GeoJSON looks like. GeoJSON vectors are commonly bundled into a unit called a `FeatureCollection`. The `FeatureCollection` below holds the same data as the above kml does. The bulk of the GeoJSON below contains the vertices that define the state outline, but you should also notice a attribute/property - `name`:
 
@@ -380,7 +380,7 @@ Now we have a single geojson file opposed to a complicated shapefile structure, 
 
 ## References:
 
-[1] GeoJson/TopoJson Converter: 
+[1] GeoJson/TopoJson Converter:
 
 - http://geojson.io/
 - http://shancarter.github.io/distillery/
