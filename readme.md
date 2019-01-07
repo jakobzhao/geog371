@@ -10,10 +10,11 @@
 
 Welcome to GEOG371:Web Mapping :earth_americas:! This course introduces concepts and techniques of web programming, digital storytelling, online project management, and web-based cartographic principles for developing, evaluating, and using web maps. To promote the equal access to web mapping technology, we ensure all the web mapping applications from course materials can be opened, debugged or further developed in either Windows or Mac OSX operating systems, and all the relevant software or services are either open source or free. This course is comprised of two major components, including lectures and lab exercises. The lectures focus on the theories and principles behind web mapping, including system architecture, responsive user graphic design, map design and geo-narrative. The lab exercises focus on practical skills for web programming, 2d and 3d web mapping, web mapping services, and digital storytelling. In addition, there will be random quizzes focusing on prior lecture materials, a mid-term focusing on basic concepts and web programming techniques. Although there is no final exam, but each student is expected to design a web map and deploy it to an openly accessible server (e.g., GitHub). From this course, students can learn both the principles of web-based cartography and the practical skills for web mapping, and develop the capabilities of map aesthetics and critique. If you have any question about this course, feel free to contact [Dr. Bo Zhao](mail://zhao2@oregonstate.edu) for more information. :raising_hand:
 
+> [Gear up the Working Environment :computer: :cloud: :earth_americas: :beer:](resources/gearup.md)
 
 | Week  |               Lecture (M)                |               Lecture (W)                |                 Lab (M)                |               Lecture (F)                |                 Reading                  |
 | :---: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
-| Wk 00 |    [Intro to the Course](lectures/lec01)    |   [Internet Fundamentals](lectures/lec00)   | [Lab 1: Project Management for Web Mapping](labs/lab01)  |  [Intro to Web Mapping](lectures/lec02)  | [Markdown, Links and Command Lines](readings/wk00.md) |
+| Wk 00 |    [Intro to the Course](lectures/lec01), [Gear Up! :gear:](resources/gearup.md)    |   [Internet Fundamentals](lectures/lec00)   | [Lab 1: Project Management for Web Mapping](labs/lab01)  |  [Intro to Web Mapping](lectures/lec02)  | [Markdown, Links and Command Lines](readings/wk00.md) |
 | Wk 01 | [Web Programming Basics I: HTML 5 and CSS](lectures/lec03) | [System Architecture for Web Mapping](lectures/lec04) | [Lab 2: Web Programming Basics II: Javascript](labs/lab02) | [Web Programming Basics III: JQuery](lectures/lec05) | [HTML, CSS and Javascript](readings/wk01.md) |
 | Wk 02 | *MLK Day* |  [Web Programming Basics III: Debugging](lectures/lec05)  |          [Lab 3: Web Map Design](labs/lab03/readme.md)           |[Spatial Data for Web Mapping](lectures/lec06)  |  [Leaflet and GeoJson](readings/wk02.md)  |
 | Wk 03 |  [Map Client I: Basics and Geographic Features](lectures/lec07) | [Map Client II: Map Events and Mashup](lectures/lec08)  |              Lab 3: Cont'd               |  [Map Client III: Web Map Interaction](lectures/lec09) |    [GeoServer Documentation](readings/wk03.md)    |
@@ -25,9 +26,9 @@ Welcome to GEOG371:Web Mapping :earth_americas:! This course introduces concepts
 | Wk 09 | [3D Web Mapping II: Build a Virtual Environment](lectures/lec24)  |   [3D Web Mapping III: Thematic Map on a Virtual Globe](lectures/lec25) |              Final Project Discussion and Preparation             |      [Emerging Topics on Web Mapping](lectures/lec26)         |       [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk09.md)                                   |
 | Wk 10 | Final Project Discussion and Preparation | Final Project Discussion and Preparation | Final Project Discussion and Preparation |   Final Project Presentation - *Strand Ag Hall (GAZE) TBD*       | *N/A* |
 
-[**Syllabus**](resources/syllabus.pdf)
+[**Syllabus**](resources/geog371-syllabus.pdf)
 
-**Course Project:star:**
+### Course Project :star:
 -  [Final Project Guidelines](project/readme.md)
  - [Guideline](project/readme.md) (WK02)
  - [Proposal]() (WK03)
