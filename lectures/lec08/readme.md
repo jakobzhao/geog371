@@ -1,6 +1,6 @@
 # Map Client II: Map Events and Mashup
 
-> Winter 2019 | Geography 371 | Web Mapping
+> Winter 2019 | Geography  | Web Mapping
 >
 > **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
@@ -97,7 +97,7 @@ Learning the fundamentals of adding small datasets to our map along with some ba
 
 **The GeoJSON**
 
-In the downloaded materials, there is a data folder `assets` that contains a file called **"geog371.geojson"**. This is a dataset of several geographic features containing the lecture, lab, and office hour location of the course Geography 371, and the route linking the lecture and lab location to the office hour location.  Open up the GeoJSON in webstorm or other IDEs to see what a GeoJSON looks like. Also, you open this geojson file by a web application at http://www.geojson.io.  As shown below.
+In the downloaded materials, there is a data folder `assets` that contains a file called **"geog.geojson"**. This is a dataset of several geographic features containing the lecture, lab, and office hour location of the course Geography 371, and the route linking the lecture and lab location to the office hour location.  Open up the GeoJSON in webstorm or other IDEs to see what a GeoJSON looks like. Also, you open this geojson file by a web application at http://www.geojson.io.  As shown below.
 
 ![](img/geojsonio.png)
 
@@ -132,7 +132,7 @@ Add the following code to your `script`, between the script tags.
 
 ```js
 // load GeoJSON from an external file
-L.geoJson.ajax("assets/geog371.geojson").addTo(map);
+L.geoJson.ajax("assets/geog.geojson").addTo(map);
 ```
 
 Simple enough right? Click save and refresh your page to see the GeoJSON added to the map.
@@ -145,7 +145,7 @@ We can see the points, but they might not be very useful without adding popups. 
 
 ```js
 // load GeoJSON from an external file
-L.geoJson.ajax("assets/geog371.geojson", {
+L.geoJson.ajax("assets/geog.geojson", {
     onEachFeature: function(feature, layer) {
         layer.bindPopup(feature.properties.name);
     }
