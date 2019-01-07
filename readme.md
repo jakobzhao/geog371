@@ -20,7 +20,7 @@ Welcome to GEOG371:Web Mapping :earth_americas:! This course introduces concepts
 | Wk 04 |  [Map Server I: Intro to GeoServer](lectures/lec10)   | [Map Server II: Styling](lectures/lec11)    |          [Lab 4: Web Map Services and Basemap](labs/lab04/)  |  [Map Server III: Web Map Services](lectures/lec12)  | [Bing Map Tile, WFS and WMS](readings/wk04.md) |
 | Wk 05 |       [Map Server IV: Base Map Design using Mapbox](lectures/lec13)                   |   [Map Server V: Map Tiles](lectures/lec14)    |              Lab 4: Cont'd               |   Midterm Exam  | [Bootstrap Documentation](readings/wk05.md) |
 | Wk 06 | [Map Design I: Web Template and Framework](lectures/lec15)  | [Map Design II: Bootstrap](lectures/lec16)  |             [Lab 5: Story Map](labs/lab05/readme.md)             | [Storytelling with Web Map I](lectures/lec17)   |   [Web Map Design Principles](readings/wk06.md)    |
-| Wk 07 |    Storytelling with Web Map II, cont'd with the last lecture      |  [Map Design III: User Friendly Design Principles](lectures/lec19)            |              Lab 5: Cont'd               |   [Real-Time Mapping: TweetMap](lectures/lec20)          |         [Server Side JavaScript](readings/wk07.md)                                   |
+| Wk 07 |    Storytelling with Web Map II, cont'd with the last lecture      |  [Map Design III: User Friendly Design Principles](lectures/lec19)            |              Lab 5: Cont'd               |   [Real-Time Mapping: TweetMap](lectures/lec20)          |         [Server-Side JavaScript](readings/wk07.md)                                   |
 | Wk 08 |                [HeatMap](lectures/lec21)   | [Map Design IV: Map Critiques](lectures/lec22) | [Lab 6:  Thematic Map on a Virtual Globe](labs/lab06) |  [3D Web Mapping I: Basics](lectures/lec23)  |    [Cesium Documentation](readings/wk08.md)                                      |
 | Wk 09 | [3D Web Mapping II: Build a Virtual Environment](lectures/lec24)  |   [3D Web Mapping III: Thematic Map on a Virtual Globe](lectures/lec25) |              Final Project Discussion and Preparation             |      [Emerging Topics on Web Mapping](lectures/lec26)         |       [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk09.md)                                   |
 | Wk 10 | Final Project Discussion and Preparation | Final Project Discussion and Preparation | Final Project Discussion and Preparation |   Final Project Presentation - *Strand Ag Hall (GAZE) TBD*       | *N/A* |
@@ -47,17 +47,13 @@ Welcome to GEOG371:Web Mapping :earth_americas:! This course introduces concepts
 - [Colors](resources/color.md)
 - [Social media](lectures/lec16/readme.md)
 
-### Texts
-
-No required textbook, but required papers and online materials will be available on the course repository on GitHub.
-
 ### Programming Languages
 
 [Html](), [CSS](), [Javascript](), and [Markdown]()
 
 ### Desktop Software
 
-[Chrome](https://www.google.com/chrome/browser/desktop/index.html), [Atom](https://atom.io/) [Webstorm](https://www.jetbrains.com/webstorm/buy/#edition=discounts), [QGIS](http://www.qgis.org/en/site/), and [GeoServer](http://geoserver.org/)
+[Chrome](https://www.google.com/chrome/browser/desktop/index.html), [Atom](https://atom.io/), [QGIS](http://www.qgis.org/en/site/), and [GeoServer](http://geoserver.org/)
 
 ### Web Services
 
