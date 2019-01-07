@@ -14,7 +14,11 @@ Welcome to GEOG 371: Web Mapping :earth_americas:! This course introduces concep
 
 | Week  |               Lecture (M)                |               Lecture (W)                |                 Lab (Th)                 |               Lecture (F)                |                 Reading                  |
 | :---: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
+<<<<<<< HEAD
 | Wk 00 |                  *N /A*                   |  [Intro to the Course](lectures/lec01)   | [Lab 1: Project Management for Web Mapping](labs/lab01)  |  [Intro to Web Mapping](lectures/lec02)  | [Markdown, Links and Command Lines](readings/wk00.md) |
+=======
+| Wk 00 |    [Intro to the Course](lectures/lec01)    |     | [Lab 1: Project Management for Web Mapping](labs/lab01)  |  [Intro to Web Mapping](lectures/lec02)  | [Markdown, Links and Command Lines](readings/wk00.md) |
+>>>>>>> 4fed5e7a5e15c991b97fa1aa4234026a1d9bfb11
 | Wk 01 | [Web Programming Basics I: HTML 5 and CSS](lectures/lec03) | [System Architecture for Web Mapping](lectures/lec04) | [Lab 2: Web Programming Basics II: Javascript](labs/lab02) | [Web Programming Basics III: JQuery](lectures/lec05) | [HTML, CSS and Javascript](readings/wk01.md) |
 | Wk 02 | [Spatial Data for Web Mapping](lectures/lec06), :raised_hands:[Final Project Guidelines](project/readme.md) | [Map Client I: Basics and Geographic Features](lectures/lec07) |          [Lab 3: Web Map Design](labs/lab03/readme.md)           | [Map Client II: Map Events and Mashup](lectures/lec08) |  [Leaflet and GeoJson](readings/wk02.md)  |
 | Wk 03 | [Map Client III: Web Map Interaction](lectures/lec09) | [Map Server I: Intro to GeoServer](lectures/lec10) |              Lab 3: Cont'd               | [Map Server II: Styling](lectures/lec11) |    [GeoServer docs](readings/wk03.md)    |
