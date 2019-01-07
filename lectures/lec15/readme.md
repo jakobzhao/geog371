@@ -1,8 +1,8 @@
 # Map Design I: Web Framework and Template
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
@@ -22,7 +22,7 @@ Here are some principal features of Bootstrap:
 
 >  **What is Responsive (Web) Design?** It is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops.
 
-One of the most important is that Bootstrap is designed to be friendly on mobile, meaning your site will resize to be viewable on mobile devices. Another is that Bootstrap has an excellent grid system that allows us a nice ability to layout our site into columns and divisions. **The grid system** uses the div element (remember, these are containers for the elements on our page), and arranges them into rows. More on the grid system: [http://getbootstrap.com/examples/grid/](http://getbootstrap.com/examples/grid/). The components provided by the Bootstrap framework and templates are on the [Bootstrap components site](http://getbootstrap.com/components), note that there are tables, dropdown menus, panels, dividers, and more. 
+One of the most important is that Bootstrap is designed to be friendly on mobile, meaning your site will resize to be viewable on mobile devices. Another is that Bootstrap has an excellent grid system that allows us a nice ability to layout our site into columns and divisions. **The grid system** uses the div element (remember, these are containers for the elements on our page), and arranges them into rows. More on the grid system: [http://getbootstrap.com/examples/grid/](http://getbootstrap.com/examples/grid/). The components provided by the Bootstrap framework and templates are on the [Bootstrap components site](http://getbootstrap.com/components), note that there are tables, dropdown menus, panels, dividers, and more.
 
 ## 2. Bootstrap: Basics
 
@@ -51,9 +51,9 @@ Bootstrap uses HTML elements and CSS properties that require the HTML5 doctype. 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
   </head>
-</html>	
+</html>
 ```
 
 **Bootstrap 3 is mobile-first**
@@ -63,7 +63,7 @@ Bootstrap 3 is designed to be responsive to mobile devices. Mobile-first styles 
 To ensure proper rendering and touch zooming, add the following tag inside the element:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1">	
+<meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
 The `width=device-width` part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
@@ -96,7 +96,7 @@ Please keep in mind that *Containers* are not nestable. Meaning you cannot put a
 
 <div class="container">
   <h1>My First Bootstrap Page</h1>
-  <p>This is some text.</p> 
+  <p>This is some text.</p>
 </div>
 
 </body>
@@ -120,7 +120,7 @@ Please keep in mind that *Containers* are not nestable. Meaning you cannot put a
 
 <div class="container-fluid">
   <h1>My First Bootstrap Page</h1>
-  <p>This is some text.</p> 
+  <p>This is some text.</p>
 </div>
 
 </body>
@@ -228,4 +228,3 @@ To facilitate the process of template design and customization, you can use the 
 [4] https://www.toptal.com/front-end/what-is-bootstrap-a-short-tutorial-on-the-what-why-and-how
 
 [5]  https://www.smashingmagazine.com/2008/01/10-principles-of-effective-web-design/
-

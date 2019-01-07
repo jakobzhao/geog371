@@ -1,13 +1,13 @@
 # 3D Web Mapping II: Building a Virtual Environment
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
-- How to build a virtual environment using cesium.js; 
-- Terrain lightning and water mask functions; and 
+- How to build a virtual environment using cesium.js;
+- Terrain lightning and water mask functions; and
 - How to create a terrain provider using geoserver.
 
 Cesium supports streaming and visualizing global high-resolution terrain and water effects for oceans, lakes, and rivers. Mountain peaks, valleys, and other terrain features really show the benefit of a 3D globe compared to a 2D map.
@@ -31,7 +31,7 @@ After modifying the example, press F8 to run it. To get a feel for the terrain, 
 
 As we zoom closer, Cesium requests higher resolution terrain based on what parts of the globe are visible and how far away they are.
 
-> **NOTE**: Terrain and imagery are treated separately; above, the default imagery is draped over the terrain. Any imagery provider(s) can be used with any terrain provider. 
+> **NOTE**: Terrain and imagery are treated separately; above, the default imagery is draped over the terrain. Any imagery provider(s) can be used with any terrain provider.
 
 The Cesium Terrain Server also includes data for terrain lighting as well as coastline data needed for water effects. By default, the terrain server does not send lighting or coastline data with the terrain tiles; we must request the terrain lighting or coastline data when constructing a `CesiumTerrainProvider`.
 
@@ -103,7 +103,7 @@ The dem data is compressed, we extracted the data, and uploaded to Geoserver, an
 
 ![](img/layer.png)
 
-Also, we upload the [mySLD.xml](https://github.com/kaktus40/Cesium-GeoserverTerrainProvider/blob/master/mySLD.xml) as a new sld file named `strm`, and then apply this sld file to the layer `ceoas:srtm_12_04`. 
+Also, we upload the [mySLD.xml](https://github.com/kaktus40/Cesium-GeoserverTerrainProvider/blob/master/mySLD.xml) as a new sld file named `strm`, and then apply this sld file to the layer `ceoas:srtm_12_04`.
 
 ![](img/style.png)
 

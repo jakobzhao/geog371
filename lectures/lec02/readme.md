@@ -1,8 +1,8 @@
 # Introduction to Web Mapping
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
@@ -51,7 +51,7 @@ Analytical web maps offer GIS analytical functions. The borderline between analy
 
 ### 2.2 Animated and real-time
 
-Realtime maps show the situation of a phenomenon in close to realtime (only a few seconds or minutes delay). They are usually animated. Data is collected by sensors and the maps are generated or updated at regular intervals or on demand. Animated maps show changes in the map over time by animating one of the graphical or temporal variables. 
+Realtime maps show the situation of a phenomenon in close to realtime (only a few seconds or minutes delay). They are usually animated. Data is collected by sensors and the maps are generated or updated at regular intervals or on demand. Animated maps show changes in the map over time by animating one of the graphical or temporal variables.
 
 ![](img/arcgis_event.jpg)
 
@@ -79,7 +79,7 @@ The traditional atlas goes through a remarkably large transition when hosted on 
 
 ### 2.5 Static web maps
 
-Static web pages are view only without animation or interactivity. These files are created once, often manually, and infrequently updated. Typical graphics formats for static web maps are PNG, JPEG, GIF, or TIFF for raster files, SVG, PDF or SWF for vector files. These include scanned paper maps not designed as screen maps. 
+Static web pages are view only without animation or interactivity. These files are created once, often manually, and infrequently updated. Typical graphics formats for static web maps are PNG, JPEG, GIF, or TIFF for raster files, SVG, PDF or SWF for vector files. These include scanned paper maps not designed as screen maps.
 
 ![](img/d3.jpg)
 
@@ -140,7 +140,7 @@ This section contains some of the milestones of web mapping, online mapping serv
 
 - 2002: **ArcIMS 4.0**, Version 4 of the ArcIMS web map server.
 
-- 2003: **NASA World Wind**, NASA World Wind Released. An open virtual globe that loads data from distributed resources across the internet. 
+- 2003: **NASA World Wind**, NASA World Wind Released. An open virtual globe that loads data from distributed resources across the internet.
 
   ![](img/World-Wind.jpg)
 
@@ -150,7 +150,7 @@ This section contains some of the milestones of web mapping, online mapping serv
 
 - 2005: **UMN MapServer** introduced as open source by the Open Source Geospatial Foundation (OSGeo). UMN MapServer 4.6, Adds support for SVG.
 
-  > **OSGeo**: The Open Source Geospatial Foundation (OSGeo) is a not-for-profit organization whose mission is to foster global adoption of open geospatial technology by being an inclusive software foundation devoted to an open philosophy and participatory community driven development. The foundation provides financial, organizational and legal support to the broader open source geospatial community.  
+  > **OSGeo**: The Open Source Geospatial Foundation (OSGeo) is a not-for-profit organization whose mission is to foster global adoption of open geospatial technology by being an inclusive software foundation devoted to an open philosophy and participatory community driven development. The foundation provides financial, organizational and legal support to the broader open source geospatial community. 
   >
   > **OSGeo sponsored Web mapping tools**: deegree, geomajas, GeoMOOSE, GeoServer, Mapbender, MapFish, MapGuide Open Source,  MapServer, OpenLayers, etc.
 
@@ -172,7 +172,7 @@ This section contains some of the milestones of web mapping, online mapping serv
 
   ![](img/mapbox.jpg)
 
-- 2011: **CARTO** (formerly CartoDB) is a Software as a Service (SaaS) **cloud computing** platform that provides GIS and web mapping tools for display in a web browser. 
+- 2011: **CARTO** (formerly CartoDB) is a Software as a Service (SaaS) **cloud computing** platform that provides GIS and web mapping tools for display in a web browser.
 
   ![](img/carto.jpg)
 
@@ -198,7 +198,7 @@ APIs designed specifically for the purpose of making web maps include OpenLayers
 
 **OpenLayers**
 
-OpenLayers is a mature and richly featured JavaScript API for building web map applications. It has an extensive collection of documentation and samples, although some of the materials can be difficult for beginners to grasp. One of nicest things about OpenLayers is the large developer community using the API. This community has created a mass of tips and examples on forums such as **GIS Stack Exchange**. 
+OpenLayers is a mature and richly featured JavaScript API for building web map applications. It has an extensive collection of documentation and samples, although some of the materials can be difficult for beginners to grasp. One of nicest things about OpenLayers is the large developer community using the API. This community has created a mass of tips and examples on forums such as **GIS Stack Exchange**.
 
 **Leaflet**
 
@@ -218,13 +218,13 @@ The Google Maps API gives developers the opportunity to overlay their own data o
 
 Applications that use the Google Maps API for free must be publicly accessible and **not incur over 25,000 map loads per day for 90 consecutive days**. Organizations whose applications that do not meet this and other criteria must purchase a Google Maps API for Business license.
 
-Microsoft's Bing Maps (link is external), another large commercial maps provider, offers APIs for web and mobile applications that are similar in scope to Google's. Like Google, Bing Maps offers a free usage tier and an enterprise license that must be purchased under various usage circumstances. 
+Microsoft's Bing Maps (link is external), another large commercial maps provider, offers APIs for web and mobile applications that are similar in scope to Google's. Like Google, Bing Maps offers a free usage tier and an enterprise license that must be purchased under various usage circumstances.
 
 **ArcGIS APIs**
 
 Esri has created web mapping APIs that fit into its ArcGIS platform, some of which are relatively rich in function compared to the Google Maps API and many of the FOSS APIs. The APIs support multiple languages and platforms, such as JavaScript, Flex, Silverlight, iOS, and Android. In theory, they are roughly equal in functionality, although, in practice, they have matured and thrived at different levels. The ArcGIS API for JavaScript (link is external) is one of the most fully featured and actively developed of these APIs.
 
-The ArcGIS APIs are primarily designed to work with web services that you have published using ArcGIS Online, Portal for ArcGIS (link is external), or ArcGIS for Server. 
+The ArcGIS APIs are primarily designed to work with web services that you have published using ArcGIS Online, Portal for ArcGIS (link is external), or ArcGIS for Server.
 
 >The APIs are free to use for development or educational use, but require a fee if you are selling the application or embedding advertising within it.
 

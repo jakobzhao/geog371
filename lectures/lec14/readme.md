@@ -1,8 +1,8 @@
 # Map Server V: Map Tiles
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
@@ -88,7 +88,7 @@ map scale = 1 : ground resolution * screen dpi / 0.0254 meters/inch  \\
 = 1 : (cos(latitude * pi/180) * 2 * pi * 6378137 * screen dpi) / (256 * 2^\mathit{level} * 0.0254)
 $$
 
-> **Retina Display:**  Retina Display is a brand name used by Apple for its series of IPS panel displays that have a higher pixel density than traditional displays. Apple has applied to register the term "Retina" as a trademark in regard to computers and mobile devices. When introducing the iPhone 4, Steve Jobs said the number of pixels needed for a Retina Display is **326PPI** . 
+> **Retina Display:**  Retina Display is a brand name used by Apple for its series of IPS panel displays that have a higher pixel density than traditional displays. Apple has applied to register the term "Retina" as a trademark in regard to computers and mobile devices. When introducing the iPhone 4, Steve Jobs said the number of pixels needed for a Retina Display is **326PPI** .
 
 > **The `detectRetina` Option for LeafLet TileLayer:** If `true` and user is on a retina display, it will request four tiles of half the specified size and a bigger zoom level in place of one to utilize the high resolution. For example,
 
@@ -169,9 +169,9 @@ $$
 To optimize the indexing and storage of tiles, the two-dimensional tile XY coordinates are combined into one-dimensional strings called quadtree keys, or “quadkeys” for short. Each quadkey uniquely identifies a single tile at a particular level of detail, and it can be used as an key in common database B-tree indexes. To convert tile coordinates into a quadkey, the bits of the Y and X coordinates are interleaved, and the result is interpreted as a base-4 number (with leading zeros maintained) and converted into a string. For instance, given tile XY coordinates of (3, 5) at level 3, the quadkey is determined as follows:
 
 $$
-tileX = 3 = 011^2 
+tileX = 3 = 011^2
 
-tileY = 5 = 101^2 
+tileY = 5 = 101^2
 
 quadkey = 100111^2 = 2134 = “213”
 $$
@@ -184,13 +184,13 @@ Finally, quadkeys provide a one-dimensional index key that usually preserves the
 
 ## 3. Creating tiles with GeoServer using GeoWebCache
 
-Suppose you're satisfied with the layers and symbols in your WMS, but you want it to draw faster and be available to many simultaneous users. In this situation, it might make sense to use GeoWebCache to create your tiles, because GeoWebCache is built directly into GeoServer. This section shows how to use GeoWeb Cache to create a tile cache for the Oregon counties map. 
+Suppose you're satisfied with the layers and symbols in your WMS, but you want it to draw faster and be available to many simultaneous users. In this situation, it might make sense to use GeoWebCache to create your tiles, because GeoWebCache is built directly into GeoServer. This section shows how to use GeoWeb Cache to create a tile cache for the Oregon counties map.
 
 1\. Start GeoServer at [http://mapio.us/geoserver/](http://mapio.us/geoserver/) and open the GeoServer Web Admin page.
 
 ![](img/geoserver-web-admin.png)
 
-2\. Use the **Layer Preview** link to preview the layer `ceoas:ore_counties`. Use the OpenLayers preview so that you can zoom and pan around. Take note of the performance and appearance of the map. 
+2\. Use the **Layer Preview** link to preview the layer `ceoas:ore_counties`. Use the OpenLayers preview so that you can zoom and pan around. Take note of the performance and appearance of the map.
 
 ![](img/ore_counties_preview.png)
 

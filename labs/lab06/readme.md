@@ -1,10 +1,10 @@
 # Practical Exercise 6: 3D Thematic Map using a Virtual Globe
 
-> Winter 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2018 | Geography 371 | Web Mapping
 >
-> Instructor: Bo Zhao  Location: 210 Wilkinson | Time: Thursday 1000 to 1150
+> **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 0800 - 1150
 >
-> Assigned: 03/09/2017 | Due: `11/21/2017 @11:59pm` | Points Available = 50
+> **Assigned:**  | **Due:**  | **Points Available** = 50
 
 During the last week, we have learned how to use a virtual globe to make a 3D thematic map. To do that, some of the most frequently used virtual globe libraries are [three.js](https://threejs.org/) and [cesium.js](http://cesiumjs.org/). While three.js is more compatible with other 3D web applications, cesium.js is dedicated to make virtual globes. As introduced in the lectures, [TerriaJS](http://terria.io/) is an robust open-source geospatial platform built on cesium.js. It provides us with handy tools for navigating, editing and managing geospatial data. If you are interested in using cesium.js for an integrated web mapping application, I would highly recommend writing the codes of [TerriaJS](http://terria.io/) at GitHub. In this lab, you are asked to make a 3D thematic map using cesium.js. The major learning goal is not to have you grasp the state-of-art skills in 3D mapping. Instead, this lab prepares you with fundamental skills of making a 3D thematic map, and provides you an opportunity to reflect on the differences between 2D and 3D web mapping. Okay, let us get started.
 
@@ -15,7 +15,7 @@ In New York City, the local government maintains an open data portal to share a 
 In the map, each bar indicates a number of noise complaint cases from the region underneath. Each region is a square grid with a side of 0.2 miles. The number of complaint cases is illustrated both through the sequential color scheme (low=yellow, high=red) and through the bar heights. To make such a 3D thematic map, we will need to
 
 - Select cesium.js as the map client library;
-- Use the dark theme map from MapBox as the basemap; and 
+- Use the dark theme map from MapBox as the basemap; and
 - Import the georeferenced bars in geojson data format and visualize them.
 
 ## 1\. Preparation
@@ -117,7 +117,7 @@ Here, the file **nyc_noise.geojson** contains a set of polygons (circles). Each 
 
 ![](img/geojsonio.png)
 
-Once the cesium successfully imports the geojson data, we will symbolize the polygons. 
+Once the cesium successfully imports the geojson data, we will symbolize the polygons.
 
 ![](img/geojson_loaded.png)
 
@@ -154,7 +154,7 @@ Also, we will update the color of entities using a sequential color ramp. To do 
 ![](img/qgis.png)
 
 After classifying the entities, we will pick a color ramp. We’ll use a yellow to red sequential color ramp to visualize the data. This color ramp provides a useful visualization of how the noise volume increases
-from low to high. 
+from low to high.
 
 ![](img/color-value.png)
 

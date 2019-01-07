@@ -1,10 +1,10 @@
 # Lab 5: Story Map
 
-> Winter 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2018 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 1000 - 1150
+> **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 0800 - 1150
 >
-> **Assigned:** 11/02/2017 | **Due:** `11/16/2017 @11:59pm` | **Points Available** = 50
+> **Assigned:**  | **Due:**  | **Points Available** = 50
 
 In this lab, you are asked to make a storymap using the library `storymap.js`. This storymap.js library is hosted at [https://github.com/jakobzhao/storymap](https://github.com/jakobzhao/storymap). Your storymap will at least have the following features:
 

@@ -1,8 +1,8 @@
 # 3D Web Mapping III: Thematic Map using a Virtual Globe
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
@@ -152,7 +152,7 @@ After we launch this virtual globe via a web server (e.g., `python SimpleHTTPSer
 </html>
 ```
 
-2.2  Then, we create a `script div` to hold the javascript code. We start with declare the viewer. To make the audience focus the web map, we turn off most of the extra features of a `Cesium.Viewer`. 
+2.2  Then, we create a `script div` to hold the javascript code. We start with declare the viewer. To make the audience focus the web map, we turn off most of the extra features of a `Cesium.Viewer`.
 
 ```javascript
 //create a cesium view, and use the mapbox dark map as the base map.
@@ -254,7 +254,7 @@ And the stylesheet.
 }
 ```
 
-Now we have made the thematic map on a virtual globe. Someone may find the default cesium.js credits distractive,  we can actually turn the credits off by the following code. 
+Now we have made the thematic map on a virtual globe. Someone may find the default cesium.js credits distractive,  we can actually turn the credits off by the following code.
 
 ```javascript
 document.getElementsByClassName("cesium-widget-credits")[0].style.visibility = "hidden";
@@ -266,7 +266,7 @@ Notably, if we turn the default credit off, we should credit cesium's contributi
 
 ## Concluding remarks
 
-Play the virtual globe by modifying the code, for example, changing the material, stroke, and extruded height. In addition, try to access a piece of geojson from a remote server (e.g., www.mapio.us). The `GeoJsonDataSource.load` function allows us to load data from both local and remote server. 
+Play the virtual globe by modifying the code, for example, changing the material, stroke, and extruded height. In addition, try to access a piece of geojson from a remote server (e.g., www.mapio.us). The `GeoJsonDataSource.load` function allows us to load data from both local and remote server.
 
 What's more, you may be also interested in activating some useful features, such as turning on the VR function or changing into another browsing perspective.
 

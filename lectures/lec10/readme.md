@@ -1,8 +1,8 @@
 # Map Server I: Introduction to GeoServer
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
@@ -283,7 +283,7 @@ Configuring a new layer (Part 3)
 
 > **`Note:`** If you’re wondering where the style/color of the layer is coming from, this will be discussed in the upcoming Styling section.
 
-The url to access this page is 
+The url to access this page is
 
 ```powershell
 http://mapious.ceoas.oregonstate.edu/GeoServer/ceoas/wms?service=WMS&version=1.1.0&request=GetMap&layers=ceoas:ore_counties&styles=&bbox=-124.56655744698392,41.99208155840781,-116.46353407190144,46.23746362317423&width=768&height=402&srs=EPSG:4326&format=application/openlayers

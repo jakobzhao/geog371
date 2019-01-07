@@ -1,8 +1,8 @@
 # Map Server III: Web Map Services
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
@@ -33,7 +33,7 @@ http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi?SERVICE=WMS&REQUEST=
 
 As you examined the URL of this request, you might have noticed parameters indicating the width and height of the image, the image format, the image background transparency, and the bounding coordinates of the map to be drawn. These parameters provide specific details about how the web service should run its map drawing code. You see these parameters reflected in the response image sent back to your browser when you clicked the link. In a future lesson, you'll learn about more of the parameters in the request above.
 
-> **Note:** Change some of the parameters of the URL, and see how the differences of the responding image tiles. For example, change the value of FORMAT to image/jpeg, the Size of the WIDTH and HEIGHT, change the value of CRS to EPSG:3857 or EPSG:4326. 
+> **Note:** Change some of the parameters of the URL, and see how the differences of the responding image tiles. For example, change the value of FORMAT to image/jpeg, the Size of the WIDTH and HEIGHT, change the value of CRS to EPSG:3857 or EPSG:4326.
 
 Not all web requests invoke web service code. Some web requests just return you a file. This is how tiled maps work, and this is why they are so fast. You'll learn more about tiled maps in a later lesson, but examine the following request for a specific zoom level, row, and column of a tile:
 
@@ -51,9 +51,9 @@ Open an GeoServer instance, and find the web map services  this GeoServer provid
 
 ## 2. View web service requests and responses
 
-Here's a simple way you can view web requests made “behind the scenes” by your browser as you navigate a website. These instructions use the in-browser console for Google Chrome. 
+Here's a simple way you can view web requests made “behind the scenes” by your browser as you navigate a website. These instructions use the in-browser console for Google Chrome.
 
-1\. Open Google Chrome, and type `ctrl+shift+I` to open the in-browser console, and turn to the `Network` tab. 
+1\. Open Google Chrome, and type `ctrl+shift+I` to open the in-browser console, and turn to the `Network` tab.
 
 ![](img/chrome-network.png)
 
@@ -154,7 +154,7 @@ A web mapping server can also (when allowed) return the actual geographic data t
 
 ### 4.1 Sample WFS request
 
-The following is a sample WFS request to a GeoServer instance at [http://geoserver.mapio.us](http://geoserver.mapio.us), 
+The following is a sample WFS request to a GeoServer instance at [http://geoserver.mapio.us](http://geoserver.mapio.us),
 
 ```http
 http://mapious.ceoas.oregonstate.edu/geoserver/mapious/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mapious:ore_counties&maxFeatures=50&outputFormat=application%2Fjson

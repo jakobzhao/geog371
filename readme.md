@@ -1,4 +1,4 @@
-# Web Mapping
+# GEOG371: Web Mapping
 >
 >**Instructor:** Bo Zhao, zhao2@oregonstate.edu | **Office Hours:** TBD or by appt. @WLKN 210
 >

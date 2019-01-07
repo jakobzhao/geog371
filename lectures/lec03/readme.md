@@ -1,8 +1,8 @@
 # Web Programming Basics I: HTML and CSS
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
@@ -100,7 +100,7 @@ In your IDE, open and create a new blank document. Signify that the document wil
 <!DOCTYPE html>
 ```
 
-This is called a **tag**. HTML tags are keywords surrounded by angle brackets. This tag states for the browser that the rest of your file will be written in HTML. The rest of our document will follow a very simple rule, no matter how complex the code. 
+This is called a **tag**. HTML tags are keywords surrounded by angle brackets. This tag states for the browser that the rest of your file will be written in HTML. The rest of our document will follow a very simple rule, no matter how complex the code.
 
 When you write a tag (aka `start tag`), you will need a second tag that declares the end of that part of the document (aka `end tag`). Content goes between the start and end tags. A start tag looks like and an end tag has a slash in front of it . Conceptually, you will write the following.
 

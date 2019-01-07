@@ -1,8 +1,8 @@
 # Map Design II: Bootstrap and Others
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
@@ -114,7 +114,7 @@ Till now, a control object is properly added. You can test it by clicking on the
 
 ## 4. Add a Social Media Component
 
-A social media button will help you spread a web map to more audience. This lecture only walk you through how to share the web map to Facebook, the ways to share to other social media applications are supposed to be quite similar. 
+A social media button will help you spread a web map to more audience. This lecture only walk you through how to share the web map to Facebook, the ways to share to other social media applications are supposed to be quite similar.
 
 To find a Facebook icon, we will use [Font Awesome](http://fontawesome.io), which is a font library dedicated for web design use. We will include the library within the `head` tag.
 
@@ -240,5 +240,3 @@ To browse this application, you can visit [jakobzhao.github.io/geog371/lectures/
 ## References:
 
 [1] https://en.wikipedia.org/wiki/Favicon
-
-

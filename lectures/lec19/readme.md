@@ -1,12 +1,12 @@
 # Map Design III: Design Principles
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
-- Understand the web design principles, and 
+- Understand the web design principles, and
 - Understand the map design principles.
 
 
@@ -32,11 +32,11 @@ Here are some concrete suggestions for making web sites:
 
 ### 1.3 Web medium:
 
-**Provide opportunities for interaction.** How is your site any different from a traditional print document? How can you involve the reader in ways that non-digitized texts usually cannot? Interactivity can be a compelling, innovative means of engaging your reader and creating experiences that cannot be replicated in other media. 
+**Provide opportunities for interaction.** How is your site any different from a traditional print document? How can you involve the reader in ways that non-digitized texts usually cannot? Interactivity can be a compelling, innovative means of engaging your reader and creating experiences that cannot be replicated in other media.
 
 **Avoid text-only pages.** Ideally, a user should never encounter an entire screen full of uninterrupted text in browsing your site. Again, take advantage of the web medium!
 
-**Don't sacrifice elegance for pizzazz.** Just because you can make images fly across the screen does not mean you necessarily should. Every design element of your site (colors, images, animation) ought to correspond thematically with the content and goals of your project. 
+**Don't sacrifice elegance for pizzazz.** Just because you can make images fly across the screen does not mean you necessarily should. Every design element of your site (colors, images, animation) ought to correspond thematically with the content and goals of your project.
 
 **Provide a link for every URL you mention in your site.** If your bibliography or notes include a citation for another website, list the URL in full, but make it 'clickable' as well so that the user can go directly to the site in question.
 
@@ -68,8 +68,8 @@ Here are some concrete suggestions for making web sites:
 
 Cartographers apply many design principles when compiling their maps and constructing page layouts. Five of the main design principles are **legibility, visual contrast, figure-ground organization, hierarchical organization, and balance.** Together these principles form a system for seeing and understanding the relative importance of the content in the map and on the page. Without these, map-based communication will fail.
 
-- Visual contrast and legibility provide **the basis for seeing the contents on the map**. 
-- Figure-ground organization, hierarchical organization, and balance **lead the map reader through the contents to determine the importance of things and ultimately find patterns**. 
+- Visual contrast and legibility provide **the basis for seeing the contents on the map**.
+- Figure-ground organization, hierarchical organization, and balance **lead the map reader through the contents to determine the importance of things and ultimately find patterns**.
 
 >  **Note:** It's worth noting that these principles are not applied in isolation but instead are complementary. Collectively, they help cartographers create maps that successfully communicate geographic information.
 

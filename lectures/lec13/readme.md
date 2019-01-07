@@ -1,8 +1,8 @@
 # Map Server IV: Base Map Design using Mapbox
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 
 In this lecture, we will help you publish a base map using Mapbox. Mapbox is a large provider of custom [online maps](https://en.wikipedia.org/wiki/Online_maps) for websites such as [Foursquare](https://en.wikipedia.org/wiki/Foursquare), [Pinterest](https://en.wikipedia.org/wiki/Pinterest), [Evernote](https://en.wikipedia.org/wiki/Evernote), the Financial Times, [The Weather Channel](https://en.wikipedia.org/wiki/The_Weather_Channel) and [Uber Technologies](https://en.wikipedia.org/wiki/Uber_Technologies).Since 2010, it has rapidly expanded the niche of custom maps, as a response to the limited choice offered by map providers such as [Google Maps](https://en.wikipedia.org/wiki/Google_Maps) and [OpenStreetMap](https://en.wikipedia.org/wiki/OpenStreetMap). Mapbox is the creator of, or a significant contributor to some open source mapping libraries and applications, including the MBTiles specification, the TileMill cartography IDE, the [Leaflet](https://en.wikipedia.org/wiki/Leaflet_(software)) JavaScript library, and the CartoCSS map styling language and parser.The data are taken both from open data sources, such as [OpenStreetMap](https://en.wikipedia.org/wiki/OpenStreetMap) and [NASA](https://en.wikipedia.org/wiki/NASA), and from proprietary data sources, such as [Digital Globe](https://en.wikipedia.org/wiki/DigitalGlobe).
@@ -117,7 +117,7 @@ Please locate and switch to a variety of styles on the right scrollable panel.
 
 ![](img/google-my-maps.png)
 
-To capture the color of a map, you can follow the following procedure. 
+To capture the color of a map, you can follow the following procedure.
 
 - Create a screenshot of the web map;
 
@@ -160,6 +160,3 @@ The generator also allows you to lock the colors you like best and auto-generate
 
 Cohesive Colors is another basic tool that offers something a little different. It creates only a simple color palette, but it also allows you to overlay the palette with a color of your choosing.
 You can either start with your own color set or choose a random one one from COLORlovers. Then select your overlay color and adjust the intensity. This tool provides you with a cohesive color scheme, but doesn’t allow you to fine-tune individual colors.
-
-
-

@@ -1,29 +1,29 @@
 # Map Server II: Styling
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
 - Sync data to web server via GitHub;
 - Get to know the basic syntax of Styled Layer Descriptor (SLD);
 - Able to read, debug/validate and edit a sld file;
-- Able to style a layer using GeoServer.  
+- Able to style a layer using GeoServer.
 
-GeoServer can render geospatial data as images and return them for viewing in a browser. However, geospatial data has no inherent visualization. Therefore additional information, in the form of a style, needs to be applied to data in order to visualize it. We have already seen automatic/generic styles in action with the layers loaded in previous sections. In this section, we will discuss the map style format and how those styles are generated.  
+GeoServer can render geospatial data as images and return them for viewing in a browser. However, geospatial data has no inherent visualization. Therefore additional information, in the form of a style, needs to be applied to data in order to visualize it. We have already seen automatic/generic styles in action with the layers loaded in previous sections. In this section, we will discuss the map style format and how those styles are generated.
 
 ## Preparation
 
 Before get started, we will synchronize some files to GeoServer. If your GeoServer is installed in your local computer, you can just simply put the data in a directory under your workspace, if the GeoServer is on a remote Server such as the compute engine in Google Cloud, we can upload the data through FTP or GitHub. Today, we would like to talk about how to synchronize data from GitHub to a GeoServer, no matter it is deployed locally or remotely.
 
-1\. Please make sure the machine which hosting GeoServer has installed a shell program `git`. Type `git` in command prompt or terminal to see whether `git` is installed or not. If not, you need follow an instruction at https://git-scm.com/book/en/v2/Getting-Started-Installing-Git to install `git`. Usually, a Linux Server, such as your Google Cloud Server, has installed `git` by default. 
+1\. Please make sure the machine which hosting GeoServer has installed a shell program `git`. Type `git` in command prompt or terminal to see whether `git` is installed or not. If not, you need follow an instruction at https://git-scm.com/book/en/v2/Getting-Started-Installing-Git to install `git`. Usually, a Linux Server, such as your Google Cloud Server, has installed `git` by default.
 
 > **Git** is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for software development, but it can be used to keep track of changes in any files. Git was created by **Linus Torvalds** in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development.
 >
 > **GitHub** is a web-based Git or version control repository and Internet hosting service. GitHub offers both plans for private and free repositories on the same account which are commonly used to host open-source software projects. As of April 2016, GitHub reports having more than 14 million users and more than 35 million repositories, making it the largest host of source code in the world.
 
-If `git` is properly installed, type `git` in command prompt or terminal will show the following information on the window. 	
+If `git` is properly installed, type `git` in command prompt or terminal will show the following information on the window.
 
 ![](img/git-command.png)
 
@@ -117,7 +117,7 @@ An SLD file contains the following hierarchical structure:
 
       * Symbolizers
 
-The header of the SLD contains metadata about XML namespaces, and is usually identical among different SLDs. The details of the header are beyond the scope of this workshop. 
+The header of the SLD contains metadata about XML namespaces, and is usually identical among different SLDs. The details of the header are beyond the scope of this workshop.
 
 A **FeatureTypeStyle** is a group of styling rules. (Recall that a `featuretype` is another word for a `layer`.)  Grouping by FeatureTypeStyle affects rendering order; the first FeatureTypeStyle will be rendered first, followed by the second, etc, allowing for precise control of drawing order.
 
@@ -140,11 +140,11 @@ The point style draws a simple 6-pixel red circle for each feature in a given la
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor version="1.0.0" 
-                       xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" 
-                       xmlns="http://www.opengis.net/sld" 
-                       xmlns:ogc="http://www.opengis.net/ogc" 
-                       xmlns:xlink="http://www.w3.org/1999/xlink" 
+<StyledLayerDescriptor version="1.0.0"
+                       xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd"
+                       xmlns="http://www.opengis.net/sld"
+                       xmlns:ogc="http://www.opengis.net/ogc"
+                       xmlns:xlink="http://www.w3.org/1999/xlink"
                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <!-- a Named Layer is the basic building block of an SLD document -->
   <NamedLayer>
@@ -200,11 +200,11 @@ Here is an example of an SLD that includes attribute-based styling. The SLD also
 
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1"?>
-   <StyledLayerDescriptor version="1.0.0" 
-    xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" 
-    xmlns="http://www.opengis.net/sld" 
-    xmlns:ogc="http://www.opengis.net/ogc" 
-    xmlns:xlink="http://www.w3.org/1999/xlink" 
+   <StyledLayerDescriptor version="1.0.0"
+    xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd"
+    xmlns="http://www.opengis.net/sld"
+    xmlns:ogc="http://www.opengis.net/ogc"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
      <NamedLayer>
        <Name>Attribute-based point</Name>
@@ -296,11 +296,11 @@ It is helpful to break the SLD down into components when it gets large. There ar
 
 **SLD Cookbook**
 
-The GeoServer documentation (available at http://docs.geoserver.org) contains a collection of styles called the SLD Cookbook, designed for those wishing to learn SLD, or those who want a quick reference. The SLD Cookbook is available at [http://docs.geoserver.org/stable/en/user/styling/sld-cookbook/](http://docs.geoserver.org/stable/en/user/styling/sld-cookbook/). 
+The GeoServer documentation (available at http://docs.geoserver.org) contains a collection of styles called the SLD Cookbook, designed for those wishing to learn SLD, or those who want a quick reference. The SLD Cookbook is available at [http://docs.geoserver.org/stable/en/user/styling/sld-cookbook/](http://docs.geoserver.org/stable/en/user/styling/sld-cookbook/).
 
 ## 2. Styles in GeoServer
 
- Every layer published in GeoServer must have a style associated with it. When manually loading layers, GeoServer will look at the geometry of the data and assign a generic style based on that data type. 
+ Every layer published in GeoServer must have a style associated with it. When manually loading layers, GeoServer will look at the geometry of the data and assign a generic style based on that data type.
 
 ### 2.1 Viewing an existing style
 

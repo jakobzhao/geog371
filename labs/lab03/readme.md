@@ -1,10 +1,10 @@
 # Lab 3: Thematic Web Map Design
 
-> Winter 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2018 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 1000 - 1150
+> **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 0800 - 1150
 >
-> **Assigned:** 10/05/2017 | **Due:** `10/19/2017 @11:59pm` | **Points Available** = 50
+> **Assigned:**  | **Due:**  | **Points Available** = 50
 
 In this lab, we will design an thematic map about cell towers in Oregon. When creating a web map, one of the key components is styling your elements to provide proper symbolization for your data. This increases legibility for users and can give your map an appealing, custom design. Elements that can be custom designed include thematic layers (i.e., points, lines, and polygons), base maps (as a leaflet `tileLayer`), interactive features (the components of the map that allow for user interaction), and legends and supplemental information (such as credits, acknowledgements, etc.).
 
@@ -12,7 +12,7 @@ To do that, the county boundaries is from [Oregon Explorer](http://oregonexplore
 
 ![](img/final_map.jpg)
 
-To get started, please synchronize the course material to the working space of your local computer. If you are working in the Digital Earth Lab, please synchronize your course material on the desktop directory.  The material for this lab is located at `[your_working_space]/geog371/labs/lab03`. Next, open the course material in Webstorm. 
+To get started, please synchronize the course material to the working space of your local computer. If you are working in the Digital Earth Lab, please synchronize your course material on the desktop directory.  The material for this lab is located at `[your_working_space]/geog371/labs/lab03`. Next, open the course material in Webstorm.
 
 ## 1. Set up our Map and Add Data
 
@@ -79,7 +79,7 @@ The `cellTowers` object hold the GeoJSON data, and then it adds to the `mymap` o
 
 ## 2. Custom Point Markers
 
-Our point markers showing the cell towers are in the default blue Leaflet map pin. While these markers are fine, if you are showing multiple properties or want to create unique symbols, you can set your point symbols to be represented by an icon of your choosing. The steps towards doing this are straightforward. In this lab, we will introduce how to apply a custom icon using **Font Awesome**. 
+Our point markers showing the cell towers are in the default blue Leaflet map pin. While these markers are fine, if you are showing multiple properties or want to create unique symbols, you can set your point symbols to be represented by an icon of your choosing. The steps towards doing this are straightforward. In this lab, we will introduce how to apply a custom icon using **Font Awesome**.
 
 ### 2.1 Create the color scheme for markers
 
@@ -188,7 +188,7 @@ onEachFeature: function (feature, layer) {
     layer.bindPopup(feature.properties.company);
 },
 ```
- Please open **map3.html** to see how the map looks like. We have changed icon to cell tower! 
+ Please open **map3.html** to see how the map looks like. We have changed icon to cell tower!
 
 ![](img/map3.jpg)
 

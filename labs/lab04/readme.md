@@ -1,10 +1,10 @@
 # Lab 4: Web Map Services and Basemap
 
-> Winter 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2018 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 1000 - 1150
+> **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 0800 - 1150
 >
-> **Assigned:** 10/19/2017 | **Due:** `11/02/2017 @11:59pm` | **Points Available** = 50
+> **Assigned:**  | **Due:**  | **Points Available** = 50
 
 
 In this lab, you are expected to make web map services through GeoServer and make base map through mapbox.

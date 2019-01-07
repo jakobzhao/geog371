@@ -1,21 +1,21 @@
 # Guidelines for Web Map Critiques
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 
 
 - Does the application keep consistent?
 
 
-- Are important information easy to find? 
+- Are important information easy to find?
 
 
 - Are there opportunities for interaction?
 
 
-- Are there a lot of text-only pages? 
+- Are there a lot of text-only pages?
 
 
 - Is the title descriptive and appealing?

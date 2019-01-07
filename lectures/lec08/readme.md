@@ -1,8 +1,8 @@
 # Map Client II: Map Events and Mashup
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao | **Location:** WLKN 235 | **Time:** MWF 1200 - 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
@@ -32,7 +32,7 @@ myDataPoint.bindPopup("<h3>Wilkinson Hall</h3><p>Corvallis, Oregon<br>College of
 
 ![](img/html_popup.png)
 
-This means, within our popup, we can add links, images, lists, and many other HTML elements. This can also include pictures. Also, we can even include videos, tweets, and etc.  
+This means, within our popup, we can add links, images, lists, and many other HTML elements. This can also include pictures. Also, we can even include videos, tweets, and etc.
 
 > **Question:** How can we add a YouTube clip to the pop-up info windows?
 
@@ -152,7 +152,7 @@ L.geoJson.ajax("assets/geog371.geojson", {
 }).addTo(map);
 ```
 
-Once entered, save and refresh your page. Click on one of the popups, you will see the name of the feature appear. 
+Once entered, save and refresh your page. Click on one of the popups, you will see the name of the feature appear.
 
 ![](img/popup.png)
 

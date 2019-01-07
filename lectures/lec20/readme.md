@@ -1,8 +1,8 @@
 # Thematic Web Maps II: Real-Time Mapping: TweetMap
 
-> Fall 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> Instructor: Bo Zhao | Location: Wilkinson 235 | Time: MWF 1200 to 1250
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
@@ -151,4 +151,3 @@ Read and download the source codes of this real-time twitter map from this lectu
 ## 3. Sum-up
 
 How do we take this further? It would be great to dig deeper into the incoming data and rather than just visualizing the data explore trends and gain intelligence. I also wonder what happens if we want to mashup different data sources and read data from other web services or lower-level protocols, such as TCP/IP or WebSockets.
-

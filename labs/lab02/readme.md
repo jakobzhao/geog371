@@ -1,10 +1,10 @@
 # Lab 2: Web Programming Basics II: Javascript
 
-> Winter 2017 | Geography 371 | Geovisualization: Web Mapping
+> Winter 2018 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 1000 - 1150
+> **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 0800 - 1150
 >
-> **Assigned:** 09/28/2017 | **Due:** `10/05/2017 @11:59pm` | **Points Available** = 50
+> **Assigned:**  | **Due:**  | **Points Available** = 50
 
 ## 1. Preparation
 
@@ -72,7 +72,7 @@ code snippets.
 
 Or in this lab, we recommend to test Javascript codes with In-browser console, such as Firefox firebug,  google in-browser console, etc. Open up your browser (Google Chrome), navigate to a page (e.g., www.google.com), and open the browser JavaScript console and dosome basic coding to show some of the principles.
 
-Chrome’s integrated JavaScript console allows you to inputand explore JavaScript. Use **CTRL+SHIFT+J** (Windows) / **CMD+OPTION+J** (Mac) to open the console. 
+Chrome’s integrated JavaScript console allows you to inputand explore JavaScript. Use **CTRL+SHIFT+J** (Windows) / **CMD+OPTION+J** (Mac) to open the console.
 
 In your JavaScript code, if you ever want to log something to the console, use:
 
@@ -80,13 +80,13 @@ In your JavaScript code, if you ever want to log something to the console, use:
 // for example
 console.log("Hello world");
 ```
-or 
+or
 ```js
 var hello = "Hello world"
 console.log(hello)
 ```
 
-Try the above code in the in-browser console, you will see: 
+Try the above code in the in-browser console, you will see:
 
 ![Drawing](img/browser-jsconsole.png)
 
@@ -367,7 +367,7 @@ newCar.start();
 
 **Function Hoisting**
 
-In JavaScript, a variable can be declared after it has been used. In other words; a variable can be used before it has been declared. I use an example from w3schools.  The following two code snippets will return the same result. 
+In JavaScript, a variable can be declared after it has been used. In other words; a variable can be used before it has been declared. I use an example from w3schools.  The following two code snippets will return the same result.
 
 **declare before use**
 
