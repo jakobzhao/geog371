@@ -127,7 +127,7 @@ C:\Users\[you_username]\workspace\geog371>dir
 
 In the root directory, there are folders like labs, lectures and readings, and files like readme.md and LICENSE.
 
-![](img/git-clone.gif)
+![](img/git-clone-371.gif)
 
 7\. Next, we open the `readme.md` file using `Atom`. To do that, make sure you have installed `Atom` and also an `Atom` packge named `markdown-preview-enhanced`.
 
@@ -158,7 +158,7 @@ Fast-forward
  readme.md | 3 ++-
 ```
 
-![](img/git-pull.gif)
+![](img/git-pull-371.gif)
 
 Now, the course material on your local computer is updated.
 
