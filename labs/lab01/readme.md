@@ -342,8 +342,8 @@ Before submitting this lab, please make sure both the **GitHub repository** and 
 * A block quote (5 POINTS);
 * Several url links (5 POINTS);
 * One or several images (10 POINTS);
-* A list (5 POINTS);
-* A table (5 POINTS); and
+* A list (5 POINTS); and
+* A table (5 POINTS); 
 
 > **Note:** Lab assignments are required to be submitted electronically to Canvas unless stated otherwise. Efforts will be made to have them graded and returned within one week after they are submitted.Lab assignments are expected to be completed by the due date. ***A late penalty of at least 10 percentage units will be taken off each day after the due date.***
 
