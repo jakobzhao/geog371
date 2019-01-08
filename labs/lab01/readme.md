@@ -4,7 +4,7 @@
 >
 > **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 0800 - 1150
 >
-> **Assigned:**  | **Due:**  | **Points Available** = 50
+> **Assigned:** 1/10/2019 | **Due:**  1/17/2019 23:59:59 | **Points Available** = 50
 
 Welcome to the lab session of **GEOG 371: Web Mapping**! In this lab, we will briefly introduce the Digital Earth Lab at Wilkinson 210, download the course material and more importantly, help you get familiar with the major operations on project management for web mapping. In practice, you will use the lab computer, if you use a personal laptop, you will install the required software, and then register a GitHub account, and learn how to use git, atom and github. To test your learning outcomes, you will be asked to create a GitHub repository to publish your resume on the web. Okay, let us get started!
 
@@ -20,11 +20,12 @@ The lab generally opens 8am-5pm , a detailed schedule can be found at [http://du
 
 For this lab, you will use chrome, git and atom. Also these software products have already been installed in the lab computers. But I highly recommend you to install all these three.
 
-- **Atom:** A professional web mapping programming development environment ([Click here to download](https://atom.io/)). Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for Git Control, developed by GitHub. Atom is a desktop application built using web technologies. Most of the extending packages have free software licenses and are community-built and maintained. It can also be used as an integrated development environment (IDE). Its developers call it a "hackable text editor for the 21st Century".;
 
-- **Chrome:** is a freeware web browser developed by Google. It was first released on September 2, 2008 for Microsoft Windows, and was later ported to Linux, macOS, iOS and Android. Google Chrome is also the main component of Chrome OS, where it serves as a platform for running web apps;and
+- **Chrome:** is a freeware web browser developed by Google. It was first released on September 2, 2008 for Microsoft Windows, and was later ported to Linux, macOS, iOS and Android. Google Chrome is also the main component of Chrome OS, where it serves as a platform for running web apps. **Click [here](install-chrome.md) to see a demo on how to install Google Chrome**;
 
-- **Git:** A version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people ([Click here to download](https://git-scm.com/downloads)). It is primarily used for source-code management in software development, but it can be used to keep track of changes in any set of files.  Git was created by **Linus Torvalds** in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development. Its current maintainer since 2005 is Junio Hamano.
+- **Git:** A version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people ([Click here to download](https://git-scm.com/downloads)). It is primarily used for source-code management in software development, but it can be used to keep track of changes in any set of files.  Git was created by **Linus Torvalds** in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development. Its current maintainer since 2005 is Junio Hamano. **Click [here](install-git.md) to see a demo on  how to install git**.
+
+- **Atom:** A professional web mapping programming development environment ([Click here to download](https://atom.io/)). Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for Git Control, developed by GitHub. Atom is a desktop application built using web technologies. Most of the extending packages have free software licenses and are community-built and maintained. It can also be used as an integrated development environment (IDE). Its developers call it a "hackable text editor for the 21st Century".  **Click [here](img/install-atom.md) to see a demo on how to install Atom**;
 
 > **Note: What is an integrated development environment (IDE)?**
 > IDE is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools, and a debugger. Most modern IDEs have intelligent code completion. The boundary between an integrated development environment and other parts of the broader software development environment is not well-defined. Sometimes a version control system, or various tools to simplify the construction of a graphical user interface (GUI), are integrated. Many modern IDEs also have a class browser, an object browser, and a class hierarchy diagram, for use in object-oriented software development.
@@ -53,6 +54,10 @@ You will apply for a GitHub account for managing and synchronizing your web mapp
 > **Git** is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for software development, but it can be used to keep track of changes in any files. Git was created by **Linus Torvalds** in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development.
 >
 >  **GitHub** is a web-based Git or version control repository and Internet hosting service. GitHub offers both plans for private and free repositories on the same account which are commonly used to host open-source software projects. As of April 2016, GitHub reports having more than 14 million users and more than 35 million repositories, making it the largest host of source code in the world.
+
+![](img/reg-github.gif)
+
+> A step-by-step turtorial on GitHub registration
 
 ## 2\. Download the course material
 
@@ -84,7 +89,7 @@ C:\Users\[your_username]>
 5\. Having the **git url**, we will need to use the command `git clone` to clone the GitHub repository to your local computer.
 
  ```powershell
-C:\Workspace\git clone https://github.com/jakobzhao/geog371.git
+C:\Users\[you_username]\workspace\git clone https://github.com/jakobzhao/geog371.git
 Cloning into 'geog371'...
 remote: Counting objects: 962, done.
 remote: Compressing objects: 100% (750/750), done.
@@ -97,13 +102,13 @@ Checking out files: 100% (650/650), done.
 6\. To review the files and folders in the downloaded/cloned repository, you need to `cd` into the root directory of this repository. If you are on a Mac or Linux, type `ls` to check the file list of this repository, or try `dir` if you are on a Windows. Take windows for example.
 
 ```powershell
-C:\Workspace>cd geog371
+C:\Users\[you_username]\workspace>cd geog371
 
-C:\Workspace\geog371>dir
+C:\Users\[you_username]\workspace\geog371>dir
  Volume in drive C has no label.
  Volume Serial Number is 3E8C-9A9E
 
- Directory of c:\Workspace\geog371
+ Directory of C:\Users\[you_username]\workspace\geog371
 
 09/19/2017  09:12 PM    <DIR>          .
 09/19/2017  09:12 PM    <DIR>          ..
@@ -122,9 +127,11 @@ C:\Workspace\geog371>dir
 
 In the root directory, there are folders like labs, lectures and readings, and files like readme.md and LICENSE.
 
+![](img/git-clone.gif)
+
 7\. Next, we open the `readme.md` file using `Atom`. To do that, make sure you have installed `Atom` and also an `Atom` packge named `markdown-preview-enhanced`.
 
-Once `Atom` is opened, press `crtl+shift+a` to open the open prjoect dialog window, naviagte to `geog371` folder from your workspace and press `select folder`. Then the `geog371` repo will be opened, and a file tree will be shown in the project list panel on the left of the atom editor.
+Once `Atom` is opened, press `crtl+shift+a` to open the open project dialog window, naviagte to `geog571` folder from your workspace and press `select folder`. Then the `geog371` repo will be opened, and a file tree will be shown in the project list panel on the left of the atom editor.
 
 ![](img/atom-open-project.png)
 
@@ -136,10 +143,10 @@ In the project list panel, navigate to the `readme.md` in the project tree panel
 8\. Once the course material is hosted on GitHub, it can be easily shared with a larger community. To synchronize the course material on remote GitHub repository to your local computer, you need to implement two sequential command lines `git checkout --force` and `git pull` in the root directory of the repository. Once the two commands are executed. An update notice will be shown as below.
 
 ```powershell
-C:\Workspace\geog371>git checkout --force
+C:\Users\[you_username]\workspace\geog571>git checkout --force
 Your branch is up-to-date with 'origin/master'.
 
-C:\Workspace\geog371>git pull
+C:\Users\[you_username]\workspace\geog571>git pull
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
@@ -151,11 +158,13 @@ Fast-forward
  readme.md | 3 ++-
 ```
 
+![](img/git-pull.gif)
+
 Now, the course material on your local computer is updated.
 
-> **Note:** To ensure you are reading the latest version of the lecture or lab handouts, you need to regularly synchronize the course material, especially before the beginin of each class.
->
-> If you implement the above two commands in a Mac or Linux system, you might need to add `sudo` before `git` to solve the lack-of-privilege issue. For example, `sudo git clone`, `sudo git checkout --force`. In general, the command `sudo` will assign the superuser privilege to the command line.
+> If you implement the above two commands in a Mac or Linux system, you might need to add `sudo` before `git` to solve the lack-of-privilege issue. For example, `sudo git pull`, `sudo git checkout --force`. In general, the command `sudo` will assign the superuser privilege to the command line.
+
+> **Note:** To ensure you are reading the latest version of the lecture or lab handouts, **you need to regularly synchronize the course material, especially so before the beginin of each class.** To do that, please jsut repeat this step to run the command combination `git checkout --force` and `git pull` again.
 
 9\. Before we jump to the next section, please:
 
@@ -163,23 +172,24 @@ Now, the course material on your local computer is updated.
 
 - Navigate to Dr. Zhao's front page at [https://github.com/jakobzhao](https://github.com/jakobzhao), and click the `Follow` button to be a follower.
 
+
 ## 3\. Project management
 
-In this section, we will introduce a series of operations related to project management, such as create a project repository, compile a markdown file, and upload files to GitHub, and at last, publish a repository. As a practice, we will build a GitHub repository for your online resume.
+In this section, we will introduce a series of operations related to project management, such as create a project repository, compile a markdown file, and upload files to GitHub, and at last, publish a repository. As a practice, we will build a GitHub repository for your online resume. To see an integrated demo of this section, please check [here](repo-git.md).
 
 ### 3.1 Create a repository for your project
 
-1\. Navigate to [https://github.com/new](https://github.com/new), and input your repository name in the blank text box for `Repository name`. Here, please name your repository in the format of **[account_username].github.io**. So, if your account_username is `jakobzhao`, this repository name will be **jakobzhao.github.io**.
+1\. Navigate to [https://github.com/new](https://github.com/new), and input your repository name in the blank text box for `Repository name`. Here, please name your repository in the format of **[account_username].github.io**. For example, if your account_username is `geovizlabtest`, this repository name will be **geovizlabtest.github.io**.
 
-![""](img/create-new-repository-2.jpg)
+![""](img/create-new-repository-2.png)
 
 2\. Besides, make sure you **CHECK** the box `Initialize this repository with a README`. You can leave other options by default.
 
-![](img/create-new-repository-3.jpg)
+![](img/create-new-repository-3.png)
 
-3\. Next, click the `Create repository` button. As a result, a new repository `[account_username].github.io` is created. You can access this repository through the link `https://github.com/[account_username]/[account_username].github.io`. For example,  you can access the repository I created through this link [https://github.com/jakobzhao/jakobzhao.github.io](https://github.com/jakobzhao/jakobzhao.github.io).
+3\. Next, click the `Create repository` button. As a result, a new repository `[account_username].github.io` is created. You can access this repository through the link `https://github.com/[account_username]/[account_username].github.io`. For example,  you can access the repository I created through this link [https://github.com/geovizlabtest/geovizlabtest.github.io](https://github.com/geovizlabtest/geovizlabtest.github.io).
 
-### 3.2 Craft a Markdown file
+### 3.2 Compose a Markdown file
 
 1\. On your local computer, create a text file, and name it `resume.md`.
 
@@ -252,7 +262,7 @@ Summary of your role
 
 ### 3.3 Upload files to GitHub
 
-Once you have drafted out your resume in the `resume.md` file. You will upload this file to the **root** of the project repository `https://github.com/[account_username]/[account_username].github.io` . In general, there are three solutions to complete this task, we will introduce them one by one.
+Once you have drafted out your resume in the `resume.md` file. You will upload this file to the **root** of the project repository `https://github.com/[account_username]/[account_username].github.io` . In general, there are three options to complete this task, we will introduce them one by one.
 
 #### 3.3.1 Drag & drop
 
@@ -262,7 +272,7 @@ Once you have drafted out your resume in the `resume.md` file. You will upload t
 
 > **Note:** Certainly, you can drag and drop multiple files and/or folders. In this lab, we just upload one single file.
 
-![](img/after-the-drop.jpg)
+![](img/after-the-drop-cropped.jpg)
 
 3\. Before pressing the green button `Commit Changes`, you might want to add a title and/or some descriptions for this commit. It will help you organize your commits.
 
@@ -278,7 +288,7 @@ You can also upload the `resume.md` through `git push` command on either command
 ```powershell
 c:\Workspace\jakobzhao.github.io>git add -A
 c:\Workspace\jakobzhao.github.io>git commit -a -m "update the resume.md"
-c:\Workspace\geog371>git push
+c:\Workspace\geog571>git push
 Username for 'https://github.com': jakobzhao
 Password for 'https://jakobzhao@github.com':
 ```
@@ -312,7 +322,7 @@ We can also use `Atom` to upload files to GitHub repository or more generally, c
 
 > **Note:** As you might already aware of, the first two steps are as same as those in the approache 2 (3.3.2). The difference is, approach 2 works on a terminal/command prompt environment (a command-lline user interface), while approach 3 works in Atom (a graphic user interface).
 >
-> Using either of the three approaches (3.3.1 to 3.3.3), you can upload your resume or any other files to GitHub. Then, log on to this repository on GitHub to see whether the uploaded content is applied.
+> Using either of the three approaches (3.3.1 to 3.3.3), you can upload your resume or any other files to GitHub. Then, log on to this repository on GitHub to see whether the uploaded content is applied. However, the third one - `Atom based commit and push`.** (3.3.3) is recommended.
 
 Now you have already known how to commit a change. In practice, you will use this operation very frequently. Other than committing changes, you may also need to synchronize, both fetch and push, the latest version of your GitHub repository.
 
@@ -326,11 +336,13 @@ Once the `resume.md` is uploaded to the root of the GitHub Repository, you can s
 
 3\. It usually takes several seconds to 1~2 minutes to apply this setting. If this setting is activated, you can read your resume from `http://[account_username].github.io/resume`.
 
+> **Note：** Similar to the step 8 in section 2, You can also update a local repository from a remote github repository using Atom. To do that, right click the github operation status on the bottom bar, and select the option `Pull`. The github operation status can be either `Fetch`, `Pull`, `Push`, `Force Push`.
+
 ## 4. Deliverable
 
 Before submitting this lab, please make sure both the **GitHub repository** and the **GitHub page** work properly. In this lab, you are excepted to submit the url of the GitHub repository to the **Canvas Dropbox** of this course. This url should be in the format of `https://www.github.com/[account_username]/[account_username].github.io`. To do that, check the item of this lab on the assignment tab, and then press the `Submit Assignment` button. Please contact the instructor if you have any difficulty in submitting the url link. Here are the grading criteria:
 
-1\. A GitHub account is registered, You have followed the instructor's GitHub account and `star-ed` the course GitHub repository. (6 POINTS)
+1\. A GitHub account is registered, You have followed the instructor's GitHub account and `star-ed` the course GitHub repository. (8 POINTS)
 
 2\. The repository should be named after `[account_username].github.io`. (5 POINTS)
 
@@ -338,13 +350,21 @@ Before submitting this lab, please make sure both the **GitHub repository** and 
 
 4\. To hone your skills in generating Markdown files, the resume could be built upon the template that was shown in `Section 3.2`, but we still encourage you customize your resume. In terms of the format, your online resume should contain:
 
-* Different levels of headers (4 POINTS);
+* Different levels of headers (8 POINTS);
 * A block quote (5 POINTS);
-* Several url links (5 POINTS);
-* One or several images (10 POINTS);
-* A list (5 POINTS); and
-* A table (5 POINTS); 
+* Several url links (6 POINTS);
+* One or several images (6 POINTS); and
+* A list (7 POINTS);
+
+#### Optional Tasks
+
+5\. Please further customize your resume to have the following features:
+
+* adding emoji icons to the resume. Here is [a cheatsheet of emoji icons](https://gist.github.com/rxaviers/7360908). (2 POINTS)
+
+* adding a table to the resume. To do that, you might need to use [Typora](https://typora.io/). (3 POINTS).
 
 > **Note:** Lab assignments are required to be submitted electronically to Canvas unless stated otherwise. Efforts will be made to have them graded and returned within one week after they are submitted.Lab assignments are expected to be completed by the due date. ***A late penalty of at least 10 percentage units will be taken off each day after the due date.***
+
 
 > If you have a genuine reason(known medical condition, a pile-up of due assignments on other courses, ROTC,athletics teams, job interview, religious obligations etc.) for being unable to complete work on time, then some flexibility is possible. However, if in my judgment you could reasonably have let me know beforehand that there would likely be a delay, and then a late penalty will still be imposed if I don't hear from you until after the deadline has passed. For unforeseeable problems,I can be more flexible. If there are ongoing medical, personal, or other issues that are likely to affect your work all semester, then please arrange to see me to discuss the situation. There will be NO make-up exams except for circumstances like those above.
