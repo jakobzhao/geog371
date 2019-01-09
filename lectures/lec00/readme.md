@@ -1,15 +1,15 @@
 #  Introduction to the Web
 
-> Winter 2019 | Geography 571 | Web Mapping
+> Winter 2019 | Geography 371 | Web Mapping
 >
-> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0900 - 0950
+> **Instructor:** Bo Zhao | **Location:** WLKN 210 | **Time:** MWF 0800 - 0850
 
 **Learning Objectives**
 
-- Understand the basic concepts related to web mapping;
-- Get to know the four major types of web maps, and its major components;
-- Walk through a brief history of web mapping; and
-- Understand web mapping API - Proprietary vs. Open Source.
+- Understand the basic concepts related to Internet and the Web;
+- IP and ports;
+- the three major options for visualization on the web; and
+- The strucutre of a URL;
 
 ## 1.1 Internet
 
@@ -23,7 +23,6 @@ The web (originally called the World Wide Web, thus the “www” in site addres
 
 World Wide Web browser software, such as Microsoft's Internet Explorer/Edge, Mozilla Firefox, Opera, Apple's Safari, and Google Chrome, lets users navigate from one web page to another via hyperlinks embedded in the documents. These documents may also contain any combination of computer data, including graphics, sounds, text, video, multimedia and interactive content that runs while the user is interacting with the page. Client-side software can include animations, games, office applications and scientific demonstrations. Through keyword-driven Internet research using search engines like Yahoo!, Bing and Google, users worldwide have easy, instant access to a vast and diverse amount of online information. Compared to printed media, books, encyclopedias and traditional libraries, the World Wide Web has enabled the decentralization of information on a large scale.
 
-The Web is therefore a global set of documents, images and other resources, logically interrelated by hyperlinks and referenced with **Uniform Resource Identifiers (URIs)**. URIs symbolically identify services, servers, and other databases, and the documents and resources that they can provide. Hypertext Transfer Protocol (HTTP) is the main access protocol of the World Wide Web.
 
 > **Note:** The web was born in a particle physics laboratory (CERN) in Geneva, Switzerland, in 1989. There a computer specialist named Tim Berners-Lee first proposed a system of information management that used a “hypertext” process to link related documents over a network. He and his partner, Robert Cailliau, created a prototype and released it for review. For the first several years, web pages were text-only. It’s difficult to believe that in 1992, the world had only about 50 web servers, total. The real boost to the web’s popularity came in 1992 when the first graphical browser (NCSA Mosaic) was introduced, and the web broke out of the realm of scientific research into mass media. The ongoing development of web technologies is overseen by the World Wide Web Consortium (W3C).
 
