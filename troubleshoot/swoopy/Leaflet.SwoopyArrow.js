@@ -1704,21 +1704,25 @@
         _createArrow: function _createArrow() {
             this._container = this._container || L$1.SVG.create('defs');
             var marker = L$1.SVG.create('marker');
-            var path = L$1.SVG.create('path');
+            var path = L$1.SVG.create('polyline');
 
             marker.classList.add('swoopyArrow__marker');
             marker.setAttribute('id', 'swoopyarrow__arrowhead' + this._currentId);
-            marker.setAttribute('markerWidth', '12');
-            marker.setAttribute('markerHeight', '12');
-            // marker.setAttribute('viewBox', '-10 -10 20 20');
+            marker.setAttribute('markerWidth', '20');
+            marker.setAttribute('markerHeight', '20');
+            marker.setAttribute('viewBox', '-10 -10 20 20');
             marker.setAttribute('orient', 'auto');
-            marker.setAttribute('refX', '1');
-            marker.setAttribute('refY', '4');
-            marker.setAttribute('fill', this._color);
+            marker.setAttribute('refX', '0');
+            marker.setAttribute('refY', '0');
+            marker.setAttribute('fill', 'none');
+            marker.setAttribute('stroke', this._color);
+            marker.setAttribute('stroke-width', this._weight);
             marker.setAttribute('opacity', this._opacity);
 
-            path.setAttribute('stroke', "none");
-            path.setAttribute('d', 'M 1 1 7 4 1 7 Z');
+            path.setAttribute('stroke-linejoin', 'bevel');
+            path.setAttribute('fill', this._arrowFilled ? this._color : 'none');
+            path.setAttribute('stroke', this._color);
+            path.setAttribute('points', '-6.75,-6.75 0,0 -6.75,6.75');
 
             marker.appendChild(path);
             this._container.appendChild(marker);
@@ -1739,7 +1743,6 @@
 
             pathOne._path.setAttribute('id', 'swoopyarrow__path' + this._currentId);
             pathOne._path.setAttribute('marker-end', 'url(#swoopyarrow__arrowhead' + this._currentId + ')');
-            pathOne._path.setAttribute('stroke-linecap', 'butt');
 
             return pathOne;
         },
