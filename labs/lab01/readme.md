@@ -89,7 +89,7 @@ C:\Users\[your_username]>
 5\. Having the **git url**, we will need to use the command `git clone` to clone the GitHub repository to your local computer.
 
  ```powershell
-C:\Users\[you_username]\workspace\git clone https://github.com/jakobzhao/geog371.git
+C:\Users\[you_username]\workspace\>git clone https://github.com/jakobzhao/geog371.git
 Cloning into 'geog371'...
 remote: Counting objects: 962, done.
 remote: Compressing objects: 100% (750/750), done.

@@ -22,7 +22,7 @@ The web has gone mobile! That means it is absolutely critical that you test the 
 
 ### Rasperry Pi (Optinal)
 
-The Raspberry Pi is a series of small single-board computers developed in the United Kingdom by the Raspberry Pi Foundation to promote teaching of basic computer science in schools and in developing countries.[5][6][7] The original model became far more popular than anticipated,[8] selling outside its target market for uses such as robotics. It does not include peripherals (such as keyboards and mice) and cases. However, some accessories have been included in several official and unofficial bundles.
+The Raspberry Pi is a series of small single-board computers developed in the United Kingdom by the Raspberry Pi Foundation to promote teaching of basic computer science in schools and in developing countries. The original model became far more popular than anticipated, selling outside its target market for uses such as robotics. It does not include peripherals (such as keyboards and mice) and cases. However, some accessories have been included in several official and unofficial bundles.
 
 
 The Raspberry Pi Zero, a US$5 model first introduced in 2015
@@ -95,11 +95,11 @@ Gives help about DOS commands.
 
 #### Terminal for Mac OSX
 
-Terminal (Terminal.app) is the terminal emulator included in the macOS operating system by Apple.[1] Terminal originated in NeXTSTEP and OPENSTEP, the predecessor operating systems of macOS.[2]
+Terminal (Terminal.app) is the terminal emulator included in the macOS operating system by Apple. Terminal originated in NeXTSTEP and OPENSTEP, the predecessor operating systems of macOS.
 
-As a terminal emulator, the application provides text-based access to the operating system, in contrast to the mostly graphical nature of the user experience of macOS, by providing a command line interface to the operating system when used in conjunction with a Unix shell, such as bash (the default shell in Mac OS X Jaguar and later[3]).[4] The user can choose other shells available with macOS, such as the Korn shell, tcsh, and zsh.[4][3]
+As a terminal emulator, the application provides text-based access to the operating system, in contrast to the mostly graphical nature of the user experience of macOS, by providing a command line interface to the operating system when used in conjunction with a Unix shell, such as bash (the default shell in Mac OS X Jaguar and later). The user can choose other shells available with macOS, such as the Korn shell, tcsh, and zsh.
 
-The preferences dialog for Terminal.app in OS X 10.8 (Mountain Lion) and later offers choices for values of the TERM environment variable. Available options are ansi, dtterm, nsterm, rxvt, vt52, vt100, vt102, xterm, xterm-16color and xterm-256color, which differ from the OS X 10.5 (Leopard) choices by dropping the xterm-color and adding xterm-16color and xterm-256color. These settings do not alter the operation of Terminal, and the xterm settings do not match the behavior of xterm.[5]
+The preferences dialog for Terminal.app in OS X 10.8 (Mountain Lion) and later offers choices for values of the TERM environment variable. Available options are ansi, dtterm, nsterm, rxvt, vt52, vt100, vt102, xterm, xterm-16color and xterm-256color, which differ from the OS X 10.5 (Leopard) choices by dropping the xterm-color and adding xterm-16color and xterm-256color. These settings do not alter the operation of Terminal, and the xterm settings do not match the behavior of xterm.
 
 
 The Terminal app is in the Utilities folder in Applications. To open it, either open your Applications folder, then open Utilities and double-click on Terminal, or press Command - spacebar to launch Spotlight and type "Terminal," then double-click the search result.
@@ -133,7 +133,7 @@ We won't go into massive detail on how Terminal works but it's best to learn the
 
 ### Atom
 
-Atom is a free and open-source[5][6] text and source code editor for macOS, Linux, and Microsoft Windows[7] with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub. Atom is a desktop application built using web technologies.[8] Most of the extending packages have free software licenses and are community-built and maintained.[9] Atom is based on Electron (formerly known as Atom Shell),[10] a framework that enables cross-platform desktop applications using Chromium and Node.js.[11][12] It is written in CoffeeScript and Less.[13] It can also be used as an integrated development environment (IDE).[14][15][16][17] Atom was released from beta, as version 1.0, on 25 June 2015.[18] Its developers call it a "hackable text editor for the 21st Century".[19]
+Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub. Atom is a desktop application built using web technologies. Most of the extending packages have free software licenses and are community-built and maintained. Atom is based on Electron (formerly known as Atom Shell), a framework that enables cross-platform desktop applications using Chromium and Node.js. It is written in CoffeeScript and Less. It can also be used as an integrated development environment (IDE). Atom was released from beta, as version 1.0, on 25 June 2015. Its developers call it a "hackable text editor for the 21st Century".
 
 Like most other configurable text editors, Atom enables users to install third-party packages and themes to customize the features and looks of the editor. Packages can be installed, managed and published via Atom's package manager apm.
 
@@ -148,15 +148,6 @@ We think we can do better. Our goal is a zero-compromise combination of hackabil
 
 As we've used Atom to build Atom, what began as an experiment has gradually matured into a tool we can't live without. On the surface, Atom is the modern desktop text editor you've come to expect. Pop the hood, however, and you'll discover a system begging to be hacked on.
 
-#### An Open-Source Text Editor
-
-We see Atom as a perfect complement to GitHub's primary mission of building better software by working together. Atom is a long-term investment, and GitHub will continue to support its development with a dedicated team going forward. But we also know that we can't achieve our vision for Atom alone. As Emacs and Vim have demonstrated over the past three decades, if you want to build a thriving, long-lasting community around a text editor, it has to be open source.
-
-The entire Atom editor is free and open source and is available under the https://github.com/atom organization.
-
- - install Atom [https://flight-manual.atom.io/getting-started/sections/installing-atom/](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
-
-- Atom Basics [https://flight-manual.atom.io/getting-started/sections/atom-basics/](https://flight-manual.atom.io/getting-started/sections/atom-basics/)
 
 **Reference:**
 
@@ -169,7 +160,7 @@ Google Chrome browser is an open source program for accessing the World Wide Web
 The Google Chrome Web browser is based on the open source Chromium project. Google released Chrome in 2008 and issues several updates a year. It is available for Windows, Mac OS X, Linux, Android and iOS operating systems. The Google Chrome browser takes a sandboxing-based approach to Web security. Each open website runs as its own process, which helps prevent malicious code on one page from affecting others (or the computer operating system at large). The browser also supports Web standards such as HTML5 and cascading style sheets (CSS).
 
 
-Google CEO Eric Schmidt opposed the development of an independent web browser for six years. He stated that "at the time, Google was a small company," and he did not want to go through "bruising browser wars." After co-founders Sergey Brin and Larry Page hired several Mozilla Firefox developers and built a demonstration of Chrome, Schmidt admitted that "It was so good that it essentially forced me to change my mind."[25] In September 2004, rumors of Google building a web browser first appeared. Online journals and U.S. newspapers stated at the time that Google was hiring former Microsoft web developers among others. It also came shortly after the final 1.0 release of Mozilla Firefox, which was surging in popularity and taking market share from Internet Explorer, which was suffering from major security problems.
+Google CEO Eric Schmidt opposed the development of an independent web browser for six years. He stated that "at the time, Google was a small company," and he did not want to go through "bruising browser wars." After co-founders Sergey Brin and Larry Page hired several Mozilla Firefox developers and built a demonstration of Chrome, Schmidt admitted that "It was so good that it essentially forced me to change my mind." In September 2004, rumors of Google building a web browser first appeared. Online journals and U.S. newspapers stated at the time that Google was hiring former Microsoft web developers among others. It also came shortly after the final 1.0 release of Mozilla Firefox, which was surging in popularity and taking market share from Internet Explorer, which was suffering from major security problems.
 
 Google based the look of Chrome OS, its operating system for Web-based applications, on the Chrome Web browser. Chrome was the first major Web browser to combine the search box and the address bar, a feature that most competitors have since adopted. It also allows users to sign in with their Google accounts, which enables them to sync bookmarks and open Web pages across multiple devices. In 2010, Google launched the Chrome Web Store, an online marketplace where users can buy and install Web-based applications to run inside the browser. These apps are available as either browser extensions or links to websites.
 
@@ -192,9 +183,9 @@ In order to use DevTools, you’ll need to right click somewhere on the page and
 
 #### Incognito mode
 
-The private browsing feature called Incognito mode prevents the browser from permanently storing any history information, cookies, site data, or form inputs.[102] Downloaded files and bookmarks will be stored. In addition, user activity is not hidden from visited websites or the Internet service provider.
+The private browsing feature called Incognito mode prevents the browser from permanently storing any history information, cookies, site data, or form inputs. Downloaded files and bookmarks will be stored. In addition, user activity is not hidden from visited websites or the Internet service provider.
 
-Incognito mode is similar to the private browsing feature in other web browsers. It doesn't prevent saving in all windows: "You can switch between an incognito window and any regular windows you have open. You'll only be in incognito mode when you're using the incognito window".[103]
+Incognito mode is similar to the private browsing feature in other web browsers. It doesn't prevent saving in all windows: "You can switch between an incognito window and any regular windows you have open. You'll only be in incognito mode when you're using the incognito window".
 
 
 **Reference**
@@ -206,13 +197,13 @@ Incognito mode is similar to the private browsing feature in other web browsers.
 
 ### QGIS
 
-QGIS (previously known as Quantum GIS) is a free and open-source cross-platform desktop geographic information system (GIS) application that supports viewing, editing, and analysis of geospatial data.[3]
+QGIS (previously known as Quantum GIS) is a free and open-source cross-platform desktop geographic information system (GIS) application that supports viewing, editing, and analysis of geospatial data.
 
-QGIS functions as geographic information system (GIS) software, allowing users to analyze and edit spatial information, in addition to composing and exporting graphical maps.[3] QGIS supports both raster and vector layers; vector data is stored as either point, line, or polygon features. Multiple formats of raster images are supported, and the software can georeference images.
+QGIS functions as geographic information system (GIS) software, allowing users to analyze and edit spatial information, in addition to composing and exporting graphical maps. QGIS supports both raster and vector layers; vector data is stored as either point, line, or polygon features. Multiple formats of raster images are supported, and the software can georeference images.
 
-QGIS supports shapefiles, coverages, personal geodatabases, dxf, MapInfo, PostGIS, and other formats.[4] Web services, including Web Map Service and Web Feature Service, are also supported to allow use of data from external sources.[5]
+QGIS supports shapefiles, coverages, personal geodatabases, dxf, MapInfo, PostGIS, and other formats. Web services, including Web Map Service and Web Feature Service, are also supported to allow use of data from external sources.
 
-QGIS integrates with other open-source GIS packages, including PostGIS, GRASS GIS, and MapServer.[5] Plugins written in Python or C++ extend QGIS's capabilities. Plugins can geocode using the Google Geocoding API, perform geoprocessing functions similar to those of the standard tools found in ArcGIS, and interface with PostgreSQL/PostGIS, SpatiaLite and MySQL databases.
+QGIS integrates with other open-source GIS packages, including PostGIS, GRASS GIS, and MapServer. Plugins written in Python or C++ extend QGIS's capabilities. Plugins can geocode using the Google Geocoding API, perform geoprocessing functions similar to those of the standard tools found in ArcGIS, and interface with PostgreSQL/PostGIS, SpatiaLite and MySQL databases.
 
 **Reference**
 
@@ -358,10 +349,10 @@ GitHub Pages are public webpages hosted for free through GitHub. GitHub users ca
 
 ### MapBox
 
-Mapbox is a large provider of custom online maps for websites and applications such as Foursquare, Lonely Planet, Facebook, the Financial Times, The Weather Channel and Snapchat.[2] Since 2010, it has rapidly expanded the niche of custom maps, as a response to the limited choice offered by map providers such as Google Maps.[2] Mapbox is the creator of, or a significant contributor to some open source mapping libraries and applications, including the MBTiles specification, the TileMill cartography IDE, the Leaflet JavaScript library, and the CartoCSS map styling language and parser.
+Mapbox is a large provider of custom online maps for websites and applications such as Foursquare, Lonely Planet, Facebook, the Financial Times, The Weather Channel and Snapchat. Since 2010, it has rapidly expanded the niche of custom maps, as a response to the limited choice offered by map providers such as Google Maps. Mapbox is the creator of, or a significant contributor to some open source mapping libraries and applications, including the MBTiles specification, the TileMill cartography IDE, the Leaflet JavaScript library, and the CartoCSS map styling language and parser.
 
 
-The data are taken both from open data sources, such as OpenStreetMap and NASA, and from proprietary data sources, such as DigitalGlobe.[10][11] The technology is based on Node.js,[12], Mapnik, GDAL, and Leaflet.
+The data are taken both from open data sources, such as OpenStreetMap and NASA, and from proprietary data sources, such as DigitalGlobe.The technology is based on Node.js, Mapnik, GDAL, and Leaflet.
 
 Mapbox uses data from tracks of its clients' users, such as Strava and RunKeeper, to identify likely missing data in OpenStreetMap with automatic methods, then manually applies the fixes or reports the issue to OSM contributors.
 
@@ -369,35 +360,35 @@ Mapbox uses data from tracks of its clients' users, such as Strava and RunKeeper
 
 ### Leaflet.js
 
-Leaflet is a widely used open source JavaScript library used to build web mapping applications. First released in 2011,[2] it supports most mobile and desktop platforms, supporting HTML5 and CSS3. Along with OpenLayers, and the Google Maps API, it is one of the most popular JavaScript mapping libraries and is used by major web sites such as FourSquare, Pinterest and Flickr.
+Leaflet is a widely used open source JavaScript library used to build web mapping applications. First released in 2011, it supports most mobile and desktop platforms, supporting HTML5 and CSS3. Along with OpenLayers, and the Google Maps API, it is one of the most popular JavaScript mapping libraries and is used by major web sites such as FourSquare, Pinterest and Flickr.
 
 Leaflet allows developers without a GIS background to very easily display tiled web maps hosted on a public server, with optional tiled overlays. It can load feature data from GeoJSON files, style it and create interactive layers, such as markers with popups when clicked.
 
 It is developed by Vladimir Agafonkin, who joined Mapbox in 2013.
 
 
-Leaflet is directly comparable with OpenLayers, as both are open source, client-side only JavaScript libraries. The library as a whole is much smaller, around 7,000 lines of code compared to OpenLayers' 230,000 (as of 2015).[11] It has a smaller code footprint than OpenLayers (around 123 KB[12] vs 423 KB[13]) due partly to its modular structure. The code base is newer, and takes advantage of recent features of JavaScript, plus HTML5 and CSS3. However, Leaflet lacks features OpenLayers supports, such as Web Feature Service (WFS)[14] and native support for projections other than Google Web Mercator (EPSG 3857).[15]
+Leaflet is directly comparable with OpenLayers, as both are open source, client-side only JavaScript libraries. The library as a whole is much smaller, around 7,000 lines of code compared to OpenLayers' 230,000 (as of 2015). It has a smaller code footprint than OpenLayers (around 123 KB vs 423 KB) due partly to its modular structure. The code base is newer, and takes advantage of recent features of JavaScript, plus HTML5 and CSS3. However, Leaflet lacks features OpenLayers supports, such as Web Feature Service (WFS) and native support for projections other than Google Web Mercator (EPSG 3857).
 
-It is also comparable to the proprietary, closed source Google Maps API (debuting in 2005) and Bing Maps API, both of which incorporate a significant server-side component to provide services such as geocoding, routing, search and integration with features such as Google Earth.[citation needed] Google Maps API provides speed and simplicity, but is not flexible, and can only be used to access Google Maps services. The new DataLayer part of Google's API does allow external data sources to be displayed, however.[16]
+It is also comparable to the proprietary, closed source Google Maps API (debuting in 2005) and Bing Maps API, both of which incorporate a significant server-side component to provide services such as geocoding, routing, search and integration with features such as Google Earth. Google Maps API provides speed and simplicity, but is not flexible, and can only be used to access Google Maps services. The new DataLayer part of Google's API does allow external data sources to be displayed, however.
 
 ### JQuery
 
-jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, animation, and Ajax.[3] It is free, open-source software using the permissive MIT License.[2] Web analysis indicates that it is the most widely deployed JavaScript library by a large margin.[4][5]
+jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, animation, and Ajax. It is free, open-source software using the permissive MIT License Web analysis indicates that it is the most widely deployed JavaScript library by a large margin.
 
 jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. jQuery also provides capabilities for developers to create plug-ins on top of the JavaScript library. This enables developers to create abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets. The modular approach to the jQuery library allows the creation of powerful dynamic web pages and Web applications.
 
-The set of jQuery core features—DOM element selections, traversal and manipulation—enabled by its selector engine (named "Sizzle" from v1.3), created a new "programming style", fusing algorithms and DOM data structures. This style influenced the architecture of other JavaScript frameworks like YUI v3 and Dojo, later stimulating the creation of the standard Selectors API.[6]
+The set of jQuery core features—DOM element selections, traversal and manipulation—enabled by its selector engine (named "Sizzle" from v1.3), created a new "programming style", fusing algorithms and DOM data structures. This style influenced the architecture of other JavaScript frameworks like YUI v3 and Dojo, later stimulating the creation of the standard Selectors API.
 
 ### Bootstrap
 
 Bootstrap is a free and open-source front-end framework for developing websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. Unlike many earlier web frameworks, it concerns itself with front-end development only.
 
 
-Bootstrap 3 supports the latest versions of the Google Chrome, Firefox, Internet Explorer, Opera, and Safari (except on Windows). It additionally supports back to IE8 and the latest Firefox Extended Support Release (ESR).[12]
+Bootstrap 3 supports the latest versions of the Google Chrome, Firefox, Internet Explorer, Opera, and Safari (except on Windows). It additionally supports back to IE8 and the latest Firefox Extended Support Release (ESR).
 
 Starting with version 3.0, Bootstrap adopted a mobile-first design philosophy, emphasizing responsive design by default.
 
-Version 4.0 added Sass and flexbox support.[9]
+Version 4.0 added Sass and flexbox support.
 
 As of Bootstrap 4, Sass is used instead of Less for the stylesheets.
 
