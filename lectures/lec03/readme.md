@@ -45,7 +45,7 @@ You can also have supplemental files, such as images, style files, scripts, and 
 
 ***How is everything related?***
 
-<img src="img/environment.jpg" alt="Drawing" style="text-align: center; width: 100%;"/>
+<img src="img/environment.jpg" alt="Drawing" style="text-align: center; width: 300px;"/>
 
 To host a web application, you need to move the codes and the supplemental files to the server. For most of the lecture and lab demos, you can launch a web server on your computer by python SimpleHTTPServer or a server integrated in Webstorm, also you can host your web map through github page.
 
@@ -53,7 +53,7 @@ To host a web application, you need to move the codes and the supplemental files
 
 ## 3. Use an IDE
 
-While you can get away with using a basic text editor to create HTML files, there are Integrated Development Environment (IDE) designed to make your life easier by color coding code snips and autocompleting lines. Download and install one of the following text editing software if you don’t already have one. In this lecture, you will mainly use `Webstorm` to edit HTML, CSS, and Javascript files. We also have `Webstorm` installed in the Digital Earth Lab, and you can install an educational version of `Webstorm` on your own machine, no matter you are a Mac or Windows users.
+While you can get away with using a basic text editor to create HTML files, there are Integrated Development Environment (IDE) designed to make your life easier by color coding code snips and autocompleting lines. Download and install one of the following text editing software if you don’t already have one. In this lecture, you will mainly use `Atom` to edit HTML, CSS, and Javascript files. We also have `Atom` installed in the Digital Earth Lab, and you can install an open source version of `Atom` on your own machine, no matter you are a Mac or Windows users. Here is a list of other IDEs:
 
 - `Webstorm` - (Windows, Mac, or Linux) One of cross-platform IDEs primarily for web, JavaScript and TypeScript development. Many of JetBrain's other IDEs include the feature set of WebStorm via plugins.
 - `Sublime Text` – (Windows, Mac, or Linux) One of the most popular and well-loved text editors around. Free to download and use, but will occasionally show a pop-up window if you don’t purchase it. This is what I’ll be using during the workshop
@@ -61,8 +61,6 @@ While you can get away with using a basic text editor to create HTML files, ther
 - `Notepad++` – A solid and reliable text editor for Windows. Free.
 - `TextWrangler` – A free text editor for Mac only.
 - `DreamWeaver` – Adobe’s software for making basic websites. This is not free generally, but many students already have it installed. This software can sometimes make simple tasks far more complicated than necessary. Not recommended, but if you already have it and you don’t want two install anything else, I will grudgingly acknowledge that it will work just fine for the workshop.
-
-Enough front matter, let's get going on our web page!
 
 ## 4. Start up a Web Server
 
