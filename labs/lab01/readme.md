@@ -131,7 +131,7 @@ In the root directory, there are folders like labs, lectures and readings, and f
 
 7\. Next, we open the `readme.md` file using `Atom`. To do that, make sure you have installed `Atom` and also an `Atom` packge named `markdown-preview-enhanced`.
 
-Once `Atom` is opened, press `crtl+shift+a` to open the open project dialog window, naviagte to `geog571` folder from your workspace and press `select folder`. Then the `geog371` repo will be opened, and a file tree will be shown in the project list panel on the left of the atom editor.
+Once `Atom` is opened, press `crtl+shift+a` to open the open project dialog window, naviagte to `geog371` folder from your workspace and press `select folder`. Then the `geog371` repo will be opened, and a file tree will be shown in the project list panel on the left of the atom editor.
 
 ![](img/atom-open-project.png)
 
@@ -143,10 +143,10 @@ In the project list panel, navigate to the `readme.md` in the project tree panel
 8\. Once the course material is hosted on GitHub, it can be easily shared with a larger community. To synchronize the course material on remote GitHub repository to your local computer, you need to implement two sequential command lines `git checkout --force` and `git pull` in the root directory of the repository. Once the two commands are executed. An update notice will be shown as below.
 
 ```powershell
-C:\Users\[you_username]\workspace\geog571>git checkout --force
+C:\Users\[you_username]\workspace\geog371>git checkout --force
 Your branch is up-to-date with 'origin/master'.
 
-C:\Users\[you_username]\workspace\geog571>git pull
+C:\Users\[you_username]\workspace\geog371>git pull
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
