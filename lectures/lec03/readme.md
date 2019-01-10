@@ -72,7 +72,7 @@ For testing and debugging purpose, we need our computer to act like a WebServer,
 $ python -m SimpleHTTPServer 8000
 ```
 
-> **Note:** If the above command line does not work, probably your computer has not installed python yet. Please follow a tutorial at [here](../../resources/SimpleHTTPServer.md) to install a SimpleHTTPServer.
+> **Note:** If the above command line does not work, probably your computer has not installed python yet. Please follow a tutorial at [here](../../resources/SimpleHTTPServer.md) to install a SimpleHTTPServer. Also, if you work on a Windows envrionment, the python path might not be inserted to the system envrionment yet, so you have to inserted it.
 
 Now open a browser and access your site at: **http://localhost:8000**
 
@@ -84,11 +84,23 @@ $ python -m SimpleHTTPServer 80
 
 Now you can access your site **http://localhost** without specifying a port.
 
-Other than setting up a Server environment through python SimpleHTTPServer, you can also If you work in Webstorm (what we suggested for this course), you do not need to start the Python server by inputting commands in the Terminal or Command promt. In Webstorm's main window, click one of the browser icons at the top right, a server environment will automatically launch, and a browser showing the web page will be opened up.
+Other than setting up a server environment through python SimpleHTTPServer, you can also If you work in `Atom` (what we suggested for this course), you do not need to start the Python server by inputting commands in the Terminal or Command promt. In Atom's main window, please press a key combination `Ctrl` + `Alt` + `l` to open up a live server. In this way, a server environment will automatically launch, and a browser showing the front page of the server will be opened up.
 
-![](img/webstorm.jpg)
+ Sometimes, you will need to relaunch the live server, so you can stop the server by pressing `Ctrl` + `Alt` + `q`, and then quickly start it by pressing `Ctrl` + `Alt` + `l`. Also, to set up the server on a dedicated port, or you want to set up multiple server for testing purpose, please refer to the commands below:
 
-> Click the chrome icon on the top right of Webstorm interface to open the "index.html" in Chrome, a server environment will automatically set up.
+`Ctrl` + `Alt` + `3` launch live server on port 3000.
+
+`Ctrl` + `Alt` + `4`launch live server on port 4000.
+
+`Ctrl` + `Alt` + `5` launch live server on port 5000.
+
+`Ctrl` + `Alt` + `8` launch live server on port 8000.
+
+The best part of the Atom's live server is that it can simultaneously visualize the change of the code as a new web page in the browser. Most IDEs do not provide this live-update feature. Conventionally, once a change has been made, you will need to stop the server and relaunch it again to ensure the change is applied to the web page. In this sense, this feature has greatly increase the efficency of web programming.
+
+![](https://i.github-camo.com/80362269abcbd6c9f78c1441b0f6de285a88e773/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6a61732d6368656e2f61746f6d2d6c6976652d7365727665722f6d61737465722f646f632f64656d6f2e676966)
+
+ > For more detailed information about the integrated live server on atom, please refer to [https://atom.io/packages/atom-live-server](https://atom.io/packages/atom-live-server).
 
 ## 5. HTML: The Core Concepts
 
