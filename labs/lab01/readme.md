@@ -69,7 +69,7 @@ In this course, I decide to store all material on GitHub instead of Canvas syste
 
 3\. However, **we recommend you to clone this project repository**. You can get the **git url** of this repository on the same information window. The git url is [https://github.com/jakobzhao/geog371.git](https://github.com/jakobzhao/geog371.git).
 
-4\. Next, open your working space on your local computer through command prompt if you are on Windows or through terminal if you are on a Mac or Linux. Here, the working space is just a folder on your local computer where you store all your working materials.For me, I created a working folder to locally store my github repositories. For some of my studuents, a working folder is a place to store course materails. For example, the working space of my computer is located as `C:\Workspace`.
+4\. Next, open your working space on your local computer through command prompt if you are on Windows or through terminal if you are on a Mac or Linux. Here, the working space is just a folder on your local computer where you store all your working materials.For me, I created a working folder to locally store my github repositories. For some of my studuents, a working folder is a place to store course materials. For example, the working space of my computer is located as `C:\Workspace`.
 
 ```powershell
 C:\Users\[your_username]>cd C:\Workspace
