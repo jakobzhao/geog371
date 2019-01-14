@@ -8,7 +8,6 @@
 
 - Understand how to organize files on a server.
 - Get to know the web development environment (IDE);
-- Understand the basic command or terminal operations to navigate and locate a directory;
 - Set up a testing/debugging web server; and
 - Walk through the basics of HTML and CSS;
 
