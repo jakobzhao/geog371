@@ -356,7 +356,7 @@ Before submitting this lab, please make sure both the **GitHub repository** and 
 * One or several images (6 POINTS); and
 * A list (7 POINTS);
 
-#### Optional Tasks
+#### Optional Task
 
 5\. Please further customize your resume to have the following features:
 

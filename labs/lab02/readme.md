@@ -4,7 +4,7 @@
 >
 > **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 0800 - 1150
 >
-> **Assigned:**  | **Due:**  | **Points Available** = 50
+> **Assigned:** 1/14/2019  | **Due:** 1/22/2019 23:59:59 | **Points Available** = 50
 
 ## 1. Preparation
 
@@ -41,7 +41,7 @@ geog371
            └──main.js
         └─img
 ```
-Please activate a web server environment under the lab02 directory by **SimpleHTTPServer** or **WebStorm**.  Then visit `index.html` on Google Chrome. For example, if you activate a web server environment by SimpleHTTPServer with default setting, you may need to visit http://localhost:8000/index.html.
+Please activate a web server environment under the lab02 directory by **SimpleHTTPServer** or **Atom**.  Then visit `index.html` on Google Chrome. For example, if you activate a web server environment by SimpleHTTPServer with default setting, you may need to visit http://localhost:8000/index.html.
 
 At the bottom of the body section, you will see the following code. This will read all code found in the `main.js` file that is in the js folder.
 
@@ -126,7 +126,6 @@ Try typing **car.start()**. You should get confirmation that your car started. T
 ![](img/browser-jsconsole-1.png)
 
 > a screenshot of running the code on Google in-browser console
-
 
 
 
@@ -630,8 +629,9 @@ You can access elements by DOM selectors. Use the [W3 HTML DOM Elements](http://
 document.getElementById("foo");
 
 // Access element by class name
-document.getElementByClassName("class-name")';
+document.getElementByClassName("class-name");
 ```
+
 
 ### 2.11 Event Listeners
 
@@ -659,7 +659,7 @@ What are these used for?
 Adding jQuery to your webpage is done by including the following line of code at the bottom of your body section. Please put this in your page.
 
 ```js
-<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 ```
 
 - Leaflet is an easy to use mapping library that makes web maps for displaying geospatial data.
@@ -668,7 +668,7 @@ Adding jQuery to your webpage is done by including the following line of code at
 
 ## 3. Deliverable
 
-Please create a PE report as a word document, and answer all the following questions in the PE report.
+Please create a lab report as a word document, and answer all the following questions in this report.
 
 **Question 1.** Inside which HTML element do we put the JavaScript? (5 points)
 
@@ -755,7 +755,29 @@ Please create a PE report as a word document, and answer all the following quest
 >
 > B. var carName;
 >
-> C. variable carName;
+> C. js carName;
+>
+> D. object carName;
+
+**Question 10.** Which value does the statement `1 == 2` return?
+
+> A. true;
+>
+> B. 1;
+>
+> C. false;
+>
+> D. 2;
+
+#### Optional task
+
+**Question 11.** Please briefly describe how to launch the atom live server to port 5000 on localhost (127.0.0.1).  --  1 POINTS
+
+**Question 12.** Please list two ways to activate the inspector of Google Chrome.  -- 1 POINTS
+
+**Question 13.** Assume a repository of course material has already been cloned to your local computer. In the class, you have annotated some markdown files in the local repository as a convenient way to take notes. Do you think it is an appropriate way to do that? Please describe the reasons why. If it is not an appropriate, please list your suggestion. -- 3 POINTS
+
+
 
 Once you finish this lab, you need to submit the lab report to **Canvas Dropbox**. On the assignment tab,  check the item of this lab, press the `Submit Assignment` button to submit your lab report. Please contact the instructor or TA if you have any difficulty. Note: only submit your lab report in Word or PDF format.
 
