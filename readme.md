@@ -27,7 +27,6 @@ Welcome to GEOG371:Web Mapping :earth_americas:! This course introduces concepts
 
 [**Syllabus**](resources/geog371-syllabus.pdf)
 
-
 ### Tutorials
 
 - [Favicon](lectures/lec16/readme.md)
