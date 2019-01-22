@@ -10,9 +10,9 @@
 
 In this lab, we will design an interact web map of cell towers in Oregon. When creating a web map, one of the key components is styling your elements to provide proper symbolization for your data. This increases legibility for users and can give your map an appealing, custom design. Elements that can be customized to include thematic layers (i.e., points, lines, and polygons), base maps (as a leaflet `tileLayer`), interactive features (the components of the map that allow for user interaction), and legends and supplemental information (such as credits, etc.). To do that, the county boundaries is from [Oregon Explorer](http://oregonexplorer.info), and the spatial distribution of cell towers is from [Map Cruzin](http://www.mapcruzin.com/google-earth-maps-resources/kml/us-cell.kmz). Below is the web map you will make by walking through this lab handout.
 
-![](img/final_map.jpg)
+![](img/final_map.png)
 
-To get started, please synchronize the course material to the working space of your local computer. If you are working in the Digital Earth Lab, please synchronize your course material on the desktop directory.  The material for this lab is located at `[your_working_space]/geog4572/labs/lab03`. Next, open the course material in Atom.
+To get started, please synchronize the course material to the working space of your local computer. If you are working in the Digital Earth Lab, please synchronize your course material on the desktop directory.  The material for this lab is located at `[your_working_space]/geog371/labs/lab03`. Next, open the course material in Atom.
 
 ## 1. Set up our Map and Add Data
 
@@ -426,239 +426,7 @@ Save and refresh your map. Or open `map5.html`.  `Titillium Web` will now be you
 
 ![](img/map5.jpg)
 
-### 5. Advanced Features (Optional)
-
-***You can skip this section and directly go to the deliverable.***
-
- #### 5.1 Add Graticules
-
-Inside the `head` tag, please add a new javascript library after the `chroma.js` library.
-
-```javascript
-<head>
-    ...
-    <script type="text/javascript" src="https://cloudybay.github.io/leaflet.latlng-graticule/leaflet.latlng-graticule.js"></script>
-</head>
-```
-
-Append the end of the script code, add the following code snippet.
-
-```javascript
-// 13. Add a latlng graticules.
-L.latlngGraticule({
-    showLabel: true,
-    opacity: 0.2,
-    color: "#747474",
-    zoomInterval: [
-        {start: 2, end: 7, interval: 2},
-        {start: 8, end: 11, interval: 0.5}
-    ]
-}).addTo(mymap);
-```
-
-The object `L.latlngGraticule` is provided by the `leaflet.latlng-graticule.js` library. Its options such as `showLabel`, `opacity`, `color` are straightforward to understand.  As for `zoomInterval`,  `{start: 6, end: 7, interval: 2}` means, from the zoom level 6 to 7, both the latitude and longitude interval is 2 degree, while ` {start: 8, end: 11, interval: 0.5}` means,  from zoom level 8 to 11,  both the latitude and longitude interval is 0.5 degree. For more information about this Graticules library, please visit [https://github.com/cloudybay/leaflet.latlng-graticule](https://github.com/cloudybay/leaflet.latlng-graticule).
-
-- **showLabel**: Show the grid tick label at the edges of the map. Default `true`
-- **opacity**: Opacity of the Graticule and Label. Default `1`
-- **weight**: The width of the graticule lines. Default `0.8`
-- **color**: The color of the graticule lines. Default `#aaa`
-- **font**: Font Style for the tick label. Default `12px Verdana`
-- **fontColor**: Color of the tick label. Default `#aaa`
-
-#### Special Options
-
-Some of the projections (like Lambert) is no straight line, set those options to draw a polyline graticule.
-
-- **lngLineCurved**: Interval of polyline. Deafult `0`
-- **latLineCurved**: Interval of polyline. Deafult `0`
-
-Check out the [Lambert projection example](https://cloudybay.github.io/leaflet.latlng-graticule/example/lambert.html).
-
-Save and refresh your map. Or open `map6.html`.  Graticules are applied!
-
-![](img/map6.jpg)
-
-#### 5.2 Add Dynamic Labels
-
-The label function is supported by the [**Label Gun**](https://github.com/Geovation/labelgun) library, which is a mapping library agnostic labelling engine. It allows you to avoid cluttering in mapping popups and labels, providing precedence to labels of your choice. The library makes three assumptions:
-
-- Each label has a bounding rectangle (Min X, Min Y, Max X, Max Y)
-- Each label has a weight
-- You can provide a function that will hide and show a label (e.g. changing a CSS class or calling a mapping library method)
-
-To use this library, in your `head` tag, add two libraries `rbush.min.js` and `labelgun.min.js ` **in front of** the `leaflet.js`, as shown below:
-
-```html
-<head>
-    ...
-    <script src="https://unpkg.com/rbush@2.0.1/rbush.min.js"></script>
-    <script src="https://unpkg.com/labelgun@6.0.0/lib/labelgun.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
-    ...
-</head>
-```
-
-Then, inside the `style` tag, define the label font style.
-
-```css
-.leaflet-tooltip.feature-label {
-    background-color: transparent;
-    border: transparent;
-    box-shadow: none;
-    font-weight: bold;
-    font-size: 12px;
-    font-family: 'Titillium Web', sans-serif;
-    text-shadow: 0 0 2px #FFFFFF;
-    color: rgba(35, 35, 35, 0.78)
-}
-```
-
-To add dynamic label, we will create variables to show or hide Label,  an array to hold labels, and the label engine. We create these variables prior to create the map variable.
-
-```javascript
-// 14. This is core of how Labelgun works. We must provide two functions, one
-// that hides our labels, another that shows the labels. These are essentially
-// callbacks that labelgun uses to actually show and hide our labels
-// In this instance we set the labels opacity to 0 and 1 respectively.
-var hideLabel = function(label){ label.labelObject.style.opacity = 0;};
-var showLabel = function(label){ label.labelObject.style.opacity = 1;};
-var labelEngine = new labelgun.default(hideLabel, showLabel);
-var labels = [];
-```
-
-Then, we will create a label for each county. The label will be the county name `feature.properties.NAME`.
-
-```javascript
-// 15. Create a label for each county.
-var counties = null;
-counties = L.geoJson.ajax("assets/counties.geojson", {
-    style: style,
-    onEachFeature: function (feature, label) {
-        label.bindTooltip(feature.properties.NAME, {className: 'feature-label', permanent:true, direction: 'center'});
-        labels.push(label);
-    }
-}).addTo(mymap);
-```
-
-Next, we create an `addLabel` function to dynamically update the visible labels, aiming to avoid the label overlap.  You do not need to know the specific meaning of this function, but please make sure to capture the bounding box from the `mymap` variable.
-
-```javascript
-function addLabel(layer, id) {
-    // This is ugly but there is no getContainer method on the tooltip :(
-    var label = layer.getTooltip()._source._tooltip._container;
-    if (label) {
-        // We need the bounding rectangle of the label itself
-        var rect = label.getBoundingClientRect();
-
-        // We convert the container coordinates (screen space) to Lat/lng
-        var bottomLeft = mymap.containerPointToLatLng([rect.left, rect.bottom]);
-        var topRight = mymap.containerPointToLatLng([rect.right, rect.top]);
-        var boundingBox = {
-            bottomLeft : [bottomLeft.lng, bottomLeft.lat],
-            topRight   : [topRight.lng, topRight.lat]
-        };
-
-        // Ingest the label into labelgun itself
-        labelEngine.ingestLabel(
-            boundingBox,
-            id,
-            parseInt(Math.random() * (5 - 1) + 1), // Weight
-            label,
-            label.innerText,
-            false
-        );
-
-        // If the label hasn't been added to the map already
-        // add it and set the added flag to true
-        if (!layer.added) {
-            layer.addTo(mymap);
-            layer.added = true;
-        }
-    }
-
-}
-```
-
-At last, we will update the visualization of the labels whenever you zoom the map.
-
-```javascript
-mymap.on("zoomend", function(){
-    var i = 0;
-    counties.eachLayer(function(label){
-        addLabel(label, ++i);
-    });
-    labelEngine.update();
-});
-```
-
-Save and refresh the map, or open `map7.html`, the dynamic labels are added! Please zoom in and out and see how the visualization of labels changes.
-
-![](img/map7.jpg)
-
-#### 5.3 Reproject a web map
-
-Most of publicly shared base map are projected in Web Mercator (a.k.a Google Mercator). In order to use custom project, we need to follow the procedure below.
-
-Above all, includes two necessary libraries `proj4js` and `proj4leaflet`  after the `leaflet.js`
-
-```html
-<head>
-	...
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
-	...
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.4/proj4.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4leaflet/1.0.2/proj4leaflet.min.js"></script>
-	...
-</head>
-```
-
-Then, we need to find the appropriate projection for Oregon. To do that, go to [http://spatialreference.org/](http://spatialreference.org/), and search “Oregon” on the search input on the top right. For the list of projections, we choose "[EPSG:2991](http://spatialreference.org/ref/epsg/2991/): NAD83 / Oregon Lambert", click into the [web page for EPSG:2991](http://spatialreference.org/ref/epsg/2991/), we need to copy the `proj4` text. So, click on the [Proj4](http://spatialreference.org/ref/epsg/2991/) item, you will have the following text
-
-```javascript
-+proj=lcc +lat_1=43 +lat_2=45.5 +lat_0=41.75 +lon_0=-120.5 +x_0=400000 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs
-```
-
-So, we can define our custom CRS as `mycrs` as below.
-
-```javascript
-// 18. define the coordinate reference system (CRS)
-mycrs = new L.Proj.CRS('EPSG:2991',
-    '+proj=lcc +lat_1=43 +lat_2=45.5 +lat_0=41.75 +lon_0=-120.5 +x_0=400000 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs',
-    {
-        resolutions: [8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1] // example zoom level resolutions
-    }
-);
-```
-
-Here, the resolution array is listed for creating zoom level 1 to 14 (There are 14 resolutions). If you are not familiar with the resolution array, you can just input the array above by default. For more information about how to use  `L.Proj.CRS`, please refer to http://kartena.github.io/Proj4Leaflet/api/.
-
- After the custom projection is created, you will need to assign it to the `crs` option of the map. Also, since the map follows a new zoom level system, we need to update the zoom level. If you do not know which one should use, you can just test different zoom level from 0 to 14 to find the best fit. See the code snippet below.
-
-```javascript
-
-var mymap = L.map('map', {
-    crs: mycrs, // 19. assign the custom crs to the crs option. change the zoom levels due to the change of projection.
-    center: [44.13, -119.93],
-    zoom: 3, // we choose zoom level 3
-    maxZoom: 10,
-    minZoom: 3,
-    detectRetina: true});
-```
-
-Because the scale bar does not work properly after a reprojection, we need to comment off the scale bar. Also, since most publicly shared base map only support web Mercator, we should comment of these base map as well. see the code snippet below.
-
-```javascript
-// 20. comment off the base map, because the publicly shared base map usually cannot reprojected
-// L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
-// 21. comment off the scale bar, because in same project, scalebar does not make sense.
-// L.control.scale({position: 'bottomleft'}).addTo(mymap);
-```
-
-Then, the final map was made! Please open `map8.html` to see the web map in Oregon Lambert projection!
-
-![](img/map8.jpg)
-
-## 6. Deliverable
+## 5. Deliverable
 
 After you successfully deploy this cell tower map, you are expected to build another web map of airports in United States. In the `assets` directory of this lab, you will see two geojson files: one is [`airports.geojson`](assets/airports.geojson), another is [`us-states.geojson`](assets/us-states.geojson).
 
@@ -671,7 +439,9 @@ After you successfully deploy this cell tower map, you are expected to build ano
 - some map elements, such as legend, scale bar, credit;  **(8 points)**
 - write up a project description in the `readme.md` file. This file will introduce the project name, a brief introduction, the major functions(especially the function which was not covered in the lectures), libraries, data sources, credit, acknowledgement, and other necessary information. **(8 points)**
 
-- you will need to synchronize this project to a github repository. And make sure the web map is accessible from a url link, which should be similar to `http://[your_github_username].github.io/[your_repository_name]/index.html`. (You may want to check out previous lecture or lab handouts on project management and hosting via github); **(6 points)**
+- you will need to synchronize this project to a github repository. And make sure the web map is accessible from a url link, which should be similar to `http://[your_github_username].github.io/[your_repository_name]/index.html`. (To do that, you may want to check out previous lecture or lab handouts on how to host repository on github pages.); **(6 points)**
+
+> **Note:** Please make sure the name of your repository is **NOT** `lab03` or similiar, use a name which can describe the theme of the map you will make. Think about that, which one do you prefer? - showing your future employer or Ph.D. admission committee a lot of course work on github or a list of professional projects.
 
 - please make sure the internal structure of the files in your project repository is well organized. For example, it may be similar to the file structure below. **(5 points)**
 
@@ -693,36 +463,7 @@ After you successfully deploy this cell tower map, you are expected to build ano
 
 #### Optional tasks:
 
-- an appropriate projection - describe that projection in the `readme.md` page;  **(2 points)**
-- Dynamic labels of the state name - use an font different from the font of the legend; **(3 points)**
-
-##Submission
-
-- you will need to synchronize this project to a GitHub repository. Please make sure the name of your repository is **NOT** `lab03` or similiar , use a name which can describe the theme of the map you will make. Think about that, which one you prefer - showing your future employer or Ph.D. admission committee a lot of course work on github or a list of professional projects.
-
-- your interactive web map should be accessible from a url link, which should be `http://[your_github_username].github.io/[your_repository_name]/index.html`. (You may want to check out previous lecture or lab handouts on project management, and how to host via GitHub); **(6 points)**
-
-- To simplify your html page, please put the javascript code in the script tag to a separate javascript file `main.js` under the `js` folder, and put the css code in the style tag to a separate css file `main.css` under the `css` folder. If you will use any images or videos, please put to the `img` folder, where the geojson data are in the `assets` folder.  please make sure the project repository structure is well organized. It should be similiar to the file structure below. **(4 points)**
-
-  ```powershell
-  [your_repository_name]
-      │index.html
-      │readme.md
-      ├─assets
-      │      airports.geojson
-      │      us-states.geojson
-      ├─css
-      │      main.css
-      ├─img
-      │      xxx.jpg
-      └─js
-              main.js
-  ```
-
-- write up a project description in the `readme.md` file. This file will introduce the project name, a brief introduction, the major functions(especially the function which was not covered in the lectures), libraries, data sources, credit, acknowledgement, and other necessary information. **(8 points)**
-
- For submission, you are excepted to submit the **url of the GitHub repository** to the **Canvas Dropbox** of this course. This url should be in the format of `https://www.github.com/[your_github_username]/[your_repository_name]`. Also the TA and other audience should be able to visit your interactive web map through the url `https://[your_github_username].github.ip/[your_repository_name]`. Please contact the instructor if you have any difficulty in submitting the url link.
-
+- Try to add on a feature of leaflet which we have not discussed in class. The new features  can be found on [the plugin page](https://leafletjs.com/plugins.html) of leafet; **(5 points)**
 
 > If you have a genuine reason(known medical condition, a pile-up of due assignments on other courses, ROTC,athletics teams, job interview, religious obligations etc.) for being unable to complete work on time, then some flexibility is possible. However, if in my judgment you could reasonably have let me know beforehand that there would likely be a delay, and then a late penalty will still be imposed if I don't hear from you until after the deadline has passed. For unforeseeable problems,I can be more flexible. If there are ongoing medical, personal, or other issues that are likely to affect your work all semester, then please arrange to see me to discuss the situation. There will be NO make-up exams except for circumstances like those above.
 
