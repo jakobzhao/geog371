@@ -30,8 +30,8 @@ What Leaflet does not do: Provide any data for you! Leaflet is a framework for s
 The latest stable Leaflet release is hosted on a CDN — to start using it straight away, place this in the head of your HTML code:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 ```
 
 ## 2. Project Preparation
