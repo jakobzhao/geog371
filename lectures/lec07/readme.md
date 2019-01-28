@@ -51,14 +51,14 @@ $ python -m SimpleHTTPServer
 
 Now open a browser and access your site at: http://localhost:8000
 
-> **Note:** Compared with python SimpleHTTPServer, we recommend to use webstorm.
+> **Note:** Compared with python SimpleHTTPServer, we recommend to use Atom.
 
 ## 3. Create a Webpage and Simple Map
 
 
 ### 3.1 Setup a web page for our map
 
-Open up your Webstorm, and then we set up an empty **index.html** template for our web page that will contain our web map and web map elements. The components will be the same as always, note the head, title, and body.
+Open up your Atom, and then we set up an empty **index.html** template for our web page that will contain our web map and web map elements. The components will be the same as always, note the head, title, and body.
 
 Enter the following code into your blank HTML page.
 
