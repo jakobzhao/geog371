@@ -41,9 +41,9 @@ The latest stable Leaflet release is hosted on a CDN — to start using it strai
 
 The first step is to create a project working directory which holds all the files. To do that, we will create a project repository on github, and then sync the empty repository to your **working space** on local computer. If you have any question on how to conduct the above-mentioned operations, please refer to lab 1.
 
-### 2.2 Use an IDE (Webstorm) or command line to start up a server
+### 2.2 Use an IDE (Atom) or command line to start up a server
 
-To set up a local server, you can try Webstorm or python SimpleHTTPServer, such as:
+To set up a local server, you can try Atom or python SimpleHTTPServer, such as:
 
 ```bash
 $ python -m SimpleHTTPServer
