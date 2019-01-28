@@ -88,14 +88,14 @@ Within the head section, after title, copy and paste the following. This adds th
 
 ```html
 <!-- External Stylesheets -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
 ```
 
 Link to the JavaScript library at the bottom of the body section of our site, putting it at the bottom allows our page to load faster. Copy and paste the following. This adds the Leaflet JS file to our web page and is the Leaflet Javascript library.
 
 ```html
 <!-- Add the Leaflet JavaScript library -->
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 ```
 
 We can now begin working with the Leaflet library.
