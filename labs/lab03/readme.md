@@ -74,7 +74,7 @@ var mymap = L.map('map', {
 L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
 ```
 
-If you are using Atom, please press the Google chrome button on the top right, you should see a basic map showing the extent of Oregon in Google chrome.
+If you are using Atom, please open up the atom live server, and then navigate to the map1.html. If you follow the default setting of Atom, the url address of map1.html should be `https://localhost:3000/labs/lab03/map1.html`.
 
 ![](img/map1.jpg)
 
