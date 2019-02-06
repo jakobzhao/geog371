@@ -20,4 +20,4 @@ $("#map").on("click", function(e) {
 
 >  For example, to select all the `<a>` elements, you can use `$("a")`. To complete this quiz, you will need to use the console drawer of the Chrome Inspector.
 
-The total avaliable score for this lab is 10 POINTS. Please answer all the questions in a word or pdf document. You will need to submit the document to canvas. The deadline of this quiz is **Thursday (Feb 7, 2019) 11:59 pm**.
+The total avaliable score for this lab is **20 POINTS**. Please answer all the questions in a word or pdf document. You will need to submit the document to canvas. The deadline of this quiz is **Thursday (Feb 7, 2019) 11:59 pm**.
