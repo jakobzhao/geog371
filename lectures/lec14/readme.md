@@ -83,9 +83,7 @@ $$
 The **map scale** indicates the ratio between map distance and ground distance, when measured in the same units. For instance, at a map scale of 1 : 100,000, each inch on the map represents a ground distance of 100,000 inches. Like the ground resolution, the map scale varies with the level of detail and the latitude of measurement. It can be calculated from the ground resolution as follows, given the screen resolution in dots per inch, **typically 96 dpi**:
 
 $$
-map scale = 1 : ground resolution * screen dpi / 0.0254 meters/inch  \\
-
-= 1 : (cos(latitude * pi/180) * 2 * pi * 6378137 * screen dpi) / (256 * 2^\mathit{level} * 0.0254)
+map scale = 1 : ground resolution * screen dpi / 0.0254 meters/inch  = 1 : (cos(latitude * pi/180) * 2 * pi * 6378137 * screen dpi) / (256 * 2^\mathit{level} * 0.0254)
 $$
 
 > **Retina Display:**  Retina Display is a brand name used by Apple for its series of IPS panel displays that have a higher pixel density than traditional displays. Apple has applied to register the term "Retina" as a trademark in regard to computers and mobile devices. When introducing the iPhone 4, Steve Jobs said the number of pixels needed for a Retina Display is **326PPI** .
@@ -129,17 +127,22 @@ This table shows each of these values at each level of detail, **as measured at
 
 ### 2.3 Pixel Coordinates
 
-Having chosen the projection and scale to use at each level of detail, we can convert geographic coordinates into pixel coordinates. Since the map width and height is different at each level, so are the pixel coordinates. The pixel at the upper-left corner of the map always has pixel coordinates (0, 0). The pixel at the lower-right corner of the map has pixel coordinates $$(width-1, height-1)$$, or referring to the equations in the previous section, $$(256 * 2^level–1, 256 * 2^\mathit{level}–1)$$. For example, at level 3, the pixel coordinates range from (0, 0) to (2047, 2047), like this:
+Having chosen the projection and scale to use at each level of detail, we can convert geographic coordinates into pixel coordinates. Since the map width and height is different at each level, so are the pixel coordinates. The pixel at the upper-left corner of the map always has pixel coordinates (0, 0). The pixel at the lower-right corner of the map has pixel coordinates $$(width-1, height-1)$$, or referring to the equations in the previous section,
+$$(256 * 2^{level}–1, 256 * 2^{level}–1)$$.
+
+For example, at level 3, the pixel coordinates range from (0, 0) to (2047, 2047), like this:
 
 ![img](img/bing_overview2.png)
 
 Given latitude and longitude in degrees, and the level of detail, the pixel XY coordinates can be calculated as follows:
 
 $$
-sinLatitude = sin(latitude * pi/180) \\
-
-pixelX = ((longitude + 180) / 360) * 256 * 2^\mathit{level} \\
-
+sinLatitude = sin(latitude * pi/180)
+$$
+$$
+pixelX = ((longitude + 180) / 360) * 256 * 2^{level}
+$$
+$$
 pixelY = (0.5 – log((1 + sinLatitude) / (1 – sinLatitude)) / (4 * pi)) * 256 * 2\mathit{level}
 $$
 
@@ -161,8 +164,10 @@ Each tile is given XY coordinates ranging from $$(0, 0)$$ in the upper left to $
 Given a pair of pixel XY coordinates, you can easily determine the tile XY coordinates of the tile containing that pixel:
 
 $$
-tileX = floor(pixelX / 256)  \\
+tileX = floor(pixelX / 256)
+$$
 
+$$
 tileY = floor(pixelY / 256)
 $$
 
@@ -170,9 +175,11 @@ To optimize the indexing and storage of tiles, the two-dimensional tile XY coord
 
 $$
 tileX = 3 = 011^2
-
+$$
+$$
 tileY = 5 = 101^2
-
+$$
+$$
 quadkey = 100111^2 = 2134 = “213”
 $$
 

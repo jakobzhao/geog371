@@ -299,8 +299,6 @@ Also , GeoServer allows you combine several layers as a layer group. This is use
 GeoServer can also publish **raster** imagery. This could be simple georeferenced images (such as Blue Marble imagery), multi-band DEM (digital elevation model) data, or many other options. If you are interested in creating a raster imagery layer, please follow the guideline ["create raster imagry layer"](http://GeoServer.geo-solutions.it/edu/en/pretty_maps/styling_raster.html)  or another one ["create a geotiff layer"](http://wiki.ieee-earth.org/index.php?title=Documents/GEOSS_Tutorials/GEOSS_Provider_Tutorials/Web_Coverage_Service_Tutorial_for_GEOSS_Providers/Section_4_:_Provisioning%2F%2FUsing_the_service_or_application/Section_4.3_:_Detailed_steps_of_the_Use_Cases/4.3.1_Offering_a_GeoTiff_dataset_with_Geoserver) to create a raster layer.
 
 
-Even though the Layer Importer generated unique styles for each layer, this layer group doesn’t look very nice. The following section will discuss the next important step of making maps: **styling**.
-
 ## References
 
 [1] OSGEO (2016) GeoServer: Introduction, retrieved Decemeber 28, 2016 from http://docs.GeoServer.org/latest/en/user/introduction/index.html#introduction
