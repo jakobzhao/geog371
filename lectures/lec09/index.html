@@ -66,8 +66,8 @@
 </head>
 <body>
 <div id='map'></div>
-<div class='info'><h1>US Population Density</h1><div class='update'>Hover over a state</div></div>
-<div class='legend'></div>
+<!-- <div class='info'><h1>US Population Density</h1><div class='update'>Hover over a state</div></div>
+<div class='legend'></div> -->
 <script type="text/javascript">
 
     // 1. create the map object and the base layer.
@@ -89,7 +89,7 @@
         for (var i = 0; i < grades.length - 1; i++) {
             if ( d > grades[i] && d < grades[i+1] ) return colors[i];
         }
-        if (d > grades[grades.length - 1]) return colors[grades.length];
+        if (d > grades[grades.length - 1]) return colors[grades.length - 1];
     }
 
     // determine the style class based on the input feature
@@ -156,7 +156,7 @@
     // 4. create the legend
     var labels = [];
     for (var i = 0; i < grades.length - 1; i++) {
-        labels.push('<i style="background:' + colors[i] + '"></i> ' + grades[i] + ' - ' + grades[i + 1]);
+        labels.push('<i style="background:' + colors[i] + '"></i> ' + (grades[i] + 1) + ' - ' + grades[i + 1]);
     }
     labels.push('<i style="background:' + colors[grades.length - 1] + '"></i> ' + grades[grades.length - 1] + ' +');
     $(".legend").html(labels.join('<br>'));
