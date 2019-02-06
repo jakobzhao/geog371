@@ -51,7 +51,7 @@ You will have one and a half weeks to work on this lab. To submit, please follow
 ```
 
 
-####Optional Task
+#### Optional Task
 
 If you design a map representing a LGBT :rainbow:  topic or a Valentine's Day :heart: topic, you will receive the addtional points (**5 POINTS**). Think out aloud, what color ramp is appropriate for a LGBT theme? Like a rainbow color flag ?
 
