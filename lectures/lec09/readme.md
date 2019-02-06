@@ -1,4 +1,4 @@
-1.4.0# Map Client III: Web Map Interaction
+# Map Client III: Web Map Interaction
 
 > Winter 2019 | Geography 371 | Web Mapping
 >
