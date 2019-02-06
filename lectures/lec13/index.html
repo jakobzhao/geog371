@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+    
         html {
             /*full screen the map*/
             height: 100%;
@@ -23,26 +24,22 @@
     </style>
 
     <!-- Stylesheet -->
-    <!--<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.2.0/leaflet.css"/>-->
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.css" rel='stylesheet'/>
     <!-- Javascript Libraries -->
-    <!--<script src="https://cdn.leafletjs.com/leaflet/v1.2.0/leaflet.js"></script>-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
     <!-- mapbox gl js -->
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.js"></script>
     <!-- leaflet mapbox js -->
     <script src="https://rawgit.com/mapbox/mapbox-gl-leaflet/master/leaflet-mapbox-gl.js"></script>
 
 </head>
-
 <body>
 <div id="map"></div>
 <script>
     var map = L.map('map').setView([44.565095, -123.278298], 15);
 
-    mapbox_token = 'pk.eyJ1Ijoiemhhb2JvIiwiYSI6ImNqMGdpM2RjNDAyMzQzMnJ1d3FuZmF0NnQifQ.yoQP0NDS5F8ePKjaS3EJgQ';
-
+    mapbox_token = 'pk.eyJ1Ijoiemhhb2JvIiwiYSI6ImNqaW85NzNrdDA3OXczcHQ5aTZvYmtjc2gifQ.ummEQxsRIweCIdv9CRRzOw';
     var gl = L.mapboxGL({
         accessToken: mapbox_token,
         style: 'assets/style.json',

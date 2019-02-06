@@ -1,4 +1,4 @@
-# Map Server I: Introduction to GeoServer
+# Map Server II: Introduction to GeoServer
 
 > Winter 2019 | Geography 371 | Web Mapping
 >

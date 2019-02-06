@@ -3,7 +3,7 @@
 <head>
     <title>Base Map Design using Mapbox</title>
     <!-- External Stylesheets -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
     <style>
         html {
             /*full screen the map*/
@@ -22,7 +22,7 @@
         }
     </style>
     <!-- Add the Leaflet JavaScript library -->
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 
 </head>
 <body>
@@ -34,7 +34,7 @@
     var map = L.map('map').setView([44.565095, -123.278298], 15);
 
     // Add OpenStreetMap tile layer to map element
-    L.tileLayer('https://api.mapbox.com/styles/v1/zhaobo/cj29w5g3c001d2rpkd7k1rcex/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiemhhb2JvIiwiYSI6ImNqMGdpM2RjNDAyMzQzMnJ1d3FuZmF0NnQifQ.yoQP0NDS5F8ePKjaS3EJgQ', {
+    L.tileLayer('https://api.mapbox.com/styles/v1/zhaobo/cj29w5g3c001d2rpkd7k1rcex/tiles/256/{z}/{x}/{y}?access_token=pk.pk.eyJ1Ijoiemhhb2JvIiwiYSI6ImNqaW85NzNrdDA3OXczcHQ5aTZvYmtjc2gifQ.ummEQxsRIweCIdv9CRRzOw', {
         detectRetina: true,
         attribution: 'Created By <a href="https://github.com/jakobzhao/">Bo Zhao</a> based on the <a href="assets/license.txt">Mapbox basic style</a>'
     }).addTo(map);

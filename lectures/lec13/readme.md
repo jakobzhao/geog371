@@ -1,4 +1,4 @@
-# Map Server IV: Base Map Design using Mapbox
+# Map Server I: Base Map Design using Mapbox
 
 > Winter 2019 | Geography 371 | Web Mapping
 >
@@ -67,10 +67,10 @@ In order to show how to use a customized basemap in leaflet, please refer to the
 
 ```javascript
 <!-- Stylesheet -->
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.2.0/leaflet.css"/>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.4.0/leaflet.css"/>
 <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.css" rel='stylesheet'/>
 <!-- Javascript Libraries -->
-<script src="http://cdn.leafletjs.com/leaflet/v1.2.0/leaflet.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet/v1.4.0/leaflet.js"></script>
 <!-- mapbox gl js -->
 <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.js"></script>
 <!-- leaflet mapbox js -->
