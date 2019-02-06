@@ -182,7 +182,7 @@ Quadkeys have several interesting properties. First, the length of a quadkey (th
 
 Finally, quadkeys provide a one-dimensional index key that usually preserves the proximity of tiles in XY space. In other words, two tiles that have nearby XY coordinates usually have quadkeys that are relatively close together. This is important for optimizing database performance, because neighboring tiles are usually requested in groups, and it’s desirable to keep those tiles on the same disk blocks, in order to minimize the number of disk reads.
 
-## 3. Creating tiles with GeoServer using GeoWebCache
+## 4. Optional: Creating tiles with GeoServer using GeoWebCache
 
 Suppose you're satisfied with the layers and symbols in your WMS, but you want it to draw faster and be available to many simultaneous users. In this situation, it might make sense to use GeoWebCache to create your tiles, because GeoWebCache is built directly into GeoServer. This section shows how to use GeoWeb Cache to create a tile cache for the Oregon counties map.
 
