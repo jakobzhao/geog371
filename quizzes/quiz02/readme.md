@@ -7,12 +7,13 @@ For this quiz, you will need to look for a shapefile and convert it to geojson. 
 [2] Simplify this geojson as a new geojson data
 
 
-In the readme.md file of this repo, please briefly introduce this data, and also make a table to compare the data size of these three (geo/topo)-json files. for example:
+In the readme.md file of this repo, please briefly introduce this data, and also make a table to compare the data size of these three geojson files. for example:
 
+```powershell
 name	size(kb)
 xxx.geojson	10,000
 xxx_simplifed.geojson	1,000
-
+```
 
 In the assets folder of this repo, please upload the two json files.  So, the structure of this repository should be: 
 
