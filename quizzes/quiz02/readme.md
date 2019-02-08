@@ -1,18 +1,21 @@
-For this home assignment, you will need to look for a shapefile (polygon) and convert it to geojson and topojson. It would be great if this data can be used for your final project. For this assignment, you need to:
+# Quiz 2: Create GeoJson
 
-[1] Convert the raw geospatial data as a geojson;
+For this quiz, you will need to look for a shapefile and convert it to geojson. You can refer to the lecture on spatial data to review how to convert a shapefiel to geojson. Please make sure the geojson is in the correct projection (wgs84, epsg: 4326). In addition, you might want to use [mapshaper](https://mapshaper.org/) to simplify a geojson. Please follow the steps below:
 
-[2] Simplify this geojson as a new geojson data; and
+[1] Convert the raw geospatial data (in shapefile) as a geojson; and
 
-[3] Convert the simplified geojson as a typojson.
+[2] Simplify this geojson as a new geojson data
+
 
 In the readme.md file of this repo, please briefly introduce this data, and also make a table to compare the data size of these three (geo/topo)-json files. for example:
 
 name	size(kb)
 xxx.geojson	10,000
 xxx_simplifed.geojson	1,000
-xxx.topojson	50
-In the assets folder of this repo, please upload the three json files.  So, the structure of this repository should be: 
+
+
+In the assets folder of this repo, please upload the two json files.  So, the structure of this repository should be: 
+
 
 ```powershell
 [your_repository_name]
@@ -22,5 +25,6 @@ In the assets folder of this repo, please upload the three json files.  So, the 
     │      XXX_simplified.geojson
     │      XXX.topojson
 ```
+
 
 Please only submit the url of this repository to canvas.
