@@ -23,7 +23,6 @@ In the assets folder of this repo, please upload the two json files.  So, the st
     ├─assets
     │      XXX.geojson 
     │      XXX_simplified.geojson
-    │      XXX.topojson
 ```
 
 
