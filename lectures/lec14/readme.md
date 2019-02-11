@@ -7,8 +7,7 @@
 **Learning Objectives**
 
 - Understand the structure of tile system;
-- How to create catch via GeoWebCache; and
-- Generate tiles using QTiles (hands-on).
+- Generate tiles using QTiles
 
 # 1. Overview
 
@@ -176,9 +175,11 @@ To optimize the indexing and storage of tiles, the two-dimensional tile XY coord
 $$
 tileX = 3 = 011^2
 $$
+
 $$
 tileY = 5 = 101^2
 $$
+
 $$
 quadkey = 100111^2 = 2134 = “213”
 $$
@@ -235,4 +236,4 @@ Although performance is improved with the tile cache, you may notice some duplic
 ## References:
 
 1. https://www.e-education.psu.edu/geog585/node/706
-2. https://msdn.microsoft.com/en-us/library/bb259689.aspx
+2. [https://docs.microsoft.com/en-us/bingmaps/articles/bing-maps-tile-system](https://docs.microsoft.com/en-us/bingmaps/articles/bing-maps-tile-system)

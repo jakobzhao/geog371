@@ -26,7 +26,7 @@ Welcome to GEOG371:Web Mapping :earth_americas:! This course introduces concepts
 | Wk 09 |               [3D Web Mapping II: Thematic Map on a Virtual Globe](lectures/lec25)  [HeatMap](lectures/lec21)   | [Map Design IV: Map Critiques](lectures/lec22) | [Lab 6:  Thematic Map on a Virtual Globe](labs/lab06) |  [Real-Time Mapping: TweetMap](lectures/lec20)  |                [Server-Side JavaScript](readings/wk09.md)                                     |
 | Wk 10 |  [Emerging Topics on Web Mapping](lectures/lec26)    | Final Project Discussion and Preparation   |              Final Project Discussion and Preparation             |       Final Project Presentation - *Strand Ag Hall (GAZE) TBD*       |       [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md)
 
-[**Syllabus**](resources/geog371-syllabus.pdf)
+
 
 ### Tutorials
 
