@@ -228,6 +228,102 @@ Suppose you're satisfied with the layers and symbols in your WMS, but you want i
 
 Although performance is improved with the tile cache, you may notice some duplicate labels appearing. This is a difficult problem to avoid with map tiling, because each tile does not "know" about the labels on the adjacent tiles. To mitigate this problem, tile caching software typically draws an area much larger than a tile and then cuts it up into individual tiles. GeoWebCache calls this large area a "metatile" (Esri calls it a "supertile"). If you like, you can experiment with adjusting the metatile size; although duplicate labels can still appear at the metatile boundaries, the duplicates will be fewer and farther between. You may also find that the settings and options in the next walkthrough with TileMill make it easier to get the labeling you want.
 
+
+
+## 5 QGIS
+
+QTiles is a plugin for QGIS 3. QGIS is an open source platform and is freely available. QGIS can be down loaded **[here](https://qgis.org/en/site/forusers/download.html#)**.
+
+### 5.1 Install Plugins
+
+#### 5.1.1 QTiles Plugin
+
+Make sure the QTiles plugin is enabled. Click the plugins drop down menu. QTiles should be listed at the bottom. If not then click the 'Manage and install Plugins...' and add QTiles.
+
+#### 5.1.2 QuickMapServices Plugin
+
+Make sure the QuickMapServices plugin is installed. Check this by clicking on the Web drop down menu If you are installing QuickMapServices Plugin, you will install, and then click on the Web tab, navigate to QuickMapServies and select Settings and then the tab for More Services. Then click **'Get Contibuted Pack'**. Click 'OK' for the pop-up window and then click 'Save.' Open a Reference Map (e.g., Bing).
+
+### 5.2 Tile Server
+
+We now want to add our bucket from Google Cloud to the Tile Server. To do this open the browser panel in QGIS. Scroll Down to the **'Tile Server'**, right click, and click **'New Connection'**. A pop-up window should appear.
+
+In order to enter the tile layer we will navigate back to our bucket in Google cloud. Open the bucket. We need to open the index.html file, which is the last item in the bucket. Click index.html.
+
+A new tab opens with a map and the tiles generated from GEE. Click on the settings in the upper right (3 vertical dots). Click **'More tools'**. Then click **'Developer tools'**.
+
+We need to open the source code. To do this make sure the source tab is selected and open the index.html so we can look at the code.
+
+Add your tiles by right clicking the tile server, in the example here we would right click the **'eetest'**, and select add layer to add it to our map.
+
+### 5.3 View Tiles
+
+Add a base map and zoom on the base map to you tile location. The **'zoom to layer'** function will not work on the tiles. Make sure you turn the base map off once you have located your tiles.
+
+### 5.4 Canvas Extent
+
+Zoom into your tiles so that they fill most of the canvas space, see image below. The canvas is the extent we will use to generate QTiles.
+
+
+### 5.5 Tile Server to QTiles
+
+Now we need to take out tiles from Google Cloud and generate QTiles.
+
+The raster you are working with needs to occupies the extent of the canvas (area of visualization in Qgis). Zoom in or out as needed.
+
+Click the Plugins drop down, hover over QTiles to open the menu and select QTiles. The QTiles screen pops up.  Name the directory where you want to save your QTiles and provide a name for the Tileset. Select Canvas Extent and Zoom levels. In the Parameters make the **'Background transparency'** clear by changing the value to zero and make sure to select **'Write Leaflet-based viewer'**. Click Run.
+
+![QTiles](img/qtiles_to_leaflet.JPG)
+
+
+> Note: the runtime is dependent on the size and number of zoom levels.
+
+
+The file directory will contain your QTiles and an HTML document that can be integrated with leaflet.
+
+Additional help with QTiles can be found **[here](http://felix.rohrba.ch/en/2017/easily-add-tilemap-layers-qgis/)**.
+
+### 5.6 Navigate to QTiles folder
+
+Navigate to the output file after QTiles finishes running. In this folder will be your sub folders of tiles arranged by zoom level and an html document, in this example it is called eetest.html.
+
+Open the html and look at the source code. Copy the L.tilelayer variable that corresponds to your tile.
+
+This can be inserted into a new index.html with base map code to visualize.
+
+## 6 Leaflet
+
+Starting with a basic leaflet html add in your tile layer that you copied in the above step. Make sure it is added to your map variable.
+
+For web mapping and geovisualization applications, the QTiles folder generated above in QGIS should become your assets folder on github. In the code you will need to adjust absolute pathnames to relative path names.
+
+```javascript
+var mymap = L.map('map', {
+    center: [0.03, 38.0],
+    zoom: 7,
+    maxZoom: 10,
+    minZoom: 6,
+    detectRetina: true // detect whether the sceen is high resolution or not.
+});
+
+// 2. Add a base map.
+L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
+
+
+var mytile =L.tileLayer('assets/tiles/{z}/{x}/{y}.png', {
+    maxZoom: 9,
+    tms: false,
+    attribution: 'Generated by QTiles'
+}).addTo(mymap);
+ ```
+
+
+![leafletmap](img/qtiles.jpg)
+
+
+Here is what the final output looks like **[here](http://jakobzhao.github.io/geog371/lectures/lec14/index.html)**
+
+
 ## Extended Readings
 
 - Vector Tiles: http://docs.geoserver.org/latest/en/user/extensions/vectortiles/tutorial.html
