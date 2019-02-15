@@ -12,6 +12,7 @@
 This lecture introduces the layout design of web based geovisualization. In this lecture, we start to list the two design principles - one for designing web site, and the other for designing map. In the second section of this lecture, we will use the library storymap.js to talk about how to design.
 
 ## 1. Overview
+
 The framework we are going to focus on today is called **Bootstrap**. Bootstrap is a website framework built with HTML, CSS, and Javascript. A framework means that many page elements, common functions, and foundational components are already created for you to use and customize. You can use the pieces of the framework and customize the pieces and components for your own page, and even create your own. The components can be customized using HTML, CSS, and Javascript. Bootstrap was developed by Twitter, and is one of the most common frameworks for websites on the web today. More reading on Bootstrap, including lots of examples, can be found on the [**Bootstrap homepage**](http://getbootstrap.com/).
 
 Here are some principal features of Bootstrap:
@@ -34,13 +35,16 @@ MaxCDN provides CDN support for Bootstrap's CSS and JavaScript. You must also in
 
 ```js
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+<!-- Popper library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
 <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
 ```
 
 **Add the HTML doctype**
@@ -52,13 +56,16 @@ Bootstrap uses HTML elements and CSS properties that require the HTML5 doctype. 
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <title></title>
+    <!-- css stylesheets -->
+    <!-- javascript library -->
   </head>
 </html>
 ```
 
-**Bootstrap 3 is mobile-first**
+**Bootstrap 4 is mobile-first**
 
-Bootstrap 3 is designed to be responsive to mobile devices. Mobile-first styles are part of the core framework.
+Bootstrap 4 is designed to be responsive to mobile devices. Mobile-first styles are part of the core framework.
 
 To ensure proper rendering and touch zooming, add the following tag inside the element:
 
@@ -88,9 +95,10 @@ Please keep in mind that *Containers* are not nestable. Meaning you cannot put a
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -112,9 +120,10 @@ Please keep in mind that *Containers* are not nestable. Meaning you cannot put a
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -210,21 +219,14 @@ To further enrich your web map templates, I encourage you browse some robust Boo
 
 > Browse and download templates from **Start Bootstrap**
 
-To facilitate the process of template design and customization, you can use the following tools to design interface or buttons.
-
-![](img/bootstrap-interface-builder.png)
-
-> **Bootstrap Interface Builder** at [http://www.layoutit.com/build](http://www.layoutit.com/build)
-
 
 ## References:
 
-[1] http://duspviz.mit.edu/web-map-workshop/bootstrap-templates/
 
-[2] http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/
+[1] http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/
 
-[3] http://www.w3schools.com/bootstrap/
+[2] http://www.w3schools.com/bootstrap/
 
-[4] https://www.toptal.com/front-end/what-is-bootstrap-a-short-tutorial-on-the-what-why-and-how
+[3] https://www.toptal.com/front-end/what-is-bootstrap-a-short-tutorial-on-the-what-why-and-how
 
-[5]  https://www.smashingmagazine.com/2008/01/10-principles-of-effective-web-design/
+[4]  https://www.smashingmagazine.com/2008/01/10-principles-of-effective-web-design/
