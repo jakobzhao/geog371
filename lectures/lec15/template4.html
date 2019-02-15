@@ -8,6 +8,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         html, body, #map { width: 100%; height: 100%; margin: 0; background: #fff; }
+
+
+        .info-panel {
+            line-height: 16px;
+            width: 180px;
+            position: absolute;
+            z-index: 1000;
+            left: 10px;
+            bottom: 10px;
+            color: #070707;
+            padding: 6px 8px;
+            background: rgba(243, 243, 243, 0.73);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+
+
+        .info-panel i {
+            width: 16px;
+            height: 14px;
+            line-height: 18px;
+            float: left;
+            margin-top: 2px;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+
+        .info-panel p {
+            font-size: 12px;
+            line-height: 16px;
+            margin: 0;
+        }
     </style>
     <!--add required stylesheets-->
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
@@ -17,7 +49,6 @@
 
 </head>
 <body>
-
 <!--add a Bootstrap navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -69,6 +100,42 @@
 </nav>
 <!--map container-->
 <div id="map" class="map"></div>
+<!--info panel-->
+<div class="info-panel">
+    <h4> Map Title </h4>
+    <p><b> Subtitle of the map </b></p><br/>
+    <!-- legend patch items -->
+    <i style="background: #bd0026"></i> <p> 1200+ </p>
+    <i style="background: #f03b20"></i> <p> 651 to 1200 </p>
+
+
+    <i><svg width="16" height="16" data-reactid=".0.1.1.0.0.1:$=11:$1.0.0.$masked.0">
+        <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="4" height="4">
+            <path d="M-1,1 l2,-2
+       M0,4 l4,-4
+       M3,5 l2,-2" style="stroke:black; stroke-width:0.5px" />
+        </pattern>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#diagonalHatch)"/>
+
+    </svg></i> <p> No data </p>
+
+
+ <!--poly line feature-->
+    <!--svg editor http://jxnblk.com/paths/-->
+    <i><svg width="16" height="16">
+        <path d='M0 16 L16 16 L16 0 L8 10 L0 0 Z' style="stroke:blue; stroke-width:2px;fill:red"></path>
+    </svg></i> <p> a polygon feature </p>
+
+    <!--place holder-->
+    <br/>
+    <br/>
+    <p> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla   </p>
+    <p> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla  </p>
+    <p> bla bla bla bla bla bla bla bla bla  </p>
+
+</div>
+
+
 <script type="text/javascript">
     var map = L.map("map", {zoomControl: false}).setView([40, -100], 5); // deactivate the zoomControl
     // construct a base map in light color.md.

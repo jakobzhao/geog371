@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <title>Online Atlas Front Page Template</title>
     <!--add required stylesheet-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
-    <!--https://www.w3schools.com/howto/howto_css_image_overlay.asp-->
     <style>
 
         body {
@@ -56,8 +55,10 @@
     </style>
 
     <!--add required javascript-->
+    <!-- Bootstrap core JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -66,12 +67,13 @@
 <!-- Page Content -->
 <div class="container">
     <!-- Page Header -->
-    <div class="row text-center">
+    <!--justify-content-center to center columns (col-*) inside row-->
+    <div class="row justify-content-center align-items-center">
         <a href="#" target="_blank"><img src="http://via.placeholder.com/180x100"></a>
     </div>
 
     <div class="row text-center">
-        <div class="col-lg-12">
+        <div class="col-12">
             <h2>Online Atlas Front Page</h2>
             <hr>
             <h3>Chapters</h3>
@@ -79,17 +81,8 @@
     </div>
 
     <hr>
-
-    <div class="row text-center">
-
-        <div class="col-md-4 col-lg-4 map">
-            <img src="http://via.placeholder.com/300x300" class="image">
-            <div class="overlay">
-                <div class="text"><h3><a href="/">Hello World</a></h3>
-                    <small>A brief intro</small>
-                </div>
-            </div>
-        </div>
+    <!--mx-auto for centering inside flex elements-->
+    <div class="row mx-auto text-center">
 
         <div class="col-md-4 col-lg-4 map">
             <img src="http://via.placeholder.com/300x300" class="image">
@@ -109,26 +102,6 @@
             </div>
         </div>
 
-    </div>
-
-    <div class="row text-center">
-
-        <div class="col-md-4 col-lg-4 map">
-            <img src="http://via.placeholder.com/300x300" class="image">
-            <div class="overlay">
-                <div class="text"><h3><a href="/">Hello World</a></h3>
-                    <small>A brief intro</small>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-lg-4 map">
-            <img src="http://via.placeholder.com/300x300" class="image">
-            <div class="overlay">
-                <div class="text"><h3><a href="/">Hello World</a></h3>
-                    <small>A brief intro</small>
-                </div>
-            </div>
-        </div>
         <div class="col-md-4 col-lg-4 map">
             <img src="http://via.placeholder.com/300x300" class="image">
             <div class="overlay">
@@ -139,7 +112,36 @@
         </div>
 
     </div>
-    <div class="row text-center">
+
+    <div class="row mx-auto text-center">
+
+        <div class="col-md-4 col-lg-4 map">
+            <img src="http://via.placeholder.com/300x300" class="image">
+            <div class="overlay">
+                <div class="text"><h3><a href="/">Hello World</a></h3>
+                    <small>A brief intro</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 map">
+            <img src="http://via.placeholder.com/300x300" class="image">
+            <div class="overlay">
+                <div class="text"><h3><a href="/">Hello World</a></h3>
+                    <small>A brief intro</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 map">
+            <img src="http://via.placeholder.com/300x300" class="image">
+            <div class="overlay">
+                <div class="text"><h3><a href="/">Hello World</a></h3>
+                    <small>A brief intro</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row mx-auto text-center">
 
         <div class="col-md-4 col-lg-4 map">
             <img src="http://via.placeholder.com/300x300" class="image">
@@ -172,11 +174,11 @@
 
     <footer class="container">
 
-        <div class="row text-center">
+        <div class="row justify-content-center align-items-center">
             <p> Bo Zhao, Oregon State University, 2017 </p>
         </div>
 
-        <div class="row text-center">
+        <div class="row justify-content-center align-items-center">
             <a href="#" target="_blank"><img src="http://via.placeholder.com/120x80"></a>
             <a href="#" target="_blank"><img src="http://via.placeholder.com/120x80"></a>
             <a href="#" target="_blank"><img src="http://via.placeholder.com/120x80"></a>
