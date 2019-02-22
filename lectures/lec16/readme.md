@@ -13,7 +13,7 @@ Add a series of web elements, including
 - social media component, and
 - an about page.
 
-In this lecture, we will continue to work on the story map, but enrich the map with a lot of web features. Most of the features we will discuss today are based on Bootstrap.
+In this lecture, we will continue to work on web features. Most of the features we will discuss today are based on Bootstrap.
 
 ## 1. Add a favicon
 
@@ -121,28 +121,30 @@ To find a Facebook icon, we will use [Font Awesome](http://fontawesome.io), whic
 ```html
 <!--facebook and info icons-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-
 ```
 
 At [http://fontawesome.io/icons/](http://fontawesome.io/icons/), we search the term `facebook` in the search box.
 
 ![](img/awesome-font-search.png)
 
+After you pick up the icon (the facebook-square) you would like to use, a new web page will appear gives you a seires of options to use this icon. Then, please click the "Start Using This Icon" Button.
+
+![](img/start-using.png)
+
 Then, we can find the classname of the Facebook icon at [http://fontawesome.io/icon/facebook-square/](http://fontawesome.io/icon/facebook-square/).
+
 
 ![](img/facebook-icon.png)
 
-As shown, the class for the facebook icon is **"fa fa-facebook-square"**. So, we add a link as below:
+As shown, the class for the facebook icon is **"fab fa-facebook-square"**. So, we add a link as below:
 
 ```html
 <!--facebook icon-->
-<a class="fa fa-facebook-square social" href="https://www.facebook.com/sharer/sharer.php?u=jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.html" target="_blank"></a>
-
-<a class="fab fa-facebook-square" href="https://www.facebook.com/sharer/sharer.php?u=jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.html" target="_blank"></a>
+<a class="fab fa-facebook-square" href="https://www.facebook.com/sharer/sharer.php?u=jakobzhao.github.io/geog371/lectures/lec16/atlas.html" target="_blank"></a>
 ```
-This tag indicates that if we click on it, a new web page will be created, this web page directs to `https://www.facebook.com/sharer/sharer.php?u=jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.html`. Basically, the url `http://jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.htm` indicates where this web map application is deployed.
+This tag indicates that if we click on it, a new web page will be created, this web page directs to `https://www.facebook.com/sharer/sharer.php?u=jakobzhao.github.io/geog371/lectures/lec16/atlas.html`.  The url `jakobzhao.github.io/geog371/lectures/lec16/atlas.html` indicates where this web map application is deployed.
 
-In order to put it on the right place and display properly, we define its style in `css\style-new.css`.
+In order to put it on the right place and display properly, we define its style as.
 
 ```css
 .social {
