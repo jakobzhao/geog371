@@ -50,14 +50,14 @@ Traditionally, a font is loaded into your page only if you have it on your compu
 
 ```html
 <!--use a better font for this web map-->
-<link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 ```
 
 Next, to style all text in our document with the Open Sans font, modify the body tag in the CSS (the code between the style tags). Modify the body CSS properties to look like the following, adding a font-family property after margin.
 
 ```css
 body {
-    font-family: Cairo, sans-serif;
+    font-family: Lobster, sans-serif;
 }
 ```
 
