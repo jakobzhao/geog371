@@ -9,7 +9,6 @@
 Add a series of web elements, including
 - favicon,
 - text font,
-- control object,
 - social media component, and
 - an about page.
 
@@ -63,56 +62,8 @@ body {
 
 Save and refresh your map. Open Sans will now be your preferred font!
 
-## 3. Control Object
 
-Inspired by the web map entitled ["California,s Getting Fracked"](http://www.facesoffracking.org/data-visualization/),  we found that a scrolling down arrow will help the audience reading the web map. Thinking about the working logics of the scrolling-down arrow, it should be an clickable arrow icon on one corner of the web map application. If hovering on the arrow, the color of arrow will be changed, and if clicking the arrow, the text panel should be scrolled down.
-
-Bootstrap provides a set of icons for web design usage. Regarding the scrolling-down function, we look for an arrow icon at [http://bootsnipp.com/buttons](http://bootsnipp.com/buttons), and finally identify one - `glyphicon-chevron-down`. Since the icon controls the texts, we prefer to put it under the text panel and as the very last element.
-
-```html
-<div class="col-sm-6 col-md-4 main">
-<section />
-<section />
-<section />
-...
- <!--add an arrow for scrolling down the texts-->
- <div class="glyphicon glyphicon-menu-down glyphicon-align-center arrow-down"></div>
-</div>
-```
-
-In order to put it on the right place and display properly, we define its style in `css\style-new.css`.
-
-```css
-.arrow-down {
-    position:fixed;
-    top:90%;
-    cursor: pointer;
-    z-index:1002;
-    font-size: 60px;
-    color: #a5a5a5;
-}
-
-.arrow-down:hover {
-    color: #0e0e0e;
-
-}
-```
-
-Also, to make it clickable, we add an click event in the `storymap.js` javascript between **line 124 to 128**. We select the scrolling down arrow element via its className, and add a function to make sure that it will scroll in a length that equals to one third of the total height of the window.
-
-```js
- var downBtn = element.find('.arrow-down');
-
-             downBtn.click(function () {
-                 window.scrollBy(0, $(window).height() / 3);
-             });
-```
-
-Till now, a control object is properly added. You can test it by clicking on the arrow.
-
-![](img/scrolling-down-arrow.png)
-
-## 4. Add a Social Media Component
+## 3. Add a Social Media Component
 
 A social media button will help you spread a web map to more audience. This lecture only walk you through how to share the web map to Facebook, the ways to share to other social media applications are supposed to be quite similar.
 
@@ -173,7 +124,7 @@ Once you click on the facebook button, you will creat a new tab as showing below
 
 >**Note:** If you want to generate urls for other social media platform, please go to [http://www.sharelinkgenerator.com/](http://www.sharelinkgenerator.com/). This web site provides a handy tool for generate urls for Facebook, Twitter, LinkedIn, etc. A more detailed tutorial on generating url for sharing on Facebook can be found at [https://developers.facebook.com/docs/plugins/share-button](https://developers.facebook.com/docs/plugins/share-button).
 
-## 5. Add an About Page
+## 4. Add an About Page
 
 Similar to the Facebook button, we create another button under the Facebook button. This button can invoke the about page.  This button shows an info-circle icon and lies right under the facebook button.
 
