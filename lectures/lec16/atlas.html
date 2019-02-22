@@ -5,7 +5,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
-      <!-- <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet"> -->
+    <!--facebook and info icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <style>
         body {
             height: 100%;
@@ -54,6 +56,19 @@
             font-family: Roboto, sans-serif;
         }
 
+        .social {
+            position:fixed;
+            cursor: pointer;
+            font-size:24px;
+            color:darkgray;
+            z-index:1003;
+            top: 4%;
+            left:5px;
+        }
+        .social:hover {
+            color: darkblue;
+            text-decoration: none;
+        }
     </style>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
@@ -67,7 +82,7 @@
 <!-- Page Content -->
 <div class="container">
     <!-- <div class="row d-flex justify-content-center"> -->
-    <div class="row justify-content-center align-items-center">
+    <div class="row justify-content-center">
         <a href="#" target="_blank"><img src="http://via.placeholder.com/180x100"></a>
     </div>
 
@@ -75,7 +90,7 @@
         <div class="col-lg-12">
             <h2>Online Atlas Front Page</h2>
             <hr>
-            <h3>Chapters</h3>
+            <h3 data-toggle="modal" data-target="#info-modal">Chapters</h3>
         </div>
     </div>
 
@@ -178,12 +193,11 @@
     <hr>
 
     <footer class="container">
-
-        <div class="row text-center">
-            <p> Bo Zhao, Oregon State University, 2017 </p>
+        <div class="row  justify-content-center">
+            <p> Bo Zhao, Oregon State University, 2018 </p>
         </div>
 
-        <div class="row text-center">
+        <div class="row  justify-content-center">
             <a href="#" target="_blank"><img src="http://via.placeholder.com/120x80"></a>
             <a href="#" target="_blank"><img src="http://via.placeholder.com/120x80"></a>
             <a href="#" target="_self"><img src="http://via.placeholder.com/120x80"></a>
@@ -191,7 +205,20 @@
         </div>
     </footer>
 
+</div>
 
+<div class="modal fade" id="info-modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">About</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>

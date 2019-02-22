@@ -120,7 +120,7 @@ To find a Facebook icon, we will use [Font Awesome](http://fontawesome.io), whic
 
 ```html
 <!--facebook and info icons-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
 ```
 
@@ -137,6 +137,8 @@ As shown, the class for the facebook icon is **"fa fa-facebook-square"**. So, we
 ```html
 <!--facebook icon-->
 <a class="fa fa-facebook-square social" href="https://www.facebook.com/sharer/sharer.php?u=jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.html" target="_blank"></a>
+
+<a class="fab fa-facebook-square" href="https://www.facebook.com/sharer/sharer.php?u=jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.html" target="_blank"></a>
 ```
 This tag indicates that if we click on it, a new web page will be created, this web page directs to `https://www.facebook.com/sharer/sharer.php?u=jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.html`. Basically, the url `http://jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.htm` indicates where this web map application is deployed.
 
@@ -174,8 +176,7 @@ Once you click on the facebook button, you will creat a new tab as showing below
 Similar to the Facebook button, we create another button under the Facebook button. This button can invoke the about page.  This button shows an info-circle icon and lies right under the facebook button.
 
 ```html
-<!--info icon-->
-<i class="fa fa-info-circle social" style="top:8%" data-toggle="modal" data-target="#info-modal"></i>
+<h3 data-toggle="modal" data-target="#info-modal">Chapters</h3>
 ```
 
 And then, we add a dialog. If the button is clicked, this dialog will be popped up.
@@ -186,14 +187,11 @@ And then, we add a dialog. If the button is clicked, this dialog will be popped 
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+              <h4 class="modal-title">About</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">About</h4>
             </div>
             <div class="modal-body">
-                <p>...</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <p>place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder</p>
             </div>
         </div>
     </div>
@@ -228,14 +226,6 @@ The `<div>` with `class="modal-content`" styles the modal (border, background
 The `.modal-header` class is used to define the style for the header of the modal. The `<button>` inside the header has a `data-dismiss="modal"` attribute which closes the modal if you click on it. The `.close` class styles the close button, and the `.modal-title`class styles the header with a proper line-height.
 
 The `.modal-body` class is used to define the style for the body of the modal. Add any HTML markup here; paragraphs, images, videos, etc.
-
-The `.modal-footer` class is used to define the style for the footer of the modal. Note that this area is right aligned by default.
-
-## Concluding remark
-
-![](img/final-page.png)
-
-To browse this application, you can visit [jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.html](jakobzhao.github.io/geog371/lectures/lec16/storymap_alpha/index.html).
 
 ## References:
 
