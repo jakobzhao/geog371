@@ -24,8 +24,7 @@ Welcome to GEOG371:Web Mapping :earth_americas:! This course introduces concepts
 | Wk 07 |  Midterm Exam :book:   | [Map Design II: Bootstrap](lectures/lec16)  |             [Lab 5: Story Map](labs/lab05/readme.md)             | [Storytelling with Web Map I](lectures/lec17)   |   [Web Map Design Principles](readings/wk07.md)    |
 | Wk 08 |    Storytelling with Web Map II, cont'd with the last lecture      |  :airplane:   [Map Design III: User Friendly Design Principles](lectures/lec19)     |              Lab 5: Cont'd               |    :airplane:  [3D Web Mapping I: Basics](lectures/lec23)         |         [Cesium Documentation](readings/wk08.md)                         |
 | Wk 09 |               [3D Web Mapping II: Thematic Map on a Virtual Globe](lectures/lec25)  [HeatMap](lectures/lec21)   | [Map Design IV: Map Critiques](lectures/lec22) | [Lab 6:  Thematic Map on a Virtual Globe](labs/lab06) |  [Real-Time Mapping: TweetMap](lectures/lec20)  |                [Server-Side JavaScript](readings/wk09.md)                                     |
-| Wk 10 |  [Emerging Topics on Web Mapping](lectures/lec26)    | Final Project Discussion and Preparation   |              Final Project Discussion and Preparation             |       Final Project Presentation - *Strand Ag Hall (GAZE) TBD*       |       [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md)
-
+| Wk 10 |                        [Emerging Topics on Web Mapping](lectures/lec26)                         |                                                         Final Project Discussion and Preparation                                                          |      Final Project Presentation - ***Digital Earth Lab Wilkinson 203 - Thursday March 14th***            | Final Project Discussion and Preparation   |        [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md)         |
 
 
 ### Tutorials

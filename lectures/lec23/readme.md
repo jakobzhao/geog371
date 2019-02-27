@@ -138,31 +138,35 @@ If you open up `helloworld.html` in an editor, you’ll find the following sim
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Use correct character set. -->
     <meta charset="utf-8">
-    <!-- Tell IE to use the latest, best version. -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css">
-    <script src="https://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.54/Build/Cesium/Widgets/widgets.css">
     <style>
-        html, body, #cesiumContainer {
-            width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
-        }
+      html, body, #cesiumContainer { width: 100%; height: 100%; margin: 0; background: #fff;}
     </style>
+    <script src="https://cesiumjs.org/releases/1.54/Build/Cesium/Cesium.js"></script>
+    <title>Hello world!</title>
 </head>
 <body>
 <div id="cesiumContainer"></div>
 <script>
 
-    //Cesium.BingMapsApi.defaultKey = "AgUQJFnmoxa47CoxZf-zslnbrBqBzATAxYAiQnd__-q8eGgLZu1ygR8_p2jI3Y9u";
-    var viewer = new Cesium.Viewer('cesiumContainer');
+    //create a cesium view, and use the mapbox dark map as the base map.
+    var viewer = new Cesium.Viewer('cesiumContainer', {
+        terrainProvider : Cesium.createWorldTerrain(),
+        vrButton: true,  // virtual reality support
+        sceneModePicker: true, // 2d, 2.5d and 3d
+        navigationHelpButton: true,
+        baseLayerPicker : true,
+        fullscreenButton: true,
+        geocoder: true,
+        homeButton: false,
+        animation: false,
+        timeline: false
+    });
 </script>
 </body>
 </html>
-
 ```
 
 These are the four lines needed to add Cesium to an application:
@@ -170,13 +174,13 @@ These are the four lines needed to add Cesium to an application:
 The first step is to include Cesium.js in a script tag. This defines the Cesium object, which contains everything we need.
 
 ```html
- <script src="https://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js"></script>
+<script src="https://cesiumjs.org/releases/1.54/Build/Cesium/Cesium.js"></script>
 ```
 
 In order to use the Cesium Viewer widget, we need to include its CSS.
 
 ```css
-<link rel="stylesheet" href="https://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css">
+<link rel="stylesheet" href="https://cesiumjs.org/releases/1.54/Build/Cesium/Widgets/widgets.css">
 ```
 
 In the HTML body, we create a div for the viewer to live.
