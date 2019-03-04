@@ -40,7 +40,7 @@ noise_complaints
 
 ## 2\. HTML template
 
-Above all, we will create an html page and include the necessary libraries. As shown, within the `body` div, we place two div elements - one for anchoring the virtual globe container and one for anchoring the legend. In addition, the style sheet locates at `css/style.css`. In order to make the application more light-weight, we use external links to include cesium libraries from [http://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js](http://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js) and [http://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css](http://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css). In order to create a color scheme dynamically, we use chroma.js.
+Above all, we will create an html page and include the necessary libraries. As shown, within the `body` div, we place two div elements - one for anchoring the virtual globe container and one for anchoring the legend. In addition, the style sheet locates at `css/style.css`. In order to make the application more light-weight, we use external links to include cesium libraries from [http://cesiumjs.org/releases/1.54/Build/Cesium/Cesium.js](http://cesiumjs.org/releases/1.54/Build/Cesium/Cesium.js) and [http://cesiumjs.org/releases/1.54/Build/Cesium/Widgets/widgets.css](http://cesiumjs.org/releases/1.54/Build/Cesium/Widgets/widgets.css). In order to create a color scheme dynamically, we use chroma.js.
 
 ```html
 <!DOCTYPE html>
@@ -49,10 +49,10 @@ Above all, we will create an html page and include the necessary libraries. As s
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.39/Build/Cesium/Widgets/widgets.css">
+    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.54/Build/Cesium/Widgets/widgets.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cesiumjs.org/releases/1.39/Build/Cesium/Cesium.js"></script>
+    <script src="https://cesiumjs.org/releases/1.54/Build/Cesium/Cesium.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
     <title> Noise Complaints in New York City (Jan. to Mar. 2017)</title>
