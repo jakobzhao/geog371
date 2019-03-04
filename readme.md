@@ -27,7 +27,7 @@ Welcome to GEOG371:Web Mapping :earth_americas:! This course introduces concepts
 | Wk 10 |                        [Emerging Topics on Web Mapping](lectures/lec26)                         |                                                         Final Project Discussion and Preparation                                                          |      Final Project Presentation - ***Digital Earth Lab Wilkinson 203 - Thursday March 14th***            | Final Project Discussion and Preparation   |        [Elwood et al. (2012), Sui and Zhao (2015)](readings/wk10.md)         |
 
 
-### Tutorials
+### [Final Project Guideline](project/readme.md) 
 
 - [Favicon](lectures/lec16/readme.md)
 - [Videos](resources/video.md)
