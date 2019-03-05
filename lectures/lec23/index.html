@@ -16,13 +16,13 @@
 
     //create a cesium view, and use the mapbox dark map as the base map.
     var viewer = new Cesium.Viewer('cesiumContainer', {
-        // imageryProvider : new Cesium.MapboxImageryProvider({
-        //         mapId : 'mapbox.dark',
-        //         accessToken : 'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpenh0dG41ZjAyY3gzMXFsdTJqbm5oNmwifQ.ucAGT19EfvxX2EUaHUwAxA'
-        // }),
-        imageryProvider : new Cesium.ArcGisMapServerImageryProvider({
-            url : 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer'
+        imageryProvider : new Cesium.MapboxImageryProvider({
+                mapId : 'mapbox.outdoors',
+                accessToken : 'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpenh0dG41ZjAyY3gzMXFsdTJqbm5oNmwifQ.ucAGT19EfvxX2EUaHUwAxA'
         }),
+        // imageryProvider : new Cesium.ArcGisMapServerImageryProvider({
+        //     url : 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer'
+        // }),
         terrainProvider : Cesium.createWorldTerrain(),
         vrButton: true,  // virtual reality support
         sceneModePicker: true, // 2d, 2.5d and 3d
