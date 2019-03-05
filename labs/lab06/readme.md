@@ -1,10 +1,10 @@
-# Practical Exercise 6: 3D Thematic Map using a Virtual Globe
+# Practical Exercise 6: 3D Thematic Map using a Virtual Globe (Bonus)
 
 > Winter 2018 | Geography 371 | Web Mapping
 >
 > **Instructor:** Bo Zhao  **Location:** Wilkinson 210 | **Time:** Th 0800 - 1150
 >
-> **Assigned:**  | **Due:**  | **Points Available** = 50
+> **Assigned:**  | **Due:**  | **Points Available** = 5
 
 During the last week, we have learned how to use a virtual globe to make a 3D thematic map. To do that, some of the most frequently used virtual globe libraries are [three.js](https://threejs.org/) and [cesium.js](http://cesiumjs.org/). While three.js is more compatible with other 3D web applications, cesium.js is dedicated to make virtual globes. As introduced in the lectures, [TerriaJS](http://terria.io/) is an robust open-source geospatial platform built on cesium.js. It provides us with handy tools for navigating, editing and managing geospatial data. If you are interested in using cesium.js for an integrated web mapping application, I would highly recommend writing the codes of [TerriaJS](http://terria.io/) at GitHub. In this lab, you are asked to make a 3D thematic map using cesium.js. The major learning goal is not to have you grasp the state-of-art skills in 3D mapping. Instead, this lab prepares you with fundamental skills of making a 3D thematic map, and provides you an opportunity to reflect on the differences between 2D and 3D web mapping. Okay, let us get started.
 
@@ -293,10 +293,10 @@ If everything works smoothly, you will see a 3D web map like this. Well done!
 
 For deliverable, you will need to create a 3d thematic map similiar to the one I show above. You will need to
 - Create a repository on github to host this 3d thematic map application.
-- Use another basemap instead of the current mapbox dark basemap. (**10 POINTS**)
-- Change the color ramp of the entities. (**15 POINTS**)
-- An updated version of the credits. ***Remember, only credit your portion of the work.*** (**10 POINTS**)
-- In the `readme.md` file, please answer the following question with real cases. - From an application perspective, what scenario do you think is more appropriate to use a 2D web map (e.g., leaflet), and is more appropriate to use a 3D virtual globe? For example, you can find some web mapping applications, and compare why they selected a 2D or 3D layout.  (**15 POINTS**)
+- Use another basemap instead of the current mapbox dark basemap. (**1 POINT**)
+- Change the color ramp of the entities. (**1.5 POINT**)
+- An updated version of the credits. ***Remember, only credit your portion of the work.*** (**1 POINT**)
+- In the `readme.md` file, please answer the following question with real cases. - From an application perspective, what scenario do you think is more appropriate to use a 2D web map (e.g., leaflet), and is more appropriate to use a 3D virtual globe? For example, you can find some web mapping applications, and compare why they selected a 2D or 3D layout.  (**1.5 POINTS**)
 
 The structure of your github repository should like something below.
 
