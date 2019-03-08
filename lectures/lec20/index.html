@@ -4,20 +4,20 @@
 <head>
     <title>Real-time Twitter Map</title>
     <!--stylesheets-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
     <link rel="stylesheet" href="css/main.css">
 
     <!--javascript libraries-->
-    <script src="socket.io/socket.io.js"></script>
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <!-- <script src="socket.io/socket.io.js"></script> -->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 
     <!--activate leaflet-heat to make heatmap-->
     <script src="js/leaflet-heat.js"></script>
 
     <!--activate jquery and bootstrap to use the glyphicons-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
     var map = L.map("map").setView([0, 0], 3);
 
     // construct the base map.
-    L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png').addTo(map);
+    L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png').addTo(map);
 
     // make an empty heatmap layer
      var heatmap = L.heatLayer([], {radius: 10}).addTo(map);
