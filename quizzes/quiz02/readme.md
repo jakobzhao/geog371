@@ -1,30 +1,23 @@
-# Quiz 2: Create GeoJson
+# Quiz 2: JQuery Selectors
 
-For this quiz, you will need to look for a shapefile and convert it to geojson. You can refer to the lecture on spatial data to review how to convert a shapefiel to geojson. Please make sure the geojson is in the correct projection (wgs84, epsg: 4326). In addition, you might want to use [mapshaper](https://mapshaper.org/) to simplify a geojson. Please follow the steps below:
+In this quize, you are expected to process the web page  [https://jquery.com](https://jquery.com/) using **jquery**:
 
-[1] Convert the raw geospatial data (in shapefile) as a geojson; and
-
-[2] Simplify this geojson as a new geojson data
-
-
-In the readme.md file of this repo, please briefly introduce this data, and also make a table to compare the data size of these three geojson files. for example:
-
-```powershell
-name	size(kb)
-xxx.geojson	10,000
-xxx_simplifed.geojson	1,000
+* [1] select all the `<p>` elements.
+* [2] select the element whose id is `container`.
+* [3] select  the element(s) whose class is `constrain`.
+* [4] select the first `<div>` element.
+* [5] select the last `<nav>` element.
+* [6] select  all elements contains the content/text `"jQuery"`.
+* [7] select  all `<a>` element under a `<li>` element.
+* [8] hide all `<a>` elements.
+* [9] when the mouse hover any `<a>` element, show the text/content of the `<a>` element in an alert window. To answer this question, you need to write several lines of code. Please recall how to bind a function to a specific event of an element. For example bind a click event to an element whose id is `map`.
+```JavaScript
+$("#map").on("click", function(e) {
+     //put your codes here.
+})
 ```
+* [10] "hack" the page by changing all the text/content "JQuery" to "Anonymous".
 
-In the assets folder of this repo, please upload the two json files.  So, the structure of this repository should be: 
+>  For example, to select all the `<a>` elements, you can use `$("a")`. To complete this quiz, you will need to use the console drawer of the Chrome Inspector.
 
-
-```powershell
-[your_repository_name]
-    │readme.md
-    ├─assets
-    │      XXX.geojson 
-    │      XXX_simplified.geojson
-```
-
-
-Please only submit the url of this repository to canvas.
+The total avaliable score for this quiz is **20 POINTS**. Please answer all the questions in a word or pdf document, and submit it to canvas. The deadline of this quiz is **Thursday (Feb 7, 2019) 11:59 pm**.
